@@ -271,8 +271,17 @@ void draw_DeliveryPath_RockBlock_TopView(GLfloat x, GLfloat y) {
     //based on the position of the original point makes calculus to create the other points
     //so it has the pretended shape
     glVertex3f(x + 40, y, 0);       //    adds 40px width
+    glVertex3f(x + 35, y + 10, 0);
+    glVertex3f(x + 45, y + 40, 0);
     glVertex3f(x + 40, y + 100, 0); //    adds 100px height
     glVertex3f(x, y + 100, 0);      //    removes 40px width
+    glVertex3f(x, y + 80, 0);
+    glVertex3f(x + 5, y + 70, 0);
+    glVertex3f(x + 5, y + 60, 0);
+    glVertex3f(x, y + 45, 0);
+    glVertex3f(x, y + 30, 0);
+    glVertex3f(x - 5, y + 15, 0);
+    glVertex3f(x, y + 10, 0);
 
     //sets the ending of the draw
     glEnd();
@@ -283,63 +292,27 @@ void draw_DeliveryPath_RockBlock_TopView(GLfloat x, GLfloat y) {
 }
 
                         /**********************************************************************/
-//carriage path entrance
-void draw_CarriagePath_Entrance_RockBlock_TopView(GLfloat x, GLfloat y) {
-
-    //sets the beginning of the draw
-    glBegin(GL_LINE_LOOP);
-
-    //sets a point in the position (x, y, 0)
-    glVertex3f(x, y, 0);
-    //based on the position of the original point makes calculus to create the other points
-    //so it has the pretended shape
-    glVertex3f(x + 20, y, 0);       //    adds 20px width
-    glVertex3f(x + 20, y + 30, 0);  //    adds 30px height
-    glVertex3f(x, y + 30, 0);       //    removes 20px width
-
-    //sets the ending of the draw
-    glEnd();
-
-    //set the drawing to be rendered
-    glFlush();
-
-}
-
 //carriage path turn
-void draw_CarriagePath_Turn_RockBlock_TopView(GLfloat x, GLfloat y) {
+void draw_CarriagePath_Full_RockBlock_TopView(GLfloat x, GLfloat y) {
 
     //sets the beginning of the draw
     glBegin(GL_LINE_LOOP);
 
     //sets a point in the position (x, y, 0)
-    glVertex3f(x, y, 0);
-    //based on the position of the original point makes calculus to create the other points
-    //so it has the pretended shape
-    glVertex3f(x + 20, y, 0);       //    adds 20px width
-    glVertex3f(x + 70, y + 40, 0);  //    adds more 50px width and 40px height
-    glVertex3f(x + 50, y + 40, 0);  //    removes 20px width
-
-    //sets the ending of the draw
-    glEnd();
-
-    //set the drawing to be rendered
-    glFlush();
-
-}
-
-//carriage path exit
-void draw_CarriagePath_Exit_RockBlock_TopView(GLfloat x, GLfloat y) {
-
-    //sets the beginning of the draw
-    glBegin(GL_LINE_LOOP);
-
-    //sets a point in the position (x, y, 0)
-    glVertex3f(x, y, 0);
-    //based on the position of the original point makes calculus to create the other points
-    //so it has the pretended shape
-    glVertex3f(x + 20, y, 0);       //    adds 20px width
-    glVertex3f(x + 20, y + 30, 0);  //    adds 30px height
-    glVertex3f(x, y + 30, 0);       //    removes 20px width
+    glVertex3f(x - 25, y, 0);
+    glVertex3f(x, y + 5, 0);
+    glVertex3f(x + 10, y, 0);
+    glVertex3f(x + 30, y + 15, 0);
+    glVertex3f(x + 40, y + 30, 0);  //    adds 30px height
+    glVertex3f(x + 50, y + 40, 0);
+    glVertex3f(x + 70, y + 70, 0);       //    adds 20px width
+    glVertex3f(x + 70, y + 80, 0);
+    glVertex3f(x + 80, y + 100, 0);  //    adds more 50px width and 40px height
+    glVertex3f(x + 50, y + 100, 0);  //    removes 20px width
+    glVertex3f(x + 45, y + 70, 0);  //    removes 20px width
+    glVertex3f(x + 30, y + 50, 0);
+    glVertex3f(x + 15, y + 35, 0);
+    glVertex3f(x - 5 , y + 20, 0);  //    removes 20px width
 
     //sets the ending of the draw
     glEnd();
@@ -439,9 +412,7 @@ void draw_RockBlock_TopView() {
 
 	draw_DeliveryPath_RockBlock_TopView(xInitial + 245, yInitial + 90);             //(345, 390)
 
-	draw_CarriagePath_Entrance_RockBlock_TopView(xInitial + 310, yInitial + 90);    //(410, 390)
-	draw_CarriagePath_Turn_RockBlock_TopView(xInitial + 310, yInitial + 120);       //(410, 420)
-	draw_CarriagePath_Exit_RockBlock_TopView(xInitial + 360, yInitial + 160);       //(460, 460)
+	draw_CarriagePath_Full_RockBlock_TopView(xInitial + 310, yInitial + 90);        //(410, 390)
 
 	draw_EntrancePath_GateWay_RockBlock_TopView(xInitial + 240, yInitial - 50);     //(340, 250)
 	draw_EntrancePath_Turn_RockBlock_TopView(xInitial + 315, yInitial - 140);       //(415, 160)
@@ -961,9 +932,9 @@ void draw_ArcBridge_Border_Spikes_Part_TopView(GLfloat x, GLfloat y) {
 
                         /**********************************************************************/
 //arc bridge border
-void draw_ArcBridge_Border_TopView(GLfloat x, GLfloat y, GLfloat size) {
+void draw_ArcBridge_Border_TopView(GLfloat x, GLfloat y) {
 
-    for (GLfloat i = x; i < x + size; i += 5) {
+    for (GLfloat i = x; i < x + 50; i += 5) {
 
         draw_ArcBridge_Border_Spikes_Part_TopView(i, y);
 
@@ -983,14 +954,14 @@ void draw_ArcBridge_TopView() {
     //xInitial = 100;
     //yInitial = 300;
 
-    draw_ArcBridge_Border_TopView(xInitial + 60, yInitial + 30, 50);    //(160, 330)
-    draw_ArcBridge_Border_TopView(xInitial + 60, yInitial + 45, 50);    //(160, 345)
+    draw_ArcBridge_Border_TopView(xInitial + 60, yInitial + 30);    //(160, 330)
+    draw_ArcBridge_Border_TopView(xInitial + 60, yInitial + 45);    //(160, 345)
 
-    draw_ArcBridge_Border_TopView(xInitial + 140, yInitial + 30, 50);   //(230, 330)
-    draw_ArcBridge_Border_TopView(xInitial + 140, yInitial + 45, 50);   //(230, 345)
+    draw_ArcBridge_Border_TopView(xInitial + 140, yInitial + 30);   //(230, 330)
+    draw_ArcBridge_Border_TopView(xInitial + 140, yInitial + 45);   //(230, 345)
 
-    draw_ArcBridge_Border_TopView(xInitial + 350, yInitial + 30, 50);   //(450, 330)
-    draw_ArcBridge_Border_TopView(xInitial + 350, yInitial + 45, 50);   //(450, 345)
+    draw_ArcBridge_Border_TopView(xInitial + 350, yInitial + 30);   //(450, 330)
+    draw_ArcBridge_Border_TopView(xInitial + 350, yInitial + 45);   //(450, 345)
 
 }
 
