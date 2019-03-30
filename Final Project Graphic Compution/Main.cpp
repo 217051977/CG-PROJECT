@@ -196,11 +196,16 @@ void draw_RightMiddle_RockBlock_Connection_TopView(GLfloat x, GLfloat y) {
     //so it has the pretended shape
     glVertex3f(x + 10, y - 12.5, 0);  //    adds 40px height
     glVertex3f(x + 20, y - 8, 0);  //    adds 40px height
-    glVertex3f(x  + 30, y - 10, 0);       //    adds 35px width
+    glVertex3f(x + 30, y - 10, 0);       //    adds 35px width
+    glVertex3f(x + 40, y - 5, 0);
+    glVertex3f(x + 35, y + 10, 0);
+    glVertex3f(x + 33, y + 25, 0);
+    glVertex3f(x + 40, y + 40, 0);
+    glVertex3f(x + 55, y + 50, 0);
+    glVertex3f(x + 65, y + 60, 0);
 
-    draw_Inverted_Curve(x + 102.5, y + 10, (35 * PI) / 32, (7 * PI) / 12, 67.5, 50);  //Center (x, y)
-
-    glVertex3f(x + 35, y + 45, 0);       //    removes 35px width
+//    glVertex3f(x + 35, y + 45, 0);       //    removes 35px width
+    glVertex3f(x + 35, y + 55, 0);       //    removes 35px width
     glVertex3f(x + 20, y + 62, 0);       //    removes 35px width
     glVertex3f(x + 15, y + 60, 0);       //    removes 35px width
     glVertex3f(x - 5, y + 68, 0);       //    removes 35px width
@@ -221,30 +226,33 @@ void draw_RightMiddle_RockBlock_Connection_TopView(GLfloat x, GLfloat y) {
 //right
 void draw_Right_RockBlock_TopView(GLfloat x, GLfloat y) {
 
-
     //sets the beginning of the draw
     glBegin(GL_LINE_LOOP);
 
-    draw_Curve(x + 67.5, y + 50, 0, 2 * PI, 67.5, 50);  //Center (x, y)
-
-    //sets the ending of the draw
-    glEnd();
-
-    //sets the beginning of the draw
-    glBegin(GL_LINE_LOOP);
-
-    glVertex3f(x + 5, y + 30, 0);
-    glVertex3f(x + 10, y + 35, 0);
+    glVertex3f(x + 15, y + 30, 0);
+    glVertex3f(x + 5, y + 35, 0);
     glVertex3f(x, y + 50, 0);
-    glVertex3f(x - 5, y + 65, 0);
-    glVertex3f(x + 5, y + 70, 0);
-    glVertex3f(x + 15, y + 90, 0);
-
-
-    glVertex3f(x + 67.5, y + 100, 0);      //    removes 135px width
-    glVertex3f(x + 135, y + 100, 0);//    adds 100px height
-    glVertex3f(x + 135, y, 0);      //    adds 135px width
-    glVertex3f(x, y, 0);
+    glVertex3f(x - 2, y + 65, 0);
+    glVertex3f(x + 5, y + 80, 0);
+    glVertex3f(x + 20, y + 90, 0);
+    glVertex3f(x + 30, y + 100, 0);      //    removes 135px width
+    glVertex3f(x + 65, y + 105, 0);
+    glVertex3f(x + 100, y + 100, 0);
+    glVertex3f(x + 110, y + 95, 0);
+    glVertex3f(x + 120, y + 85, 0);
+    glVertex3f(x + 125, y + 75, 0);
+    glVertex3f(x + 130, y + 70, 0);
+    glVertex3f(x + 132, y + 65, 0);
+    glVertex3f(x + 130, y + 60, 0);
+    glVertex3f(x + 135, y + 50, 0);//    adds 100px height
+    glVertex3f(x + 125, y + 20, 0);
+    glVertex3f(x + 115, y + 20, 0);
+    glVertex3f(x + 107, y + 10, 0);
+    glVertex3f(x + 100, y + 3, 0);
+    glVertex3f(x + 67.5, y, 0);      //    adds 135px width
+    glVertex3f(x + 50, y + 5, 0);
+    glVertex3f(x + 30, y + 5, 0);
+    glVertex3f(x + 20, y + 15, 0);
 
     //sets the ending of the draw
     glEnd();
@@ -890,8 +898,8 @@ void draw_LeftTower_Ruined_TopView() {
     //xInitial = 100;
     //yInitial = 300;
 
-    draw_LeftTower_Ruined_Bottom_TopView(xInitial + 100, yInitial + 25);//(200, 325)
-    draw_LeftTower_Ruined_Head_TopView(xInitial + 105, yInitial + 30);  //(205, 330)
+    draw_LeftTower_Ruined_Bottom_TopView(xInitial + 110, yInitial + 25);//(200, 325)
+    draw_LeftTower_Ruined_Head_TopView(xInitial + 115, yInitial + 30);  //(205, 330)
 
 }
 
@@ -978,11 +986,11 @@ void draw_ArcBridge_TopView() {
     //xInitial = 100;
     //yInitial = 300;
 
-    draw_ArcBridge_Border_TopView(xInitial + 60, yInitial + 30, 40);    //(160, 330)
-    draw_ArcBridge_Border_TopView(xInitial + 60, yInitial + 45, 40);    //(160, 345)
+    draw_ArcBridge_Border_TopView(xInitial + 60, yInitial + 30, 50);    //(160, 330)
+    draw_ArcBridge_Border_TopView(xInitial + 60, yInitial + 45, 50);    //(160, 345)
 
-    draw_ArcBridge_Border_TopView(xInitial + 130, yInitial + 30, 60);   //(230, 330)
-    draw_ArcBridge_Border_TopView(xInitial + 130, yInitial + 45, 60);   //(230, 345)
+    draw_ArcBridge_Border_TopView(xInitial + 140, yInitial + 30, 50);   //(230, 330)
+    draw_ArcBridge_Border_TopView(xInitial + 140, yInitial + 45, 50);   //(230, 345)
 
     draw_ArcBridge_Border_TopView(xInitial + 350, yInitial + 30, 65);   //(450, 330)
     draw_ArcBridge_Border_TopView(xInitial + 350, yInitial + 45, 65);   //(450, 345)
