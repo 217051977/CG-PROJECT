@@ -118,15 +118,6 @@ void draw_Inverted_Circle(GLfloat x, GLfloat y, GLfloat starAngle, GLfloat final
 }
 
 /***********************************************************************************************************************
-************************************************************************************************************************
-********************************************Draw the front door of the castle*******************************************
-************************************************************************************************************************
-***********************************************************************************************************************/
-
-
-
-
-/***********************************************************************************************************************
 *                                                                                                                      *
 *                                             Draws the rock block it self                                             *
 *                                                                                                                      *
@@ -435,24 +426,68 @@ void draw_Castle_RockBlock_TopView(GLfloat x, GLfloat y) {
     //sets the beginning of the draw
     glBegin(GL_LINE_LOOP);
 
-    glVertex3f(x, y, 0);
-    glVertex3f(x + 377, y, 0);
-/*
-    draw_Circle(x + 188.5, y + 175, 0, PI, 188.5, 175);
-*/
-    glVertex3f(x + 377, y + 350, 0);
-    glVertex3f(x, y + 350, 0);
+    glVertex3f(x, y + 35, 0);
+    glVertex3f(x + 5, y + 30, 0);
+    glVertex3f(x + 30, y + 20, 0);
+    glVertex3f(x + 54, y, 0);
+    glVertex3f(x + 60, y - 5, 0);
+    glVertex3f(x + 90, y - 10, 0);
+    glVertex3f(x + 300, y, 0);
+    glVertex3f(x + 330, y + 10, 0);
+    glVertex3f(x + 340, y + 20, 0);
+    glVertex3f(x + 360, y + 45, 0);
+    glVertex3f(x + 370, y + 70, 0);
+    glVertex3f(x + 380, y + 80, 0);
+    glVertex3f(x + 395, y + 95, 0);
+    glVertex3f(x + 390, y + 117, 0);
+    glVertex3f(x + 400, y + 120, 0);
+    glVertex3f(x + 415, y + 145, 0);
+    glVertex3f(x + 420, y + 150, 0);
+    glVertex3f(x + 400, y + 175, 0);
+    glVertex3f(x + 410, y + 210, 0);
+    glVertex3f(x + 390, y + 240, 0);
+    glVertex3f(x + 390, y + 260, 0);
+    glVertex3f(x + 380, y + 280, 0);
+    glVertex3f(x + 390, y + 290, 0);
+    glVertex3f(x + 377, y + 310, 0);
+    glVertex3f(x + 360, y + 325, 0);
+    glVertex3f(x + 340, y + 330, 0);
+    glVertex3f(x + 330, y + 340, 0);
+    glVertex3f(x + 300, y + 350, 0);
+    glVertex3f(x + 280, y + 370, 0);
+    glVertex3f(x + 260, y + 370, 0);
+    glVertex3f(x + 240, y + 390, 0);
+    glVertex3f(x + 200, y + 400, 0);
+    glVertex3f(x + 188.5, y + 385, 0);
+    glVertex3f(x + 130, y + 390, 0);
+    glVertex3f(x + 80, y + 380, 0);
+    glVertex3f(x + 65, y + 385, 0);
+    glVertex3f(x + 35, y + 370, 0);
+    glVertex3f(x + 30, y + 340, 0);
+    glVertex3f(x + 20, y + 350, 0);
+    glVertex3f(x + 5, y + 330, 0);
+    glVertex3f(x + 5, y + 320, 0);
+    glVertex3f(x - 10, y + 290, 0);
+    glVertex3f(x - 5, y + 250, 0);
+    glVertex3f(x - 20, y + 220, 0);
+    glVertex3f(x - 30, y + 200, 0);
+    glVertex3f(x - 23, y + 175, 0);
+    glVertex3f(x - 30, y + 130, 0);
+    glVertex3f(x - 15, y + 90, 0);
+    glVertex3f(x - 5, y + 80, 0);
+    glVertex3f(x + 5 , y + 60, 0);
+    glVertex3f(x, y + 40, 0);
 
     //sets the ending of the draw
     glEnd();
 
-/*    //sets the beginning of the draw
+    //sets the beginning of the draw
     glBegin(GL_LINE_LOOP);
 
-    draw_Circle(x + 188.5, y + 175, 0, PI, 188.5, 175);
+    draw_Circle(x + 188.5, y + 175, 0, 2 * PI, 205, 205);
 
     //sets the ending of the draw
-    glEnd();*/
+    glEnd();
 
     //set the drawing to be rendered
     glFlush();
@@ -1286,39 +1321,6 @@ void draw_FrontDoor_TopView(GLfloat x, GLfloat y) {
 
 }
 
-                        /**********************************************************************/
-//roundabout outside
-void draw_Delivery_Roundabout_Outside_TopView(GLfloat x, GLfloat y) {
-
-    //sets the beginning of the inside draw part
-    glBegin(GL_LINE_LOOP);
-
-    draw_Circle(x, y, 0, 2 * PI, 7.5, 7.5);  //Center (x, y)
-
-    //sets the ending of the draw
-    glEnd();
-
-    //set the drawing to be rendered
-    glFlush();
-
-}
-
-//roundabout inside
-void draw_Delivery_Roundabout_Inside_TopView(GLfloat x, GLfloat y) {
-
-    //sets the beginning of the inside draw part
-    glBegin(GL_LINE_LOOP);
-
-    draw_Circle(x, y, 0, 2 * PI, 2.5, 2.5);  //Center (x, y)
-
-    //sets the ending of the draw
-    glEnd();
-
-    //set the drawing to be rendered
-    glFlush();
-
-}
-
 /***********************************************************************************************************************
 ************************************************************************************************************************
 ************************************Sets the origin point position of the deliver road**********************************
@@ -1330,35 +1332,6 @@ void draw_Delivery_TopView() {
     draw_FrontDoor_TopView(X_INITIAL + 247.5, Y_INITIAL + 160);
 
 }
-
-/***********************************************************************************************************************
-*                                                                                                                      *
-*                                            Draws the castle walls it self                                            *
-*                                                                                                                      *
-***********************************************************************************************************************/
-
-//castle front left wall
-void draw_Castle_LeftFrontWall_TopView(/*values*/) {}
-//castle right front wall
-void draw_Castle_RightFrontWall_TopView(/*values*/) {}
-//castle left wall
-void draw_Castle_LeftWall_TopView(/*values*/) {}
-//castle right wall
-void draw_Castle_RightWall_TopView(/*values*/) {}
-//castle back wall
-void draw_Castle_BackWall_TopView(/*values*/) {}
-
-//castle entrance tower top
-void draw_Castle_Entrance_Tower_Top_TopView(/*values*/) {}
-
-/***********************************************************************************************************************
-*                                                                                                                      *
-*                                   Sets the origin point position of the castle walls                                 *
-*                                                                                                                      *
-***********************************************************************************************************************/
-
-///castle walls
-void draw_Castle_Walls_TopView(/*values*/) {}
 
 /***********************************************************************************************************************
 *                                                                                                                      *
@@ -1403,7 +1376,37 @@ void draw_Castle_Road_Vertical_TopView(GLfloat x, GLfloat y, GLfloat size) {
 
 }
 
-void draw_Castle_Courtyard_TopView(GLfloat x, GLfloat y, GLfloat xSize, GLfloat ySize) {
+/***********************************************************************************************************************
+************************************************************************************************************************
+***********************************Sets the origin point position of the castle roads***********************************
+************************************************************************************************************************
+***********************************************************************************************************************/
+//castle road
+void draw_Castle_Road_TopView() {
+
+    draw_Castle_Road_Vertical_TopView(X_INITIAL + 252.5, Y_INITIAL + 295, 40);
+    draw_Castle_Road_Vertical_TopView(X_INITIAL + 252.5, Y_INITIAL + 395, 40);
+    draw_Castle_Road_Vertical_TopView(X_INITIAL + 252.5, Y_INITIAL + 465, 10);
+    draw_Castle_Road_Vertical_TopView(X_INITIAL + 373.5, Y_INITIAL + 200, 305);
+    draw_Castle_Road_Vertical_TopView(X_INITIAL + 133.5, Y_INITIAL + 200, 305);
+
+    draw_Castle_Road_Horizontal_TopView(X_INITIAL + 163.5, Y_INITIAL + 200, 10);
+    draw_Castle_Road_Horizontal_TopView(X_INITIAL + 363.5, Y_INITIAL + 200, 10);
+    draw_Castle_Road_Horizontal_TopView(X_INITIAL + 163.5, Y_INITIAL + 475, 210);
+    draw_Castle_Road_Horizontal_TopView(X_INITIAL + 163.5, Y_INITIAL + 350, 10);
+    draw_Castle_Road_Horizontal_TopView(X_INITIAL + 203.5, Y_INITIAL + 350, 35);
+    draw_Castle_Road_Horizontal_TopView(X_INITIAL + 298.5, Y_INITIAL + 350, 35);
+    draw_Castle_Road_Horizontal_TopView(X_INITIAL + 363.5, Y_INITIAL + 350, 10);
+
+}
+
+/***********************************************************************************************************************
+*                                                                                                                      *
+*                                               Draw the castle courtyard                                              *
+*                                                                                                                      *
+***********************************************************************************************************************/
+//castle courtyard
+void draw_Castle_Courtyard_Limit_TopView(GLfloat x, GLfloat y, GLfloat xSize, GLfloat ySize) {
 
     //sets the beginning of the inside draw part
     glBegin(GL_LINE_LOOP);
@@ -1421,30 +1424,124 @@ void draw_Castle_Courtyard_TopView(GLfloat x, GLfloat y, GLfloat xSize, GLfloat 
 
 }
 
+                        /**********************************************************************/
+//roundabout outside
+void draw_Castle_Courtyard_Roundabout_Outside_TopView(GLfloat x, GLfloat y) {
+
+    //sets the beginning of the inside draw part
+    glBegin(GL_LINE_LOOP);
+
+    draw_Circle(x, y, 0, 2 * PI, 7.5, 7.5);  //Center (x, y)
+
+    //sets the ending of the draw
+    glEnd();
+
+    //set the drawing to be rendered
+    glFlush();
+
+}
+
+//roundabout inside
+void draw_Castle_Courtyard_Roundabout_Inside_TopView(GLfloat x, GLfloat y) {
+
+    //sets the beginning of the inside draw part
+    glBegin(GL_LINE_LOOP);
+
+    draw_Circle(x, y, 0, 2 * PI, 2.5, 2.5);  //Center (x, y)
+
+    //sets the ending of the draw
+    glEnd();
+
+    //set the drawing to be rendered
+    glFlush();
+
+}
+
+                        /**********************************************************************/
+
+void draw_Castle_Courtyard_Store_TopView(GLfloat x, GLfloat y, GLfloat hSize, GLfloat vSize) {
+
+    //sets the beginning of the inside draw part
+    glBegin(GL_LINE_LOOP);
+
+    glVertex3f(x, y, 0);
+    glVertex3f(x + hSize, y, 0);
+    glVertex3f(x + hSize, y + vSize, 0);
+    glVertex3f(x, y + vSize, 0);
+
+    // sets the ending of the draw
+    glEnd();
+
+    // set the drawing to be rendered
+    glFlush();
+
+}
+
+void draw_Castle_Courtyard_Road_TopView(GLfloat x, GLfloat y) {
+
+    //sets the beginning of the inside draw part
+    glBegin(GL_LINE_LOOP);
+
+    glVertex3f(x, y, 0);
+    glVertex3f(x + 5, y, 0);
+    glVertex3f(x + 5, y + 5, 0);
+    glVertex3f(x, y + 5, 0);
+
+    // sets the ending of the draw
+    glEnd();
+
+    // set the drawing to be rendered
+    glFlush();
+
+}
+
 /***********************************************************************************************************************
 ************************************************************************************************************************
-***********************************Sets the origin point position of the castle roads***********************************
+*********************************Sets the origin point position of the castle courtyard*********************************
 ************************************************************************************************************************
 ***********************************************************************************************************************/
 //castle road
-void draw_Castle_Road_TopView() {
+void draw_Castle_Courtyard_TopView() {
 
-    draw_Castle_Road_Vertical_TopView(X_INITIAL + 252.5, Y_INITIAL + 295, 40);
-    draw_Castle_Road_Vertical_TopView(X_INITIAL + 252.5, Y_INITIAL + 395, 40);
-    draw_Castle_Road_Vertical_TopView(X_INITIAL + 252.5, Y_INITIAL + 465, 10);
+    draw_Castle_Courtyard_Limit_TopView(X_INITIAL + 173.5, Y_INITIAL + 200, 190, 65);
 
-    draw_Castle_Road_Vertical_TopView(X_INITIAL + 373.5, Y_INITIAL + 200, 305);
-    draw_Castle_Road_Vertical_TopView(X_INITIAL + 133.5, Y_INITIAL + 200, 305);
+    draw_Castle_Courtyard_Roundabout_Outside_TopView(X_INITIAL + 267.5, Y_INITIAL + 229.5);
 
-    draw_Castle_Road_Horizontal_TopView(X_INITIAL + 163.5, Y_INITIAL + 200, 10);
-    draw_Castle_Road_Horizontal_TopView(X_INITIAL + 363.5, Y_INITIAL + 200, 10);
-    draw_Castle_Road_Horizontal_TopView(X_INITIAL + 163.5, Y_INITIAL + 475, 210);
-    draw_Castle_Road_Horizontal_TopView(X_INITIAL + 163.5, Y_INITIAL + 350, 10);
-    draw_Castle_Road_Horizontal_TopView(X_INITIAL + 203.5, Y_INITIAL + 350, 40);
-    draw_Castle_Road_Horizontal_TopView(X_INITIAL + 293.5, Y_INITIAL + 350, 40);
-    draw_Castle_Road_Horizontal_TopView(X_INITIAL + 363.5, Y_INITIAL + 350, 10);
+    draw_Castle_Courtyard_Roundabout_Inside_TopView(X_INITIAL + 267.5, Y_INITIAL + 229.5);
 
-    draw_Castle_Courtyard_TopView(X_INITIAL + 173.5, Y_INITIAL + 200, 190, 65);
+    draw_Castle_Courtyard_Store_TopView(X_INITIAL + 177.5, Y_INITIAL + 230, 10, 32);
+    draw_Castle_Courtyard_Store_TopView(X_INITIAL + 187.5, Y_INITIAL + 252, 30, 10);
+
+    draw_Castle_Courtyard_Store_TopView(X_INITIAL + 197.5, Y_INITIAL + 220, 30, 20);
+
+    draw_Castle_Courtyard_Store_TopView(X_INITIAL + 187.5, Y_INITIAL + 200, 40, 10);
+
+    draw_Castle_Courtyard_Store_TopView(X_INITIAL + 297.5, Y_INITIAL + 200, 20, 40);
+
+    draw_Castle_Courtyard_Store_TopView(X_INITIAL + 327.5, Y_INITIAL + 200, 20, 20);
+
+    draw_Castle_Courtyard_Store_TopView(X_INITIAL + 347.5, Y_INITIAL + 230, 10, 32);
+    draw_Castle_Courtyard_Store_TopView(X_INITIAL + 297.5, Y_INITIAL + 252, 40, 10);
+
+    for (int h = 253; h < 281; h += 5) {
+
+        for (int v = 165; v < 210; v += 5) {
+
+            draw_Castle_Courtyard_Road_TopView(X_INITIAL + h, Y_INITIAL + v);
+
+        }
+
+    }
+
+    for (int h = 248; h < 286; h += 5) {
+
+        for (int v = 210; v < 250; v += 5) {
+
+            draw_Castle_Courtyard_Road_TopView(X_INITIAL + h, Y_INITIAL + v);
+
+        }
+
+    }
 
 }
 
@@ -1473,7 +1570,7 @@ void draw_Castle_Hallway_TopView(GLfloat x, GLfloat y, GLfloat sizeH, GLfloat si
 
 /***********************************************************************************************************************
 ************************************************************************************************************************
-***********************************Sets the origin point position of the castle hallways***********************************
+**********************************Sets the origin point position of the castle hallways*********************************
 ************************************************************************************************************************
 ***********************************************************************************************************************/
 //castle road
@@ -1489,47 +1586,122 @@ void draw_Castle_Hallway_TopView() {
 
 /***********************************************************************************************************************
 *                                                                                                                      *
+*                                              Draws the castle buildings                                              *
+*                                                                                                                      *
+***********************************************************************************************************************/
+
+//castle front left wall
+void draw_Castle_CentralBuilding_TopView(GLfloat x, GLfloat y) {
+
+    //sets the beginning of the inside draw part
+    glBegin(GL_LINE_LOOP);
+
+    glVertex3f(x, y, 0);
+    glVertex3f(x + 60, y, 0);
+    glVertex3f(x + 60, y + 60, 0);
+    glVertex3f(x, y + 60, 0);
+
+    // sets the ending of the draw
+    glEnd();
+
+    // set the drawing to be rendered
+    glFlush();
+
+}
+
+/***********************************************************************************************************************
+************************************************************************************************************************
+************************************Sets the origin point position of the castle walls**********************************
+************************************************************************************************************************
+***********************************************************************************************************************/
+
+///castle walls
+void draw_Castle_Buildings_TopView(/*values*/) {
+
+    draw_Castle_CentralBuilding_TopView(X_INITIAL + 238.5, Y_INITIAL + 335);
+
+}
+
+/***********************************************************************************************************************
+*                                                                                                                      *
 *                                          Draws the old castle walls it self                                          *
 *                                                                                                                      *
 ***********************************************************************************************************************/
 
 //castle old tower side top
-void draw_Castle_OldTower_SideTop_TopView(/*values*/) {}
-//castle old tower middle top
-void draw_Castle_OldTower_MiddleTop_TopView(/*values*/) {}
-//castle old tower side__middle top
-void draw_Castle_OldTower_SideMiddle_Connection_TopView(/*values*/) {}
+void draw_Castle_OldTower_Full_TopView(GLfloat x, GLfloat y, GLfloat size) {
+
+    for (GLfloat i = size / 2; i > 1; i -= 2) {
+
+        glBegin(GL_LINE_LOOP);
+
+        draw_Circle(x - size - 5, y, 0, 2 * PI, i, i);
+
+        glEnd();
+
+        glBegin(GL_LINE_LOOP);
+
+        draw_Circle(x + size + 5, y, 0, 2 * PI, i, i);
+
+        glEnd();
+
+    }
+
+    for (GLfloat i = size; i > 0; i -= 2) {
+
+        glBegin(GL_LINE_LOOP);
+
+        draw_Circle(x, y, 0, 2 * PI, i, i);
+
+        glEnd();
+
+    }
+
+    glFlush();
+
+}
 
 /***********************************************************************************************************************
-*                                                                                                                      *
-*                                 Sets the origin point position of the old castle walls                               *
-*                                                                                                                      *
+************************************************************************************************************************
+**********************************Sets the origin point position of the old castle walls********************************
+************************************************************************************************************************
 ***********************************************************************************************************************/
 
 ///castle old tower
-void draw_Castle_OldTower_TopView(/*values*/) {}
+void draw_Castle_OldTower_TopView(/*values*/) {
+
+    draw_Castle_OldTower_Full_TopView(X_INITIAL + 268.5, Y_INITIAL + 515, 20);
+
+}
 
 /***********************************************************************************************************************
 *                                                                                                                      *
-*                                     Draws the carriage castle entrance it self                                       *
+*                                            Draws the castle walls it self                                            *
 *                                                                                                                      *
 ***********************************************************************************************************************/
 
-//car Carriage entrance ramp
-void draw_Carriage_Entrance_Ramp_TopView(/*values*/) {}
-//car Carriage entrance side wall
-void draw_Carriage_Entrance_SideWall_TopView(/*values*/) {}
-//car Carriage entrance back wall
-void draw_Carriage_Entrance_BackWall_TopView(/*values*/) {}
+//castle front left wall
+void draw_Castle_LeftFrontWall_TopView(/*values*/) {}
+//castle right front wall
+void draw_Castle_RightFrontWall_TopView(/*values*/) {}
+//castle left wall
+void draw_Castle_LeftWall_TopView(/*values*/) {}
+//castle right wall
+void draw_Castle_RightWall_TopView(/*values*/) {}
+//castle back wall
+void draw_Castle_BackWall_TopView(/*values*/) {}
+
+//castle entrance tower top
+void draw_Castle_Entrance_Tower_Top_TopView(/*values*/) {}
 
 /***********************************************************************************************************************
 *                                                                                                                      *
-*                            Sets the origin point position of the carriage castle entrance                            *
+*                                   Sets the origin point position of the castle walls                                 *
 *                                                                                                                      *
 ***********************************************************************************************************************/
 
-///car Carriage entrance
-void draw_Carriage_Entrance_TopView(/*values*/) {}
+///castle walls
+void draw_Castle_Walls_TopView(/*values*/) {}
 
 /***********************************************************************************************************************
 *                                                                                                                      *
@@ -1553,22 +1725,55 @@ void drawScene(void) {
 *                  IMPORTANT: because the z component is always 0, this function does not receives it                  *
 *                                                                                                                      *
 ***********************************************************************************************************************/
-	draw_RockBlock_TopView();
+	draw_RockBlock_TopView(/*x, y*/);
+
+                        /**********************************************************************/
 	draw_LeftTower_TopView(/*x, y*/);
+
+                        /**********************************************************************/
     draw_LeftTower_Ruined_TopView(/*x, y*/);
+
+                        /**********************************************************************/
     draw_MiddleTower_TopView(/*x, y*/);
+
+                        /**********************************************************************/
     draw_RightTower_TopView(/*x, y*/);
+
+                        /**********************************************************************/
     draw_ArcBridge_TopView(/*x, y*/);
+
+                        /**********************************************************************/
     draw_ArcBridge_Ruined_TopView(/*x, y*/);
+
+                        /**********************************************************************/
     draw_MiddleTowers_connection_TopView(/*x, y*/);
+
+                        /**********************************************************************/
     draw_Gate_TopView(/*x, y*/);
+
+                        /**********************************************************************/
     draw_EntranceGargoyles_TopView(/*x, y*/);
+
+                        /**********************************************************************/
     draw_Delivery_TopView(/*x, y*/);
+
+                        /**********************************************************************/
     draw_Castle_Walls_TopView(/*x, y*/);
+
+                        /**********************************************************************/
     draw_Castle_Road_TopView(/*x, y*/);
+
+                        /**********************************************************************/
     draw_Castle_Hallway_TopView(/*x, y*/);
+
+                        /**********************************************************************/
+    draw_Castle_Courtyard_TopView(/*x, y*/);
+
+                        /**********************************************************************/
     draw_Castle_OldTower_TopView(/*x, y*/);
-    draw_Carriage_Entrance_TopView(/*x, y*/);
+
+                        /**********************************************************************/
+    draw_Castle_Buildings_TopView(/*x, y*/);
 
 	//send the scene to be rendered
 	glFlush();
