@@ -1344,18 +1344,29 @@ void draw_MiddleTowers_connection_TopView() {
 //gate head
 void draw_Gate_Head_TopView(GLfloat size) {
 
-	//sets the beginning of the inside draw part
-	glBegin(GL_LINE_LOOP);
+    glPushMatrix();
+    glTranslatef(X_INITIAL, Y_INITIAL, 0);
+    glScalef(size, 1, 100);
+    create_Front_Face();
+    glTranslatef(0, 5, 0);
+    create_Front_Face();
+    glPopMatrix();
 
-	glVertex3f(X_INITIAL, Y_INITIAL, 0);
-	glVertex3f(X_INITIAL + size, Y_INITIAL, 0);      //     adds 100px width
-	glVertex3f(X_INITIAL + size, Y_INITIAL + 5, 0);  //     adds 100px height
-	glVertex3f(X_INITIAL, Y_INITIAL + 5, 0);        //     removes 5px width
+    glPushMatrix();
+    glTranslatef(X_INITIAL, Y_INITIAL, 0);
+    glScalef(1, 5, 100);
+    create_Left_Face();
+    glTranslatef(size, 0, 0);
+    create_Left_Face();
+    glPopMatrix();
 
-	//sets the ending of the draw
-	glEnd();
-
-	//set the drawing to be rendered
+    glPushMatrix();
+    glTranslatef(X_INITIAL, Y_INITIAL, 0);
+    glScalef(size, 5, 1);
+    create_Bot_Face();
+    glTranslatef(0, 0, 100);
+    create_Bot_Face();
+    glPopMatrix();
 
 /*
 	//sets the beginning of the inside draw part
@@ -1562,6 +1573,20 @@ void draw_EntranceGargoyles_TopView() {
 *                                                                                                                      *
 ***********************************************************************************************************************/
 
+void draw_FrontDoor_Tower_Body_TopView() {
+
+    glPushMatrix();
+    glTranslatef(X_INITIAL, Y_INITIAL, 0);
+    glBegin(GL_LINE_LOOP);
+
+    draw_2_Circle(0, 2 * PI, 5, 5);
+    draw_3_Circle(0, 2 * PI, 5, 5, 100);
+
+    glEnd();
+    glPopMatrix();
+
+}
+
 void draw_FrontDoor_Tower_TopView() {
 
 	glPushMatrix();
@@ -1570,7 +1595,7 @@ void draw_FrontDoor_Tower_TopView() {
 
 	draw_2_Circle(0, 2 * PI, 5, 5);
 	draw_3_Circle(0, 2 * PI, 3, 3, 5);
-	draw_3_Circle(0, 2 * PI, 1, 1, 5);
+	draw_3_Circle(0, 2 * PI, 1, 1, 10);
 
 	glEnd();
 	glPopMatrix();
@@ -1578,13 +1603,15 @@ void draw_FrontDoor_Tower_TopView() {
 }
 
 /**********************************************************************/
-void draw_FrontDoor_TopView(GLfloat x, GLfloat y) {
+void draw_FrontDoor_TopView() {
 
 	glPushMatrix();
 	glTranslatef(2.5, 2.5, 0);
 	draw_FrontDoor_Tower_TopView();
+	draw_FrontDoor_Tower_Body_TopView();
 	glTranslatef(35, 0, 0);
 	draw_FrontDoor_Tower_TopView();
+	draw_FrontDoor_Tower_Body_TopView();
 	glPopMatrix();
 
 	glPushMatrix();
@@ -1606,7 +1633,7 @@ void draw_Delivery_TopView() {
 
 	glPushMatrix();
 	glTranslatef(247.5, 160, 0);
-	draw_FrontDoor_TopView(X_INITIAL + 247.5, Y_INITIAL + 160);
+	draw_FrontDoor_TopView();
 	glPopMatrix();
 
 }
@@ -1733,6 +1760,8 @@ void draw_Castle_Courtyard_Roundabout_Outside_TopView() {
 
 	draw_2_Circle(0, 2 * PI, 7.5, 7.5);  //Center (x, y)
 
+    draw_3_Circle(0, 2 * PI, 7.5, 7.5, 5);  //Center (x, y)
+
 	//sets the ending of the draw
 	glEnd();
 
@@ -1748,6 +1777,8 @@ void draw_Castle_Courtyard_Roundabout_Inside_TopView() {
 	glBegin(GL_LINE_LOOP);
 
 	draw_2_Circle(0, 2 * PI, 2.5, 2.5);  //Center (x, y)
+
+    draw_3_Circle(0, 2 * PI, 2.5, 2.5, 10);  //Center (x, y)
 
 	//sets the ending of the draw
 	glEnd();
@@ -1822,11 +1853,6 @@ void draw_Castle_Courtyard_TopView() {
 
 	glTranslatef(94.5, 29.5, 0);
 	draw_Castle_Courtyard_Roundabout_Outside_TopView();
-	draw_Castle_Courtyard_Roundabout_Inside_TopView();
-
-	glTranslatef(0, 0, 5);
-	draw_Castle_Courtyard_Roundabout_Outside_TopView();
-	glTranslatef(0, 0, 5);
 	draw_Castle_Courtyard_Roundabout_Inside_TopView();
 	glPopMatrix();
 
@@ -2047,14 +2073,15 @@ void draw_Castle_OldTower_Roof_TopView(GLfloat size) {
 }
 
 //castle old tower side top
-void draw_Castle_OldTower_Full_TopView(GLfloat size) {
+void draw_Castle_OldTower_Body_TopView() {
 
-    glPushMatrix();
-    glTranslatef(size + 5, 0, 200);
-    glBegin(GL_LINE_LOOP);
-    draw_Castle_OldTower_Roof_TopView(size / 2);
-    glEnd();
-    glPopMatrix();
+    draw_2_Circle(0, 2 * PI, 1, 1);
+    draw_3_Circle(0, 2 * PI, 1, 1, 1);
+
+}
+
+//castle old tower side top
+void draw_Castle_OldTower_Left_TopView(GLfloat size) {
 
     glPushMatrix();
     glTranslatef(-size - 5, 0, 200);
@@ -2064,11 +2091,60 @@ void draw_Castle_OldTower_Full_TopView(GLfloat size) {
     glPopMatrix();
 
     glPushMatrix();
+    glTranslatef(-size - 5, 0, 150);
+    glScalef(size / 2, size / 2, 50);
+    glBegin(GL_LINE_LOOP);
+    draw_Castle_OldTower_Body_TopView();
+    glEnd();
+    glPopMatrix();
+
+}
+
+//castle old tower side top
+void draw_Castle_OldTower_Central_TopView(GLfloat size) {
+
+    glPushMatrix();
     glTranslatef(0, 0, 200);
     glBegin(GL_LINE_LOOP);
     draw_Castle_OldTower_Roof_TopView(size);
     glEnd();
     glPopMatrix();
+
+    glPushMatrix();
+    glScalef(size, size, 200);
+    glBegin(GL_LINE_LOOP);
+    draw_Castle_OldTower_Body_TopView();
+    glEnd();
+    glPopMatrix();
+
+}
+
+//castle old tower side top
+void draw_Castle_OldTower_Right_TopView(GLfloat size) {
+
+    glPushMatrix();
+    glTranslatef(size + 5, 0, 200);
+    glBegin(GL_LINE_LOOP);
+    draw_Castle_OldTower_Roof_TopView(size / 2);
+    glEnd();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(size + 5, 0, 150);
+    glScalef(size / 2, size / 2, 50);
+    glBegin(GL_LINE_LOOP);
+    draw_Castle_OldTower_Body_TopView();
+    glEnd();
+    glPopMatrix();
+
+}
+
+//castle old tower side top
+void draw_Castle_OldTower_Full_TopView(GLfloat size) {
+
+    draw_Castle_OldTower_Left_TopView(size);
+    draw_Castle_OldTower_Central_TopView(size);
+    draw_Castle_OldTower_Right_TopView(size);
 
 }
 
@@ -2214,8 +2290,8 @@ void resize(int w, int h) {
 	//set the orthographic view (perpendicular) with the size:
 	//x_min, x_max, y_min, y_max, z_min, z_max (from the observer perspective!)
 	//AKA -> left, right, top, down, near, far
-	glRotatef(70, 1, 0, 0);
-	glRotatef(70, 0, 0, 1);
+//	glRotatef(70, 1, 0, 0);
+//	glRotatef(70, 0, 0, 1);
 	glOrtho(X_MIN_VIEW, X_MAX_VIEW, Y_MIN_VIEW, Y_MAX_VIEW, Z_MIN_VIEW, Z_MAX_VIEW);
 	glTranslatef(100, 100, -500);
 
