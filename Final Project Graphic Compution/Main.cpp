@@ -213,22 +213,22 @@ void draw_Left_RockBlock_TopView() {
 	//sets the beginning of the draw
 	glBegin(GL_LINE_LOOP);
 
-	glVertex3f(X_INITIAL + 34, Y_INITIAL, 0);
-	glVertex3f(X_INITIAL + 32, Y_INITIAL + 0.25, 0);
-	glVertex3f(X_INITIAL + 30, Y_INITIAL + 0.5, 0);
-	glVertex3f(X_INITIAL + 28, Y_INITIAL + 0.75, 0);
-	glVertex3f(X_INITIAL + 26, Y_INITIAL + 1, 0);
-	glVertex3f(X_INITIAL + 20, Y_INITIAL + 5, 0);
-	glVertex3f(X_INITIAL + 10, Y_INITIAL + 12, 0);
-	glVertex3f(X_INITIAL + 5, Y_INITIAL + 20, 0);
-	glVertex3f(X_INITIAL + 2.5, Y_INITIAL + 40, 0);
-	glVertex3f(X_INITIAL, Y_INITIAL + 45, 0);
-	glVertex3f(X_INITIAL + 2.5, Y_INITIAL + 50, 0);
-	glVertex3f(X_INITIAL + 5, Y_INITIAL + 55, 0);
-	glVertex3f(X_INITIAL + 7.5, Y_INITIAL + 65, 0);
-	glVertex3f(X_INITIAL + 15, Y_INITIAL + 75, 0);
+	glVertex3f(34, 0, 0);
+	glVertex3f(32, 0.25, 0);
+	glVertex3f(30, 0.5, 0);
+	glVertex3f(28, 0.75, 0);
+	glVertex3f(26, 1, 0);
+	glVertex3f(20, 5, 0);
+	glVertex3f(10, 12, 0);
+	glVertex3f(5, 20, 0);
+	glVertex3f(2.5, 40, 0);
+	glVertex3f(0, 45, 0);
+	glVertex3f(2.5, 50, 0);
+	glVertex3f(5, 55, 0);
+	glVertex3f(7.5, 65, 0);
+	glVertex3f(15, 75, 0);
 
-	draw_Inverted_Circle(X_INITIAL + 40, Y_INITIAL + 40, PI / 2, -(PI) / 2, 40, 40);  //Center (x, y)
+	draw_Inverted_Circle(40, 40, PI / 2, -(PI) / 2, 40, 40);  //Center (x, y)
 
 	//sets the ending of the draw
 	glEnd();
@@ -245,30 +245,30 @@ void draw_LeftMiddle_RockBlock_Connection_TopView() {
 	glBegin(GL_LINE_LOOP);
 
 
-	draw_Inverted_Circle(X_INITIAL - 40, Y_INITIAL + 20, (5 * PI) / 24, -PI / 3, 40, 40);  //Center (x, y)
+	draw_Inverted_Circle(-40, 20, (5 * PI) / 24, -PI / 3, 40, 40);  //Center (x, y)
 
 	//based on the position of the original point makes calculus to create the other points
 	//so it has the pretended shape
-	glVertex3f(X_INITIAL + 10, Y_INITIAL - 5, 0);
-	glVertex3f(X_INITIAL + 30, Y_INITIAL, 0);
-	glVertex3f(X_INITIAL + 37.5, Y_INITIAL - 10, 0);
-	glVertex3f(X_INITIAL + 50, Y_INITIAL - 15, 0);
-	glVertex3f(X_INITIAL + 60, Y_INITIAL - 5, 0);
-	glVertex3f(X_INITIAL + 70, Y_INITIAL, 0);
-	glVertex3f(X_INITIAL + 90, Y_INITIAL - 5, 0);
-	glVertex3f(X_INITIAL + 97, Y_INITIAL - 5, 0);
-	glVertex3f(X_INITIAL + 95, Y_INITIAL - 2, 0);
-	glVertex3f(X_INITIAL + 105, Y_INITIAL + 38, 0);
-	glVertex3f(X_INITIAL + 110, Y_INITIAL + 48, 0);
-	glVertex3f(X_INITIAL + 115, Y_INITIAL + 58, 0);
-	glVertex3f(X_INITIAL + 117, Y_INITIAL + 60, 0);
+	glVertex3f(10, -5, 0);
+	glVertex3f(30, 0, 0);
+	glVertex3f(37.5, -10, 0);
+	glVertex3f(50, -15, 0);
+	glVertex3f(60, -5, 0);
+	glVertex3f(70, 0, 0);
+	glVertex3f(90, -5, 0);
+	glVertex3f(97, -5, 0);
+	glVertex3f(95, -2, 0);
+	glVertex3f(105, 38, 0);
+	glVertex3f(110, 48, 0);
+	glVertex3f(115, 58, 0);
+	glVertex3f(117, 60, 0);
 
-	glVertex3f(X_INITIAL + 100, Y_INITIAL + 50, 0);
-	glVertex3f(X_INITIAL + 90, Y_INITIAL + 57.5, 0);
-	glVertex3f(X_INITIAL + 60, Y_INITIAL + 60, 0);
-	glVertex3f(X_INITIAL + 50, Y_INITIAL + 50, 0);
-	glVertex3f(X_INITIAL + 30, Y_INITIAL + 40, 0);
-	glVertex3f(X_INITIAL + 10, Y_INITIAL + 35, 0);
+	glVertex3f(100, 50, 0);
+	glVertex3f(90, 57.5, 0);
+	glVertex3f(60, 60, 0);
+	glVertex3f(50, 50, 0);
+	glVertex3f(30, 40, 0);
+	glVertex3f(10, 35, 0);
 
 	//sets the ending of the draw
 	glEnd();
@@ -283,31 +283,31 @@ void draw_Middle_RockBlock_TopView() {
 
 	glBegin(GL_LINE_LOOP);
 
-	glVertex3f(X_INITIAL + 60, Y_INITIAL, 0);
-	glVertex3f(X_INITIAL + 55, Y_INITIAL, 0);
-	glVertex3f(X_INITIAL + 30, Y_INITIAL + 10, 0);
-	glVertex3f(X_INITIAL + 20, Y_INITIAL + 40, 0);
-	glVertex3f(X_INITIAL + 2, Y_INITIAL + 50, 0);
-	glVertex3f(X_INITIAL - 5, Y_INITIAL + 70, 0);
-	glVertex3f(X_INITIAL + 5, Y_INITIAL + 110, 0);
-	glVertex3f(X_INITIAL + 10, Y_INITIAL + 120, 0);
-	glVertex3f(X_INITIAL + 15, Y_INITIAL + 130, 0);
-	glVertex3f(X_INITIAL + 25, Y_INITIAL + 140, 0);
-	glVertex3f(X_INITIAL + 65, Y_INITIAL + 150, 0);
-	glVertex3f(X_INITIAL + 65, Y_INITIAL + 140, 0);
-	glVertex3f(X_INITIAL + 105, Y_INITIAL + 140, 0);
-	glVertex3f(X_INITIAL + 130, Y_INITIAL + 145, 0);
-	glVertex3f(X_INITIAL + 140, Y_INITIAL + 140, 0);
-	glVertex3f(X_INITIAL + 170, Y_INITIAL + 130, 0);
-	glVertex3f(X_INITIAL + 175, Y_INITIAL + 125, 0);
-	glVertex3f(X_INITIAL + 180, Y_INITIAL + 115, 0);
-	glVertex3f(X_INITIAL + 190, Y_INITIAL + 100, 0);
-	glVertex3f(X_INITIAL + 180, Y_INITIAL + 70, 0);
-	glVertex3f(X_INITIAL + 175, Y_INITIAL + 60, 0);
-	glVertex3f(X_INITIAL + 160, Y_INITIAL + 40, 0);
-	glVertex3f(X_INITIAL + 155, Y_INITIAL + 30, 0);
-	glVertex3f(X_INITIAL + 150, Y_INITIAL + 15, 0);
-	glVertex3f(X_INITIAL + 140, Y_INITIAL, 0);
+	glVertex3f(60, 0, 0);
+	glVertex3f(55, 0, 0);
+	glVertex3f(30, 10, 0);
+	glVertex3f(20, 40, 0);
+	glVertex3f(2, 50, 0);
+	glVertex3f(-5, 70, 0);
+	glVertex3f(5, 110, 0);
+	glVertex3f(10, 120, 0);
+	glVertex3f(15, 130, 0);
+	glVertex3f(25, 140, 0);
+	glVertex3f(65, 150, 0);
+	glVertex3f(65, 140, 0);
+	glVertex3f(105, 140, 0);
+	glVertex3f(130, 145, 0);
+	glVertex3f(140, 140, 0);
+	glVertex3f(170, 130, 0);
+	glVertex3f(175, 125, 0);
+	glVertex3f(180, 115, 0);
+	glVertex3f(190, 100, 0);
+	glVertex3f(180, 70, 0);
+	glVertex3f(175, 60, 0);
+	glVertex3f(160, 40, 0);
+	glVertex3f(155, 30, 0);
+	glVertex3f(150, 15, 0);
+	glVertex3f(140, 0, 0);
 
 	//sets the ending of the draw
 	glEnd();
@@ -323,24 +323,24 @@ void draw_RightMiddle_RockBlock_Connection_TopView() {
 	//sets the beginning of the draw
 	glBegin(GL_LINE_LOOP);
 
-	glVertex3f(X_INITIAL, Y_INITIAL, 0);
-	glVertex3f(X_INITIAL + 10, Y_INITIAL - 12.5, 0);  //    adds 40px height
-	glVertex3f(X_INITIAL + 20, Y_INITIAL - 8, 0);  //    adds 40px height
-	glVertex3f(X_INITIAL + 25, Y_INITIAL - 5, 0);
-	glVertex3f(X_INITIAL + 20, Y_INITIAL + 10, 0);
-	glVertex3f(X_INITIAL + 18, Y_INITIAL + 25, 0);
-	glVertex3f(X_INITIAL + 25, Y_INITIAL + 40, 0);
-	glVertex3f(X_INITIAL + 40, Y_INITIAL + 50, 0);
-	glVertex3f(X_INITIAL + 50, Y_INITIAL + 60, 0);
-	glVertex3f(X_INITIAL + 35, Y_INITIAL + 55, 0);       //    removes 35px width
-	glVertex3f(X_INITIAL + 20, Y_INITIAL + 62, 0);       //    removes 35px width
-	glVertex3f(X_INITIAL + 15, Y_INITIAL + 60, 0);       //    removes 35px width
-	glVertex3f(X_INITIAL - 5, Y_INITIAL + 68, 0);       //    removes 35px width
+	glVertex3f(0, 0, 0);
+	glVertex3f(10, -12.5, 0);  //    adds 40px height
+	glVertex3f(20, -8, 0);  //    adds 40px height
+	glVertex3f(25, -5, 0);
+	glVertex3f(20, 10, 0);
+	glVertex3f(18, 25, 0);
+	glVertex3f(25, 40, 0);
+	glVertex3f(40, 50, 0);
+	glVertex3f(50, 60, 0);
+	glVertex3f(35, 55, 0);       //    removes 35px width
+	glVertex3f(20, 62, 0);       //    removes 35px width
+	glVertex3f(15, 60, 0);       //    removes 35px width
+	glVertex3f(-5, 68, 0);       //    removes 35px width
 
-	glVertex3f(X_INITIAL - 10, Y_INITIAL + 60, 0);       //    removes 35px width
-	glVertex3f(X_INITIAL - 5, Y_INITIAL + 55, 0);       //    removes 35px width
-	glVertex3f(X_INITIAL, Y_INITIAL + 45, 0);       //    removes 35px width
-	glVertex3f(X_INITIAL + 10, Y_INITIAL + 30, 0);       //    removes 35px width
+	glVertex3f(-10, 60, 0);       //    removes 35px width
+	glVertex3f(-5, 55, 0);       //    removes 35px width
+	glVertex3f(0, 45, 0);       //    removes 35px width
+	glVertex3f(10, 30, 0);       //    removes 35px width
 
 	//sets the ending of the draw
 	glEnd();
@@ -356,30 +356,30 @@ void draw_Right_RockBlock_TopView() {
 	//sets the beginning of the draw
 	glBegin(GL_LINE_LOOP);
 
-	glVertex3f(X_INITIAL + 15, Y_INITIAL + 30, 0);
-	glVertex3f(X_INITIAL + 5, Y_INITIAL + 35, 0);
-	glVertex3f(X_INITIAL, Y_INITIAL + 50, 0);
-	glVertex3f(X_INITIAL - 2, Y_INITIAL + 65, 0);
-	glVertex3f(X_INITIAL + 5, Y_INITIAL + 80, 0);
-	glVertex3f(X_INITIAL + 20, Y_INITIAL + 90, 0);
-	glVertex3f(X_INITIAL + 30, Y_INITIAL + 100, 0);      //    removes 135px width
-	glVertex3f(X_INITIAL + 65, Y_INITIAL + 105, 0);
-	glVertex3f(X_INITIAL + 100, Y_INITIAL + 100, 0);
-	glVertex3f(X_INITIAL + 110, Y_INITIAL + 95, 0);
-	glVertex3f(X_INITIAL + 120, Y_INITIAL + 85, 0);
-	glVertex3f(X_INITIAL + 125, Y_INITIAL + 75, 0);
-	glVertex3f(X_INITIAL + 130, Y_INITIAL + 70, 0);
-	glVertex3f(X_INITIAL + 132, Y_INITIAL + 65, 0);
-	glVertex3f(X_INITIAL + 130, Y_INITIAL + 60, 0);
-	glVertex3f(X_INITIAL + 135, Y_INITIAL + 50, 0);//    adds 100px height
-	glVertex3f(X_INITIAL + 125, Y_INITIAL + 20, 0);
-	glVertex3f(X_INITIAL + 115, Y_INITIAL + 20, 0);
-	glVertex3f(X_INITIAL + 107, Y_INITIAL + 10, 0);
-	glVertex3f(X_INITIAL + 100, Y_INITIAL + 3, 0);
-	glVertex3f(X_INITIAL + 67.5, Y_INITIAL, 0);      //    adds 135px width
-	glVertex3f(X_INITIAL + 50, Y_INITIAL + 5, 0);
-	glVertex3f(X_INITIAL + 30, Y_INITIAL + 5, 0);
-	glVertex3f(X_INITIAL + 20, Y_INITIAL + 15, 0);
+	glVertex3f(15, 30, 0);
+	glVertex3f(5, 35, 0);
+	glVertex3f(0, 50, 0);
+	glVertex3f(-2, 65, 0);
+	glVertex3f(5, 80, 0);
+	glVertex3f(20, 90, 0);
+	glVertex3f(30, 100, 0);      //    removes 135px width
+	glVertex3f(65, 105, 0);
+	glVertex3f(100, 100, 0);
+	glVertex3f(110, 95, 0);
+	glVertex3f(120, 85, 0);
+	glVertex3f(125, 75, 0);
+	glVertex3f(130, 70, 0);
+	glVertex3f(132, 65, 0);
+	glVertex3f(130, 60, 0);
+	glVertex3f(135, 50, 0);//    adds 100px height
+	glVertex3f(125, 20, 0);
+	glVertex3f(115, 20, 0);
+	glVertex3f(107, 10, 0);
+	glVertex3f(100, 3, 0);
+	glVertex3f(67.5, 0, 0);      //    adds 135px width
+	glVertex3f(50, 5, 0);
+	glVertex3f(30, 5, 0);
+	glVertex3f(20, 15, 0);
 
 	//sets the ending of the draw
 	glEnd();
@@ -396,19 +396,19 @@ void draw_DeliveryPath_RockBlock_TopView() {
 	//sets the beginning of the draw
 	glBegin(GL_LINE_LOOP);
 
-	glVertex3f(X_INITIAL, Y_INITIAL, 0);
-	glVertex3f(X_INITIAL + 40, Y_INITIAL, 0);       //    adds 40px width
-	glVertex3f(X_INITIAL + 65, Y_INITIAL + 5, 0);
-	glVertex3f(X_INITIAL + 50, Y_INITIAL + 10, 0);
-	glVertex3f(X_INITIAL + 55, Y_INITIAL + 30, 0);
-	glVertex3f(X_INITIAL + 45, Y_INITIAL + 40, 0);
-	glVertex3f(X_INITIAL + 40, Y_INITIAL + 70, 0);
-	glVertex3f(X_INITIAL + 5, Y_INITIAL + 70, 0);
-	glVertex3f(X_INITIAL + 5, Y_INITIAL + 60, 0);
-	glVertex3f(X_INITIAL, Y_INITIAL + 45, 0);
-	glVertex3f(X_INITIAL, Y_INITIAL + 30, 0);
-	glVertex3f(X_INITIAL - 5, Y_INITIAL + 15, 0);
-	glVertex3f(X_INITIAL, Y_INITIAL + 10, 0);
+	glVertex3f(0, 0, 0);
+	glVertex3f(40, 0, 0);       //    adds 40px width
+	glVertex3f(65, 5, 0);
+	glVertex3f(50, 10, 0);
+	glVertex3f(55, 30, 0);
+	glVertex3f(45, 40, 0);
+	glVertex3f(40, 70, 0);
+	glVertex3f(5, 70, 0);
+	glVertex3f(5, 60, 0);
+	glVertex3f(0, 45, 0);
+	glVertex3f(0, 30, 0);
+	glVertex3f(-5, 15, 0);
+	glVertex3f(0, 10, 0);
 
 	//sets the ending of the draw
 	glEnd();
@@ -425,53 +425,53 @@ void draw_EntrancePath_Full_RockBlock_TopView() {
 	//sets the beginning of the draw
 	glBegin(GL_LINE_LOOP);
 
-	glVertex3f(X_INITIAL + 10, Y_INITIAL, 0);
-	glVertex3f(X_INITIAL + 75, Y_INITIAL, 0);
-	glVertex3f(X_INITIAL + 75, Y_INITIAL - 5, 0);
-	draw_Circle(X_INITIAL + 74, Y_INITIAL - 15, (PI / 2), ((3 * PI) / 2), 2, 5);
-	glVertex3f(X_INITIAL + 80, Y_INITIAL - 25, 0);
-	glVertex3f(X_INITIAL + 78, Y_INITIAL - 30, 0);
-	glVertex3f(X_INITIAL + 95, Y_INITIAL - 40, 0);
-	glVertex3f(X_INITIAL + 110, Y_INITIAL - 60, 0);
-	glVertex3f(X_INITIAL + 110, Y_INITIAL - 70, 0);
-	glVertex3f(X_INITIAL + 111, Y_INITIAL - 75, 0);
-	glVertex3f(X_INITIAL + 115, Y_INITIAL - 80, 0);
-	glVertex3f(X_INITIAL + 119, Y_INITIAL - 85, 0);
-	glVertex3f(X_INITIAL + 120, Y_INITIAL - 90, 0);
-	glVertex3f(X_INITIAL + 130, Y_INITIAL - 100, 0);
-	glVertex3f(X_INITIAL + 120, Y_INITIAL - 110, 0);
-	glVertex3f(X_INITIAL + 118, Y_INITIAL - 112, 0);
-	glVertex3f(X_INITIAL + 115, Y_INITIAL - 112, 0);
-	glVertex3f(X_INITIAL + 108, Y_INITIAL - 120, 0);
-	glVertex3f(X_INITIAL + 70, Y_INITIAL - 130, 0);
-	glVertex3f(X_INITIAL + 50, Y_INITIAL - 128, 0);
-	glVertex3f(X_INITIAL + 20, Y_INITIAL - 140, 0);
-	glVertex3f(X_INITIAL - 5, Y_INITIAL - 137, 0);
-	glVertex3f(X_INITIAL, Y_INITIAL - 150, 0);
-	glVertex3f(X_INITIAL - 5, Y_INITIAL - 165, 0);
-	glVertex3f(X_INITIAL - 5, Y_INITIAL - 170, 0);
-	glVertex3f(X_INITIAL - 40, Y_INITIAL - 170, 0);
-	glVertex3f(X_INITIAL - 50, Y_INITIAL - 160, 0);
-	glVertex3f(X_INITIAL - 52, Y_INITIAL - 155, 0);
-	glVertex3f(X_INITIAL - 55, Y_INITIAL - 150, 0);
-	glVertex3f(X_INITIAL - 52, Y_INITIAL - 145, 0);
-	glVertex3f(X_INITIAL - 50, Y_INITIAL - 130, 0);
-	glVertex3f(X_INITIAL - 40, Y_INITIAL - 130, 0);
-	glVertex3f(X_INITIAL - 30, Y_INITIAL - 125, 0);
-	glVertex3f(X_INITIAL - 27.5, Y_INITIAL - 120, 0);
-	glVertex3f(X_INITIAL - 30, Y_INITIAL - 110, 0);
-	glVertex3f(X_INITIAL - 15, Y_INITIAL - 105, 0);
-	glVertex3f(X_INITIAL - 10, Y_INITIAL - 95, 0);
-	glVertex3f(X_INITIAL + 5, Y_INITIAL - 90, 0);
-	glVertex3f(X_INITIAL + 30, Y_INITIAL - 100, 0);
-	glVertex3f(X_INITIAL + 35, Y_INITIAL - 105, 0);
-	glVertex3f(X_INITIAL + 50, Y_INITIAL - 95, 0);
-	glVertex3f(X_INITIAL + 75, Y_INITIAL - 90, 0);
-	glVertex3f(X_INITIAL + 60, Y_INITIAL - 80, 0);
-	glVertex3f(X_INITIAL + 67, Y_INITIAL - 67, 0);
-	glVertex3f(X_INITIAL + 65, Y_INITIAL - 60, 0);
-	glVertex3f(X_INITIAL + 45, Y_INITIAL - 50, 0);
-	glVertex3f(X_INITIAL + 35, Y_INITIAL - 20, 0);
+	glVertex3f(10, 0, 0);
+	glVertex3f(75, 0, 0);
+	glVertex3f(75, -5, 0);
+	draw_Circle(74, -15, (PI / 2), ((3 * PI) / 2), 2, 5);
+	glVertex3f(80, -25, 0);
+	glVertex3f(78, -30, 0);
+	glVertex3f(95, -40, 0);
+	glVertex3f(110, -60, 0);
+	glVertex3f(110, -70, 0);
+	glVertex3f(111, -75, 0);
+	glVertex3f(115, -80, 0);
+	glVertex3f(119, -85, 0);
+	glVertex3f(120, -90, 0);
+	glVertex3f(130, -100, 0);
+	glVertex3f(120, -110, 0);
+	glVertex3f(118, -112, 0);
+	glVertex3f(115, -112, 0);
+	glVertex3f(108, -120, 0);
+	glVertex3f(70, -130, 0);
+	glVertex3f(50, -128, 0);
+	glVertex3f(20, -140, 0);
+	glVertex3f(-5, -137, 0);
+	glVertex3f(0, -150, 0);
+	glVertex3f(-5, -165, 0);
+	glVertex3f(-5, -170, 0);
+	glVertex3f(-40, -170, 0);
+	glVertex3f(-50, -160, 0);
+	glVertex3f(-52, -155, 0);
+	glVertex3f(-55, -150, 0);
+	glVertex3f(-52, -145, 0);
+	glVertex3f(-50, -130, 0);
+	glVertex3f(-40, -130, 0);
+	glVertex3f(-30, -125, 0);
+	glVertex3f(-27.5, -120, 0);
+	glVertex3f(-30, -110, 0);
+	glVertex3f(-15, -105, 0);
+	glVertex3f(-10, -95, 0);
+	glVertex3f(5, -90, 0);
+	glVertex3f(30, -100, 0);
+	glVertex3f(35, -105, 0);
+	glVertex3f(50, -95, 0);
+	glVertex3f(75, -90, 0);
+	glVertex3f(60, -80, 0);
+	glVertex3f(67, -67, 0);
+	glVertex3f(65, -60, 0);
+	glVertex3f(45, -50, 0);
+	glVertex3f(35, -20, 0);
 
 	//sets the ending of the draw
 	glEnd();
@@ -488,63 +488,63 @@ void draw_Castle_RockBlock_TopView() {
 	//sets the beginning of the draw
 	glBegin(GL_LINE_LOOP);
 
-	glVertex3f(X_INITIAL, Y_INITIAL + 35, 0);
-	glVertex3f(X_INITIAL + 5, Y_INITIAL + 30, 0);
-	glVertex3f(X_INITIAL + 30, Y_INITIAL + 20, 0);
-	glVertex3f(X_INITIAL + 54, Y_INITIAL, 0);
-	glVertex3f(X_INITIAL + 60, Y_INITIAL - 5, 0);
-	glVertex3f(X_INITIAL + 90, Y_INITIAL - 10, 0);
-	glVertex3f(X_INITIAL + 300, Y_INITIAL, 0);
-	glVertex3f(X_INITIAL + 330, Y_INITIAL + 10, 0);
-	glVertex3f(X_INITIAL + 340, Y_INITIAL + 20, 0);
-	glVertex3f(X_INITIAL + 360, Y_INITIAL + 45, 0);
-	glVertex3f(X_INITIAL + 370, Y_INITIAL + 70, 0);
-	glVertex3f(X_INITIAL + 380, Y_INITIAL + 80, 0);
-	glVertex3f(X_INITIAL + 395, Y_INITIAL + 95, 0);
-	glVertex3f(X_INITIAL + 390, Y_INITIAL + 117, 0);
-	glVertex3f(X_INITIAL + 400, Y_INITIAL + 120, 0);
-	glVertex3f(X_INITIAL + 415, Y_INITIAL + 145, 0);
-	glVertex3f(X_INITIAL + 420, Y_INITIAL + 150, 0);
-	glVertex3f(X_INITIAL + 400, Y_INITIAL + 175, 0);
-	glVertex3f(X_INITIAL + 410, Y_INITIAL + 210, 0);
-	glVertex3f(X_INITIAL + 390, Y_INITIAL + 240, 0);
-	glVertex3f(X_INITIAL + 390, Y_INITIAL + 260, 0);
-	glVertex3f(X_INITIAL + 380, Y_INITIAL + 280, 0);
-	glVertex3f(X_INITIAL + 390, Y_INITIAL + 290, 0);
-	glVertex3f(X_INITIAL + 377, Y_INITIAL + 310, 0);
-	glVertex3f(X_INITIAL + 360, Y_INITIAL + 325, 0);
-	glVertex3f(X_INITIAL + 340, Y_INITIAL + 330, 0);
-	glVertex3f(X_INITIAL + 330, Y_INITIAL + 340, 0);
-	glVertex3f(X_INITIAL + 300, Y_INITIAL + 350, 0);
-	glVertex3f(X_INITIAL + 280, Y_INITIAL + 370, 0);
-	glVertex3f(X_INITIAL + 260, Y_INITIAL + 370, 0);
-	glVertex3f(X_INITIAL + 240, Y_INITIAL + 390, 0);
-	glVertex3f(X_INITIAL + 200, Y_INITIAL + 400, 0);
-	glVertex3f(X_INITIAL + 188.5, Y_INITIAL + 385, 0);
-	glVertex3f(X_INITIAL + 130, Y_INITIAL + 390, 0);
-	glVertex3f(X_INITIAL + 80, Y_INITIAL + 380, 0);
-	glVertex3f(X_INITIAL + 65, Y_INITIAL + 385, 0);
-	glVertex3f(X_INITIAL + 35, Y_INITIAL + 370, 0);
-	glVertex3f(X_INITIAL + 30, Y_INITIAL + 340, 0);
-	glVertex3f(X_INITIAL + 20, Y_INITIAL + 350, 0);
-	glVertex3f(X_INITIAL + 5, Y_INITIAL + 330, 0);
-	glVertex3f(X_INITIAL + 5, Y_INITIAL + 320, 0);
-	glVertex3f(X_INITIAL - 10, Y_INITIAL + 290, 0);
-	glVertex3f(X_INITIAL - 5, Y_INITIAL + 250, 0);
-	glVertex3f(X_INITIAL - 20, Y_INITIAL + 220, 0);
-	glVertex3f(X_INITIAL - 30, Y_INITIAL + 200, 0);
-	glVertex3f(X_INITIAL - 23, Y_INITIAL + 175, 0);
-	glVertex3f(X_INITIAL - 30, Y_INITIAL + 130, 0);
-	glVertex3f(X_INITIAL - 15, Y_INITIAL + 90, 0);
-	glVertex3f(X_INITIAL - 5, Y_INITIAL + 80, 0);
-	glVertex3f(X_INITIAL + 5, Y_INITIAL + 60, 0);
-	glVertex3f(X_INITIAL, Y_INITIAL + 40, 0);
+	glVertex3f(0, 35, 0);
+	glVertex3f(5, 30, 0);
+	glVertex3f(30, 20, 0);
+	glVertex3f(54, 0, 0);
+	glVertex3f(60, -5, 0);
+	glVertex3f(90, -10, 0);
+	glVertex3f(300, 0, 0);
+	glVertex3f(330, 10, 0);
+	glVertex3f(340, 20, 0);
+	glVertex3f(360, 45, 0);
+	glVertex3f(370, 70, 0);
+	glVertex3f(380, 80, 0);
+	glVertex3f(395, 95, 0);
+	glVertex3f(390, 117, 0);
+	glVertex3f(400, 120, 0);
+	glVertex3f(415, 145, 0);
+	glVertex3f(420, 150, 0);
+	glVertex3f(400, 175, 0);
+	glVertex3f(410, 210, 0);
+	glVertex3f(390, 240, 0);
+	glVertex3f(390, 260, 0);
+	glVertex3f(380, 280, 0);
+	glVertex3f(390, 290, 0);
+	glVertex3f(377, 310, 0);
+	glVertex3f(360, 325, 0);
+	glVertex3f(340, 330, 0);
+	glVertex3f(330, 340, 0);
+	glVertex3f(300, 350, 0);
+	glVertex3f(280, 370, 0);
+	glVertex3f(260, 370, 0);
+	glVertex3f(240, 390, 0);
+	glVertex3f(200, 400, 0);
+	glVertex3f(188.5, 385, 0);
+	glVertex3f(130, 390, 0);
+	glVertex3f(80, 380, 0);
+	glVertex3f(65, 385, 0);
+	glVertex3f(35, 370, 0);
+	glVertex3f(30, 340, 0);
+	glVertex3f(20, 350, 0);
+	glVertex3f(5, 330, 0);
+	glVertex3f(5, 320, 0);
+	glVertex3f(-10, 290, 0);
+	glVertex3f(-5, 250, 0);
+	glVertex3f(-20, 220, 0);
+	glVertex3f(-30, 200, 0);
+	glVertex3f(-23, 175, 0);
+	glVertex3f(-30, 130, 0);
+	glVertex3f(-15, 90, 0);
+	glVertex3f(-5, 80, 0);
+	glVertex3f(5, 60, 0);
+	glVertex3f(0, 40, 0);
 
 	//sets the ending of the draw
 	glEnd();
 
 	glPushMatrix();
-	glTranslatef(X_INITIAL + 188.5, Y_INITIAL + 175, 150);
+	glTranslatef(188.5, 175, 150);
 	//sets the beginning of the draw
 	glBegin(GL_LINE_LOOP);
 
@@ -568,36 +568,43 @@ void draw_RockBlock_TopView() {
 	//X_INITIAL = 100;
 	//Y_INITIAL = 300;
 
+    glPushMatrix();
+    glTranslatef(X_INITIAL, Y_INITIAL, 0);
 	draw_Left_RockBlock_TopView();                      //(100 ,300)
+    glPopMatrix();
+
 	glPushMatrix();
-	glTranslatef(80, 20, 0);
+	glTranslatef(X_INITIAL + 80, Y_INITIAL + 20, 0);
 	draw_LeftMiddle_RockBlock_Connection_TopView();     //(180 ,320)
 	glPopMatrix();
+
 	glPushMatrix();
-	glTranslatef(180, -50, 0);
+	glTranslatef(X_INITIAL + 180, Y_INITIAL - 50, 0);
 	draw_Middle_RockBlock_TopView();                   //(280 ,250)
 	glPopMatrix();
+
 	glPushMatrix();
-	glTranslatef(360, 20, 0);
+	glTranslatef(X_INITIAL + 360, Y_INITIAL + 20, 0);
 	draw_RightMiddle_RockBlock_Connection_TopView();   //(460, 320)
 	glPopMatrix();
+
 	glPushMatrix();
-	glTranslatef(380, -20, 0);
+	glTranslatef(X_INITIAL + 380, Y_INITIAL - 20, 0);
 	draw_Right_RockBlock_TopView();                    //(495, 280)
 	glPopMatrix();
 
 	glPushMatrix();
-	glTranslatef(245, 90, 0);
+	glTranslatef(X_INITIAL + 245, Y_INITIAL + 90, 0);
 	draw_DeliveryPath_RockBlock_TopView();             //(345, 390)
 	glPopMatrix();
 
 	glPushMatrix();
-	glTranslatef(240, -50, 0);
+	glTranslatef(X_INITIAL + 240, Y_INITIAL - 50, 0);
 	draw_EntrancePath_Full_RockBlock_TopView();
 	glPopMatrix();
 
 	glPushMatrix();
-	glTranslatef(80, 190, 0);
+	glTranslatef(X_INITIAL + 80, Y_INITIAL + 190, 0);
 	draw_Castle_RockBlock_TopView();
 	glPopMatrix();
 
@@ -702,16 +709,16 @@ void draw_LeftTower_Crown_Spikes_Part_TopView(GLfloat x, GLfloat y) {
 }
 */
 //crown spikes part
-void draw_LeftTower_Crown_Spikes_Part_TopView(GLfloat x, GLfloat y) {
+void draw_LeftTower_Crown_Spikes_Part_TopView() {
 
 	//top
 
 	glBegin(GL_LINE_LOOP);
 
-	glVertex3f(x, y, 0);
-	glVertex3f(x + 5, y, 0);      //     adds 2.5px width
-	glVertex3f(x + 5, y + 5, 0);//     adds 2.5px height
-	glVertex3f(x, y + 5, 0);      //     removes 2.5px width
+	glVertex3f(0, 0, 0);
+	glVertex3f(5, 0, 0);      //     adds 2.5px width
+	glVertex3f(5, 5, 0);//     adds 2.5px height
+	glVertex3f(0, 5, 0);      //     removes 2.5px width
 
 	//sets the ending of the draw
 	glEnd();
@@ -721,10 +728,10 @@ void draw_LeftTower_Crown_Spikes_Part_TopView(GLfloat x, GLfloat y) {
 	glBegin(GL_LINE_LOOP);
 
 
-	glVertex3f(x, y, 1.5);
-	glVertex3f(x + 5, y, 1.5);      //     adds 2.5px width
-	glVertex3f(x + 5, y + 5, 1.5);//     adds 2.5px height
-	glVertex3f(x, y + 5, 1.5);      //     removes 2.5px width
+	glVertex3f(0, 0, 1.5);
+	glVertex3f(5, 0, 1.5);      //     adds 2.5px width
+	glVertex3f(5, 5, 1.5);//     adds 2.5px height
+	glVertex3f(0, 5, 1.5);      //     removes 2.5px width
 
 	//sets the ending of the draw
 	glEnd();
@@ -733,10 +740,10 @@ void draw_LeftTower_Crown_Spikes_Part_TopView(GLfloat x, GLfloat y) {
 
 	glBegin(GL_LINE_LOOP);
 
-	glVertex3f(x, y, 0);
-	glVertex3f(x + 5, y, 0);      //     adds 2.5px width
-	glVertex3f(x + 5, y, 1.5);//     adds 2.5px height
-	glVertex3f(x, y, 1.5);      //     removes 2.5px width
+	glVertex3f(0, 0, 0);
+	glVertex3f(5, 0, 0);      //     adds 2.5px width
+	glVertex3f(5, 0, 1.5);//     adds 2.5px height
+	glVertex3f(0, 0, 1.5);      //     removes 2.5px width
 
 	//sets the ending of the draw
 	glEnd();
@@ -745,10 +752,10 @@ void draw_LeftTower_Crown_Spikes_Part_TopView(GLfloat x, GLfloat y) {
 
 	glBegin(GL_LINE_LOOP);
 
-	glVertex3f(x, y + 5, 0);      //     adds 2.5px width
-	glVertex3f(x + 5, y + 5, 0);//     adds 2.5px height
-	glVertex3f(x + 5, y + 5, 1.5);//     adds 2.5px height
-	glVertex3f(x, y + 5, 1.5);      //     adds 2.5px width
+	glVertex3f(0, 5, 0);      //     adds 2.5px width
+	glVertex3f(5, 5, 0);//     adds 2.5px height
+	glVertex3f(5, 5, 1.5);//     adds 2.5px height
+	glVertex3f(0, 5, 1.5);      //     adds 2.5px width
 
 	//sets the ending of the draw
 	glEnd();
@@ -757,10 +764,10 @@ void draw_LeftTower_Crown_Spikes_Part_TopView(GLfloat x, GLfloat y) {
 
 	glBegin(GL_LINE_LOOP);
 
-	glVertex3f(x, y, 0);      //     adds 2.5px width
-	glVertex3f(x, y + 5, 0);//     adds 2.5px height
-	glVertex3f(x, y + 5, 1.5);//     adds 2.5px height
-	glVertex3f(x, y, 1.5);      //     adds 2.5px width
+	glVertex3f(0, 0, 0);      //     adds 2.5px width
+	glVertex3f(0, 5, 0);//     adds 2.5px height
+	glVertex3f(0, 5, 1.5);//     adds 2.5px height
+	glVertex3f(0, 0, 1.5);      //     adds 2.5px width
 
 	//sets the ending of the draw
 	glEnd();
@@ -769,10 +776,10 @@ void draw_LeftTower_Crown_Spikes_Part_TopView(GLfloat x, GLfloat y) {
 
 	glBegin(GL_LINE_LOOP);
 
-	glVertex3f(x + 5, y, 0);      //     adds 2.5px width
-	glVertex3f(x + 5, y + 5, 0);//     adds 2.5px height
-	glVertex3f(x + 5, y + 5, 1.5);//     adds 2.5px height
-	glVertex3f(x + 5, y, 1.5);      //     adds 2.5px width
+	glVertex3f(5, 0, 0);      //     adds 2.5px width
+	glVertex3f(5, 5, 0);//     adds 2.5px height
+	glVertex3f(5, 5, 1.5);//     adds 2.5px height
+	glVertex3f(5, 0, 1.5);      //     adds 2.5px width
 
 	//sets the ending of the draw
 	glEnd();
@@ -783,25 +790,31 @@ void draw_LeftTower_Crown_Spikes_Part_TopView(GLfloat x, GLfloat y) {
 }
 
 //crown outside part
-void draw_LeftTower_Crown_TopView(GLfloat x, GLfloat y) {
+void draw_LeftTower_Crown_TopView() {
 
 	//makes a cycle where since the point 5px away from the origin in the x axis
 	//until it reach 5px before the end of the x axis draw
-	for (GLfloat i = x; i < x + 40; i += 5) {
+	for (GLfloat i = 0; i < 40; i += 5) {
 
-		draw_LeftTower_Crown_Spikes_Part_TopView(i, y);
-
-		draw_LeftTower_Crown_Spikes_Part_TopView(i, y + 35);
+        glPushMatrix();
+        glTranslatef(i, 0, 0);
+		draw_LeftTower_Crown_Spikes_Part_TopView();
+        glTranslatef(0, 35, 0);
+		draw_LeftTower_Crown_Spikes_Part_TopView();
+		glPopMatrix();
 
 	}
 
 	//makes a cycle where since the point 5px away from the origin in the y axis
 	//until it reach 5px before the end of the y axis draw
-	for (GLfloat i = y + 5; i < y + 35; i += 5) {
+	for (GLfloat i = 5; i < 35; i += 5) {
 
-		draw_LeftTower_Crown_Spikes_Part_TopView(x, i);
-
-		draw_LeftTower_Crown_Spikes_Part_TopView(x + 35, i);
+        glPushMatrix();
+        glTranslatef(0, i, 0);
+        draw_LeftTower_Crown_Spikes_Part_TopView();
+        glTranslatef(35, 0, 0);
+        draw_LeftTower_Crown_Spikes_Part_TopView();
+        glPopMatrix();
 
 	}
 
@@ -809,15 +822,15 @@ void draw_LeftTower_Crown_TopView(GLfloat x, GLfloat y) {
 
 /**********************************************************************/
 //trapdoor
-void draw_LeftTower_Trapdoor_TopView(GLfloat x, GLfloat y) {
+void draw_LeftTower_Trapdoor_TopView() {
 
 	//sets the beginning of the inside draw part
 	glBegin(GL_LINE_LOOP);
 
-	glVertex3f(x, y, 0);
-	glVertex3f(x + 10, y, 0);       //     adds 10px width
-	glVertex3f(x + 10, y + 10, 0);  //     adds 10px height
-	glVertex3f(x, y + 10, 0);       //     removes 10x width
+	glVertex3f(0, 0, 0);
+	glVertex3f(10, 0, 0);       //     adds 10px width
+	glVertex3f(10, 10, 0);  //     adds 10px height
+	glVertex3f(0, 10, 0);       //     removes 10x width
 
 	//sets the ending of the draw
 	glEnd();
@@ -834,15 +847,15 @@ void draw_LeftTower_Trapdoor_TopView(GLfloat x, GLfloat y) {
 ***********************************************************************************************************************/
 
 //bottom
-void draw_LeftTower_Ruined_Bottom_TopView(GLfloat x, GLfloat y) {
+void draw_LeftTower_Ruined_Bottom_TopView() {
 
 	//sets the beginning of the inside draw part
 	glBegin(GL_LINE_LOOP);
 
-	glVertex3f(x, y, 0);
-	glVertex3f(x + 30, y, 0);       //     adds 30px width
-	glVertex3f(x + 30, y + 30, 0);  //     adds 30px height
-	glVertex3f(x, y + 30, 0);       //     removes 30px width
+	glVertex3f(0, 0, 0);
+	glVertex3f(30, 0, 0);       //     adds 30px width
+	glVertex3f(30, 30, 0);  //     adds 30px height
+	glVertex3f(0, 30, 0);       //     removes 30px width
 
 	//sets the ending of the draw
 	glEnd();
@@ -854,15 +867,15 @@ void draw_LeftTower_Ruined_Bottom_TopView(GLfloat x, GLfloat y) {
 
 /**********************************************************************/
 //stairway steps horizontal
-void draw_LeftTower_Ruined_Stairway_Steps_TopView(GLfloat x, GLfloat y) {
+void draw_LeftTower_Ruined_Stairway_Steps_TopView() {
 
 	//sets the beginning of the inside draw part
 	glBegin(GL_LINE_LOOP);
 
-	glVertex3f(x, y, 0);
-	glVertex3f(x + 3.5, y, 0);      //     adds 3.5px width
-	glVertex3f(x + 3.5, y + 5, 0);  //     adds 5px height
-	glVertex3f(x, y + 5, 0);        //     removes 3.5px width
+	glVertex3f(0, 0, 0);
+	glVertex3f(3.5, 0, 0);      //     adds 3.5px width
+	glVertex3f(3.5, 5, 0);  //     adds 5px height
+	glVertex3f(0, 5, 0);        //     removes 3.5px width
 
 	//sets the ending of the draw
 	glEnd();
@@ -873,15 +886,15 @@ void draw_LeftTower_Ruined_Stairway_Steps_TopView(GLfloat x, GLfloat y) {
 }
 
 //stairway steps vertical
-void draw_LeftTower_Ruined_Stairway_Steps_Vertical_TopView(GLfloat x, GLfloat y) {
+void draw_LeftTower_Ruined_Stairway_Steps_Vertical_TopView() {
 
 	//sets the beginning of the inside draw part
 	glBegin(GL_LINE_LOOP);
 
-	glVertex3f(x, y, 0);
-	glVertex3f(x + 5, y, 0);    //     adds 5px width
-	glVertex3f(x + 5, y + 3, 0);//     adds 3px height
-	glVertex3f(x, y + 3, 0);    //     removes 5px width
+	glVertex3f(0, 0, 0);
+	glVertex3f(5, 0, 0);    //     adds 5px width
+	glVertex3f(5, 3, 0);//     adds 3px height
+	glVertex3f(0, 3, 0);    //     removes 5px width
 
 	//sets the ending of the draw
 	glEnd();
@@ -892,15 +905,18 @@ void draw_LeftTower_Ruined_Stairway_Steps_Vertical_TopView(GLfloat x, GLfloat y)
 }
 
 //stairway
-void draw_LeftTower_Ruined_Stairway_TopView(GLfloat x, GLfloat y) {
+void draw_LeftTower_Ruined_Stairway_TopView() {
 
 	//makes a cycle where since the point 5px away from the origin in the x axis
 	//until it reach 5px before the end of the x axis draw
-	for (GLfloat i = x; i < x + 9; i += 3.5) {
+	for (GLfloat i = 0; i < 9; i += 3.5) {
 
-		draw_LeftTower_Ruined_Stairway_Steps_TopView(i, y);
-
-		draw_LeftTower_Ruined_Stairway_Steps_TopView(i, y + 11);
+        glPushMatrix();
+        glTranslatef(i, 0, 0);
+        draw_LeftTower_Ruined_Stairway_Steps_TopView();
+        glTranslatef(i, 11, 0);
+        draw_LeftTower_Ruined_Stairway_Steps_TopView();
+        glPopMatrix();
 
 	}
 
@@ -909,10 +925,10 @@ void draw_LeftTower_Ruined_Stairway_TopView(GLfloat x, GLfloat y) {
 	//sets the beginning of the inside draw part
 	glBegin(GL_LINE_LOOP);
 
-	glVertex3f(x + 11, y + 5, 0);   //     adds 11px width and 5px height
-	glVertex3f(x + 16, y + 5, 0);   //     adds more 5px width
-	glVertex3f(x + 16, y + 8, 0);   //     adds more 3px height
-	glVertex3f(x + 11, y + 8, 0);   //     removes 5px width
+	glVertex3f(11, 5, 0);   //     adds 11px width and 5px height
+	glVertex3f(16, 5, 0);   //     adds more 5px width
+	glVertex3f(16, 8, 0);   //     adds more 3px height
+	glVertex3f(11, 8, 0);   //     removes 5px width
 
 	//sets the ending of the draw
 	glEnd();
@@ -923,10 +939,10 @@ void draw_LeftTower_Ruined_Stairway_TopView(GLfloat x, GLfloat y) {
 	//sets the beginning of the inside draw part
 	glBegin(GL_LINE_LOOP);
 
-	glVertex3f(x + 11, y + 11, 0);  //     adds 11px both width and height
-	glVertex3f(x + 16, y + 11, 0);  //     adds more 5px width
-	glVertex3f(x + 16, y + 16, 0);  //     adds more 5px height
-	glVertex3f(x + 11, y + 16, 0);  //     removes 5px width
+	glVertex3f(11, 11, 0);  //     adds 11px both width and height
+	glVertex3f(16, 11, 0);  //     adds more 5px width
+	glVertex3f(16, 16, 0);  //     adds more 5px height
+	glVertex3f(11, 16, 0);  //     removes 5px width
 
 	//sets the ending of the draw
 	glEnd();
@@ -938,15 +954,15 @@ void draw_LeftTower_Ruined_Stairway_TopView(GLfloat x, GLfloat y) {
 
 /**********************************************************************/
 //head
-void draw_LeftTower_Ruined_Head_TopView(GLfloat x, GLfloat y) {
+void draw_LeftTower_Ruined_Head_TopView() {
 
 	//sets the beginning of the inside draw part
 	glBegin(GL_LINE_LOOP);
 
-	glVertex3f(x, y, 0);
-	glVertex3f(x + 20, y, 0);       //     adds 20px width
-	glVertex3f(x + 20, y + 20, 0);  //     adds 20px height
-	glVertex3f(x, y + 20, 0);       //     removes 20px width
+	glVertex3f(0, 0, 0);
+	glVertex3f(20, 0, 0);       //     adds 20px width
+	glVertex3f(20, 20, 0);  //     adds 20px height
+	glVertex3f(0, 20, 0);       //     removes 20px width
 
 	//sets the ending of the draw
 	glEnd();
@@ -954,18 +970,18 @@ void draw_LeftTower_Ruined_Head_TopView(GLfloat x, GLfloat y) {
 	//sets the beginning of the inside draw part
 	glBegin(GL_LINE_LOOP);
 
-	glVertex3f(x + 2, y + 2, 0);    //     adds 2 both in width and height
-	glVertex3f(x + 18, y + 2, 0);   //     adds more 16px width
-	glVertex3f(x + 18, y + 18, 0);  //     adds more 16px height
-	glVertex3f(x + 2, y + 18, 0);   //     removes 16px width
+	glVertex3f(2, 2, 0);    //     adds 2 both in width and height
+	glVertex3f(18, 2, 0);   //     adds more 16px width
+	glVertex3f(18, 18, 0);  //     adds more 16px height
+	glVertex3f(2, 18, 0);   //     removes 16px width
 
 	//sets the ending of the draw
 	glEnd();
 
-	//set the drawing to be rendered
-
-
-	draw_LeftTower_Ruined_Stairway_TopView(x + 2, y + 2);
+    glPushMatrix();
+    glTranslatef(2, 2, 0);
+    draw_LeftTower_Ruined_Stairway_TopView();
+    glPopMatrix();
 
 }
 
@@ -976,15 +992,15 @@ void draw_LeftTower_Ruined_Head_TopView(GLfloat x, GLfloat y) {
 ***********************************************************************************************************************/
 
 //outside crown spikes part
-void draw_MiddleTower_Bottom_Crown_Spikes_Part_TopView(GLfloat x, GLfloat y) {
+void draw_MiddleTower_Bottom_Crown_Spikes_Part_TopView() {
 
 	//sets the beginning of the inside draw part
 	glBegin(GL_LINE_LOOP);
 
-	glVertex3f(x, y, 0);
-	glVertex3f(x + 5, y, 0);        //     adds 5px width
-	glVertex3f(x + 5, y + 5, 0);    //     adds 5px height
-	glVertex3f(x, y + 5, 0);        //     removes 5px width
+	glVertex3f(0, 0, 0);
+	glVertex3f(5, 0, 0);        //     adds 5px width
+	glVertex3f(5, 5, 0);    //     adds 5px height
+	glVertex3f(0, 5, 0);        //     removes 5px width
 
 	//sets the ending of the draw
 	glEnd();
@@ -995,25 +1011,31 @@ void draw_MiddleTower_Bottom_Crown_Spikes_Part_TopView(GLfloat x, GLfloat y) {
 }
 
 //outside crown part
-void draw_MiddleTower_Bottom_Crown_TopView(GLfloat x, GLfloat y) {
+void draw_MiddleTower_Bottom_Crown_TopView() {
 
 	//makes a cycle where since the point 5px away from the origin in the x axis
 	//until it reach 5px before the end of the x axis draw
-	for (GLfloat i = x; i < x + 30; i += 5) {
+	for (GLfloat i = 0; i < 30; i += 5) {
 
-		draw_MiddleTower_Bottom_Crown_Spikes_Part_TopView(i, y);
-
-		draw_MiddleTower_Bottom_Crown_Spikes_Part_TopView(i, y + 25);
+        glPushMatrix();
+        glTranslatef(i, 0, 0);
+		draw_MiddleTower_Bottom_Crown_Spikes_Part_TopView();
+        glTranslatef(0, 25, 0);
+		draw_MiddleTower_Bottom_Crown_Spikes_Part_TopView();
+		glPopMatrix();
 
 	}
 
 	//makes a cycle where since the point 5px away from the origin in the y axis
 	//until it reach 5px before the end of the y axis draw
-	for (GLfloat i = y + 5; i < y + 25; i += 5) {
+	for (GLfloat i = 5; i < 25; i += 5) {
 
-		draw_MiddleTower_Bottom_Crown_Spikes_Part_TopView(x, i);
-
-		draw_MiddleTower_Bottom_Crown_Spikes_Part_TopView(x + 25, i);
+        glPushMatrix();
+        glTranslatef(0, i, 0);
+        draw_MiddleTower_Bottom_Crown_Spikes_Part_TopView();
+        glTranslatef(25, 0, 0);
+        draw_MiddleTower_Bottom_Crown_Spikes_Part_TopView();
+        glPopMatrix();
 
 	}
 
@@ -1021,15 +1043,15 @@ void draw_MiddleTower_Bottom_Crown_TopView(GLfloat x, GLfloat y) {
 
 /**********************************************************************/
 //inside crown spikes part
-void draw_MiddleRight_Tower_Crown_Spikes_Part_TopView(GLfloat x, GLfloat y) {
+void draw_MiddleRight_Tower_Crown_Spikes_Part_TopView() {
 
 	//sets the beginning of the inside draw part
 	glBegin(GL_LINE_LOOP);
 
-	glVertex3f(x, y, 0);
-	glVertex3f(x + 5, y, 0);        //     adds 5px width
-	glVertex3f(x + 5, y + 5, 0);    //     adds 5px height
-	glVertex3f(x, y + 5, 0);        //     removes 5px width
+	glVertex3f(0, 0, 0);
+	glVertex3f(5, 0, 0);        //     adds 5px width
+	glVertex3f(5, 5, 0);    //     adds 5px height
+	glVertex3f(0, 5, 0);        //     removes 5px width
 
 	//sets the ending of the draw
 	glEnd();
@@ -1040,25 +1062,31 @@ void draw_MiddleRight_Tower_Crown_Spikes_Part_TopView(GLfloat x, GLfloat y) {
 }
 
 //inside crown part
-void draw_MiddleRight_Tower_Crown_TopView(GLfloat x, GLfloat y) {
+void draw_MiddleRight_Tower_Crown_TopView() {
 
 	//makes a cycle where since the point 5px away from the origin in the x axis
 	//until it reach 5px before the end of the x axis draw
-	for (GLfloat i = x; i < x + 15; i += 5) {
+	for (GLfloat i = 0; i < 15; i += 5) {
 
-		draw_MiddleRight_Tower_Crown_Spikes_Part_TopView(i, y);
-
-		draw_MiddleRight_Tower_Crown_Spikes_Part_TopView(i, y + 10);
+        glPushMatrix();
+        glTranslatef(i, 0, 0);
+        draw_MiddleRight_Tower_Crown_Spikes_Part_TopView();
+        glTranslatef(0, 10, 0);
+        draw_MiddleRight_Tower_Crown_Spikes_Part_TopView();
+        glPopMatrix();
 
 	}
 
 	//makes a cycle where since the point 5px away from the origin in the y axis
 	//until it reach 5px before the end of the y axis draw
-	for (GLfloat i = y + 5; i < y + 10; i += 5) {
+	for (GLfloat i = 5; i < 10; i += 5) {
 
-		draw_MiddleRight_Tower_Crown_Spikes_Part_TopView(x, i);
-
-		draw_MiddleRight_Tower_Crown_Spikes_Part_TopView(x + 10, i);
+        glPushMatrix();
+        glTranslatef(0, i, 0);
+        draw_MiddleRight_Tower_Crown_Spikes_Part_TopView();
+        glTranslatef(10, 0, 0);
+        draw_MiddleRight_Tower_Crown_Spikes_Part_TopView();
+        glPopMatrix();
 
 	}
 
@@ -1066,15 +1094,15 @@ void draw_MiddleRight_Tower_Crown_TopView(GLfloat x, GLfloat y) {
 
 /**********************************************************************/
 //banner
-void draw_MiddleTower_Banner_TopView(GLfloat x, GLfloat y) {
+void draw_MiddleTower_Banner_TopView() {
 
 	//sets the beginning of the inside draw part
 	glBegin(GL_LINE_LOOP);
 
-	glVertex3f(x, y, 0);
-	glVertex3f(x + 15, y, 0);       //     adds 15px width
-	glVertex3f(x + 15, y - 1, 0);   //     removes 1px height
-	glVertex3f(x, y - 1, 0);        //     removes 15px width
+	glVertex3f(0, 0, 0);
+	glVertex3f(15, 0, 0);       //     adds 15px width
+	glVertex3f(15, -1, 0);   //     removes 1px height
+	glVertex3f(0, -1, 0);        //     removes 15px width
 
 	//sets the ending of the draw
 	glEnd();
@@ -1091,46 +1119,46 @@ void draw_MiddleTower_Banner_TopView(GLfloat x, GLfloat y) {
 ***********************************************************************************************************************/
 
 //bottom (bottom cover)
-void draw_RightTower_Bottom_TopView(GLfloat x, GLfloat y) {
+void draw_RightTower_Bottom_TopView() {
 
 	//sets the beginning of the inside draw part
 	glBegin(GL_LINE_LOOP);
 
-	glVertex3f(x, y, 0);            //                          start
+	glVertex3f(0, 0, 0);            //                          start
 
-	glVertex3f(x + 57, y, 0);       //     adds 57px width      right
-	glVertex3f(x + 57, y + 57, 0);  //     adds 57px height     up
-	glVertex3f(x, y + 57, 0);       //     removes 57px width   left
-	glVertex3f(x, y + 7, 0);        //     removes 50px height  down
+	glVertex3f(57, 0, 0);       //     adds 57px width      right
+	glVertex3f(57, 57, 0);  //     adds 57px height     up
+	glVertex3f(0, 57, 0);       //     removes 57px width   left
+	glVertex3f(0, 7, 0);        //     removes 50px height  down
 
-	glVertex3f(x + 50, y + 7, 0);   //     adds 50px width      right
-	glVertex3f(x + 50, y + 50, 0);  //     adds 43px width      up
-	glVertex3f(x + 7, y + 50, 0);   //     removes 43px width   left
-	glVertex3f(x + 7, y + 14, 0);   //     removes 36px height  down
+	glVertex3f(50, 7, 0);   //     adds 50px width      right
+	glVertex3f(50, 50, 0);  //     adds 43px width      up
+	glVertex3f(7, 50, 0);   //     removes 43px width   left
+	glVertex3f(7, 14, 0);   //     removes 36px height  down
 
-	glVertex3f(x + 43, y + 14, 0);  //     adds 36px width      right
-	glVertex3f(x + 43, y + 43, 0);  //     adds 29px width      up
-	glVertex3f(x + 14, y + 43, 0);  //     removes 29px width   left
-
-						/**********************************************************************/
-
-	glVertex3f(x + 14, y + 41, 0);  //     removes 2px height   down
+	glVertex3f(43, 14, 0);  //     adds 36px width      right
+	glVertex3f(43, 43, 0);  //     adds 29px width      up
+	glVertex3f(14, 43, 0);  //     removes 29px width   left
 
 						/**********************************************************************/
 
-	glVertex3f(x + 41, y + 41, 0);  //     adds 27px width      right
-	glVertex3f(x + 41, y + 16, 0);  //     removes 25px height  down
-	glVertex3f(x + 9, y + 16, 0);   //     removes 25px width   left
-	glVertex3f(x + 9, y + 48, 0);   //     adds 32px width      up
+	glVertex3f(14, 41, 0);  //     removes 2px height   down
 
-	glVertex3f(x + 48, y + 48, 0);  //     adds 39px width      right
-	glVertex3f(x + 48, y + 9, 0);   //     removes 39px width   down
-	glVertex3f(x + 2, y + 9, 0);    //     removes 46px height  left
-	glVertex3f(x + 2, y + 55, 0);   //     adds 46px width      up
+						/**********************************************************************/
 
-	glVertex3f(x + 55, y + 55, 0);  //     adds 57px width      right
-	glVertex3f(x + 55, y + 2, 0);   //     removes 57px width   down
-	glVertex3f(x, y + 2, 0);        //     removes 55px width   left
+	glVertex3f(41, 41, 0);  //     adds 27px width      right
+	glVertex3f(41, 16, 0);  //     removes 25px height  down
+	glVertex3f(9, 16, 0);   //     removes 25px width   left
+	glVertex3f(9, 48, 0);   //     adds 32px width      up
+
+	glVertex3f(48, 48, 0);  //     adds 39px width      right
+	glVertex3f(48, 9, 0);   //     removes 39px width   down
+	glVertex3f(2, 9, 0);    //     removes 46px height  left
+	glVertex3f(2, 55, 0);   //     adds 46px width      up
+
+	glVertex3f(55, 55, 0);  //     adds 57px width      right
+	glVertex3f(55, 2, 0);   //     removes 57px width   down
+	glVertex3f(0, 2, 0);        //     removes 55px width   left
 
 	//sets the ending of the draw
 	glEnd();
@@ -1149,11 +1177,12 @@ void draw_RightTower_Bottom_TopView(GLfloat x, GLfloat y) {
 //left tower
 void draw_LeftTower_TopView() {
 
-	//X_INITIAL = 100;
-	//Y_INITIAL = 300;
-
-	draw_LeftTower_Crown_TopView(X_INITIAL + 20, Y_INITIAL + 20);     //(120, 320)
-	draw_LeftTower_Trapdoor_TopView(X_INITIAL + 27, Y_INITIAL + 27);  //(127, 327)
+	glPushMatrix();
+	glTranslatef(X_INITIAL + 20, Y_INITIAL + 20, 0);
+	draw_LeftTower_Crown_TopView();     //(120, 320)
+    glTranslatef(7, 7, 0);
+	draw_LeftTower_Trapdoor_TopView();  //(127, 327)
+	glPopMatrix();
 
 }
 
@@ -1161,11 +1190,12 @@ void draw_LeftTower_TopView() {
 //left tower ruined
 void draw_LeftTower_Ruined_TopView() {
 
-	//X_INITIAL = 100;
-	//Y_INITIAL = 300;
-
-	draw_LeftTower_Ruined_Bottom_TopView(X_INITIAL + 110, Y_INITIAL + 25);//(200, 325)
-	draw_LeftTower_Ruined_Head_TopView(X_INITIAL + 115, Y_INITIAL + 30);  //(205, 330)
+    glPushMatrix();
+    glTranslatef(X_INITIAL + 110, Y_INITIAL + 25, 0);
+    draw_LeftTower_Ruined_Bottom_TopView();
+    glTranslatef(5, 5, 0);
+    draw_LeftTower_Ruined_Head_TopView();
+    glPopMatrix();
 
 }
 
@@ -1176,15 +1206,33 @@ void draw_MiddleTower_TopView() {
 	//X_INITIAL = 100;
 	//Y_INITIAL = 300;
 
-	//draws the left middle tower
-	draw_MiddleTower_Bottom_Crown_TopView(X_INITIAL + 190, Y_INITIAL + 25);   //(290, 325)
-	draw_MiddleRight_Tower_Crown_TopView(X_INITIAL + 197.5, Y_INITIAL + 32.5);//(297.5, 332.5)
-	draw_MiddleTower_Banner_TopView(X_INITIAL + 197.5, Y_INITIAL + 25);       //(297.5, 325)
 
+    glPushMatrix();
+    glTranslatef(X_INITIAL + 190, Y_INITIAL + 25, 0);
+	//draws the left middle tower
+	draw_MiddleTower_Bottom_Crown_TopView();   //(290, 325)
+    glTranslatef(7.5, 7.5, 0);
+	draw_MiddleRight_Tower_Crown_TopView();//(297.5, 332.5)
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(X_INITIAL + 197.5, Y_INITIAL + 25, 0);
+	draw_MiddleTower_Banner_TopView();       //(297.5, 325)
+	glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(X_INITIAL + 320, Y_INITIAL + 25, 0);
+    //draws the left middle tower
+    draw_MiddleTower_Bottom_Crown_TopView();   //(290, 325)
 	//draws the right middle tower
-	draw_MiddleTower_Bottom_Crown_TopView(X_INITIAL + 320, Y_INITIAL + 25);   //(420, 325)
-	draw_MiddleRight_Tower_Crown_TopView(X_INITIAL + 327.5, Y_INITIAL + 32.5);//(427.5, 332.5)
-	draw_MiddleTower_Banner_TopView(X_INITIAL + 327.5, Y_INITIAL + 25);       //(427.5, 325)
+    glTranslatef(7.5, 7.5, 0);
+    draw_MiddleRight_Tower_Crown_TopView();//(427.5, 332.5)
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(X_INITIAL + 327.5, Y_INITIAL + 25, 0);
+	draw_MiddleTower_Banner_TopView();       //(427.5, 325)
+    glPopMatrix();
 
 }
 
@@ -1192,11 +1240,12 @@ void draw_MiddleTower_TopView() {
 //right tower
 void draw_RightTower_TopView() {
 
-	//X_INITIAL = 100;
-	//Y_INITIAL = 300;
-
-	draw_RightTower_Bottom_TopView(X_INITIAL + 400, Y_INITIAL + 10);          //(515, 310)
-	draw_MiddleRight_Tower_Crown_TopView(X_INITIAL + 416.5, Y_INITIAL + 31);  //(531.5, 331)
+    glPushMatrix();
+    glTranslatef(X_INITIAL + 400, Y_INITIAL + 10, 0);
+	draw_RightTower_Bottom_TopView();          //(515, 310)
+    glTranslatef(16.5, 21, 0);
+    draw_MiddleRight_Tower_Crown_TopView();  //(531.5, 331)
+    glPopMatrix();
 
 }
 
@@ -1207,15 +1256,15 @@ void draw_RightTower_TopView() {
 ***********************************************************************************************************************/
 
 //outside crown spikes part
-void draw_ArcBridge_Border_Spikes_Part_TopView(GLfloat x, GLfloat y) {
+void draw_ArcBridge_Border_Spikes_Part_TopView() {
 
 	//sets the beginning of the inside draw part
 	glBegin(GL_LINE_LOOP);
 
-	glVertex3f(x, y, 0);
-	glVertex3f(x + 5, y, 0);        //     adds 5px width
-	glVertex3f(x + 5, y + 5, 0);    //     adds 5px height
-	glVertex3f(x, y + 5, 0);        //     removes 5px width
+	glVertex3f(0, 0, 0);
+    glVertex3f(5, 0, 0);        //     adds 5px width
+    glVertex3f(5, 5, 0);    //     adds 5px height
+    glVertex3f(0, 5, 0);        //     removes 5px width
 
 	//sets the ending of the draw
 	glEnd();
@@ -1227,11 +1276,14 @@ void draw_ArcBridge_Border_Spikes_Part_TopView(GLfloat x, GLfloat y) {
 
 /**********************************************************************/
 //arc bridge border
-void draw_ArcBridge_Border_TopView(GLfloat x, GLfloat y) {
+void draw_ArcBridge_Border_TopView() {
 
-	for (GLfloat i = x; i < x + 50; i += 5) {
+	for (GLfloat i = 0; i < 50; i += 5) {
 
-		draw_ArcBridge_Border_Spikes_Part_TopView(i, y);
+	    glPushMatrix();
+	    glTranslatef(i, 0, 0);
+		draw_ArcBridge_Border_Spikes_Part_TopView();
+		glPopMatrix();
 
 	}
 
@@ -1251,20 +1303,20 @@ void draw_ArcBridge_TopView() {
 
 	glPushMatrix();
 	glTranslatef(X_INITIAL + 60, Y_INITIAL + 30, 0);
-	glTranslatef(0, 15, 0);
-	glTranslatef(80, -15, 0);
-	glTranslatef(0, 15, 0);
-	glTranslatef(90, -15, 0);
-	glTranslatef(0, 15, 0);
-	glPopMatrix();
-	draw_ArcBridge_Border_TopView(X_INITIAL + 60, Y_INITIAL + 30);    //(160, 330)
-	draw_ArcBridge_Border_TopView(X_INITIAL + 60, Y_INITIAL + 45);    //(160, 345)
+    draw_ArcBridge_Border_TopView();
+    glTranslatef(0, 15, 0);
+    draw_ArcBridge_Border_TopView();
+    glTranslatef(80, -15, 0);
+    draw_ArcBridge_Border_TopView();
+    glTranslatef(0, 15, 0);
+    draw_ArcBridge_Border_TopView();
+    glTranslatef(210, -15, 0);
+    draw_ArcBridge_Border_TopView();
+    glTranslatef(0, 15, 0);
+    draw_ArcBridge_Border_TopView();
+    glPopMatrix();
 
-	draw_ArcBridge_Border_TopView(X_INITIAL + 140, Y_INITIAL + 30);   //(230, 330)
-	draw_ArcBridge_Border_TopView(X_INITIAL + 140, Y_INITIAL + 45);   //(230, 345)
 
-	draw_ArcBridge_Border_TopView(X_INITIAL + 350, Y_INITIAL + 30);   //(450, 330)
-	draw_ArcBridge_Border_TopView(X_INITIAL + 350, Y_INITIAL + 45);   //(450, 345)
 
 }
 
@@ -1368,112 +1420,26 @@ void draw_Gate_Head_TopView(GLfloat size) {
     create_Bot_Face();
     glPopMatrix();
 
-/*
-	//sets the beginning of the inside draw part
-	glBegin(GL_LINE_LOOP);
-
-	//top
-
-	//sets a point in the position (x, y, 0)
-	glVertex3f(x, y, 0);
-	//based on the position of the original point makes calculus to create the other points
-	//so it has the pretended shape
-	glVertex3f(x + 1, y, 0);      //     adds 2.5px width
-	glVertex3f(x + 1, y + 1, 0);//     adds 2.5px height
-	glVertex3f(x, y + 1, 0);      //     removes 2.5px width
-
-	//sets the ending of the draw
-	glEnd();
-
-	//bot
-
-	glBegin(GL_LINE_LOOP);
-
-	//sets a point in the position (x, y, 0)
-	glVertex3f(x, y, 10);
-	//based on the position of the original point makes calculus to create the other points
-	//so it has the pretended shape
-	glVertex3f(x + 1, y, 10);      //     adds 2.5px width
-	glVertex3f(x + 1, y + 1, 10);//     adds 2.5px height
-	glVertex3f(x, y + 1, 10);      //     removes 2.5px width
-
-	//sets the ending of the draw
-	glEnd();
-
-	//front
-
-	glBegin(GL_LINE_LOOP);
-
-	//sets a point in the position (x, y, 0)
-	glVertex3f(x, y, 0);
-	//based on the position of the original point makes calculus to create the other points
-	//so it has the pretended shape
-	glVertex3f(x + 1, y, 0);      //     adds 2.5px width
-	glVertex3f(x + 1, y, 10);//     adds 2.5px height
-	glVertex3f(x, y, 10);      //     removes 2.5px width
-
-	//sets the ending of the draw
-	glEnd();
-
-	//back
-
-	glBegin(GL_LINE_LOOP);
-
-	glVertex3f(x, y + 1, 0);      //     adds 2.5px width
-	glVertex3f(x + 1, y + 1, 0);//     adds 2.5px height
-	glVertex3f(x + 1, y + 1, 10);//     adds 2.5px height
-	glVertex3f(x, y + 1, 10);      //     adds 2.5px width
-
-	//sets the ending of the draw
-	glEnd();
-
-	//left
-
-	glBegin(GL_LINE_LOOP);
-
-	glVertex3f(x, y, 0);      //     adds 2.5px width
-	glVertex3f(x, y + 1, 0);//     adds 2.5px height
-	glVertex3f(x, y + 1, 10);//     adds 2.5px height
-	glVertex3f(x, y, 10);      //     adds 2.5px width
-
-	//sets the ending of the draw
-	glEnd();
-
-	//right
-
-	glBegin(GL_LINE_LOOP);
-
-	glVertex3f(x + 1, y, 0);      //     adds 2.5px width
-	glVertex3f(x + 1, y + 1, 0);//     adds 2.5px height
-	glVertex3f(x + 1, y + 1, 10);//     adds 2.5px height
-	glVertex3f(x + 1, y, 10);      //     adds 2.5px width
-
-	//sets the ending of the draw
-	glEnd();
-
-	//set the drawing to be rendered
-
-*/
-
 }
 
 /**********************************************************************/
 //flag holder (gate)
 void draw_FlagHolder_TopView() {
 
+    glPushMatrix();
+    glTranslatef(X_INITIAL, Y_INITIAL, 0);
 	//sets the beginning of the inside draw part
 	glBegin(GL_LINE_LOOP);
 
-	glVertex3f(X_INITIAL, Y_INITIAL, 0);
-	glVertex3f(X_INITIAL + 10, Y_INITIAL, 0);       //     adds 10px width
-	glVertex3f(X_INITIAL + 10, Y_INITIAL + 10, 0);  //     adds 10px height
-	glVertex3f(X_INITIAL, Y_INITIAL + 10, 0);       //     removes 10px width
+	glVertex3f(0, 0, 0);
+	glVertex3f(10, 0, 0);       //     adds 10px width
+	glVertex3f(10, 10, 0);  //     adds 10px height
+	glVertex3f(0, 10, 0);       //     removes 10px width
 
 	//sets the ending of the draw
 	glEnd();
 
-	//set the drawing to be rendered
-
+	glPopMatrix();
 
 }
 
@@ -1481,17 +1447,18 @@ void draw_FlagHolder_TopView() {
 //flag (gate)
 void draw_Flag_TopView() {
 
+    glPushMatrix();
+    glTranslatef(X_INITIAL, Y_INITIAL, 0);
 	//sets the beginning of the inside draw part
 	glBegin(GL_LINE_LOOP);
 
-	glVertex3f(X_INITIAL, Y_INITIAL, 0);
-	glVertex3f(X_INITIAL + 5, Y_INITIAL - 5, 0);    //     adds 5px width and removes 5px height
+	glVertex3f(0, 0, 0);
+	glVertex3f(5, -5, 0);    //     adds 5px width and removes 5px height
 
 	//sets the ending of the draw
 	glEnd();
 
-	//set the drawing to be rendered
-
+    glPopMatrix();
 
 }
 
@@ -1529,21 +1496,18 @@ void draw_Gate_TopView() {
 ***********************************************************************************************************************/
 
 //gargoyles
-void draw_Gargoyles_TopView(GLfloat x, GLfloat y) {
+void draw_Gargoyles_TopView() {
 
 	//sets the beginning of the inside draw part
 	glBegin(GL_LINE_LOOP);
 
-	glVertex3f(X_INITIAL, Y_INITIAL, 0);
-	glVertex3f(X_INITIAL + 10, Y_INITIAL, 0);       //     adds 10px width
-	glVertex3f(X_INITIAL + 10, Y_INITIAL + 10, 0);  //     adds 10px height
-	glVertex3f(X_INITIAL, Y_INITIAL + 10, 0);       //     removes 10px width
+	glVertex3f(0, 0, 0);
+	glVertex3f(10, 0, 0);       //     adds 10px width
+	glVertex3f(10, 10, 0);  //     adds 10px height
+	glVertex3f(0, 10, 0);       //     removes 10px width
 
 	//sets the ending of the draw
 	glEnd();
-
-	//set the drawing to be rendered
-
 
 }
 
@@ -1556,13 +1520,11 @@ void draw_Gargoyles_TopView(GLfloat x, GLfloat y) {
 //entrance gargoyles
 void draw_EntranceGargoyles_TopView() {
 
-	//X_INITIAL = 100;
-	//Y_INITIAL = 300;
 	glPushMatrix();
-	glTranslatef(220, -10, 0);
-	draw_Gargoyles_TopView(X_INITIAL + 220, Y_INITIAL - 10);  //(320, 90)
+	glTranslatef(X_INITIAL + 220, Y_INITIAL - 10, 0);
+	draw_Gargoyles_TopView();  //(320, 90)
 	glTranslatef(90, 0, 0);
-	draw_Gargoyles_TopView(X_INITIAL + 310, Y_INITIAL - 10);  //(410, 90)
+	draw_Gargoyles_TopView();  //(410, 90)
 	glPopMatrix();
 
 }
