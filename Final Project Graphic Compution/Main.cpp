@@ -2525,10 +2525,30 @@ void draw_Castle_Courtyard() {
     /*
      * save the matrix status
      * translate the figure
-     *      X_INITIAL + 177.5 for the x value
-     *      Y_INITIAL + 230 for the y value
+     *      253 for the x value
+     *      165 for the y value
      * for 28 unities, increasing 2.5 each
      * for 45 unities, increasing 2.5 each
+     *
+     *      save the matrix status
+     *      translate the figure
+     *          X_INITIAL + h for the x value
+     *          Y_INITIAL + v for the y value
+     *
+     *              save the matrix status
+     *              increase the figure size by
+     *                   5 times of the x value
+     *                   5 times of the y value
+     *              create_Bot_Face()
+     *              every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
+     *      every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
+     * translate the figure
+     *      -5 for the x value
+     *      45 for the y value
+     * for 38 unities, increasing 2.5 each
+     * for 40 unities, increasing 2.5 each
      *
      *      save the matrix status
      *      translate the figure
@@ -2566,34 +2586,8 @@ void draw_Castle_Courtyard() {
 		}
 
 	}
-    glPopMatrix();
 
-    /*
-     * save the matrix status
-     * translate the figure
-     *      X_INITIAL + 177.5 for the x value
-     *      Y_INITIAL + 230 for the y value
-     * for 38 unities, increasing 2.5 each
-     * for 40 unities, increasing 2.5 each
-     *
-     *      save the matrix status
-     *      translate the figure
-     *          X_INITIAL + h for the x value
-     *          Y_INITIAL + v for the y value
-     *
-     *              save the matrix status
-     *              increase the figure size by
-     *                   5 times of the x value
-     *                   5 times of the y value
-     *              create_Bot_Face()
-     *              every vertex non modified keeps the same as it was, but the modified ones are changed
-     *
-     *      every vertex non modified keeps the same as it was, but the modified ones are changed
-     *
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-    glPushMatrix();
-    glTranslatef(248, 210, 0);
+    glTranslatef(-5, 45, 0);
 	for (int h = 0; h < 38; h += 5) {
 
 		for (int v = 0; v < 40; v += 5) {
@@ -3098,7 +3092,7 @@ void resize(int w, int h) {
 //	glRotatef(75, 1, 0, 0);
 //	glRotatef(65, 0, 0, 1);
 	glOrtho(X_MIN_VIEW, X_MAX_VIEW, Y_MIN_VIEW, Y_MAX_VIEW, Z_NEAR_VIEW, Z_FAR_VIEW);
-	glTranslatef(100, 100, -500);
+	glTranslatef(100, 100, 0);
 
 	glMatrixMode(GL_MODELVIEW);
 }
@@ -3173,5 +3167,5 @@ int main(int argc, char **argv) {
  *
  * TODO: try to make the inclination on the ground
  *
- * TODO: try to make the left tower circular
+ * TODO: try to make the right tower circular
  * */
