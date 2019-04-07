@@ -84,9 +84,9 @@ GLfloat Z_FAR_VIEW = 1000;
 GLfloat X_INITIAL = 100, Y_INITIAL = 300;
 
 /***********************************************************************************************************************
-************************************************************************************************************************
-******************************************************Create Faces******************************************************
-************************************************************************************************************************
+*                                                                                                                      *
+*                                                     Create Faces                                                     *
+*                                                                                                                      *
 ***********************************************************************************************************************/
 //create bottom face
 void create_Bot_Face() {
@@ -154,107 +154,7 @@ void create_Front_Face() {
 
 /***********************************************************************************************************************
 ************************************************************************************************************************
-****************************************************Draw roof tiles*****************************************************
-************************************************************************************************************************
-***********************************************************************************************************************/
-//draw roof tiles
-void draw_RoofTiles_Square_TopView() {
-
-	//top
-	/*
-	 * save the matrix status
-	 * translate the figure 0.5 units up (z axis)
-     * increase the figure size by
-     *      2.5 times of the x value
-     *      2.5 times of the y value
-	 * call the function create_Bot_Face()
-	 * every vertex non modified keeps the same as it was, but the modified ones are changed
-	 * */
-	glPushMatrix();
-	glTranslatef(0, 0, 0.5);
-	glScalef(2.5, 2.5, 1);
-	create_Bot_Face();
-	glPopMatrix();
-
-	//bot
-    /*
-     * save the matrix status
-     * increase the figure size by
-     *      2.5 times of the x value
-     *      2.5 times of the y value
-     * call the function create_Bot_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-	glPushMatrix();
-	glScalef(2.5, 2.5, 1);
-	create_Bot_Face();
-	glPopMatrix();
-
-	//front
-    /*
-     * save the matrix status
-     * increase the figure size by
-     *      2.5 times of the x value
-     *      0.5 times of the z value
-     * call the function create_Front_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-	glPushMatrix();
-	glScalef(2.5, 1, 0.5);
-	create_Front_Face();
-	glPopMatrix();
-
-	//back
-    /*
-     * save the matrix status
-     * translate the figure 2.5 units up (y axis)
-     * increase the figure size by
-     *      2.5 times of the x value
-     *      0.5 times of the z value
-     * call the function create_Front_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-	glPushMatrix();
-	glTranslatef(0, 2.5, 0);
-	glScalef(2.5, 1, 0.5);
-	create_Front_Face();
-	glPopMatrix();
-
-	//left
-    /*
-     * save the matrix status
-     * increase the figure size by
-     *      2.5 times of the y value
-     *      0.5 times of the z value
-     * call the function create_Left_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-	glPushMatrix();
-	glScalef(1, 2.5, 0.5);
-	create_Left_Face();
-	glPopMatrix();
-
-	//right
-    /*
-     * save the matrix status
-     * translate the figure 2.5 units up (x axis)
-     * increase the figure size by
-     *      2.5 times of the y value
-     *      0.5 times of the z value
-     * call the function create_Left_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-	glPushMatrix();
-	glTranslatef(2.5, 0, 0);
-	glScalef(1, 2.5, 0.5);
-	create_Left_Face();
-	glPopMatrix();
-
-}
-
-/***********************************************************************************************************************
-************************************************************************************************************************
-******************************************************Draw Circles******************************************************
+*                                                     Draw Circles                                                     *
 ************************************************************************************************************************
 ***********************************************************************************************************************/
 //draw circle
@@ -277,13 +177,124 @@ void draw_Circle(GLfloat starAngle, GLfloat finalAngle, GLfloat xSize, GLfloat y
 }
 
 /***********************************************************************************************************************
+************************************************************************************************************************
+*                                                     Draw figures                                                     *
+************************************************************************************************************************
+***********************************************************************************************************************/
+//draw 6 faces figure
+void draw_6_Faces_Figure() {
+
+	//top
+	/*
+	 * save the matrix status
+	 * translate the figure 0.5 units up (z axis)
+     * increase the figure size by
+     *      2.5 times of the x value
+     *      2.5 times of the y value
+	 * call the function create_Bot_Face()
+	 * every vertex non modified keeps the same as it was, but the modified ones are changed
+	 * */
+	glPushMatrix();
+	glTranslatef(0, 0, 1);
+	create_Bot_Face();
+	glPopMatrix();
+
+	//bot
+    /*
+     * save the matrix status
+     * increase the figure size by
+     *      2.5 times of the x value
+     *      2.5 times of the y value
+     * call the function create_Bot_Face()
+     * every vertex non modified keeps the same as it was, but the modified ones are changed
+     * */
+	glPushMatrix();
+	create_Bot_Face();
+	glPopMatrix();
+
+	//front
+    /*
+     * save the matrix status
+     * increase the figure size by
+     *      2.5 times of the x value
+     *      0.5 times of the z value
+     * call the function create_Front_Face()
+     * every vertex non modified keeps the same as it was, but the modified ones are changed
+     * */
+	glPushMatrix();
+	create_Front_Face();
+	glPopMatrix();
+
+	//back
+    /*
+     * save the matrix status
+     * translate the figure 2.5 units up (y axis)
+     * increase the figure size by
+     *      2.5 times of the x value
+     *      0.5 times of the z value
+     * call the function create_Front_Face()
+     * every vertex non modified keeps the same as it was, but the modified ones are changed
+     * */
+	glPushMatrix();
+	glTranslatef(0, 1, 0);
+	create_Front_Face();
+	glPopMatrix();
+
+	//left
+    /*
+     * save the matrix status
+     * increase the figure size by
+     *      2.5 times of the y value
+     *      0.5 times of the z value
+     * call the function create_Left_Face()
+     * every vertex non modified keeps the same as it was, but the modified ones are changed
+     * */
+	glPushMatrix();
+	create_Left_Face();
+	glPopMatrix();
+
+	//right
+    /*
+     * save the matrix status
+     * translate the figure 2.5 units up (x axis)
+     * increase the figure size by
+     *      2.5 times of the y value
+     *      0.5 times of the z value
+     * call the function create_Left_Face()
+     * every vertex non modified keeps the same as it was, but the modified ones are changed
+     * */
+	glPushMatrix();
+	glTranslatef(1, 0, 0);
+	create_Left_Face();
+	glPopMatrix();
+
+}
+
+//draw cylinder figure
+void draw_Cylinder_Figure() {
+
+//  sets the beginning with only the lines that surrounds it
+    glBegin(GL_LINE_LOOP);
+
+//  call the function draw_Circle()
+    draw_Circle(0, 2 * PI, 1, 1, 0);
+
+//  call the function draw_Circle()
+    draw_Circle(0, 2 * PI, 1, 1, 1);
+
+//  sets the ending of the draw connecting the first vertex draw with the last
+    glEnd();
+
+}
+
+/***********************************************************************************************************************
 *                                                                                                                      *
 *                                             Draws the rock block it self                                             *
 *                                                                                                                      *
 ***********************************************************************************************************************/
 
 //left
-void draw_Left_RockBlock_TopView() {
+void draw_Left_RockBlock() {
 
 //  sets the beginning with only the lines that surrounds it
 	glBegin(GL_LINE_LOOP);
@@ -327,7 +338,7 @@ void draw_Left_RockBlock_TopView() {
 }
 
 //left__middle connection
-void draw_LeftMiddle_RockBlock_Connection_TopView() {
+void draw_LeftMiddle_RockBlock_Connection() {
 
 //  sets the beginning with only the lines that surrounds it
 	glBegin(GL_LINE_LOOP);
@@ -380,7 +391,7 @@ void draw_LeftMiddle_RockBlock_Connection_TopView() {
 }
 
 //middle rock block
-void draw_Middle_RockBlock_TopView() {
+void draw_Middle_RockBlock() {
 
 //  sets the beginning with only the lines that surrounds it
 	glBegin(GL_LINE_LOOP);
@@ -443,7 +454,7 @@ void draw_Middle_RockBlock_TopView() {
 }
 
 //right__middle connection
-void draw_RightMiddle_RockBlock_Connection_TopView() {
+void draw_RightMiddle_RockBlock_Connection() {
 
 //  sets the beginning with only the lines that surrounds it
     glBegin(GL_LINE_LOOP);
@@ -491,7 +502,7 @@ void draw_RightMiddle_RockBlock_Connection_TopView() {
 }
 
 //right
-void draw_Right_RockBlock_TopView() {
+void draw_Right_RockBlock() {
 
 //  sets the beginning with only the lines that surrounds it
     glBegin(GL_LINE_LOOP);
@@ -554,7 +565,7 @@ void draw_Right_RockBlock_TopView() {
 
 /**********************************************************************/
 //delivery path
-void draw_DeliveryPath_RockBlock_TopView() {
+void draw_DeliveryPath_RockBlock() {
 
 //  sets the beginning with only the lines that surrounds it
     glBegin(GL_LINE_LOOP);
@@ -595,7 +606,7 @@ void draw_DeliveryPath_RockBlock_TopView() {
 
 /**********************************************************************/
 //entrance path full
-void draw_EntrancePath_Full_RockBlock_TopView() {
+void draw_EntrancePath_Full_RockBlock() {
 
 //  sets the beginning with only the lines that surrounds it
     glBegin(GL_LINE_LOOP);
@@ -704,7 +715,7 @@ void draw_EntrancePath_Full_RockBlock_TopView() {
 
 /**********************************************************************/
 //entrance path
-void draw_Castle_RockBlock_TopView() {
+void draw_Castle_RockBlock() {
 
 //  sets the beginning with only the lines that surrounds it
     glBegin(GL_LINE_LOOP);
@@ -841,19 +852,19 @@ void draw_Castle_RockBlock_TopView() {
 ************************************************************************************************************************
 ***********************************************************************************************************************/
 
-void draw_RockBlock_TopView() {
+void draw_RockBlock() {
 
     /*
      * save the matrix status
      * translate the figure
      *      X_INITIAL + 40 units for the x value
      *      Y_INITIAL + 40 units for the y value
-     * draw_Left_RockBlock_TopView()
+     * draw_Left_RockBlock()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
     glPushMatrix();
     glTranslatef(X_INITIAL + 40, Y_INITIAL + 40, 0);
-	draw_Left_RockBlock_TopView();                      //(100 ,300)
+	draw_Left_RockBlock();                      //(100 ,300)
     glPopMatrix();
 
     /*
@@ -861,12 +872,12 @@ void draw_RockBlock_TopView() {
      * translate the figure
      *      X_INITIAL + 40 units for the x value
      *      Y_INITIAL + 40 units for the y value
-     * draw_LeftMiddle_RockBlock_Connection_TopView()
+     * draw_LeftMiddle_RockBlock_Connection()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
 	glPushMatrix();
 	glTranslatef(X_INITIAL + 40, Y_INITIAL + 40, 0);
-	draw_LeftMiddle_RockBlock_Connection_TopView();     //(180 ,320)
+	draw_LeftMiddle_RockBlock_Connection();     //(180 ,320)
 	glPopMatrix();
 
     /*
@@ -874,12 +885,12 @@ void draw_RockBlock_TopView() {
      * translate the figure
      *      X_INITIAL + 180 units for the x value
      *      Y_INITIAL - 50 units for the y value
-     * draw_Middle_RockBlock_TopView()
+     * draw_Middle_RockBlock()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
 	glPushMatrix();
 	glTranslatef(X_INITIAL + 180, Y_INITIAL - 50, 0);
-	draw_Middle_RockBlock_TopView();                   //(280 ,250)
+	draw_Middle_RockBlock();                   //(280 ,250)
 	glPopMatrix();
 
     /*
@@ -887,12 +898,12 @@ void draw_RockBlock_TopView() {
      * translate the figure
      *      X_INITIAL + 360 units for the x value
      *      Y_INITIAL + 20 units for the y value
-     * draw_RightMiddle_RockBlock_Connection_TopView()
+     * draw_RightMiddle_RockBlock_Connection()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
 	glPushMatrix();
 	glTranslatef(X_INITIAL + 360, Y_INITIAL + 20, 0);
-	draw_RightMiddle_RockBlock_Connection_TopView();   //(460, 320)
+	draw_RightMiddle_RockBlock_Connection();   //(460, 320)
 	glPopMatrix();
 
     /*
@@ -900,12 +911,12 @@ void draw_RockBlock_TopView() {
      * translate the figure
      *      X_INITIAL + 380 units for the x value
      *      Y_INITIAL - 20 units for the y value
-     * draw_Right_RockBlock_TopView()
+     * draw_Right_RockBlock()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
 	glPushMatrix();
 	glTranslatef(X_INITIAL + 380, Y_INITIAL - 20, 0);
-	draw_Right_RockBlock_TopView();                    //(495, 280)
+	draw_Right_RockBlock();                    //(495, 280)
 	glPopMatrix();
 
     /*
@@ -913,12 +924,12 @@ void draw_RockBlock_TopView() {
      * translate the figure
      *      X_INITIAL + 245 units for the x value
      *      Y_INITIAL + 90 units for the y value
-     * draw_DeliveryPath_RockBlock_TopView()
+     * draw_DeliveryPath_RockBlock()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
 	glPushMatrix();
 	glTranslatef(X_INITIAL + 245, Y_INITIAL + 90, 0);
-	draw_DeliveryPath_RockBlock_TopView();             //(345, 390)
+	draw_DeliveryPath_RockBlock();             //(345, 390)
 	glPopMatrix();
 
     /*
@@ -926,12 +937,12 @@ void draw_RockBlock_TopView() {
      * translate the figure
      *      X_INITIAL + 314 units for the x value
      *      Y_INITIAL - 65 units for the y value
-     * draw_EntrancePath_RockBlock_TopView()
+     * draw_EntrancePath_RockBlock()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
 	glPushMatrix();
 	glTranslatef(X_INITIAL + 314, Y_INITIAL - 65, 0);
-	draw_EntrancePath_Full_RockBlock_TopView();
+	draw_EntrancePath_Full_RockBlock();
 	glPopMatrix();
 
     /*
@@ -939,12 +950,12 @@ void draw_RockBlock_TopView() {
      * translate the figure
      *      X_INITIAL + 268.5 units for the x value
      *      Y_INITIAL + 365 units for the y value
-     * draw_Castle_RockBlock_TopView()
+     * draw_Castle_RockBlock()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
 	glPushMatrix();
     glTranslatef(X_INITIAL + 268.5, Y_INITIAL + 365, 0);
-    draw_Castle_RockBlock_TopView();
+    draw_Castle_RockBlock();
     glPopMatrix();
 
 
@@ -957,7 +968,7 @@ void draw_RockBlock_TopView() {
 *                                                                                                                      *
 ***********************************************************************************************************************/
 //crown spikes part
-void draw_LeftTower_Crown_Spikes_Part_TopView() {
+void draw_LeftTower_Crown_Spikes_Part() {
 
 	//top
 
@@ -1038,7 +1049,7 @@ void draw_LeftTower_Crown_Spikes_Part_TopView() {
 }
 
 //crown outside part
-void draw_LeftTower_Crown_TopView() {
+void draw_LeftTower_Crown() {
 
 	//makes a cycle where since the point 5px away from the origin in the x axis
 	//until it reach 5px before the end of the x axis draw
@@ -1048,17 +1059,17 @@ void draw_LeftTower_Crown_TopView() {
          * save the matrix status
          * translate the figure
          *      i units for the x value
-         * draw_LeftTower_Crown_Spikes_Part_TopView()
+         * draw_LeftTower_Crown_Spikes_Part()
          * translate the figure
          *      35 units for the y value
-         * draw_LeftTower_Crown_Spikes_Part_TopView()
+         * draw_LeftTower_Crown_Spikes_Part()
          * every vertex non modified keeps the same as it was, but the modified ones are changed
          * */
         glPushMatrix();
         glTranslatef(i, 0, 0);
-		draw_LeftTower_Crown_Spikes_Part_TopView();
+		draw_LeftTower_Crown_Spikes_Part();
         glTranslatef(0, 35, 0);
-		draw_LeftTower_Crown_Spikes_Part_TopView();
+		draw_LeftTower_Crown_Spikes_Part();
 		glPopMatrix();
 
 	}
@@ -1071,17 +1082,17 @@ void draw_LeftTower_Crown_TopView() {
          * save the matrix status
          * translate the figure
          *      i units for the y value
-         * draw_LeftTower_Crown_Spikes_Part_TopView()
+         * draw_LeftTower_Crown_Spikes_Part()
          * translate the figure
          *      35 units for the x value
-         * draw_LeftTower_Crown_Spikes_Part_TopView()
+         * draw_LeftTower_Crown_Spikes_Part()
          * every vertex non modified keeps the same as it was, but the modified ones are changed
          * */
         glPushMatrix();
         glTranslatef(0, i, 0);
-        draw_LeftTower_Crown_Spikes_Part_TopView();
+        draw_LeftTower_Crown_Spikes_Part();
         glTranslatef(35, 0, 0);
-        draw_LeftTower_Crown_Spikes_Part_TopView();
+        draw_LeftTower_Crown_Spikes_Part();
         glPopMatrix();
 
 	}
@@ -1090,7 +1101,7 @@ void draw_LeftTower_Crown_TopView() {
 
 /**********************************************************************/
 //trapdoor
-void draw_LeftTower_Trapdoor_TopView() {
+void draw_LeftTower_Trapdoor() {
 
 	//sets the beginning of the inside draw part
 	glBegin(GL_LINE_LOOP);
@@ -1115,7 +1126,7 @@ void draw_LeftTower_Trapdoor_TopView() {
 ***********************************************************************************************************************/
 
 //bottom
-void draw_LeftTower_Ruined_Bottom_TopView() {
+void draw_LeftTower_Ruined_Bottom() {
 
 	//sets the beginning of the inside draw part
 	glBegin(GL_LINE_LOOP);
@@ -1135,7 +1146,7 @@ void draw_LeftTower_Ruined_Bottom_TopView() {
 
 /**********************************************************************/
 //stairway steps horizontal
-void draw_LeftTower_Ruined_Stairway_Steps_TopView() {
+void draw_LeftTower_Ruined_Stairway_Steps() {
 
 	//sets the beginning of the inside draw part
 	glBegin(GL_LINE_LOOP);
@@ -1154,7 +1165,7 @@ void draw_LeftTower_Ruined_Stairway_Steps_TopView() {
 }
 
 //stairway steps vertical
-void draw_LeftTower_Ruined_Stairway_Steps_Vertical_TopView() {
+void draw_LeftTower_Ruined_Stairway_Steps_Vertical() {
 
 	//sets the beginning of the inside draw part
 	glBegin(GL_LINE_LOOP);
@@ -1173,7 +1184,7 @@ void draw_LeftTower_Ruined_Stairway_Steps_Vertical_TopView() {
 }
 
 //stairway
-void draw_LeftTower_Ruined_Stairway_TopView() {
+void draw_LeftTower_Ruined_Stairway() {
 
 	//makes a cycle where since the point 5px away from the origin in the x axis
 	//until it reach 5px before the end of the x axis draw
@@ -1181,9 +1192,9 @@ void draw_LeftTower_Ruined_Stairway_TopView() {
 
         glPushMatrix();
         glTranslatef(i, 0, 0);
-        draw_LeftTower_Ruined_Stairway_Steps_TopView();
-        glTranslatef(i, 11, 0);
-        draw_LeftTower_Ruined_Stairway_Steps_TopView();
+        draw_LeftTower_Ruined_Stairway_Steps();
+        glTranslatef(0, 11, 0);
+        draw_LeftTower_Ruined_Stairway_Steps();
         glPopMatrix();
 
 	}
@@ -1222,7 +1233,7 @@ void draw_LeftTower_Ruined_Stairway_TopView() {
 
 /**********************************************************************/
 //head
-void draw_LeftTower_Ruined_Head_TopView() {
+void draw_LeftTower_Ruined_Head() {
 
 	//sets the beginning of the inside draw part
 	glBegin(GL_LINE_LOOP);
@@ -1248,7 +1259,7 @@ void draw_LeftTower_Ruined_Head_TopView() {
 
     glPushMatrix();
     glTranslatef(2, 2, 0);
-    draw_LeftTower_Ruined_Stairway_TopView();
+    draw_LeftTower_Ruined_Stairway();
     glPopMatrix();
 
 }
@@ -1260,7 +1271,7 @@ void draw_LeftTower_Ruined_Head_TopView() {
 ***********************************************************************************************************************/
 
 //outside crown spikes part
-void draw_MiddleTower_Bottom_Crown_Spikes_Part_TopView() {
+void draw_MiddleTower_Bottom_Crown_Spikes_Part() {
 
 	//sets the beginning of the inside draw part
 	glBegin(GL_LINE_LOOP);
@@ -1279,7 +1290,7 @@ void draw_MiddleTower_Bottom_Crown_Spikes_Part_TopView() {
 }
 
 //outside crown part
-void draw_MiddleTower_Bottom_Crown_TopView() {
+void draw_MiddleTower_Bottom_Crown() {
 
 	//makes a cycle where since the point 5px away from the origin in the x axis
 	//until it reach 5px before the end of the x axis draw
@@ -1287,9 +1298,9 @@ void draw_MiddleTower_Bottom_Crown_TopView() {
 
         glPushMatrix();
         glTranslatef(i, 0, 0);
-		draw_MiddleTower_Bottom_Crown_Spikes_Part_TopView();
+		draw_MiddleTower_Bottom_Crown_Spikes_Part();
         glTranslatef(0, 25, 0);
-		draw_MiddleTower_Bottom_Crown_Spikes_Part_TopView();
+		draw_MiddleTower_Bottom_Crown_Spikes_Part();
 		glPopMatrix();
 
 	}
@@ -1300,9 +1311,9 @@ void draw_MiddleTower_Bottom_Crown_TopView() {
 
         glPushMatrix();
         glTranslatef(0, i, 0);
-        draw_MiddleTower_Bottom_Crown_Spikes_Part_TopView();
+        draw_MiddleTower_Bottom_Crown_Spikes_Part();
         glTranslatef(25, 0, 0);
-        draw_MiddleTower_Bottom_Crown_Spikes_Part_TopView();
+        draw_MiddleTower_Bottom_Crown_Spikes_Part();
         glPopMatrix();
 
 	}
@@ -1311,7 +1322,7 @@ void draw_MiddleTower_Bottom_Crown_TopView() {
 
 /**********************************************************************/
 //inside crown spikes part
-void draw_MiddleRight_Tower_Crown_Spikes_Part_TopView() {
+void draw_MiddleRight_Tower_Crown_Spikes_Part() {
 
 	//sets the beginning of the inside draw part
 	glBegin(GL_LINE_LOOP);
@@ -1330,7 +1341,7 @@ void draw_MiddleRight_Tower_Crown_Spikes_Part_TopView() {
 }
 
 //inside crown part
-void draw_MiddleRight_Tower_Crown_TopView() {
+void draw_MiddleRight_Tower_Crown() {
 
 	//makes a cycle where since the point 5px away from the origin in the x axis
 	//until it reach 5px before the end of the x axis draw
@@ -1338,9 +1349,9 @@ void draw_MiddleRight_Tower_Crown_TopView() {
 
         glPushMatrix();
         glTranslatef(i, 0, 0);
-        draw_MiddleRight_Tower_Crown_Spikes_Part_TopView();
+        draw_MiddleRight_Tower_Crown_Spikes_Part();
         glTranslatef(0, 10, 0);
-        draw_MiddleRight_Tower_Crown_Spikes_Part_TopView();
+        draw_MiddleRight_Tower_Crown_Spikes_Part();
         glPopMatrix();
 
 	}
@@ -1351,9 +1362,9 @@ void draw_MiddleRight_Tower_Crown_TopView() {
 
         glPushMatrix();
         glTranslatef(0, i, 0);
-        draw_MiddleRight_Tower_Crown_Spikes_Part_TopView();
+        draw_MiddleRight_Tower_Crown_Spikes_Part();
         glTranslatef(10, 0, 0);
-        draw_MiddleRight_Tower_Crown_Spikes_Part_TopView();
+        draw_MiddleRight_Tower_Crown_Spikes_Part();
         glPopMatrix();
 
 	}
@@ -1362,7 +1373,7 @@ void draw_MiddleRight_Tower_Crown_TopView() {
 
 /**********************************************************************/
 //banner
-void draw_MiddleTower_Banner_TopView() {
+void draw_MiddleTower_Banner() {
 
 	//sets the beginning of the inside draw part
 	glBegin(GL_LINE_LOOP);
@@ -1387,7 +1398,7 @@ void draw_MiddleTower_Banner_TopView() {
 ***********************************************************************************************************************/
 
 //bottom (bottom cover)
-void draw_RightTower_Bottom_TopView() {
+void draw_RightTower_Bottom() {
 
 	//sets the beginning of the inside draw part
 	glBegin(GL_LINE_LOOP);
@@ -1443,80 +1454,80 @@ void draw_RightTower_Bottom_TopView() {
 ***********************************************************************************************************************/
 
 //left tower
-void draw_LeftTower_TopView() {
+void draw_LeftTower() {
 
     /*
      * save the matrix status
      * translate the figure
      *      X_INITIAL + 20 units for the x value
      *      Y_INITIAL + 20 units for the y value
-     * draw_LeftTower_Crown_TopView()
+     * draw_LeftTower_Crown()
      * translate the figure
      *      7 units for the x value
      *      7 units for the y value
-     * draw_LeftTower_Crown_Spikes_Part_TopView()
+     * draw_LeftTower_Crown_Spikes_Part()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
 	glPushMatrix();
 	glTranslatef(X_INITIAL + 20, Y_INITIAL + 20, 0);
-	draw_LeftTower_Crown_TopView();     //(120, 320)
+	draw_LeftTower_Crown();     //(120, 320)
     glTranslatef(7, 7, 0);
-	draw_LeftTower_Trapdoor_TopView();  //(127, 327)
+	draw_LeftTower_Trapdoor();  //(127, 327)
 	glPopMatrix();
 
 }
 
 /**********************************************************************/
 //left tower ruined
-void draw_LeftTower_Ruined_TopView() {
+void draw_LeftTower_Ruined() {
 
     /*
      * save the matrix status
      * translate the figure
      *      X_INITIAL + 110 units for the x value
      *      Y_INITIAL + 25 units for the y value
-     * draw_LeftTower_Crown_TopView()
+     * draw_LeftTower_Crown()
      * translate the figure
      *      5 units for the x value
      *      5 units for the y value
-     * draw_LeftTower_Crown_Spikes_Part_TopView()
+     * draw_LeftTower_Crown_Spikes_Part()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
     glPushMatrix();
     glTranslatef(X_INITIAL + 110, Y_INITIAL + 25, 0);
-    draw_LeftTower_Ruined_Bottom_TopView();
+    draw_LeftTower_Ruined_Bottom();
     glTranslatef(5, 5, 0);
-    draw_LeftTower_Ruined_Head_TopView();
+    draw_LeftTower_Ruined_Head();
     glPopMatrix();
 
 }
 
 /**********************************************************************/
 //middle tower
-void draw_MiddleTower_TopView() {
+void draw_MiddleTower() {
 
     /*
      * save the matrix status
      * translate the figure
      *      X_INITIAL + 190 units for the x value
      *      Y_INITIAL + 25 units for the y value
-     * draw_MiddleTower_Bottom_Crown_TopView()
+     * draw_MiddleTower_Bottom_Crown()
      * translate the figure
      *      7.5 units for the x value
      *      7.5 units for the y value
-     * draw_MiddleRight_Tower_Crown_TopView()
+     * draw_MiddleRight_Tower_Crown()
      * translate the figure
      *      -7.5 units for the y value
-     * draw_MiddleTower_Banner_TopView()
+     * draw_MiddleTower_Banner()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
     glPushMatrix();
     glTranslatef(X_INITIAL + 190, Y_INITIAL + 25, 0);
-	draw_MiddleTower_Bottom_Crown_TopView();
+	draw_MiddleTower_Bottom_Crown();
     glTranslatef(7.5, 7.5, 0);
-	draw_MiddleRight_Tower_Crown_TopView();
+	draw_MiddleRight_Tower_Crown();
     glTranslatef(0, -7.5, 0);
-    draw_MiddleTower_Banner_TopView();
+    draw_MiddleTower_Banner();
     glPopMatrix();
 
     /*
@@ -1524,48 +1535,48 @@ void draw_MiddleTower_TopView() {
      * translate the figure
      *      X_INITIAL + 320 units for the x value
      *      Y_INITIAL + 25 units for the y value
-     * draw_MiddleTower_Bottom_Crown_TopView()
+     * draw_MiddleTower_Bottom_Crown()
      * translate the figure
      *      7.5 units for the x value
      *      7.5 units for the y value
-     * draw_MiddleRight_Tower_Crown_TopView()
+     * draw_MiddleRight_Tower_Crown()
      * translate the figure
      *      -7.5 units for the y value
-     * draw_MiddleTower_Banner_TopView()
+     * draw_MiddleTower_Banner()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
     glPushMatrix();
     glTranslatef(X_INITIAL + 320, Y_INITIAL + 25, 0);
-    draw_MiddleTower_Bottom_Crown_TopView();
+    draw_MiddleTower_Bottom_Crown();
     glTranslatef(7.5, 7.5, 0);
-    draw_MiddleRight_Tower_Crown_TopView();
+    draw_MiddleRight_Tower_Crown();
     glTranslatef(0, -7.5, 0);
-    draw_MiddleTower_Banner_TopView();
+    draw_MiddleTower_Banner();
     glPopMatrix();
 
 }
 
 /**********************************************************************/
 //right tower
-void draw_RightTower_TopView() {
+void draw_RightTower() {
 
     /*
      * save the matrix status
      * translate the figure
      *      X_INITIAL + 400 units for the x value
      *      Y_INITIAL + 10 units for the y value
-     * draw_RightTower_Bottom_TopView()
+     * draw_RightTower_Bottom()
      * translate the figure
      *      16.5 units for the x value
      *      21 units for the y value
-     * draw_MiddleRight_Tower_Crown_TopView()
+     * draw_MiddleRight_Tower_Crown()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
     glPushMatrix();
     glTranslatef(X_INITIAL + 400, Y_INITIAL + 10, 0);
-	draw_RightTower_Bottom_TopView();
+	draw_RightTower_Bottom();
     glTranslatef(16.5, 21, 0);
-    draw_MiddleRight_Tower_Crown_TopView();
+    draw_MiddleRight_Tower_Crown();
     glPopMatrix();
 
 }
@@ -1577,7 +1588,7 @@ void draw_RightTower_TopView() {
 ***********************************************************************************************************************/
 
 //outside crown spikes part
-void draw_ArcBridge_Border_Spikes_Part_TopView() {
+void draw_ArcBridge_Border_Spikes_Part() {
 
 	//sets the beginning of the inside draw part
 	glBegin(GL_LINE_LOOP);
@@ -1597,7 +1608,7 @@ void draw_ArcBridge_Border_Spikes_Part_TopView() {
 
 /**********************************************************************/
 //arc bridge border
-void draw_ArcBridge_Border_TopView() {
+void draw_ArcBridge_Border() {
 
 //  for 50 units
 	for (GLfloat i = 0; i < 50; i += 5) {
@@ -1606,12 +1617,12 @@ void draw_ArcBridge_Border_TopView() {
          * save the matrix status
          * translate the figure
          *      i units for the x value
-         * draw_ArcBridge_Border_Spikes_Part_TopView()
+         * draw_ArcBridge_Border_Spikes_Part()
          * every vertex non modified keeps the same as it was, but the modified ones are changed
          * */
 	    glPushMatrix();
 	    glTranslatef(i, 0, 0);
-		draw_ArcBridge_Border_Spikes_Part_TopView();
+		draw_ArcBridge_Border_Spikes_Part();
 		glPopMatrix();
 
 	}
@@ -1625,46 +1636,46 @@ void draw_ArcBridge_Border_TopView() {
 ***********************************************************************************************************************/
 
 //arc bridge
-void draw_ArcBridge_TopView() {
+void draw_ArcBridge() {
 
     /*
      * save the matrix status
      * translate the figure
      *      X_INITIAL + 60 units for the x value
      *      Y_INITIAL + 30 units for the y value
-     * draw_ArcBridge_Border_TopView()
+     * draw_ArcBridge_Border()
      * translate the figure
      *      15 units for the y value
-     * draw_ArcBridge_Border_TopView()
+     * draw_ArcBridge_Border()
      * translate the figure
      *      80 units for the x value
      *      -15 units for the y value
-     * draw_ArcBridge_Border_TopView()
+     * draw_ArcBridge_Border()
      * translate the figure
      *      15 units for the y value
-     * draw_ArcBridge_Border_TopView()
+     * draw_ArcBridge_Border()
      * translate the figure
      *      210 units for the x value
      *      -15 units for the y value
-     * draw_ArcBridge_Border_TopView()
+     * draw_ArcBridge_Border()
      * translate the figure
      *      15 units for the y value
-     * draw_ArcBridge_Border_TopView()
+     * draw_ArcBridge_Border()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
 	glPushMatrix();
 	glTranslatef(X_INITIAL + 60, Y_INITIAL + 30, 0);
-    draw_ArcBridge_Border_TopView();
+    draw_ArcBridge_Border();
     glTranslatef(0, 15, 0);
-    draw_ArcBridge_Border_TopView();
+    draw_ArcBridge_Border();
     glTranslatef(80, -15, 0);
-    draw_ArcBridge_Border_TopView();
+    draw_ArcBridge_Border();
     glTranslatef(0, 15, 0);
-    draw_ArcBridge_Border_TopView();
+    draw_ArcBridge_Border();
     glTranslatef(210, -15, 0);
-    draw_ArcBridge_Border_TopView();
+    draw_ArcBridge_Border();
     glTranslatef(0, 15, 0);
-    draw_ArcBridge_Border_TopView();
+    draw_ArcBridge_Border();
     glPopMatrix();
 
 
@@ -1678,11 +1689,11 @@ void draw_ArcBridge_TopView() {
 ***********************************************************************************************************************/
 
 //arc bridge border ruined
-void draw_ArcBridge_Border_Ruined_TopView(/*values*/) {}
+void draw_ArcBridge_Border_Ruined(/*values*/) {}
 
 /**********************************************************************/
 //arc bridge path ruined
-void draw_ArcBridge_Path_Ruined_TopView(/*values*/) {}
+void draw_ArcBridge_Path_Ruined(/*values*/) {}
 
 /***********************************************************************************************************************
 *                                                                                                                      *
@@ -1691,7 +1702,7 @@ void draw_ArcBridge_Path_Ruined_TopView(/*values*/) {}
 ***********************************************************************************************************************/
 
 ///arc bridge ruined
-void draw_ArcBridge_Ruined_TopView(/*values*/) {}
+void draw_ArcBridge_Ruined(/*values*/) {}
 
 /***********************************************************************************************************************
 *                                                                                                                      *
@@ -1700,7 +1711,7 @@ void draw_ArcBridge_Ruined_TopView(/*values*/) {}
 ***********************************************************************************************************************/
 
 //wall edification (middle towers connection)
-void draw_WallEdification_Roof_TopView(GLfloat width, GLfloat height) {
+void draw_WallEdification_Roof(GLfloat width, GLfloat height) {
 
 //  for height unities, increasing 2.5 each
 	for (GLfloat v = 0; v < height; v += 2.5) {
@@ -1713,12 +1724,13 @@ void draw_WallEdification_Roof_TopView(GLfloat width, GLfloat height) {
              * translate the figure
              *      h units for the x value
              *      v units for the y value
-             * draw_RoofTiles_Square_TopView()
+             * draw_RoofTiles_Square()
              * every vertex non modified keeps the same as it was, but the modified ones are changed
              * */
 			glPushMatrix();
 			glTranslatef(h, v, 0);
-			draw_RoofTiles_Square_TopView();
+			glScalef(2.5, 2.5, 0.5);
+			draw_6_Faces_Figure();
 			glPopMatrix();
 
 		}
@@ -1734,25 +1746,25 @@ void draw_WallEdification_Roof_TopView(GLfloat width, GLfloat height) {
 ***********************************************************************************************************************/
 
 //middle towers connection
-void draw_MiddleTowers_connection_TopView() {
+void draw_MiddleTowers_connection() {
 
     /*
      * save the matrix status
      * translate the figure
      *      X_INITIAL + 195 units for the x value
      *      Y_INITIAL + 55 units for the y value
-     * draw_WallEdification_Roof_TopView()
+     * draw_WallEdification_Roof()
      * translate the figure
      *      25 units for the x value
      *      -20 units for the y value
-     * draw_WallEdification_Roof_TopView()
+     * draw_WallEdification_Roof()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
 	glPushMatrix();
 	glTranslatef(X_INITIAL + 195, Y_INITIAL + 55, 0);
-	draw_WallEdification_Roof_TopView(150, 25);
+	draw_WallEdification_Roof(150, 25);
 	glTranslatef(25, -20, 0);
-	draw_WallEdification_Roof_TopView(100, 20);
+	draw_WallEdification_Roof(100, 20);
 	glPopMatrix();
 
 }
@@ -1763,104 +1775,11 @@ void draw_MiddleTowers_connection_TopView() {
 *                                                                                                                      *
 ***********************************************************************************************************************/
 
-//gate head
-void draw_Gate_Head_TopView(GLfloat size) {
-
-    /*
-     * save the matrix status
-     * translate the figure
-     *      X_INITIAL units for the x value
-     *      Y_INITIAL units for the y value
-     * increase the figure by:
-     *      size on the x axis
-     *      100 on the z axis
-     * create_Front_Face()
-     * translate the figure
-     *      5 units for the y value
-     * create_Front_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-    glPushMatrix();
-    glTranslatef(X_INITIAL, Y_INITIAL, 0);
-    glScalef(size, 1, 100);
-    create_Front_Face();
-    glTranslatef(0, 5, 0);
-    create_Front_Face();
-    glPopMatrix();
-
-    /*
-     * save the matrix status
-     * translate the figure
-     *      X_INITIAL units for the x value
-     *      Y_INITIAL units for the y value
-     * increase the figure by:
-     *      5 on the y axis
-     *      100 on the z axis
-     * create_Front_Face()
-     * translate the figure
-     *      size units for the x value
-     * create_Front_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-    glPushMatrix();
-    glTranslatef(X_INITIAL, Y_INITIAL, 0);
-    glScalef(1, 5, 100);
-    create_Left_Face();
-    glTranslatef(size, 0, 0);
-    create_Left_Face();
-    glPopMatrix();
-
-    /*
-     * save the matrix status
-     * translate the figure
-     *      X_INITIAL units for the x value
-     *      Y_INITIAL units for the y value
-     * increase the figure by:
-     *      size on the x axis
-     *      5 on the y axis
-     * create_Front_Face()
-     * translate the figure
-     *      100 units for the z value
-     * create_Front_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-    glPushMatrix();
-    glTranslatef(X_INITIAL, Y_INITIAL, 0);
-    glScalef(size, 5, 1);
-    create_Bot_Face();
-    glTranslatef(0, 0, 100);
-    create_Bot_Face();
-    glPopMatrix();
-
-}
-
-/**********************************************************************/
-//flag holder (gate)
-void draw_FlagHolder_TopView() {
-
-    glPushMatrix();
-    glTranslatef(X_INITIAL, Y_INITIAL, 0);
-	//sets the beginning of the inside draw part
-	glBegin(GL_LINE_LOOP);
-
-	glVertex3f(0, 0, 0);
-	glVertex3f(10, 0, 0);       //     adds 10px width
-	glVertex3f(10, 10, 0);  //     adds 10px height
-	glVertex3f(0, 10, 0);       //     removes 10px width
-
-	//sets the ending of the draw
-	glEnd();
-
-	glPopMatrix();
-
-}
-
-/**********************************************************************/
 //flag (gate)
-void draw_Flag_TopView() {
+void draw_Flag() {
 
     glPushMatrix();
-    glTranslatef(X_INITIAL, Y_INITIAL, 0);
+    glTranslatef(0, 0, 0);
 	//sets the beginning of the inside draw part
 	glBegin(GL_LINE_LOOP);
 
@@ -1881,41 +1800,82 @@ void draw_Flag_TopView() {
 ***********************************************************************************************************************/
 
 //gate
-void draw_Gate_TopView() {
+void draw_Gate_Entrance() {
 
     /*
      * save the matrix status
      * translate the figure
-     *      220 units for the x value
-     *      30 units for the y value
-     * draw_Gate_Head_TopView()
+     *      X_INITIAL + 220 units for the x value
+     *      Y_INITIAL + 30 units for the y value
+     *
+     *      save the matrix status
+     *      increase the figure size by
+     *           100 times of the x value
+     *           5 times of the y value
+     *           100 times of the z value
+     *      draw_6_Faces_Figure()
+     *      every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
      * translate the figure
      *      -5 units for the x value
      *      -10 units for the y value
-     * draw_FlagHolder_TopView()
+     *
+     *      save the matrix status
+     *      increase the figure size by
+     *           10 times of the x value
+     *           10 times of the y value
+     *           70 times of the z value
+     *      draw_6_Faces_Figure()
+     *      every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
      * translate the figure
      *      100 units for the x value
-     * draw_FlagHolder_TopView()
+     *
+     *      save the matrix status
+     *      increase the figure size by
+     *           10 times of the x value
+     *           10 times of the y value
+     *           70 times of the z value
+     *      draw_6_Faces_Figure()
+     *      every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
      * translate the figure
      *      -93 units for the x value
      *      2.5 units for the y value
-     * draw_Flag_TopView()
+     * draw_Flag()
      * translate the figure
      *      95 units for the x value
-     * draw_Flag_TopView()
+     * draw_Flag()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
 	glPushMatrix();
-	glTranslatef(220, 30, 0);
-	draw_Gate_Head_TopView(100);
+	glTranslatef(X_INITIAL + 220, Y_INITIAL + 30, 0);
+
+	glPushMatrix();
+	glScalef(100, 5, 100);
+	draw_6_Faces_Figure();
+	glPopMatrix();
+
 	glTranslatef(-5, -10, 0);
-	draw_FlagHolder_TopView();
+
+//	make the flag holder
+    glPushMatrix();
+    glScalef(10, 10, 70);
+    draw_6_Faces_Figure();
+    glPopMatrix();
+
 	glTranslatef(100, 0, 0);
-	draw_FlagHolder_TopView();
-	glTranslatef(-93, 2.5, 0);
-	draw_Flag_TopView();
+
+//	make the flag holder
+    glPushMatrix();
+    glScalef(10, 10, 70);
+    draw_6_Faces_Figure();
+    glPopMatrix();
+
+    glTranslatef(-93, 2.5, 0);
+	draw_Flag();
 	glTranslatef(95, 0, 0);
-	draw_Flag_TopView();
+	draw_Flag();
 	glPopMatrix();
 
 }
@@ -1927,7 +1887,7 @@ void draw_Gate_TopView() {
 ***********************************************************************************************************************/
 
 //gargoyles
-void draw_Gargoyles_TopView() {
+void draw_Gargoyles() {
 
 	//sets the beginning of the inside draw part
 	glBegin(GL_LINE_LOOP);
@@ -1949,24 +1909,24 @@ void draw_Gargoyles_TopView() {
 ***********************************************************************************************************************/
 
 //entrance gargoyles
-void draw_EntranceGargoyles_TopView() {
+void draw_EntranceGargoyles() {
 
     /*
      * save the matrix status
      * translate the figure
      *      X_INITIAL + 220 units for the x value
      *      Y_INITIAL - 10 units for the y value
-     * draw_Gargoyles_TopView()
+     * draw_Gargoyles()
      * translate the figure
      *      90 units for the x value
-     * draw_Gargoyles_TopView()
+     * draw_Gargoyles()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
 	glPushMatrix();
 	glTranslatef(X_INITIAL + 220, Y_INITIAL - 10, 0);
-	draw_Gargoyles_TopView();
+	draw_Gargoyles();
 	glTranslatef(90, 0, 0);
-	draw_Gargoyles_TopView();
+	draw_Gargoyles();
 	glPopMatrix();
 
 }
@@ -1977,96 +1937,128 @@ void draw_EntranceGargoyles_TopView() {
 *                                                                                                                      *
 ***********************************************************************************************************************/
 
-void draw_FrontDoor_Tower_Body_TopView() {
-
-    /*
-     * save the matrix status
-     * translate the figure
-     *      X_INITIAL units for the x value
-     *      Y_INITIAL units for the y value
-     *
-     * sets the beginning with only the lines that surrounds it
-     * draw_Circle()
-     * draw_Circle()
-     * sets the ending of the draw connecting the first vertex draw with the last
-     *
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-    glPushMatrix();
-    glTranslatef(X_INITIAL, Y_INITIAL, 0);
-    glBegin(GL_LINE_LOOP);
-    draw_Circle(0, 2 * PI, 5, 5, 0);
-    draw_Circle(0, 2 * PI, 5, 5, 100);
-    glEnd();
-    glPopMatrix();
-
-}
-
-void draw_FrontDoor_Tower_TopView() {
-
-    /*
-     * save the matrix status
-     * translate the figure
-     *      X_INITIAL units for the x value
-     *      Y_INITIAL units for the y value
-     *      100 units for the z axis
-     *
-     * sets the beginning with only the lines that surrounds it
-     * draw_Circle()
-     * draw_Circle()
-     * draw_Circle()
-     * sets the ending of the draw connecting the first vertex draw with the last
-     *
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-	glPushMatrix();
-	glTranslatef(X_INITIAL, Y_INITIAL, 100);
-	glBegin(GL_LINE_LOOP);
-
-	draw_Circle(0, 2 * PI, 5, 5, 0);
-	draw_Circle(0, 2 * PI, 3, 3, 5);
-	draw_Circle(0, 2 * PI, 1, 1, 10);
-
-	glEnd();
-	glPopMatrix();
-
-}
-
-/**********************************************************************/
-void draw_FrontDoor_TopView() {
+void draw_FrontDoor() {
 
     /*
      * save the matrix status
      * translate the figure
      *      2.5 for the x value
      *      2.5 for the y value
-     * draw_FrontDoor_Tower_TopView()
-     * draw_FrontDoor_Tower_Body_TopView()
+     *
+     *      save the matrix status
+     *      translate the figure
+     *           0 units for the x value
+     *           0 units for the y value
+     *           100 units for the z axis
+     *
+     *      sets the beginning with only the lines that surrounds it
+     *      draw_Circle()
+     *      draw_Circle()
+     *      draw_Circle()
+     *      sets the ending of the draw connecting the first vertex draw with the last
+     *
+     *      every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
+     *      save the matrix status
+     *      increase the figure size by
+     *           5 times of the x value
+     *           5 times of the y value
+     *           100 times of the z value
+     *      draw_Cylinder_Figure()
+     *      every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
      * translate the figure
      *      35 for the x value
-     * draw_FrontDoor_Tower_TopView()
-     * draw_FrontDoor_Tower_Body_TopView()
+     *
+     *      save the matrix status
+     *      translate the figure
+     *           0 units for the x value
+     *           0 units for the y value
+     *           100 units for the z axis
+     *
+     *      sets the beginning with only the lines that surrounds it
+     *      draw_Circle()
+     *      draw_Circle()
+     *      draw_Circle()
+     *      sets the ending of the draw connecting the first vertex draw with the last
+     *
+     *      save the matrix status
+     *      increase the figure size by
+     *           5 times of the x value
+     *           5 times of the y value
+     *           100 times of the z value
+     *      draw_Cylinder_Figure()
+     *      every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
 	glPushMatrix();
 	glTranslatef(2.5, 2.5, 0);
-	draw_FrontDoor_Tower_TopView();
-	draw_FrontDoor_Tower_Body_TopView();
-	glTranslatef(35, 0, 0);
-	draw_FrontDoor_Tower_TopView();
-	draw_FrontDoor_Tower_Body_TopView();
-	glPopMatrix();
+
+//  make the roof of the tower
+    glPushMatrix();
+    glTranslatef(0, 0, 100);
+    glBegin(GL_LINE_LOOP);
+
+    draw_Circle(0, 2 * PI, 5, 5, 0);
+    draw_Circle(0, 2 * PI, 3, 3, 5);
+    draw_Circle(0, 2 * PI, 1, 1, 10);
+
+    glEnd();
+    glPopMatrix();
+
+//  make the body of the tower
+    glPushMatrix();
+    glScalef(5, 5, 100);
+    draw_Cylinder_Figure();
+    glPopMatrix();
+
+    glTranslatef(35, 0, 0);
+
+//  make the roof of the tower
+    glPushMatrix();
+    glTranslatef(0, 0, 100);
+    glBegin(GL_LINE_LOOP);
+
+    draw_Circle(0, 2 * PI, 5, 5, 0);
+    draw_Circle(0, 2 * PI, 3, 3, 5);
+    draw_Circle(0, 2 * PI, 1, 1, 10);
+
+    glEnd();
+    glPopMatrix();
+
+//  make the body of the tower
+    glPushMatrix();
+    glScalef(5, 5, 100);
+    draw_Cylinder_Figure();
+    glPopMatrix();
+
+    glPopMatrix();
 
     /*
      * save the matrix status
      * translate the figure
      *      7 for the x value
-     * draw_Gate_Head_TopView()
+     *
+     *      save the matrix status
+     *      increase the figure size by
+     *           100 times of the x value
+     *           5 times of the y value
+     *           100 times of the z value
+     *      draw_6_Faces_Figure()
+     *      every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
+     * draw_Gate_Head()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
 	glPushMatrix();
 	glTranslatef(7, 0, 0);
-	draw_Gate_Head_TopView(26);
+
+    glPushMatrix();
+    glScalef(26, 5, 100);
+    draw_6_Faces_Figure();
+    glPopMatrix();
+
 	glPopMatrix();
 
 
@@ -2079,19 +2071,19 @@ void draw_FrontDoor_TopView() {
 ************************************************************************************************************************
 ***********************************************************************************************************************/
 //delivery road
-void draw_Delivery_TopView() {
+void draw_Delivery() {
 
     /*
      * save the matrix status
      * translate the figure
-     *      247.5 for the x value
-     *      160 for the y value
-     * draw_FrontDoor_TopView()
+     *      X_INITIAL + 247.5 for the x value
+     *      Y_INITIAL + 160 for the y value
+     * draw_FrontDoor()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
 	glPushMatrix();
-	glTranslatef(247.5, 160, 0);
-	draw_FrontDoor_TopView();
+	glTranslatef(X_INITIAL + 247.5, Y_INITIAL + 160, 0);
+	draw_FrontDoor();
 	glPopMatrix();
 
 }
@@ -2102,7 +2094,7 @@ void draw_Delivery_TopView() {
 ************************************************************************************************************************
 ***********************************************************************************************************************/
 //castle road
-void draw_Castle_Road_TopView() {
+void draw_Castle_Road() {
 
     /*
      * save the matrix status
@@ -2311,209 +2303,223 @@ void draw_Castle_Road_TopView() {
 }
 
 /***********************************************************************************************************************
-*                                                                                                                      *
-*                                               Draw the castle courtyard                                              *
-*                                                                                                                      *
-***********************************************************************************************************************/
-//castle courtyard
-void draw_Castle_Courtyard_Limit_TopView() {
-
-    /*
-     * save the matrix status
-     * increase the figure size by
-     *      190 times of the x value
-     *      65 times of the y value
-     * create_Bot_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-	glPushMatrix();
-	glScalef(190, 65, 1);
-	create_Bot_Face();
-	glPopMatrix();
-
-}
-
-/**********************************************************************/
-//roundabout outside
-void draw_Castle_Courtyard_Roundabout_Outside_TopView() {
-
-	//sets the beginning with only the lines that surrounds it
-	glBegin(GL_LINE_LOOP);
-
-	//call the function draw_Circle()
-	draw_Circle(0, 2 * PI, 7.5, 7.5, 0);
-
-    //call the function draw_Circle()
-    draw_Circle(0, 2 * PI, 7.5, 7.5, 5);
-
-	//sets the ending of the draw connecting the first vertex draw with the last
-	glEnd();
-}
-
-//roundabout inside
-void draw_Castle_Courtyard_Roundabout_Inside_TopView() {
-
-	//sets the beginning with only the lines that surrounds it
-	glBegin(GL_LINE_LOOP);
-
-    //call the function draw_Circle()
-	draw_Circle(0, 2 * PI, 2.5, 2.5, 0);  //Center (x, y)
-
-    //call the function draw_Circle()
-    draw_Circle(0, 2 * PI, 2.5, 2.5, 10);  //Center (x, y)
-
-	//sets the ending of the draw connecting the first vertex draw with the last
-	glEnd();
-
-}
-
-/**********************************************************************/
-void draw_Castle_Courtyard_Store_TopView(GLfloat xSize, GLfloat ySize) {
-
-    /*
-     * save the matrix status
-     * increase the figure size by
-     *      xSize times of the x value
-     *      ySize times of the y value
-     * create_Bot_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-	//bot
-	glPushMatrix();
-	glScalef(xSize, ySize, 1);
-	create_Bot_Face();
-	glPopMatrix();
-
-    /*
-     * save the matrix status
-     * translate the figure
-     *      15 for the z value
-     * increase the figure size by
-     *      xSize times of the x value
-     *      ySize times of the y value
-     * create_Bot_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-	//top
-	glPushMatrix();
-	glTranslatef(0, 0, 15);
-	glScalef(xSize, ySize, 1);
-	create_Bot_Face();
-	glPopMatrix();
-
-    /*
-     * save the matrix status
-     * increase the figure size by
-     *      xSize times of the x value
-     *      15 times of the z value
-     * create_Front_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-	//front
-	glPushMatrix();
-	glScalef(xSize, 1, 15);
-	create_Front_Face();
-	glPopMatrix();
-
-    /*
-     * save the matrix status
-     * translate the figure
-     *      ySize for the y value
-     * increase the figure size by
-     *      xSize times of the x value
-     *      15 times of the z value
-     * create_Front_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-	//back
-	glPushMatrix();
-	glTranslatef(0, ySize, 0);
-	glScalef(xSize, 1, 15);
-	create_Front_Face();
-	glPopMatrix();
-
-    /*
-     * save the matrix status
-     * increase the figure size by
-     *      ySize times of the y value
-     *      15 times of the z value
-     * create_Left_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-	//left
-	glPushMatrix();
-	glScalef(1, ySize, 15);
-	create_Left_Face();
-	glPopMatrix();
-
-    /*
-     * save the matrix status
-     * translate the figure
-     *      xSize for the x value
-     * increase the figure size by
-     *      ySize times of the y value
-     *      15 times of the z value
-     * create_Left_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-	//right
-	glPushMatrix();
-	glTranslatef(xSize, 0, 0);
-	glScalef(1, ySize, 15);
-	create_Left_Face();
-	glPopMatrix();
-
-}
-
-void draw_Castle_Courtyard_Road_TopView() {
-
-    /*
-     * save the matrix status
-     * increase the figure size by
-     *      5 times of the x value
-     *      5 times of the y value
-     * create_Bot_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-	glPushMatrix();
-	glScalef(5, 5, 1);
-	create_Bot_Face();
-	glPopMatrix();
-
-}
-
-/***********************************************************************************************************************
 ************************************************************************************************************************
 *********************************Sets the origin point position of the castle courtyard*********************************
 ************************************************************************************************************************
 ***********************************************************************************************************************/
 //castle road
-void draw_Castle_Courtyard_TopView() {
+void draw_Castle_Courtyard() {
 
     /*
      * save the matrix status
      * translate the figure
      *      X_INITIAL + 173.5 for the x value
      *      Y_INITIAL + 200 for the y value
-     * draw_Castle_Courtyard_Limit_TopView()
+     *
+     *      save the matrix status
+     *      increase the figure size by
+     *           190 times of the x value
+     *           65 times of the y value
+     *      create_Bot_Face()
+     *      every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
 	glPushMatrix();
 	glTranslatef(X_INITIAL + 173.5, Y_INITIAL + 200, 0);
-	draw_Castle_Courtyard_Limit_TopView();
+
+//	make the courtyard limit (ground)
+    glPushMatrix();
+    glScalef(190, 65, 1);
+    create_Bot_Face();
+    glPopMatrix();
 
     /*
      * save the matrix status
      * translate the figure
      *      94.5 for the x value
      *      29.5 for the y value
-     * draw_Castle_Courtyard_Roundabout_Outside_TopView()
-     * draw_Castle_Courtyard_Roundabout_Inside_TopView()
+     *
+     *      sets the beginning with only the lines that surrounds it
+     *      draw_Circle()
+     *      draw_Circle()
+     *      sets the ending of the draw connecting the first vertex draw with the last
+     *
+     *      sets the beginning with only the lines that surrounds it
+     *      draw_Circle()
+     *      draw_Circle()
+     *      sets the ending of the draw connecting the first vertex draw with the last
+     *
+     * draw_Castle_Courtyard_Roundabout_Outside()
+     * draw_Castle_Courtyard_Roundabout_Inside()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
 	glTranslatef(94.5, 29.5, 0);
-	draw_Castle_Courtyard_Roundabout_Outside_TopView();
-	draw_Castle_Courtyard_Roundabout_Inside_TopView();
+
+//	make the outside part of the roundabout
+    glBegin(GL_LINE_LOOP);
+    draw_Circle(0, 2 * PI, 7.5, 7.5, 0);
+    draw_Circle(0, 2 * PI, 7.5, 7.5, 5);
+    glEnd();
+
+//	make the inside part of the roundabout
+    glBegin(GL_LINE_LOOP);
+    draw_Circle(0, 2 * PI, 2.5, 2.5, 0);
+    draw_Circle(0, 2 * PI, 2.5, 2.5, 10);
+    glEnd();
+
+	glPopMatrix();
+
+    /*
+     * make the stores
+     *
+     * save the matrix status
+     * translate the figure
+     *      X_INITIAL + 177.5 for the x value
+     *      Y_INITIAL + 230 for the y value
+     *
+     *      save the matrix status
+     *      increase the figure size by
+     *           10 times of the x value
+     *           32 times of the y value
+     *           15 times of the z value
+     *      draw_Castle_Courtyard_Store()
+     *      every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
+     * translate the figure
+     *      10 for the x value
+     *      22 for the y value
+     *
+     *      save the matrix status
+     *      increase the figure size by
+     *           30 times of the x value
+     *           10 times of the y value
+     *           15 times of the z value
+     *      draw_Castle_Courtyard_Store()
+     *      every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
+     * translate the figure
+     *      10 for the x value
+     *      -32 for the y value
+     *
+     *      save the matrix status
+     *      increase the figure size by
+     *           30 times of the x value
+     *           20 times of the y value
+     *           15 times of the z value
+     *      draw_Castle_Courtyard_Store()
+     *      every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
+     * translate the figure
+     *      -10 for the x value
+     *      -20 for the y value
+     *
+     *      save the matrix status
+     *      increase the figure size by
+     *           40 times of the x value
+     *           10 times of the y value
+     *           15 times of the z value
+     *      draw_Castle_Courtyard_Store()
+     *      every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
+     * translate the figure
+     *      110 for the x value
+     *
+     *      save the matrix status
+     *      increase the figure size by
+     *           20 times of the x value
+     *           40 times of the y value
+     *           15 times of the z value
+     *      draw_Castle_Courtyard_Store()
+     *      every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
+     * translate the figure
+     *      30 for the x value
+     *
+     *      save the matrix status
+     *      increase the figure size by
+     *           20 times of the x value
+     *           20 times of the y value
+     *           15 times of the z value
+     *      draw_Castle_Courtyard_Store()
+     *      every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
+     * translate the figure
+     *      20 for the x value
+     *      30 for the y value
+     *
+     *      save the matrix status
+     *      increase the figure size by
+     *           12 times of the x value
+     *           32 times of the y value
+     *           15 times of the z value
+     *      draw_Castle_Courtyard_Store()
+     *      every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
+     * translate the figure
+     *      -50 for the x value
+     *      22 for the y value
+     *
+     *      save the matrix status
+     *      increase the figure size by
+     *           40 times of the x value
+     *           10 times of the y value
+     *           15 times of the z value
+     *      draw_Castle_Courtyard_Store()
+     *      every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
+     * every vertex non modified keeps the same as it was, but the modified ones are changed
+     * */
+	glPushMatrix();
+	glTranslatef(X_INITIAL + 177.5, Y_INITIAL + 230, 0);
+
+    glPushMatrix();
+    glScalef(10, 32, 15);
+	draw_6_Faces_Figure();
+	glPopMatrix();
+
+	glTranslatef(10, 22, 0);
+	glPushMatrix();
+	glScalef(30, 10, 15);
+	draw_6_Faces_Figure();
+    glPopMatrix();
+
+	glTranslatef(10, -32, 0);
+    glPushMatrix();
+    glScalef(30, 20, 15);
+	draw_6_Faces_Figure();
+	glPopMatrix();
+
+	glTranslatef(-10, -20, 0);
+    glPushMatrix();
+    glScalef(40, 10, 15);
+	draw_6_Faces_Figure();
+	glPopMatrix();
+
+	glTranslatef(110, 0, 0);
+    glPushMatrix();
+    glScalef(20, 40, 15);
+	draw_6_Faces_Figure();
+	glPopMatrix();
+
+	glTranslatef(30, 0, 0);
+    glPushMatrix();
+    glScalef(20, 20, 15);
+	draw_6_Faces_Figure();
+	glPopMatrix();
+
+	glTranslatef(20, 30, 0);
+    glPushMatrix();
+    glScalef(12, 32, 15);
+	draw_6_Faces_Figure();
+	glPopMatrix();
+
+	glTranslatef(-50, 22, 0);
+    glPushMatrix();
+    glScalef(40, 10, 15);
+	draw_6_Faces_Figure();
+	glPopMatrix();
+
 	glPopMatrix();
 
     /*
@@ -2521,218 +2527,92 @@ void draw_Castle_Courtyard_TopView() {
      * translate the figure
      *      X_INITIAL + 177.5 for the x value
      *      Y_INITIAL + 230 for the y value
-     * draw_Castle_Courtyard_Store_TopView()
+     * for 28 unities, increasing 2.5 each
+     * for 45 unities, increasing 2.5 each
      *
-     * translate the figure
-     *      10 for the x value
-     *      22 for the y value
-     * draw_Castle_Courtyard_Store_TopView()
+     *      save the matrix status
+     *      translate the figure
+     *          X_INITIAL + h for the x value
+     *          Y_INITIAL + v for the y value
      *
-     * translate the figure
-     *      10 for the x value
-     *      -32 for the y value
-     * draw_Castle_Courtyard_Store_TopView()
+     *              save the matrix status
+     *              increase the figure size by
+     *                   5 times of the x value
+     *                   5 times of the y value
+     *              create_Bot_Face()
+     *              every vertex non modified keeps the same as it was, but the modified ones are changed
      *
-     * translate the figure
-     *      -10 for the x value
-     *      -20 for the y value
-     * draw_Castle_Courtyard_Store_TopView()
+     *      every vertex non modified keeps the same as it was, but the modified ones are changed
      *
-     * translate the figure
-     *      110 for the x value
-     * draw_Castle_Courtyard_Store_TopView()
-     *
-     * translate the figure
-     *      30 for the x value
-     * draw_Castle_Courtyard_Store_TopView()
-     *
-     * translate the figure
-     *      20 for the x value
-     *      30 for the y value
-     * draw_Castle_Courtyard_Store_TopView()
-     *
-     * translate the figure
-     *      -50 for the x value
-     *      22 for the y value
-     * draw_Castle_Courtyard_Store_TopView()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
 	glPushMatrix();
-	glTranslatef(X_INITIAL + 177.5, Y_INITIAL + 230, 0);
-	draw_Castle_Courtyard_Store_TopView(10, 32);
+	glTranslatef(253, 165, 0);
+	for (int h = 0; h < 28; h += 5) {
 
-	glTranslatef(10, 22, 0);
-	draw_Castle_Courtyard_Store_TopView(30, 10);
+		for (int v = 0; v < 45; v += 5) {
 
-	glTranslatef(10, -32, 0);
-	draw_Castle_Courtyard_Store_TopView(30, 20);
+			glPushMatrix();
+			glTranslatef(X_INITIAL + h, Y_INITIAL + v, 0);
 
-	glTranslatef(-10, -20, 0);
-	draw_Castle_Courtyard_Store_TopView(40, 10);
+//			make the courtyard road (1 square)
+            glPushMatrix();
+            glScalef(5, 5, 1);
+            create_Bot_Face();
+            glPopMatrix();
 
-	glTranslatef(110, 0, 0);
-	draw_Castle_Courtyard_Store_TopView(20, 40);
+            glPopMatrix();
 
-	glTranslatef(30, 0, 0);
-	draw_Castle_Courtyard_Store_TopView(20, 20);
+		}
 
-	glTranslatef(20, 30, 0);
-	draw_Castle_Courtyard_Store_TopView(12, 32);
+	}
+    glPopMatrix();
 
-	glTranslatef(-50, 22, 0);
-	draw_Castle_Courtyard_Store_TopView(40, 10);
+    /*
+     * save the matrix status
+     * translate the figure
+     *      X_INITIAL + 177.5 for the x value
+     *      Y_INITIAL + 230 for the y value
+     * for 38 unities, increasing 2.5 each
+     * for 40 unities, increasing 2.5 each
+     *
+     *      save the matrix status
+     *      translate the figure
+     *          X_INITIAL + h for the x value
+     *          Y_INITIAL + v for the y value
+     *
+     *              save the matrix status
+     *              increase the figure size by
+     *                   5 times of the x value
+     *                   5 times of the y value
+     *              create_Bot_Face()
+     *              every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
+     *      every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
+     * every vertex non modified keeps the same as it was, but the modified ones are changed
+     * */
+    glPushMatrix();
+    glTranslatef(248, 210, 0);
+	for (int h = 0; h < 38; h += 5) {
+
+		for (int v = 0; v < 40; v += 5) {
+
+			glPushMatrix();
+			glTranslatef(X_INITIAL + h, Y_INITIAL + v, 0);
+
+//			make the courtyard road (1 square)
+            glPushMatrix();
+            glScalef(5, 5, 1);
+            create_Bot_Face();
+            glPopMatrix();
+
+            glPopMatrix();
+
+		}
+
+	}
 	glPopMatrix();
-
-//  from the  height unities, increasing 2.5 each
-	for (int h = 253; h < 281; h += 5) {
-
-//  for width unities, increasing 2.5 each
-		for (int v = 165; v < 210; v += 5) {
-
-            /*
-             * save the matrix status
-             * translate the figure
-             *      X_INITIAL + h for the x value
-             *      Y_INITIAL + v for the y value
-             * draw_Castle_Courtyard_Road_TopView()
-             * every vertex non modified keeps the same as it was, but the modified ones are changed
-             * */
-			glPushMatrix();
-			glTranslatef(X_INITIAL + h, Y_INITIAL + v, 0);
-			draw_Castle_Courtyard_Road_TopView();
-			glPopMatrix();
-
-		}
-
-	}
-
-	for (int h = 248; h < 286; h += 5) {
-
-		for (int v = 210; v < 250; v += 5) {
-
-			glPushMatrix();
-			glTranslatef(X_INITIAL + h, Y_INITIAL + v, 0);
-			draw_Castle_Courtyard_Road_TopView();
-			glPopMatrix();
-
-		}
-
-	}
-
-}
-
-/***********************************************************************************************************************
-*                                                                                                                      *
-*                                               Draws the castle hallway                                               *
-*                                                                                                                      *
-***********************************************************************************************************************/
-
-void draw_Castle_Hallway_Full_TopView(GLfloat xSize, GLfloat ySize) {
-
-    /*
-     * save the matrix status
-     * increase the figure size by
-     *      xSize times of the x value
-     *      ySize times of the y value
-     * create_Bot_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-    //bot
-    glPushMatrix();
-    glScalef(xSize, ySize, 1);
-    create_Bot_Face();
-    glPopMatrix();
-
-    /*
-     * save the matrix status
-     * translate the figure
-     *      40 for the z value
-     * increase the figure size by
-     *      xSize times of the x value
-     *      ySize times of the y value
-     * create_Bot_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-    //top
-    glPushMatrix();
-    glTranslatef(0, 0, 40);
-    glScalef(xSize, ySize, 1);
-    create_Bot_Face();
-    glPopMatrix();
-
-    /*
-     * save the matrix status
-     * increase the figure size by
-     *      xSize times of the x value
-     *      40 times of the z value
-     * create_Front_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-    //front
-    glPushMatrix();
-    glScalef(xSize, 1, 40);
-    create_Front_Face();
-    glPopMatrix();
-
-    /*
-     * save the matrix status
-     * translate the figure
-     *      ySize for the y value
-     * increase the figure size by
-     *      xSize times of the x value
-     *      40 times of the z value
-     * create_Front_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-    //back
-    glPushMatrix();
-    glTranslatef(0, ySize, 0);
-    glScalef(xSize, 1, 40);
-    create_Front_Face();
-    glPopMatrix();
-
-    /*
-     * save the matrix status
-     * increase the figure size by
-     *      ySize times of the y value
-     *      40 times of the z value
-     * create_Left_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-    //left
-    glPushMatrix();
-    glScalef(1, ySize, 40);
-    create_Left_Face();
-    glPopMatrix();
-
-    /*
-     * save the matrix status
-     * translate the figure
-     *      xSize for the x value
-     * increase the figure size by
-     *      ySize times of the y value
-     *      40 times of the z value
-     * create_Left_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-    //right
-    glPushMatrix();
-    glTranslatef(xSize, 0, 0);
-    glScalef(1, ySize, 40);
-    create_Left_Face();
-    glPopMatrix();
-
-    /*
-     * save the matrix status
-     * translate the figure
-     *      40 for the y value
-     * draw_WallEdification_Roof_TopView()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-    glPushMatrix();
-    glTranslatef(0, 0, 40);
-	draw_WallEdification_Roof_TopView(xSize, ySize);
-    glPopMatrix();
 
 }
 
@@ -2742,145 +2622,138 @@ void draw_Castle_Hallway_Full_TopView(GLfloat xSize, GLfloat ySize) {
 ************************************************************************************************************************
 ***********************************************************************************************************************/
 //castle road
-void draw_Castle_Hallway_TopView() {
+void draw_Castle_Hallway() {
 
     /*
      * save the matrix status
      * translate the figure
      *      X_INITIAL + 333.5 of the x value
      *      Y_INITIAL + 265 of the y value
-     * draw_Castle_Hallway_Full_TopView()
+     *
+     *      save the matrix status
+     *      increase the figure size by
+     *           30 times of the x value
+     *           200 times of the y value
+     *           40 times of the z value
+     *      draw_6_Faces_Figure()
+     *      every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
+     * draw_Castle_Hallway_Roof()
+     *
      *
      * translate the figure
      *      -130 of the x value
      *      170 of the x value
-     * draw_Castle_Hallway_Full_TopView()
+     *
+     *      save the matrix status
+     *      increase the figure size by
+     *           130 times of the x value
+     *           30 times of the y value
+     *           40 times of the z value
+     *      draw_6_Faces_Figure()
+     *      every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
+     *      save the matrix status
+     *      translate the figure
+     *           40 for the y value
+     *      draw_WallEdification_Roof()
+     *      every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
+     *
      * translate the figure
-     *      0 of the x value
      *      -170 of the y value
-     * draw_Castle_Hallway_Full_TopView()
+     *
+     *      save the matrix status
+     *      increase the figure size by
+     *           130 times of the x value
+     *           30 times of the y value
+     *           40 times of the z value
+     *      draw_6_Faces_Figure()
+     *      every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
+     *      save the matrix status
+     *      translate the figure
+     *           40 for the y value
+     *      draw_WallEdification_Roof()
+     *      every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
      *
      * translate the figure
      *      -30 of the x value
-     * draw_Castle_Hallway_Full_TopView()
+     *
+     *      save the matrix status
+     *      increase the figure size by
+     *           30 times of the x value
+     *           200 times of the y value
+     *           40 times of the z value
+     *      draw_6_Faces_Figure()
+     *      every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
+     *      save the matrix status
+     *      translate the figure
+     *           40 for the y value
+     *      draw_WallEdification_Roof()
+     *      every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
 	glPushMatrix();
 	glTranslatef(X_INITIAL + 333.5, Y_INITIAL + 265, 0);
-	draw_Castle_Hallway_Full_TopView(30, 200);
+
+	glPushMatrix();
+
+//	make the hallway body
+    glScalef(30, 200, 40);
+    draw_6_Faces_Figure();
+    glPopMatrix();
+    glPushMatrix();
+    glTranslatef(0, 0, 40);
+    draw_WallEdification_Roof(30, 200);
+    glPopMatrix();
+
 
 	glTranslatef(-130, 170, 0);
-	draw_Castle_Hallway_Full_TopView(130, 30);
+
+    glPushMatrix();
+    glScalef(130, 30, 40);
+
+//	make the hallway body
+    draw_6_Faces_Figure();
+    glPopMatrix();
+    glPushMatrix();
+    glTranslatef(0, 0, 40);
+    draw_WallEdification_Roof(130, 30);
+    glPopMatrix();
+
+
 	glTranslatef(0, -170, 0);
-	draw_Castle_Hallway_Full_TopView(130, 30);
+
+    glPushMatrix();
+    glScalef(130, 30, 40);
+
+//	make the hallway body
+    draw_6_Faces_Figure();
+    glPopMatrix();
+    glPushMatrix();
+    glTranslatef(0, 0, 40);
+    draw_WallEdification_Roof(130, 30);
+    glPopMatrix();
+
 
 	glTranslatef(-30, 0, 0);
-	draw_Castle_Hallway_Full_TopView(30, 200);
+
+    glPushMatrix();
+    glScalef(30, 200, 40);
+
+//	make the hallway body
+    draw_6_Faces_Figure();
+    glPopMatrix();
+    glPushMatrix();
+    glTranslatef(0, 0, 40);
+    draw_WallEdification_Roof(30, 200);
+    glPopMatrix();
+
 	glPopMatrix();
-
-}
-
-/***********************************************************************************************************************
-*                                                                                                                      *
-*                                              Draws the castle buildings                                              *
-*                                                                                                                      *
-***********************************************************************************************************************/
-
-//castle front left wall
-void draw_Castle_CentralBuilding_TopView() {
-
-    /*
-     * save the matrix status
-     * increase the figure size by
-     *      60 times of the x value
-     *      60 times of the y value
-     * create_Bot_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-    //bot
-    glPushMatrix();
-    glScalef(60, 60, 1);
-    create_Bot_Face();
-    glPopMatrix();
-
-    /*
-     * save the matrix status
-     * translate the figure
-     *      70 for the z value
-     * increase the figure size by
-     *      60 times of the x value
-     *      60 times of the y value
-     * create_Bot_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-    //top
-    glPushMatrix();
-    glTranslatef(0, 0, 70);
-    glScalef(60, 60, 1);
-    create_Bot_Face();
-    glPopMatrix();
-
-    /*
-     * save the matrix status
-     * increase the figure size by
-     *      60 times of the x value
-     *      70 times of the z value
-     * create_Front_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-    //front
-    glPushMatrix();
-    glScalef(60, 1, 70);
-    create_Front_Face();
-    glPopMatrix();
-
-    /*
-     * save the matrix status
-     * translate the figure
-     *      60 for the y value
-     * increase the figure size by
-     *      60 times of the x value
-     *      70 times of the z value
-     * create_Front_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-    //back
-    glPushMatrix();
-    glTranslatef(0, 60, 0);
-    glScalef(60, 1, 70);
-    create_Front_Face();
-    glPopMatrix();
-
-    /*
-     * save the matrix status
-     * increase the figure size by
-     *      60 times of the y value
-     *      70 times of the z value
-     * create_Left_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-    //left
-    glPushMatrix();
-    glScalef(1, 60, 70);
-    create_Left_Face();
-    glPopMatrix();
-
-    /*
-     * save the matrix status
-     * translate the figure
-     *      60 for the x value
-     * increase the figure size by
-     *      60 times of the y value
-     *      70 times of the z value
-     * create_Left_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-    //right
-    glPushMatrix();
-    glTranslatef(60, 0, 0);
-    glScalef(1, 60, 70);
-    create_Left_Face();
-    glPopMatrix();
 
 }
 
@@ -2891,19 +2764,33 @@ void draw_Castle_CentralBuilding_TopView() {
 ***********************************************************************************************************************/
 
 //castle walls
-void draw_Castle_Buildings_TopView() {
+void draw_Castle_Buildings() {
 
     /*
      * save the matrix status
      * translate the figure
      *      X_INITIAL + 238.5 for the x value
      *      Y_INITIAL + 335 for the y value
-     * draw_Castle_CentralBuilding_TopView()
+     *
+     *      save the matrix status
+     *      increase the figure size by
+     *           60 times of the x value
+     *           60 times of the y value
+     *           70 times of the z value
+     *      draw_6_Faces_Figure()
+     *      every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
 	glPushMatrix();
 	glTranslatef(X_INITIAL + 238.5, Y_INITIAL + 335, 0);
-	draw_Castle_CentralBuilding_TopView();
+
+//	make the central building
+    glPushMatrix();
+    glScalef(60, 60, 70);
+    draw_6_Faces_Figure();
+    glPopMatrix();
+
 	glPopMatrix();
 
 }
@@ -2915,7 +2802,7 @@ void draw_Castle_Buildings_TopView() {
 ***********************************************************************************************************************/
 
 //castle old tower side top
-void draw_Castle_OldTower_Roof_TopView(GLfloat size) {
+void draw_Castle_OldTower_Roof(GLfloat size) {
 
 //  while the size is bigger than one, decrease 2 units and increase 5 units in height
     for (GLfloat i = size, h = 0; i > 1; i -= 2, h += 5) {
@@ -2928,24 +2815,7 @@ void draw_Castle_OldTower_Roof_TopView(GLfloat size) {
 }
 
 //castle old tower side top
-void draw_Castle_OldTower_Body_TopView() {
-
-//  sets the beginning with only the lines that surrounds it
-    glBegin(GL_LINE_LOOP);
-
-//  call the function draw_Circle()
-    draw_Circle(0, 2 * PI, 1, 1, 0);
-
-//  call the function draw_Circle()
-    draw_Circle(0, 2 * PI, 1, 1, 1);
-
-//  sets the ending of the draw connecting the first vertex draw with the last
-    glEnd();
-
-}
-
-//castle old tower side top
-void draw_Castle_OldTower_Left_TopView(GLfloat size) {
+void draw_Castle_OldTower_Left(GLfloat size) {
 
     /*
      * save the matrix status
@@ -2954,7 +2824,7 @@ void draw_Castle_OldTower_Left_TopView(GLfloat size) {
      *      200 for the z value
      *
      * sets the beginning with only the lines that surrounds it
-     *      draw_Castle_OldTower_Roof_TopView()
+     *      draw_Castle_OldTower_Roof()
      * sets the ending of the draw connecting the first vertex draw with the last
      *
      * every vertex non modified keeps the same as it was, but the modified ones are changed
@@ -2962,7 +2832,7 @@ void draw_Castle_OldTower_Left_TopView(GLfloat size) {
     glPushMatrix();
     glTranslatef(-size - 5, 0, 200);
     glBegin(GL_LINE_LOOP);
-    draw_Castle_OldTower_Roof_TopView(size / 2);
+    draw_Castle_OldTower_Roof(size / 2);
     glEnd();
     glPopMatrix();
 
@@ -2975,19 +2845,21 @@ void draw_Castle_OldTower_Left_TopView(GLfloat size) {
      *      size / 2 times of the x value
      *      size / 2 times of the y value
      *      50 times of the z value
-     * draw_Castle_OldTower_Body_TopView()
+     * draw_Cylinder_Figure()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
     glPushMatrix();
     glTranslatef(-size - 5, 0, 150);
     glScalef(size / 2, size / 2, 50);
-    draw_Castle_OldTower_Body_TopView();
+
+//  make the body of the tower
+    draw_Cylinder_Figure();
     glPopMatrix();
 
 }
 
 //castle old tower side top
-void draw_Castle_OldTower_Central_TopView(GLfloat size) {
+void draw_Castle_OldTower_Central(GLfloat size) {
 
     /*
      * save the matrix status
@@ -2995,7 +2867,7 @@ void draw_Castle_OldTower_Central_TopView(GLfloat size) {
      *      200 for the z value
      *
      * sets the beginning with only the lines that surrounds it
-     *      draw_Castle_OldTower_Roof_TopView()
+     *      draw_Castle_OldTower_Roof()
      * sets the ending of the draw connecting the first vertex draw with the last
      *
      * every vertex non modified keeps the same as it was, but the modified ones are changed
@@ -3003,7 +2875,7 @@ void draw_Castle_OldTower_Central_TopView(GLfloat size) {
     glPushMatrix();
     glTranslatef(0, 0, 200);
     glBegin(GL_LINE_LOOP);
-    draw_Castle_OldTower_Roof_TopView(size);
+    draw_Castle_OldTower_Roof(size);
     glEnd();
     glPopMatrix();
 
@@ -3013,18 +2885,20 @@ void draw_Castle_OldTower_Central_TopView(GLfloat size) {
      *      size times of the x value
      *      size times of the y value
      *      200 times of the z value
-     * draw_Castle_OldTower_Body_TopView()
+     * draw_Cylinder_Figure()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
     glPushMatrix();
     glScalef(size, size, 200);
-    draw_Castle_OldTower_Body_TopView();
+
+//  make the body of the tower
+    draw_Cylinder_Figure();
     glPopMatrix();
 
 }
 
 //castle old tower side top
-void draw_Castle_OldTower_Right_TopView(GLfloat size) {
+void draw_Castle_OldTower_Right(GLfloat size) {
 
     /*
      * save the matrix status
@@ -3033,7 +2907,7 @@ void draw_Castle_OldTower_Right_TopView(GLfloat size) {
      *      200 for the z value
      *
      * sets the beginning with only the lines that surrounds it
-     *      draw_Castle_OldTower_Roof_TopView()
+     *      draw_Castle_OldTower_Roof()
      * sets the ending of the draw connecting the first vertex draw with the last
      *
      * every vertex non modified keeps the same as it was, but the modified ones are changed
@@ -3041,7 +2915,7 @@ void draw_Castle_OldTower_Right_TopView(GLfloat size) {
     glPushMatrix();
     glTranslatef(size + 5, 0, 200);
     glBegin(GL_LINE_LOOP);
-    draw_Castle_OldTower_Roof_TopView(size / 2);
+    draw_Castle_OldTower_Roof(size / 2);
     glEnd();
     glPopMatrix();
 
@@ -3054,28 +2928,16 @@ void draw_Castle_OldTower_Right_TopView(GLfloat size) {
      *      size / 2 times of the x value
      *      size / 2 times of the y value
      *      50 times of the z value
-     * draw_Castle_OldTower_Body_TopView()
+     * draw_Cylinder_Figure()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
     glPushMatrix();
     glTranslatef(size + 5, 0, 150);
     glScalef(size / 2, size / 2, 50);
-    draw_Castle_OldTower_Body_TopView();
+
+//  make the body of the tower
+    draw_Cylinder_Figure();
     glPopMatrix();
-
-}
-
-//castle old tower side top
-void draw_Castle_OldTower_Full_TopView(GLfloat size) {
-
-//  call the function draw_Castle_OldTower_Left_TopView()
-    draw_Castle_OldTower_Left_TopView(size);
-
-//  call the function draw_Castle_OldTower_Central_TopView()
-    draw_Castle_OldTower_Central_TopView(size);
-
-//  call the function draw_Castle_OldTower_Right_TopView()
-    draw_Castle_OldTower_Right_TopView(size);
 
 }
 
@@ -3086,19 +2948,23 @@ void draw_Castle_OldTower_Full_TopView(GLfloat size) {
 ***********************************************************************************************************************/
 
 //castle old tower
-void draw_Castle_OldTower_TopView(/*values*/) {
+void draw_Castle_OldTower(/*values*/) {
 
     /*
      * save the matrix status
      * translate the figure
      *      X_INITIAL + 268.5 for the x value
      *      Y_INITIAL + 515 for the y value
-     * draw_Castle_OldTower_Full_TopView()
+     * draw_Castle_OldTower_Left()
+     * draw_Castle_OldTower_Central()
+     * draw_Castle_OldTower_Right()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
 	glPushMatrix();
 	glTranslatef(X_INITIAL + 268.5, Y_INITIAL + 515, 0);
-	draw_Castle_OldTower_Full_TopView(20);
+    draw_Castle_OldTower_Left(20);
+    draw_Castle_OldTower_Central(20);
+    draw_Castle_OldTower_Right(20);
 	glPopMatrix();
 
 }
@@ -3110,18 +2976,18 @@ void draw_Castle_OldTower_TopView(/*values*/) {
 ***********************************************************************************************************************/
 
 //castle front left wall
-void draw_Castle_LeftFrontWall_TopView(/*values*/) {}
+void draw_Castle_LeftFrontWall(/*values*/) {}
 //castle right front wall
-void draw_Castle_RightFrontWall_TopView(/*values*/) {}
+void draw_Castle_RightFrontWall(/*values*/) {}
 //castle left wall
-void draw_Castle_LeftWall_TopView(/*values*/) {}
+void draw_Castle_LeftWall(/*values*/) {}
 //castle right wall
-void draw_Castle_RightWall_TopView(/*values*/) {}
+void draw_Castle_RightWall(/*values*/) {}
 //castle back wall
-void draw_Castle_BackWall_TopView(/*values*/) {}
+void draw_Castle_BackWall(/*values*/) {}
 
 //castle entrance tower top
-void draw_Castle_Entrance_Tower_Top_TopView(/*values*/) {}
+void draw_Castle_Entrance_Tower_Top(/*values*/) {}
 
 /***********************************************************************************************************************
 *                                                                                                                      *
@@ -3130,7 +2996,7 @@ void draw_Castle_Entrance_Tower_Top_TopView(/*values*/) {}
 ***********************************************************************************************************************/
 
 ///castle walls
-void draw_Castle_Walls_TopView(/*values*/) {}
+void draw_Castle_Walls(/*values*/) {}
 
 /***********************************************************************************************************************
 *                                                                                                                      *
@@ -3154,55 +3020,55 @@ void drawScene(void) {
 *                  IMPORTANT: because the z component is always 0, this function does not receives it                  *
 *                                                                                                                      *
 ***********************************************************************************************************************/
-	draw_RockBlock_TopView();
+	draw_RockBlock();
 
 	/**********************************************************************/
-	draw_LeftTower_TopView();
+	draw_LeftTower();
 
 	/**********************************************************************/
-	draw_LeftTower_Ruined_TopView();
+	draw_LeftTower_Ruined();
 
 	/**********************************************************************/
-	draw_MiddleTower_TopView();
+	draw_MiddleTower();
 
 	/**********************************************************************/
-	draw_RightTower_TopView();
+	draw_RightTower();
 
 	/**********************************************************************/
-	draw_ArcBridge_TopView();
+	draw_ArcBridge();
 
 	/**********************************************************************/
-	draw_ArcBridge_Ruined_TopView();
+	draw_ArcBridge_Ruined();
 
 	/**********************************************************************/
-	draw_MiddleTowers_connection_TopView();
+	draw_MiddleTowers_connection();
 
 	/**********************************************************************/
-	draw_Gate_TopView();
+	draw_Gate_Entrance();
 
 	/**********************************************************************/
-	draw_EntranceGargoyles_TopView();
+	draw_EntranceGargoyles();
 
 	/**********************************************************************/
-	draw_Delivery_TopView();
+	draw_Delivery();
 
 	/**********************************************************************/
-	draw_Castle_Walls_TopView();
+	draw_Castle_Walls();
 
 	/**********************************************************************/
-	draw_Castle_Road_TopView();
+	draw_Castle_Road();
 
 	/**********************************************************************/
-	draw_Castle_Hallway_TopView();
+	draw_Castle_Hallway();
 
 	/**********************************************************************/
-	draw_Castle_Courtyard_TopView();
+	draw_Castle_Courtyard();
 
 	/**********************************************************************/
-	draw_Castle_OldTower_TopView();
+	draw_Castle_OldTower();
 
 	/**********************************************************************/
-	draw_Castle_Buildings_TopView();
+	draw_Castle_Buildings();
 
 	//send the scene to be rendered
 	glFlush();
@@ -3229,8 +3095,8 @@ void resize(int w, int h) {
 	//set the orthographic view (perpendicular) with the size:
 	//x_min, x_max, y_min, y_max, z_min, z_max (from the observer perspective!)
 	//AKA -> left, right, top, down, near, far
-//	glRotatef(90, 1, 0, 0);
-//	glRotatef(90, 0, 0, 1);
+//	glRotatef(75, 1, 0, 0);
+//	glRotatef(65, 0, 0, 1);
 	glOrtho(X_MIN_VIEW, X_MAX_VIEW, Y_MIN_VIEW, Y_MAX_VIEW, Z_NEAR_VIEW, Z_FAR_VIEW);
 	glTranslatef(100, 100, -500);
 
@@ -3283,9 +3149,7 @@ int main(int argc, char **argv) {
 }
 
 /*
- * TODO: castle courtyard correct translations
- *
- * TODO: check duplicated code!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ * TODO: check if there's some duplicated code remaining
  *
  * TODO: change the crown spikes to obey to this rule -> 5 unities spike, 5 unities non spike
  *
@@ -3300,8 +3164,6 @@ int main(int argc, char **argv) {
  * TODO: make the broken tower stairs
  *
  * TODO: make the all the effects of the banners
- *
- * TODO: make the flag holders
  *
  * TODO: make the flags
  *
