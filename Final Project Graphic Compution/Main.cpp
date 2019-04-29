@@ -23,11 +23,18 @@
 #  include <GL/glut.h>
 #endif
 
-//define the PI value
-#define PI 3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803482534211706798214808651328230664709384460955058223172535940812848111745028410270193852110555964462294895493038196442881097566593344612847564823378678316527120190914564856692346034861045432664821339360726024914127372458700660631558817488152092096282925409171536436789259036001133053054882046652138414695194151160943305727036575959195309218611738193261179310511854807446237996274956735188575272489122793818301194912983367336244065664308602139494639522473719070217986094370277053921717629317675238467481846766940513200056812714526356082778577134275778960917363717872146844090122495343014654958537105079227968925892354201995611212902196086403441815981362977477130996051870721134999999837297804995105973173281609631859502445945534690830264252230825334468503526193118817101000313783875288658753320838142061717766914730359825349042875546873115956286388235378759375195778185778053217122680661300192787661119590921642019893809525720106548586327886593615338182796823030195203530185296899577362259941389124972177528347913151557485724245415069595082953311686172785588907509838175463746493931925506040092770167113900984882401285836160356370766010471018194295559619894676783744944825537977472684710404753464620804668425906949129331367702898915210475216205696602405803815019351125338243003558764024749647326391419927260426992279678235478163600934172164121992458631503028618297455570674983850549458858692699569092721079750930295532116534498720275596023648066549911988183479775356636980742654252786255181841757467289097777279380008164706001614524919217321721477235014144197356854816136115735255213347574184946843852332390739414333454776241686251898356948556209921922218427255025425688767179049460165346680498862723279178608578438382796797668145410095388378636095068006422512520511739298489608412848862694560424196528502221066118630674427862203919494504712371378696095636437191728746776465757396241389086583264599581339047802759009946576407895126946839835259570982582262052248
-
-//makes implicit the std:: instruction to all std namespace
-using namespace std;
+/*
+ * includes the headers necessaries to draw the castle and the environment:
+ *      "Faces.h"
+ *      "Circle.h"
+ *      "Figures.h"
+ *      "RockBlocks.h"
+ *      
+ * */
+#include "Faces.h"
+#include "Circle.h"
+#include "Figures.h"
+#include "RockBlocks.h"
 
 /*
  * background color value
@@ -83,759 +90,6 @@ GLfloat Z_FAR_VIEW = 1000;
  * */
 GLfloat X_INITIAL = 100, Y_INITIAL = 300;
 
-/***********************************************************************************************************************
-*                                                                                                                      *
-*                                                     Create Faces                                                     *
-*                                                                                                                      *
-***********************************************************************************************************************/
-//create bottom face
-void create_Bot_Face() {
-
-//  sets the beginning with only the lines that surrounds it
-	glBegin(GL_LINE_LOOP);
-
-	/*
-	 * set a vertex on the position (0, 0, 0)
-	 * set a vertex on the position (1, 0, 0)
-	 * set a vertex on the position (1, 1, 0)
-	 * set a vertex on the position (0, 1, 0)
-	 * */
-	glVertex3f(0, 0, 0);
-	glVertex3f(1, 0, 0);
-	glVertex3f(1, 1, 0);
-	glVertex3f(0, 1, 0);
-
-//	sets the ending of the draw connecting the first vertex draw with the last
-	glEnd();
-
-}
-
-void create_Left_Face() {
-
-//  sets the beginning with only the lines that surrounds it
-    glBegin(GL_LINE_LOOP);
-
-    /*
-     * set a vertex on the position (0, 0, 0)
-     * set a vertex on the position (0, 1, 0)
-     * set a vertex on the position (0, 1, 1)
-     * set a vertex on the position (0, 0, 1)
-     * */
-	glVertex3f(0, 0, 0);
-	glVertex3f(0, 1, 0);
-	glVertex3f(0, 1, 1);
-	glVertex3f(0, 0, 1);
-
-//	sets the ending of the draw connecting the first vertex draw with the last
-	glEnd();
-
-}
-
-void create_Front_Face() {
-
-//  sets the beginning with only the lines that surrounds it
-    glBegin(GL_LINE_LOOP);
-
-    /*
-     * set a vertex on the position (0, 0, 0)
-     * set a vertex on the position (1, 0, 0)
-     * set a vertex on the position (1, 0, 1)
-     * set a vertex on the position (0, 0, 1)
-     * */
-	glVertex3f(0, 0, 0);
-	glVertex3f(1, 0, 0);
-	glVertex3f(1, 0, 1);
-	glVertex3f(0, 0, 1);
-
-//	sets the ending of the draw connecting the first vertex draw with the last
-    glEnd();
-
-}
-
-/***********************************************************************************************************************
-************************************************************************************************************************
-*                                                     Draw Circles                                                     *
-************************************************************************************************************************
-***********************************************************************************************************************/
-//draw circle
-void draw_Circle(GLfloat starAngle, GLfloat finalAngle, GLfloat xSize, GLfloat ySize, GLfloat height) {
-
-//  from the start angle increase 0.0001 unit until it reach the final angle
-    for (GLfloat angle = starAngle; angle < finalAngle; angle += 0.0001) {
-
-        /*
-         * draw the vertex in the position:
-         *      xSize times the value of the cos(angle) for the x axis
-         *      ySize times the value of the sin(angle) for the y axis
-         *      height for the z axis
-         *              angle is the value fo the current angle set by this loop (for)
-         * */
-        glVertex3f(xSize * cosf(angle), ySize * sinf(angle), height);
-
-    }
-
-}
-
-/***********************************************************************************************************************
-************************************************************************************************************************
-*                                                     Draw figures                                                     *
-************************************************************************************************************************
-***********************************************************************************************************************/
-//draw 6 faces figure
-void draw_6_Faces_Figure(GLfloat xSize, GLfloat ySize, GLfloat height) {
-
-    /*
-     * save the matrix status
-     * increase the figure size by
-     *      xSize times of the x value
-     *      ySize times of the y value
-     *      zSize times of the z value
-     *
-     * save the matrix status
-     * translate the figure
-     *      1 unit for the z axis
-     * create_Bot_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     *
-     * create_Bot_Face()
-     *
-     * create_Front_Face()
-     *
-     * save the matrix status
-     * translate the figure
-     *      1 unit for the y axis
-     * create_Front_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     *
-     * create_Left_Face()
-     *
-     * save the matrix status
-     * translate the figure
-     *      1 unit for the x axis
-     * create_Left_Face()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-    glPushMatrix();
-    glScalef(xSize, ySize, height);
-
-	//top
-	glPushMatrix();
-	glTranslatef(0, 0, 1);
-	create_Bot_Face();
-	glPopMatrix();
-
-	//bot
-	create_Bot_Face();
-
-	//front
-	create_Front_Face();
-
-	//back
-	glPushMatrix();
-	glTranslatef(0, 1, 0);
-	create_Front_Face();
-	glPopMatrix();
-
-	//left
-	create_Left_Face();
-
-	//right
-	glPushMatrix();
-	glTranslatef(1, 0, 0);
-	create_Left_Face();
-	glPopMatrix();
-
-    glPopMatrix();
-
-}
-
-//draw cylinder figure
-void draw_Cylinder_Figure(GLfloat radios, GLfloat height) {
-
-    /*
-     * save the matrix status
-     * increase the figure size by
-     *      radios times of the x value
-     *      radios times of the y value
-     *      height times of the z value
-     *
-     * sets the beginning with only the lines that surrounds it
-     * draw_Circle()
-     * draw_Circle()
-     * sets the ending of the draw connecting the first vertex draw with the last
-     *
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
-    glPushMatrix();
-    glScalef(radios, radios, height);
-
-    glBegin(GL_LINE_LOOP);
-    draw_Circle(0, 2 * PI, 1, 1, 0);
-    draw_Circle(0, 2 * PI, 1, 1, 1);
-    glEnd();
-
-    glPopMatrix();
-
-}
-
-/***********************************************************************************************************************
-*                                                                                                                      *
-*                                             Draws the rock block it self                                             *
-*                                                                                                                      *
-***********************************************************************************************************************/
-
-//left
-void draw_Left_RockBlock() {
-
-//  sets the beginning with only the lines that surrounds it
-	glBegin(GL_LINE_LOOP);
-
-    /*
-     * set a vertex on the position (-25, 35, 0)
-     * set a vertex on the position (-32.5, 25, 0)
-     * set a vertex on the position (-35, 15, 0)
-     * set a vertex on the position (-37.5, 10, 0)
-     * set a vertex on the position (-40, 5, 0)
-     * set a vertex on the position (-37.5, 0, 0)
-     * set a vertex on the position (-35, -20, 0)
-     * set a vertex on the position (-30, -28, 0)
-     * set a vertex on the position (-20, -35, 0)
-     * set a vertex on the position (-14, -39, 0)
-     * set a vertex on the position (-12, -39.75, 0)
-     * set a vertex on the position (-10, -39.5, 0)
-     * set a vertex on the position (-8, -39.75, 0)
-     * set a vertex on the position (-6, -40, 0)
-     * call the function draw_Circle()
-     * */
-    glVertex3f(-25, 35, 0);
-    glVertex3f(-32.5, 25, 0);
-    glVertex3f(-35, 15, 0);
-    glVertex3f(-37.5, 10, 0);
-    glVertex3f(-40, 5, 0);
-    glVertex3f(-37.5, 0, 0);
-    glVertex3f(-35, -20, 0);
-    glVertex3f(-30, -28, 0);
-    glVertex3f(-20, -35, 0);
-    glVertex3f(-14, -39, 0);
-    glVertex3f(-12, -39.75, 0);
-    glVertex3f(-10, -39.5, 0);
-    glVertex3f(-8, -39.75, 0);
-    glVertex3f(-6, -40, 0);
-	draw_Circle(-(PI) / 2, PI / 2, 40, 40, 0);
-
-//	sets the ending of the draw connecting the first vertex draw with the last
-	glEnd();
-
-}
-
-//left__middle connection
-void draw_LeftMiddle_RockBlock_Connection() {
-
-//  sets the beginning with only the lines that surrounds it
-	glBegin(GL_LINE_LOOP);
-
-    /*
-     * set a vertex on the position (50, 15, 0)
-     * set a vertex on the position (70, 20, 0)
-     * set a vertex on the position (90, 30, 0)
-     * set a vertex on the position (100, 40, 0)
-     * set a vertex on the position (130, 37.5, 0)
-     * set a vertex on the position (140, 30, 0)
-     * set a vertex on the position (157, 40, 0)
-     * set a vertex on the position (155, 38, 0)
-     * set a vertex on the position (150, 28, 0)
-     * set a vertex on the position (145, 18, 0)
-     * set a vertex on the position (135, -22, 0)
-     * set a vertex on the position (137, -25, 0)
-     * set a vertex on the position (130, -25, 0)
-     * set a vertex on the position (110, -20, 0)
-     * set a vertex on the position (100, -25, 0)
-     * set a vertex on the position (90, -35, 0)
-     * set a vertex on the position (77.5, -30, 0)
-     * set a vertex on the position (70, -20, 0)
-     * call the function draw_Circle()
-     * */
-    glVertex3f(50, 15, 0);
-    glVertex3f(70, 20, 0);
-    glVertex3f(90, 30, 0);
-    glVertex3f(100, 40, 0);
-    glVertex3f(130, 37.5, 0);
-    glVertex3f(140, 30, 0);
-    glVertex3f(157, 40, 0);
-    glVertex3f(155, 38, 0);
-    glVertex3f(150, 28, 0);
-    glVertex3f(145, 18, 0);
-    glVertex3f(135, -22, 0);
-    glVertex3f(137, -25, 0);
-    glVertex3f(130, -25, 0);
-    glVertex3f(110, -20, 0);
-    glVertex3f(100, -25, 0);
-    glVertex3f(90, -35, 0);
-    glVertex3f(77.5, -30, 0);
-    glVertex3f(70, -20, 0);
-    glVertex3f(50, -25, 0);
-    draw_Circle(-PI / 3, (5 * PI) / 24, 40, 40, 0);
-
-//	sets the ending of the draw connecting the first vertex draw with the last
-	glEnd();
-
-}
-
-//middle rock block
-void draw_Middle_RockBlock() {
-
-//  sets the beginning with only the lines that surrounds it
-	glBegin(GL_LINE_LOOP);
-
-    /*
-     * set a vertex on the position (60, 0, 0)
-     * set a vertex on the position (55, 0, 0)
-     * set a vertex on the position (30, 10, 0)
-     * set a vertex on the position (20, 40, 0)
-     * set a vertex on the position (2, 50, 0)
-     * set a vertex on the position (-5, 70, 0)
-     * set a vertex on the position (5, 110, 0)
-     * set a vertex on the position (10, 120, 0)
-     * set a vertex on the position (15, 130, 0)
-     * set a vertex on the position (25, 140, 0)
-     * set a vertex on the position (65, 150, 0)
-     * set a vertex on the position (65, 140, 0)
-     * set a vertex on the position (105, 140, 0)
-     * set a vertex on the position (130, 145, 0)
-     * set a vertex on the position (140, 140, 0)
-     * set a vertex on the position (170, 130, 0)
-     * set a vertex on the position (175, 125, 0)
-     * set a vertex on the position (180, 115, 0)
-     * set a vertex on the position (190, 100, 0)
-     * set a vertex on the position (180, 70, 0)
-     * set a vertex on the position (175, 60, 0)
-     * set a vertex on the position (160, 40, 0)
-     * set a vertex on the position (155, 30, 0)
-     * set a vertex on the position (150, 15, 0)
-     * */
-	glVertex3f(60, 0, 0);
-	glVertex3f(55, 0, 0);
-	glVertex3f(30, 10, 0);
-	glVertex3f(20, 40, 0);
-	glVertex3f(2, 50, 0);
-	glVertex3f(-5, 70, 0);
-	glVertex3f(5, 110, 0);
-	glVertex3f(10, 120, 0);
-	glVertex3f(15, 130, 0);
-	glVertex3f(25, 140, 0);
-	glVertex3f(65, 150, 0);
-	glVertex3f(65, 140, 0);
-	glVertex3f(105, 140, 0);
-	glVertex3f(130, 145, 0);
-	glVertex3f(140, 140, 0);
-	glVertex3f(170, 130, 0);
-	glVertex3f(175, 125, 0);
-	glVertex3f(180, 115, 0);
-	glVertex3f(190, 100, 0);
-	glVertex3f(180, 70, 0);
-	glVertex3f(175, 60, 0);
-	glVertex3f(160, 40, 0);
-	glVertex3f(155, 30, 0);
-	glVertex3f(150, 15, 0);
-	glVertex3f(140, 0, 0);
-
-//	sets the ending of the draw connecting the first vertex draw with the last
-	glEnd();
-
-}
-
-//right__middle connection
-void draw_RightMiddle_RockBlock_Connection() {
-
-//  sets the beginning with only the lines that surrounds it
-    glBegin(GL_LINE_LOOP);
-
-    /*
-     * set a vertex on the position (0, 0, 0)
-     * set a vertex on the position (10, -12.5, 0)
-     * set a vertex on the position (20, -8, 0)
-     * set a vertex on the position (25, -5, 0)
-     * set a vertex on the position (20, 10, 0)
-     * set a vertex on the position (18, 25, 0)
-     * set a vertex on the position (25, 40, 0)
-     * set a vertex on the position (40, 50, 0)
-     * set a vertex on the position (50, 60, 0)
-     * set a vertex on the position (35, 55, 0)
-     * set a vertex on the position (20, 62, 0)
-     * set a vertex on the position (15, 60, 0)
-     * set a vertex on the position (-5, 68, 0)
-     * set a vertex on the position (-10, 60, 0)
-     * set a vertex on the position (-5, 55, 0)
-     * set a vertex on the position (0, 45, 0)
-     * set a vertex on the position (10, 30, 0)
-     * */
-	glVertex3f(0, 0, 0);
-	glVertex3f(10, -12.5, 0);
-	glVertex3f(20, -8, 0);
-	glVertex3f(25, -5, 0);
-	glVertex3f(20, 10, 0);
-	glVertex3f(18, 25, 0);
-	glVertex3f(25, 40, 0);
-	glVertex3f(40, 50, 0);
-	glVertex3f(50, 60, 0);
-	glVertex3f(35, 55, 0);
-	glVertex3f(20, 62, 0);
-	glVertex3f(15, 60, 0);
-	glVertex3f(-5, 68, 0);
-	glVertex3f(-10, 60, 0);
-	glVertex3f(-5, 55, 0);
-	glVertex3f(0, 45, 0);
-	glVertex3f(10, 30, 0);
-
-//	sets the ending of the draw connecting the first vertex draw with the last
-	glEnd();
-
-}
-
-//right
-void draw_Right_RockBlock() {
-
-//  sets the beginning with only the lines that surrounds it
-    glBegin(GL_LINE_LOOP);
-
-    /*
-     * set a vertex on the position (15, 30, 0)
-     * set a vertex on the position (5, 35, 0)
-     * set a vertex on the position (0, 50, 0)
-     * set a vertex on the position (-2, 65, 0)
-     * set a vertex on the position (5, 80, 0)
-     * set a vertex on the position (20, 90, 0)
-     * set a vertex on the position (30, 100, 0)
-     * set a vertex on the position (65, 105, 0)
-     * set a vertex on the position (100, 100, 0)
-     * set a vertex on the position (110, 95, 0)
-     * set a vertex on the position (120, 85, 0)
-     * set a vertex on the position (125, 75, 0)
-     * set a vertex on the position (130, 70, 0)
-     * set a vertex on the position (132, 65, 0)
-     * set a vertex on the position (130, 60, 0)
-     * set a vertex on the position (135, 50, 0)
-     * set a vertex on the position (125, 20, 0)
-     * set a vertex on the position (115, 20, 0)
-     * set a vertex on the position (107, 10, 0)
-     * set a vertex on the position (100, 3, 0)
-     * set a vertex on the position (67.5, 0, 0)
-     * set a vertex on the position (50, 5, 0)
-     * set a vertex on the position (30, 5, 0)
-     * set a vertex on the position (20, 15, 0)
-     * */
-	glVertex3f(15, 30, 0);
-	glVertex3f(5, 35, 0);
-	glVertex3f(0, 50, 0);
-	glVertex3f(-2, 65, 0);
-	glVertex3f(5, 80, 0);
-	glVertex3f(20, 90, 0);
-	glVertex3f(30, 100, 0);
-	glVertex3f(65, 105, 0);
-	glVertex3f(100, 100, 0);
-	glVertex3f(110, 95, 0);
-	glVertex3f(120, 85, 0);
-	glVertex3f(125, 75, 0);
-	glVertex3f(130, 70, 0);
-	glVertex3f(132, 65, 0);
-	glVertex3f(130, 60, 0);
-	glVertex3f(135, 50, 0);
-	glVertex3f(125, 20, 0);
-	glVertex3f(115, 20, 0);
-	glVertex3f(107, 10, 0);
-	glVertex3f(100, 3, 0);
-	glVertex3f(67.5, 0, 0);
-	glVertex3f(50, 5, 0);
-	glVertex3f(30, 5, 0);
-	glVertex3f(20, 15, 0);
-
-//	sets the ending of the draw connecting the first vertex draw with the last
-    glEnd();
-
-}
-
-/**********************************************************************/
-//delivery path
-void draw_DeliveryPath_RockBlock() {
-
-//  sets the beginning with only the lines that surrounds it
-    glBegin(GL_LINE_LOOP);
-
-    /*
-     * set a vertex on the position (0, 0, 0)
-     * set a vertex on the position (40, 0, 0)
-     * set a vertex on the position (65, 5, 0)
-     * set a vertex on the position (50, 10, 0)
-     * set a vertex on the position (55, 30, 0)
-     * set a vertex on the position (45, 40, 0)
-     * set a vertex on the position (40, 70, 0)
-     * set a vertex on the position (5, 70, 0)
-     * set a vertex on the position (5, 60, 0)
-     * set a vertex on the position (0, 45, 0)
-     * set a vertex on the position (0, 30, 0)
-     * set a vertex on the position (-5, 15, 0)
-     * set a vertex on the position (0, 10, 0)
-     * */
-	glVertex3f(0, 0, 0);
-	glVertex3f(40, 0, 0);
-	glVertex3f(65, 5, 0);
-	glVertex3f(50, 10, 0);
-	glVertex3f(55, 30, 0);
-	glVertex3f(45, 40, 0);
-	glVertex3f(40, 70, 0);
-	glVertex3f(5, 70, 0);
-	glVertex3f(5, 60, 0);
-	glVertex3f(0, 45, 0);
-	glVertex3f(0, 30, 0);
-	glVertex3f(-5, 15, 0);
-	glVertex3f(0, 10, 0);
-
-//	sets the ending of the draw connecting the first vertex draw with the last
-    glEnd();
-
-}
-
-/**********************************************************************/
-//entrance path full
-void draw_EntrancePath_Full_RockBlock() {
-
-//  sets the beginning with only the lines that surrounds it
-    glBegin(GL_LINE_LOOP);
-
-    /*
-     * set a vertex on the position (-64, 15, 0)
-     * set a vertex on the position (1, 15, 0)
-     * set a vertex on the position (1, 10, 0)
-     * call the function draw_Circle()
-     * set a vertex on the position (6, -10, 0)
-     * set a vertex on the position (4, -15, 0)
-     * set a vertex on the position (21, -25, 0)
-     * set a vertex on the position (36, -45, 0)
-     * set a vertex on the position (36, -55, 0)
-     * set a vertex on the position (37, -60, 0)
-     * set a vertex on the position (41, -65, 0)
-     * set a vertex on the position (45, -70, 0)
-     * set a vertex on the position (46, -75, 0)
-     * set a vertex on the position (56, -85, 0)
-     * set a vertex on the position (46, -95, 0)
-     * set a vertex on the position (44, -97, 0)
-     * set a vertex on the position (41, -97, 0)
-     * set a vertex on the position (34, -105, 0)
-     * set a vertex on the position (-4, -115, 0)
-     * set a vertex on the position (-24, -113, 0)
-     * set a vertex on the position (-54, -125, 0)
-     * set a vertex on the position (-79, -122, 0)
-     * set a vertex on the position (-74, -135, 0)
-     * set a vertex on the position (-79, -150, 0)
-     * set a vertex on the position (-79, -155, 0)
-     * set a vertex on the position (-114, -155, 0)
-     * set a vertex on the position (-124, -145, 0)
-     * set a vertex on the position (-126, -140, 0)
-     * set a vertex on the position (-129, -135, 0)
-     * set a vertex on the position (-126, -130, 0)
-     * set a vertex on the position (-124, -115, 0)
-     * set a vertex on the position (-114, -115, 0)
-     * set a vertex on the position (-104, -110, 0)
-     * set a vertex on the position (-101.5, -105, 0)
-     * set a vertex on the position (-104, -95, 0)
-     * set a vertex on the position (-89, -90, 0)
-     * set a vertex on the position (-84, -80, 0)
-     * set a vertex on the position (-69, -75, 0)
-     * set a vertex on the position (-44, -85, 0)
-     * set a vertex on the position (-39, -90, 0)
-     * set a vertex on the position (-24, -80, 0)
-     * set a vertex on the position (1, -75, 0)
-     * set a vertex on the position (-14, -65, 0)
-     * set a vertex on the position (-7, -52, 0)
-     * set a vertex on the position (-9, -45, 0)
-     * set a vertex on the position (-29, -35, 0)
-     * set a vertex on the position (-39, -5, 0)
-     * */
-	glVertex3f(-64, 15, 0);
-	glVertex3f(1, 15, 0);
-	glVertex3f(1, 10, 0);
-	draw_Circle((PI / 2), ((3 * PI) / 2), 2, 5, 0); //74 -15
-	glVertex3f(6, -10, 0);
-	glVertex3f(4, -15, 0);
-	glVertex3f(21, -25, 0);
-	glVertex3f(36, -45, 0);
-	glVertex3f(36, -55, 0);
-	glVertex3f(37, -60, 0);
-	glVertex3f(41, -65, 0);
-	glVertex3f(45, -70, 0);
-	glVertex3f(46, -75, 0);
-    glVertex3f(56, -85, 0);
-    glVertex3f(46, -95, 0);
-    glVertex3f(44, -97, 0);
-    glVertex3f(41, -97, 0);
-    glVertex3f(34, -105, 0);
-    glVertex3f(-4, -115, 0);
-    glVertex3f(-24, -113, 0);
-    glVertex3f(-54, -125, 0);
-    glVertex3f(-79, -122, 0);
-    glVertex3f(-74, -135, 0);
-    glVertex3f(-79, -150, 0);
-    glVertex3f(-79, -155, 0);
-    glVertex3f(-114, -155, 0);
-    glVertex3f(-124, -145, 0);
-    glVertex3f(-126, -140, 0);
-    glVertex3f(-129, -135, 0);
-    glVertex3f(-126, -130, 0);
-    glVertex3f(-124, -115, 0);
-    glVertex3f(-114, -115, 0);
-    glVertex3f(-104, -110, 0);
-    glVertex3f(-101.5, -105, 0);
-    glVertex3f(-104, -95, 0);
-    glVertex3f(-89, -90, 0);
-    glVertex3f(-84, -80, 0);
-    glVertex3f(-69, -75, 0);
-    glVertex3f(-44, -85, 0);
-    glVertex3f(-39, -90, 0);
-    glVertex3f(-24, -80, 0);
-    glVertex3f(1, -75, 0);
-    glVertex3f(-14, -65, 0);
-    glVertex3f(-7, -52, 0);
-    glVertex3f(-9, -45, 0);
-    glVertex3f(-29, -35, 0);
-    glVertex3f(-39, -5, 0);
-
-//	sets the ending of the draw connecting the first vertex draw with the last
-    glEnd();
-
-}
-
-/**********************************************************************/
-//entrance path
-void draw_Castle_RockBlock() {
-
-//  sets the beginning with only the lines that surrounds it
-    glBegin(GL_LINE_LOOP);
-
-    /*
-     * call the function draw_circle()
-     * set a vertex on the position (-18, -205, 100)
-     * set a vertex on the position (-18, -205, 0)
-     * set a vertex on the position (-70, -205, 0)
-     * set a vertex on the position (-98.5, -185, 0)
-     * set a vertex on the position (-128.5, -180, 0)
-     * set a vertex on the position (-134.5, -175, 0)
-     * set a vertex on the position (-158.5, -155, 0)
-     * set a vertex on the position (-183.5, -145, 0)
-     * set a vertex on the position (-188.5, -140, 0)
-     * set a vertex on the position (-188.5, -135, 0)
-     * set a vertex on the position (-183.5, -115, 0)
-     * set a vertex on the position (-193.5, -95, 0)
-     * set a vertex on the position (-203.5, -85, 0)
-     * set a vertex on the position (-218.5, -45, 0)
-     * set a vertex on the position (-221.5, 0, 0)
-     * set a vertex on the position (-218.5, 25, 0)
-     * set a vertex on the position (-208.5, 45, 0)
-     * set a vertex on the position (-193.5, 75, 0)
-     * set a vertex on the position (-198.5, 115, 0)
-     * set a vertex on the position (-183.5, 145, 0)
-     * set a vertex on the position (-183.5, 155, 0)
-     * set a vertex on the position (-168.5, 175, 0)
-     * set a vertex on the position (-158.5, 165, 0)
-     * set a vertex on the position (-153.5, 195, 0)
-     * set a vertex on the position (-123.5, 210, 0)
-     * set a vertex on the position (-108.5, 205, 0)
-     * set a vertex on the position (-58.5, 215, 0)
-     * set a vertex on the position (0, 210, 0)
-     * set a vertex on the position (11.5, 225, 0)
-     * set a vertex on the position (51.5, 215, 0)
-     * set a vertex on the position (71.5, 195, 0)
-     * set a vertex on the position (91.5, 195, 0)
-     * set a vertex on the position (111.5, 175, 0)
-     * set a vertex on the position (141.5, 165, 0)
-     * set a vertex on the position (151.5, 155, 0)
-     * set a vertex on the position (171.5, 150, 0)
-     * set a vertex on the position (188.5, 135, 0)
-     * set a vertex on the position (201.5, 115, 0)
-     * set a vertex on the position (191.5, 105, 0)
-     * set a vertex on the position (201.5, 85, 0)
-     * set a vertex on the position (201.5, 65, 0)
-     * set a vertex on the position (221, 35, 0)
-     * set a vertex on the position (211.5, 0, 0)
-     * set a vertex on the position (231.5, -25, 0)
-     * set a vertex on the position (226.5, -30, 0)
-     * set a vertex on the position (211.5, -55, 0)
-     * set a vertex on the position (201.5, -58, 0)
-     * set a vertex on the position (206.5, -80, 0)
-     * set a vertex on the position (191.5, -95, 0)
-     * set a vertex on the position (181.5, -105, 0)
-     * set a vertex on the position (171.5, -130, 0)
-     * set a vertex on the position (151.5, -155, 0)
-     * set a vertex on the position (141.5, -165, 0)
-     * set a vertex on the position (90.5, -195, 0)
-     * set a vertex on the position (55, -205, 0)
-     * set a vertex on the position (30, -210, 0)
-     * set a vertex on the position (17, -205, 0)
-     * set a vertex on the position (17, -205, 100)
-     * */
-    draw_Circle(-(13 * PI) / 30, (37 * PI) / 26, 205, 205, 150);
-    glVertex3f(-18, -205, 100);
-    glVertex3f(-18, -205, 0);
-    glVertex3f(-70, -205, 0);
-    glVertex3f(-98.5, -185, 0);
-    glVertex3f(-128.5, -180, 0);
-    glVertex3f(-134.5, -175, 0);
-    glVertex3f(-158.5, -155, 0);
-    glVertex3f(-183.5, -145, 0);
-    glVertex3f(-188.5, -140, 0);
-    glVertex3f(-188.5, -135, 0);
-    glVertex3f(-183.5, -115, 0);
-    glVertex3f(-193.5, -95, 0);
-    glVertex3f(-203.5, -85, 0);
-    glVertex3f(-218.5, -45, 0);
-    glVertex3f(-221.5, 0, 0);
-    glVertex3f(-218.5, 25, 0);
-    glVertex3f(-208.5, 45, 0);
-    glVertex3f(-193.5, 75, 0);
-    glVertex3f(-198.5, 115, 0);
-    glVertex3f(-183.5, 145, 0);
-    glVertex3f(-183.5, 155, 0);
-    glVertex3f(-168.5, 175, 0);
-    glVertex3f(-158.5, 165, 0);
-    glVertex3f(-153.5, 195, 0);
-    glVertex3f(-123.5, 210, 0);
-    glVertex3f(-108.5, 205, 0);
-    glVertex3f(-58.5, 215, 0);
-    glVertex3f(0, 210, 0);
-    glVertex3f(11.5, 225, 0);
-    glVertex3f(51.5, 215, 0);
-    glVertex3f(71.5, 195, 0);
-    glVertex3f(91.5, 195, 0);
-    glVertex3f(111.5, 175, 0);
-    glVertex3f(141.5, 165, 0);
-    glVertex3f(151.5, 155, 0);
-    glVertex3f(171.5, 150, 0);
-    glVertex3f(188.5, 135, 0);
-    glVertex3f(201.5, 115, 0);
-    glVertex3f(191.5, 105, 0);
-    glVertex3f(201.5, 85, 0);
-    glVertex3f(201.5, 65, 0);
-    glVertex3f(221, 35, 0);
-    glVertex3f(211.5, 0, 0);
-    glVertex3f(231.5, -25, 0);
-    glVertex3f(226.5, -30, 0);
-    glVertex3f(211.5, -55, 0);
-    glVertex3f(201.5, -58, 0);
-    glVertex3f(206.5, -80, 0);
-    glVertex3f(191.5, -95, 0);
-    glVertex3f(181.5, -105, 0);
-    glVertex3f(171.5, -130, 0);
-    glVertex3f(151.5, -155, 0);
-    glVertex3f(141.5, -165, 0);
-    glVertex3f(90.5, -195, 0);
-    glVertex3f(55, -205, 0);
-    glVertex3f(30, -210, 0);
-    glVertex3f(17, -205, 0);
-    glVertex3f(17, -205, 100);
-
-//	sets the ending of the draw connecting the first vertex draw with the last
-    glEnd();
-
-}
 
 /***********************************************************************************************************************
 ************************************************************************************************************************
@@ -1715,12 +969,17 @@ void draw_WallEdification_Roof(GLfloat width, GLfloat height) {
              * translate the figure
              *      h units for the x value
              *      v units for the y value
+             * increase the figure size by
+             *     2.5 times of the x value
+             *     2.5 times of the y value
+             *     0.5 times of the z value
              * draw_6_Faces_Figure()
              * every vertex non modified keeps the same as it was, but the modified ones are changed
              * */
 			glPushMatrix();
 			glTranslatef(h, v, 0);
-			draw_6_Faces_Figure(2.5, 2.5, 0.5);
+			glScalef(2.5, 2.5, 0.5);
+			draw_6_Faces_Figure();
 			glPopMatrix();
 
 		}
@@ -1786,17 +1045,41 @@ void draw_Flag() {
 //flag holder
 void draw_Flag_Holder() {
 
-//  draw_6_Faces_Figure()
-    draw_6_Faces_Figure(10, 10, 70);
+	/*
+     * save the matrix status
+     * increase the figure size by
+     *     10 times of the x value
+     *     10 times of the y value
+     *     70 times of the z value
+     * draw_6_Faces_Figure()
+     * every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
+     * */
+	glPushMatrix();
+    glScalef(10, 10, 70);
+    draw_6_Faces_Figure();
+    glPopMatrix();
 
 
 }
 
 //gate
-void draw_Gate(GLfloat xSize) {
+void draw_Gate() {
 
-//  draw_6_Faces_Figure()
-    draw_6_Faces_Figure(xSize, 5, 100);
+	/*
+	 * save the matrix status
+     * increase the figure size by
+	 *     xSize times of the x value
+	 *     5 times of the y value
+	 *     100 times of the z value
+     * draw_6_Faces_Figure()
+     * every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
+	 * */
+	glPushMatrix();
+    glScalef(1, 5, 100);
+    draw_6_Faces_Figure();
+    glPopMatrix();
 
 }
 
@@ -1837,7 +1120,10 @@ void draw_Gate_Entrance() {
      * */
 	glPushMatrix();
 	glTranslatef(X_INITIAL + 220, Y_INITIAL + 30, 0);
-    draw_Gate(100);
+	glPushMatrix();
+	glScalef(100, 1, 1);
+    draw_Gate();
+    glPopMatrix();
 
 	glTranslatef(-5, -10, 0);
     draw_Flag_Holder();
@@ -1866,10 +1152,7 @@ void draw_Gargoyles() {
 	//sets the beginning of the inside draw part
 	glBegin(GL_LINE_LOOP);
 
-	glVertex3f(0, 0, 0);
-	glVertex3f(10, 0, 0);       //     adds 10px width
-	glVertex3f(10, 10, 0);  //     adds 10px height
-	glVertex3f(0, 10, 0);       //     removes 10px width
+	create_Bot_Face();
 
 	//sets the ending of the draw
 	glEnd();
@@ -1890,17 +1173,43 @@ void draw_EntranceGargoyles() {
      * translate the figure
      *      X_INITIAL + 220 units for the x value
      *      Y_INITIAL - 10 units for the y value
-     * draw_Gargoyles()
+     *
+     *      save the matrix status
+     *      increase the figure size by
+	 *          xSize times of the 10 value
+	 *          ySize times of the 10 value
+	 *          zSize times of the 1 value
+     *      draw_Gargoyles()
+     *      every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
      * translate the figure
      *      90 units for the x value
-     * draw_Gargoyles()
+     *
+     *      save the matrix status
+     *      increase the figure size by
+	 *          xSize times of the 10 value
+	 *          ySize times of the 10 value
+	 *          zSize times of the 1 value
+     *      draw_Gargoyles()
+     *      every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
 	glPushMatrix();
 	glTranslatef(X_INITIAL + 220, Y_INITIAL - 10, 0);
-	draw_Gargoyles();
-	glTranslatef(90, 0, 0);
-	draw_Gargoyles();
+
+    glPushMatrix();
+    glScalef(10, 10 , 10);
+    draw_Gargoyles();
+    glPopMatrix();
+
+    glTranslatef(90, 0, 0);
+
+    glPushMatrix();
+    glScalef(10, 10 , 10);
+    draw_Gargoyles();
+    glPopMatrix();
+
 	glPopMatrix();
 
 }
@@ -1941,8 +1250,22 @@ void draw_FrontDoor_Tower_Roof() {
 
 void draw_FrontDoor_Tower_Body() {
 
-//  draw_Cylinder_Figure()
-    draw_Cylinder_Figure(5, 100);
+	/*
+     * save the matrix status
+     * increase the figure size by
+     *     5 times of the x value
+     *     5 times of the y value
+     *     100 times of the z value
+     * draw_Cylinder_Figure()
+     * every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
+     * */
+	glPushMatrix();
+	glScalef(5, 5, 100);
+
+    draw_Cylinder_Figure();
+
+	glPopMatrix();
 
 }
 
@@ -1983,7 +1306,9 @@ void draw_FrontDoor() {
      * */
 	glPushMatrix();
 	glTranslatef(7, 0, 0);
-    draw_Gate(26);
+	glScalef(26, 1, 1);
+	draw_Gate();
+	glPopMatrix();
 	glPopMatrix();
 
 
@@ -2146,8 +1471,20 @@ void draw_Castle_Roads() {
 //delivery road
 void draw_Store(GLfloat xSize, GLfloat ySize) {
 
-//  draw_6_Faces_Figure()
-    draw_6_Faces_Figure(xSize, ySize, 15);
+	/*
+	 * save the matrix status
+     * increase the figure size by
+	 *     xSize times of the x value
+	 *     ySize times of the y value
+	 *     15 times of the z value
+     * draw_6_Faces_Figure()
+     * every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
+	 * */
+	glPushMatrix();
+    glScalef(xSize, ySize, 15);
+    draw_6_Faces_Figure();
+    glPopMatrix();
 
 }
 
@@ -2388,7 +1725,13 @@ void draw_Castle_Courtyard() {
 void draw_Hallway_Section(GLfloat xSize, GLfloat ySize) {
 
     /*
+     * save the matrix status
+     * increase the figure size by
+	 *     xSize times of the x value
+	 *     ySize times of the y value
+	 *     40 times of the z value
      * draw_6_Faces_Figure()
+     * every vertex non modified keeps the same as it was, but the modified ones are changed
      *
      * save the matrix status
      * translate the figure
@@ -2396,7 +1739,10 @@ void draw_Hallway_Section(GLfloat xSize, GLfloat ySize) {
      * draw_WallEdification_Roof()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
-    draw_6_Faces_Figure(xSize, ySize, 40);
+    glPushMatrix();
+    glScalef(xSize, ySize, 40);
+    draw_6_Faces_Figure();
+    glPopMatrix();
 
     glPushMatrix();
     glTranslatef(0, 0, 40);
@@ -2480,8 +1826,20 @@ void draw_Castle_Buildings() {
 	glTranslatef(X_INITIAL + 238.5, Y_INITIAL + 335, 0);
 
 //	make the central building
-// draw_6_Faces_Figure()
-    draw_6_Faces_Figure(60, 60, 70);
+	/*
+	 * save the matrix status
+     * increase the figure size by
+	 *     60 times of the x value
+	 *     60 times of the y value
+	 *     70 times of the z value
+     * draw_6_Faces_Figure()
+     * every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
+	 * */
+	glPushMatrix();
+    glScalef(60, 60, 70);
+    draw_6_Faces_Figure();
+    glPopMatrix();
     glPopMatrix();
 
 	glPopMatrix();
@@ -2527,8 +1885,22 @@ void draw_Castle_OldTower_Roof(GLfloat radios, GLfloat xSize) {
 //castle old tower body
 void draw_Castle_OldTower_Body(GLfloat radios, GLfloat height) {
 
-//  draw_Cylinder_Figure()
-    draw_Cylinder_Figure(radios, height);
+	/*
+     * save the matrix status
+     * increase the figure size by
+     *     radios times of the x value
+     *     radios times of the y value
+     *     height times of the z value
+     * draw_Cylinder_Figure()
+     * every vertex non modified keeps the same as it was, but the modified ones are changed
+     *
+     * */
+	glPushMatrix();
+	glScalef(radios, radios, height);
+
+	draw_Cylinder_Figure();
+
+	glPopMatrix();
 
 }
 
@@ -2739,8 +2111,8 @@ void resize(int w, int h) {
 	//set the orthographic view (perpendicular) with the size:
 	//x_min, x_max, y_min, y_max, z_min, z_max (from the observer perspective!)
 	//AKA -> left, right, top, down, near, far
-//	glRotatef(90, 1, 0, 0);
-//	glRotatef(90, 0, 0, 1);
+//	glRotatef(80, 1, 0, 0);
+//	glRotatef(80, 0, 0, 1);
 	glOrtho(X_MIN_VIEW, X_MAX_VIEW, Y_MIN_VIEW, Y_MAX_VIEW, Z_NEAR_VIEW, Z_FAR_VIEW);
 	glTranslatef(100, 100, 0);
 
