@@ -78,5 +78,3 @@ void create_Front_Face() {
 	glEnd();
 
 }
-
-

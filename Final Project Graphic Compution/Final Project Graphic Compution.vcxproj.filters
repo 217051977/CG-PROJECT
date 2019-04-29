@@ -13,6 +13,81 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\DirectFunctions">
+      <UniqueIdentifier>{82c9141c-63a4-476e-be13-07996235af5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Bases">
+      <UniqueIdentifier>{d1415544-a4c2-4763-b523-1d89c2ada154}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Entrance">
+      <UniqueIdentifier>{4f05bae8-b9af-4884-9710-8c9151ac997d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Entrance\Tower">
+      <UniqueIdentifier>{c8141bb4-c45f-4e4e-a8c4-d2da4edcdb62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Entrance\Conncections">
+      <UniqueIdentifier>{ae83a2bb-6588-486f-bec6-7fa4332df88b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Entrance\Conncections\Bridge">
+      <UniqueIdentifier>{b18a8ce8-7827-4a0e-9937-5b8c062bceb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Entrance\Conncections\Buildings">
+      <UniqueIdentifier>{3c4dff28-e626-49dd-a15b-6c027e5355bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Entrance\Conncections\Gate">
+      <UniqueIdentifier>{c467d587-9475-418e-a058-baf5f1fa071d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Entrance\Path">
+      <UniqueIdentifier>{50adf76e-76f6-4eba-aae5-de185d5f1971}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Entrance\DeliverRoad">
+      <UniqueIdentifier>{af02f9a3-8ebe-4465-968d-3187cfe8bc63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Castle">
+      <UniqueIdentifier>{5102131d-35df-4761-8e1a-fda40c8f56c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Castle\Roads">
+      <UniqueIdentifier>{daa41779-cbdd-40cd-9b35-6942dc93e7b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Castle\Stores">
+      <UniqueIdentifier>{ea25ad2f-4e4a-4a5a-afe8-7428b5a1eb16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Castle\HallWay">
+      <UniqueIdentifier>{a0341ed7-e593-44ab-a8c3-5124284bc5aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Castle\OldCastle">
+      <UniqueIdentifier>{322ea265-c557-4b5d-8666-fd9bb0a150a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Castle\Walls">
+      <UniqueIdentifier>{79bdac9a-7e0f-47a4-b1cd-80777102c72c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\RoofTiles">
+      <UniqueIdentifier>{28c8dae2-46bc-44cf-8d33-119bcf89ebea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Rocks">
+      <UniqueIdentifier>{d7a28e91-77aa-4964-ae29-1f33e50af034}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\IndirectFunctions">
+      <UniqueIdentifier>{662c060b-cc47-456b-ace2-4fafb9e4bf16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\IndirectFunctions\DrawScene">
+      <UniqueIdentifier>{7af6c552-b70a-4adb-a1b2-64c6843c0bf8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SemiDirectFunctions">
+      <UniqueIdentifier>{04dc7fbc-775a-4974-855b-e570963e44b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SemiDirectFunctions\DrawImage">
+      <UniqueIdentifier>{f0a8dc05-2cd8-4b10-9839-b5425f52d82c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\IndirectFunctions\SetUp">
+      <UniqueIdentifier>{1675b7d0-8361-4c07-8f1e-7d76781e68eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\IndirectFunctions\Resize">
+      <UniqueIdentifier>{fc55a8bc-4ac2-4747-b444-f9ece744c1b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\IndirectFunctions\KeyInput">
+      <UniqueIdentifier>{e6f4bfff-e34a-411d-8b86-4d627edd2b62}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -23,17 +98,80 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Figures.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="RightTower.h">
+      <Filter>Header Files\DirectFunctions\Entrance\Tower</Filter>
+    </ClInclude>
+    <ClInclude Include="MiddleTower.h">
+      <Filter>Header Files\DirectFunctions\Entrance\Tower</Filter>
+    </ClInclude>
+    <ClInclude Include="LeftTower_Ruined.h">
+      <Filter>Header Files\DirectFunctions\Entrance\Tower</Filter>
+    </ClInclude>
+    <ClInclude Include="LeftTower.h">
+      <Filter>Header Files\DirectFunctions\Entrance\Tower</Filter>
     </ClInclude>
     <ClInclude Include="Faces.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\DirectFunctions\Bases</Filter>
     </ClInclude>
     <ClInclude Include="Circle.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\DirectFunctions\Bases</Filter>
+    </ClInclude>
+    <ClInclude Include="Figures.h">
+      <Filter>Header Files\DirectFunctions\Bases</Filter>
     </ClInclude>
     <ClInclude Include="RockBlocks.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\DirectFunctions\Rocks</Filter>
+    </ClInclude>
+    <ClInclude Include="ArcBridge.h">
+      <Filter>Header Files\DirectFunctions\Entrance\Conncections\Bridge</Filter>
+    </ClInclude>
+    <ClInclude Include="ArcBridge_Ruined.h">
+      <Filter>Header Files\DirectFunctions\Entrance\Conncections\Bridge</Filter>
+    </ClInclude>
+    <ClInclude Include="MiddleTowersConnection.h">
+      <Filter>Header Files\DirectFunctions\Entrance\Conncections\Buildings</Filter>
+    </ClInclude>
+    <ClInclude Include="Gate.h">
+      <Filter>Header Files\DirectFunctions\Entrance\Conncections\Gate</Filter>
+    </ClInclude>
+    <ClInclude Include="Gargoyles.h">
+      <Filter>Header Files\DirectFunctions\Entrance\Path</Filter>
+    </ClInclude>
+    <ClInclude Include="DeliverRoad.h">
+      <Filter>Header Files\DirectFunctions\Entrance\DeliverRoad</Filter>
+    </ClInclude>
+    <ClInclude Include="CastleRoads.h">
+      <Filter>Header Files\DirectFunctions\Castle\Roads</Filter>
+    </ClInclude>
+    <ClInclude Include="Stores.h">
+      <Filter>Header Files\DirectFunctions\Castle\Stores</Filter>
+    </ClInclude>
+    <ClInclude Include="HallWay.h">
+      <Filter>Header Files\DirectFunctions\Castle\HallWay</Filter>
+    </ClInclude>
+    <ClInclude Include="OldCastle_Walls.h">
+      <Filter>Header Files\DirectFunctions\Castle\OldCastle</Filter>
+    </ClInclude>
+    <ClInclude Include="CastleWalls.h">
+      <Filter>Header Files\DirectFunctions\Castle\Walls</Filter>
+    </ClInclude>
+    <ClInclude Include="RoofTiles.h">
+      <Filter>Header Files\DirectFunctions\RoofTiles</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw.h">
+      <Filter>Header Files\SemiDirectFunctions\DrawImage</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawScene.h">
+      <Filter>Header Files\IndirectFunctions\DrawScene</Filter>
+    </ClInclude>
+    <ClInclude Include="SetUp.h">
+      <Filter>Header Files\IndirectFunctions\SetUp</Filter>
+    </ClInclude>
+    <ClInclude Include="Resize.h">
+      <Filter>Header Files\IndirectFunctions\Resize</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyInput.h">
+      <Filter>Header Files\IndirectFunctions\KeyInput</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
