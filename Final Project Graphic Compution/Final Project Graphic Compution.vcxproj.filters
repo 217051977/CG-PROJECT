@@ -88,11 +88,9 @@
     <Filter Include="Header Files\IndirectFunctions\KeyInput">
       <UniqueIdentifier>{e6f4bfff-e34a-411d-8b86-4d627edd2b62}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <Filter Include="Header Files\IndirectFunctions\Main">
+      <UniqueIdentifier>{2e5fbdb3-86b7-4dd1-8e94-e189e607f89a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -173,5 +171,13 @@
     <ClInclude Include="KeyInput.h">
       <Filter>Header Files\IndirectFunctions\KeyInput</Filter>
     </ClInclude>
+    <ClInclude Include="Main.h">
+      <Filter>Header Files\IndirectFunctions\Main</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Castle_Start.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,20 +1,20 @@
-//makes the program where this header will be used add it just one time this header to it
-#pragma once
-
-//Check which type of machine the code is working in and include/import the necessary library(s)
-#include <iostream>
-#ifdef __APPLE__
-#  include <OpenGL/glu.h>
-#  include <GLUT/glut.h>
-#else
-#  include <GL/glut.h>
-#endif
-
 /***********************************************************************************************************************
 *                                                                                                                      *
-*                                            Draws the castle walls it self                                            *
+*                                                     CastleWalls.h                                                    *
 *                                                                                                                      *
+*                                 This file is responsible to create the castle walls                                  *
+*                                                                                                                      *
+************************************************************************************************************************
+*                                                                         *                                            *
+*                               GROUP MEMBERS:                            *         GROUP MEMBERS' NUMBERS:            *
+*                                                                         *                                            *
+*                           Bruno Miguel Dias Leal                        *               Nº 21705197                  *
+*              Diana Margarida Simões Soares da Silva de Jesus            *               Nº 21703012                  *
+*                                                                         *                                            *
 ***********************************************************************************************************************/
+
+//makes the program where this header will be used add it just one time this header to it
+#pragma once
 
 //castle front left wall
 void draw_Castle_LeftFrontWall(/*values*/) {}

@@ -1,20 +1,20 @@
-//makes the program where this header will be used add it just one time this header to it
-#pragma once
-
-//Check which type of machine the code is working in and include/import the necessary library(s)
-#include <iostream>
-#ifdef __APPLE__
-#  include <OpenGL/glu.h>
-#  include <GLUT/glut.h>
-#else
-#  include <GL/glut.h>
-#endif
-
 /***********************************************************************************************************************
 *                                                                                                                      *
-*                                       Draws the middle towers connection it self                                     *
+*                                                     RoofTiles.h                                                      *
 *                                                                                                                      *
+*                                  This file is responsible to create the roof tiles                                   *
+*                                                                                                                      *
+************************************************************************************************************************
+*                                                                         *                                            *
+*                               GROUP MEMBERS:                            *         GROUP MEMBERS' NUMBERS:            *
+*                                                                         *                                            *
+*                           Bruno Miguel Dias Leal                        *               Nº 21705197                  *
+*              Diana Margarida Simões Soares da Silva de Jesus            *               Nº 21703012                  *
+*                                                                         *                                            *
 ***********************************************************************************************************************/
+
+//makes the program where this header will be used add it just one time this header to it
+#pragma once
 
 //wall edification (middle towers connection)
 void draw_WallEdification_Roof(GLfloat width, GLfloat height) {

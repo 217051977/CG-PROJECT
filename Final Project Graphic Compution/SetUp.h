@@ -1,23 +1,20 @@
+/***********************************************************************************************************************
+*                                                                                                                      *
+*                                                       SetUp.U                                                        *
+*                                                                                                                      *
+*                            This file is responsible manage any set up made to the program                            *
+*                                                                                                                      *
+************************************************************************************************************************
+*                                                                         *                                            *
+*                               GROUP MEMBERS:                            *         GROUP MEMBERS' NUMBERS:            *
+*                                                                         *                                            *
+*                           Bruno Miguel Dias Leal                        *               Nº 21705197                  *
+*              Diana Margarida Simões Soares da Silva de Jesus            *               Nº 21703012                  *
+*                                                                         *                                            *
+***********************************************************************************************************************/
+
 //makes the program where this header will be used add it just one time this header to it
 #pragma once
-
-//Check which type of machine the code is working in and include/import the necessary library(s)
-#include <iostream>
-#ifdef __APPLE__
-#  include <OpenGL/glu.h>
-#  include <GLUT/glut.h>
-#else
-#  include <GL/glut.h>
-#endif
-
-/*
- * background color value
- *      red
- *      green
- *      blue
- *      alpha
- * */
-double B_RED = 1, B_GREEN = 1, B_BLUE = 1, B_ALPHA = 0;
 
 // Initialization routine.
 void setup(void) {

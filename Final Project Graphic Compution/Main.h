@@ -1,8 +1,8 @@
 /***********************************************************************************************************************
 *                                                                                                                      *
-*                                                       Stores.h                                                       *
+*                                                        Main.h                                                        *
 *                                                                                                                      *
-*                                 This file is responsible to create the castle stores                                 *
+*                                      This file is responsible start the program                                      *
 *                                                                                                                      *
 ************************************************************************************************************************
 *                                                                         *                                            *
@@ -16,22 +16,30 @@
 //makes the program where this header will be used add it just one time this header to it
 #pragma once
 
-//delivery road
-void draw_Store(GLfloat xSize, GLfloat ySize) {
+int main(int argc, char **argv) {
 
-    /*
-     * save the matrix status
-     * increase the figure size by
-     *     xSize times of the x value
-     *     ySize times of the y value
-     *     15 times of the z value
-     * draw_6_Faces_Figure()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     *
-     * */
-    glPushMatrix();
-    glScalef(xSize, ySize, 15);
-    draw_6_Faces_Figure();
-    glPopMatrix();
+	//initialize the glut
+	glutInit(&argc, argv);
+	//set the display mode
+	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
+	//set the size of the OpenGL window that it will be open
+	glutInitWindowSize(X_WINDOW_SIZE, Y_WINDOW_SIZE);
+	//sets the position of the window based on the top left corner
+	glutInitWindowPosition(X_WINDOW_POSITION, Y_WINDOW_POSITION);
+	//create the OpenGL window has been set up with the name
+	glutCreateWindow("Castle.cpp");
+	//call the function
+	setup();
+	//set the function which will get the Scene from
+	glutDisplayFunc(drawScene);
+	//set the function that is responsible to reshape the window
+	glutReshapeFunc(resize);
+	//set the function that it will receive from the keyboard
+	glutKeyboardFunc(keyInput);
+	//starts rendering the Scene
+	glutMainLoop();
+
+	//returns 0 when ended
+	return 0;
 
 }
