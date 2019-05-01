@@ -115,7 +115,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Castle_Start.cpp" />
+    <ClCompile Include="__Castle_Start__.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -176,7 +176,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Castle_Start.cpp">
+    <ClCompile Include="__Castle_Start__.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
