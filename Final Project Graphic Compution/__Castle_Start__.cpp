@@ -158,7 +158,7 @@ GLfloat X_INITIAL = 100, Y_INITIAL = 300;
 #include "Main.h"
 
 /*
- * TODO: change the crown spikes to obey to this rule -> 5 unities spike, 5 unities non spike
+ * TODO: change the crown spikes to obey to this rule -> 5 unities spike, 5 unities non spike (utilizar o word existente no ambiente de trabalho)
  *
  * TODO: make the towers body and the base of the crown it self
  *
