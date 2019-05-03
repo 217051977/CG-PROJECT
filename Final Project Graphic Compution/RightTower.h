@@ -16,6 +16,30 @@
 //makes the program where this header will be used add it just one time this header to it
 #pragma once
 
+void draw_RightTower_Wall() {
+
+    draw_6_Faces_Figure();
+
+}
+
+void draw_RightTower_Middle_Block() {
+
+    draw_6_Faces_Figure();
+
+}
+
+void draw_RightTower_Crown() {
+
+    draw_6_Faces_Figure();
+
+}
+
+void draw_RightTower_Spike() {
+
+    draw_6_Faces_Figure();
+
+}
+
 //bottom (bottom cover)
 void draw_RightTower_Bottom() {
 

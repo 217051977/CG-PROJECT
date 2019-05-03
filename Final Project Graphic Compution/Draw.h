@@ -211,7 +211,7 @@ void draw_LeftTower() {
 
     }
 
-    for (int y = 0; y < 45; y += 5) {
+    for (int y = 5; y < 40; y += 5) {
 
         if (y % 2 == 0) {
 
@@ -290,33 +290,47 @@ void draw_MiddleTower() {
     glTranslatef(0, 0, 140);
 
     for (int x = 0; x < 30; x += 5) {
+
         if (x % 2 == 0) {
+
             glPushMatrix();
             glTranslatef(x, 0, 0);
             glScalef(5, 5, 10);
             draw_MiddleTower_Body_Bottom_Spikes();
             glPopMatrix();
+
+        } else {
+
             glPushMatrix();
             glTranslatef(x, 25, 0);
             glScalef(5, 5, 10);
             draw_MiddleTower_Body_Bottom_Spikes();
             glPopMatrix();
+
         }
+
     }
 
-    for (int y = 0; y < 30; y += 5) {
+    for (int y = 5; y < 25; y += 5) {
+
         if (y % 2 == 0) {
+
             glPushMatrix();
             glTranslatef(0, y, 0);
             glScalef(5, 5, 10);
             draw_MiddleTower_Body_Bottom_Spikes();
             glPopMatrix();
+
+        } else {
+
             glPushMatrix();
             glTranslatef(25, y, 0);
             glScalef(5, 5, 10);
             draw_MiddleTower_Body_Bottom_Spikes();
             glPopMatrix();
+
         }
+
     }
 
     glTranslatef(7.5, 7.5, 0);
@@ -381,7 +395,7 @@ void draw_MiddleTower() {
 
     for (int y = 0; y < 15; y += 5) {
 
-        if (y % 2 == 0) {
+        if (y % 2 != 0) {
 
             glPushMatrix();
             glTranslatef(0, y, 0);
@@ -429,33 +443,47 @@ void draw_MiddleTower() {
     glTranslatef(0, 0, 140);
 
     for (int x = 0; x < 30; x += 5) {
+
         if (x % 2 == 0) {
+
             glPushMatrix();
             glTranslatef(x, 0, 0);
             glScalef(5, 5, 10);
             draw_MiddleTower_Body_Bottom_Spikes();
             glPopMatrix();
+
+        } else {
+
             glPushMatrix();
             glTranslatef(x, 25, 0);
             glScalef(5, 5, 10);
             draw_MiddleTower_Body_Bottom_Spikes();
             glPopMatrix();
+
         }
+
     }
 
-    for (int y = 0; y < 30; y += 5) {
+    for (int y = 5; y < 25; y += 5) {
+
         if (y % 2 == 0) {
+
             glPushMatrix();
             glTranslatef(0, y, 0);
             glScalef(5, 5, 10);
             draw_MiddleTower_Body_Bottom_Spikes();
             glPopMatrix();
+
+        } else {
+
             glPushMatrix();
             glTranslatef(25, y, 0);
             glScalef(5, 5, 10);
             draw_MiddleTower_Body_Bottom_Spikes();
             glPopMatrix();
+
         }
+
     }
 
     glTranslatef(7.5, 7.5, 0);
@@ -548,23 +576,122 @@ void draw_MiddleTower() {
 //right tower
 void draw_RightTower() {
 
-    /*
-     * save the matrix status
-     * translate the figure
-     *      X_INITIAL + 400 units for the x value
-     *      Y_INITIAL + 10 units for the y value
-     * draw_RightTower_Bottom()
-     * translate the figure
-     *      16.5 units for the x value
-     *      21 units for the y value
-     * draw_MiddleRight_Tower_Crown()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
     glPushMatrix();
     glTranslatef(X_INITIAL + 400, Y_INITIAL + 10, 0);
-    draw_RightTower_Bottom();
-    glTranslatef(16.5, 21, 0);
-    draw_MiddleRight_Tower_Crown();
+    glScalef(57, 2, 1);
+    draw_RightTower_Wall();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(X_INITIAL + 455, Y_INITIAL + 10, 0);
+    glScalef(2, 57, 1);
+    draw_RightTower_Wall();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(X_INITIAL + 400, Y_INITIAL + 65, 0);
+    glScalef(57, 2, 1);
+    draw_RightTower_Wall();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(X_INITIAL + 400, Y_INITIAL + 17, 0);
+    glScalef(2, 50, 1);
+    draw_RightTower_Wall();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(X_INITIAL + 400, Y_INITIAL + 17, 0);
+    glScalef(50, 2, 1);
+    draw_RightTower_Wall();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(X_INITIAL + 448, Y_INITIAL + 17, 0);
+    glScalef(2, 43, 1);
+    draw_RightTower_Wall();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(X_INITIAL + 407, Y_INITIAL + 58, 0);
+    glScalef(43, 2, 1);
+    draw_RightTower_Wall();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(X_INITIAL + 407, Y_INITIAL + 24, 0);
+    glScalef(2, 36, 1);
+    draw_RightTower_Wall();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(X_INITIAL + 407, Y_INITIAL + 24, 0);
+    glScalef(36, 2, 1);
+    draw_RightTower_Wall();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(X_INITIAL + 441, Y_INITIAL + 24, 0);
+    glScalef(2, 29, 1);
+    draw_RightTower_Wall();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(X_INITIAL + 414, Y_INITIAL + 51, 0);
+    glScalef(29, 2, 1);
+    draw_RightTower_Wall();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(X_INITIAL + 416.5, Y_INITIAL + 31, 0);
+
+    glPushMatrix();
+    glScalef(15, 15, 1);
+    draw_RightTower_Wall();
+    glPopMatrix();
+
+    glTranslatef(0, 0, 1);
+
+    for (int x = 0; x < 15; x += 5) {
+
+        if (x % 2 != 0) {
+
+            glPushMatrix();
+            glTranslatef(x, 0, 0);
+            glScalef(5, 5, 10);
+            draw_MiddleTower_Crown_Spike();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(x, 10, 0);
+            glScalef(5, 5, 10);
+            draw_MiddleTower_Crown_Spike();
+            glPopMatrix();
+
+        }
+
+    }
+
+    for (int y = 0; y < 15; y += 5) {
+
+        if (y % 2 != 0) {
+
+            glPushMatrix();
+            glTranslatef(0, y, 0);
+            glScalef(5, 5, 10);
+            draw_MiddleTower_Crown_Spike();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(10, y, 0);
+            glScalef(5, 5, 10);
+            draw_MiddleTower_Crown_Spike();
+            glPopMatrix();
+
+        }
+
+    }
+
     glPopMatrix();
 
 }

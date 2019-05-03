@@ -60,7 +60,7 @@ double D_RED = 0, D_GREEN = 0, D_BLUE = 0;
  *      x
  *      y
  * */
-double X_WINDOW_SIZE = 800, Y_WINDOW_SIZE = 800;
+double X_WINDOW_SIZE = 950, Y_WINDOW_SIZE = X_WINDOW_SIZE + 30;
 /*
  * window position
  *      x
@@ -158,7 +158,15 @@ GLfloat X_INITIAL = 100, Y_INITIAL = 300;
 #include "Main.h"
 
 /*
- * TODO: change the crown spikes to obey to this rule -> 5 unities spike, 5 unities non spike (utilizar o word existente no ambiente de trabalho)
+ * TODO: try to merge headers functions (especially in the towers) -> create a directory in the solution (not in the folder) called common in side the tower directory
+ *
+ * TODO: make a pyramidal figure
+ *
+ * TODO: create a private functions to prevent double code
+ *
+ * TODO: set the height of the right tower
+ *
+ * TODO: try to make the right tower rising
  *
  * TODO: make the towers body and the base of the crown it self
  *
