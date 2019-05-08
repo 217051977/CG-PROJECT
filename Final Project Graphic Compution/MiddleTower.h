@@ -40,7 +40,7 @@ void draw_MiddleTower_Body_Top() {
 //body bottom pyramid spikes
 void draw_MiddleTower_Body_Bottom_Spikes() {
 
-    draw_6_Faces_Figure(); // -> tenho que fazer spikes piramidais
+	draw_Piramidal_Figure();
 
 }
 

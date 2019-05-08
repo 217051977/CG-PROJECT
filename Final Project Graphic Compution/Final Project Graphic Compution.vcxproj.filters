@@ -91,6 +91,15 @@
     <Filter Include="Header Files\IndirectFunctions\Main">
       <UniqueIdentifier>{2e5fbdb3-86b7-4dd1-8e94-e189e607f89a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\DirectFunctions\Menus">
+      <UniqueIdentifier>{f1c3fbc3-0796-49ba-ae00-e8aa0c5c6f6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Animations">
+      <UniqueIdentifier>{2b7f111a-31af-4b76-b8d2-bd55590dc440}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SemiDirectFunctions\View">
+      <UniqueIdentifier>{d97da93c-b8e9-4999-91f3-42d78482ac32}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RightTower.h">

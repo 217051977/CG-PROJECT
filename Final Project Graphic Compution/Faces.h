@@ -79,3 +79,23 @@ void create_Front_Face() {
 	glEnd();
 
 }
+
+//create piramidal face
+void create_Piramidal_Face() {
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_LINE_LOOP);
+
+	/*
+	 * set a vertex on the position (0, 0, 0)
+	 * set a vertex on the position (1, 0, 0)
+	 * set a vertex on the position (0.5, 0.5, 1)
+	 * */
+	glVertex3f(0, 0, 0);
+	glVertex3f(1, 0, 0);
+	glVertex3f(0.5, 0.5, 1);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+}
