@@ -93,9 +93,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="RightTower.h">
       <Filter>Header Files\DirectFunctions\Entrance\Tower</Filter>
     </ClInclude>
@@ -179,5 +176,8 @@
     <ClCompile Include="__Castle_Start__.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

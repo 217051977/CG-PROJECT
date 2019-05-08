@@ -118,9 +118,6 @@
     <ClCompile Include="__Castle_Start__.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="ArcBridge.h" />
     <ClInclude Include="ArcBridge_Ruined.h" />
     <ClInclude Include="CastleRoads.h" />
@@ -147,6 +144,9 @@
     <ClInclude Include="RoofTiles.h" />
     <ClInclude Include="SetUp.h" />
     <ClInclude Include="Stores.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
