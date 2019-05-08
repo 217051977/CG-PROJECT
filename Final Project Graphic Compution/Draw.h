@@ -159,27 +159,51 @@ void draw_LeftTower() {
     draw_LeftTower_Body();
     glPopMatrix();
 
-    glTranslatef(-5, -5, 140);
+	glTranslatef(0, -5, 140);
+
+	glPushMatrix();
+	glScalef(35, 5, 10);
+	draw_LeftTower_Crown();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0, 40, 0);
+	glScalef(35, 5, 10);
+	draw_LeftTower_Crown();
+	glPopMatrix();
+
+	for (int x = 0; x < 40; x += 5) {
+
+		if (x % 2 == 0) {
+
+			glPushMatrix();
+			glTranslatef(x, 0, 0);
+			glScalef(5, 5, 10);
+			draw_LeftTower_Crown_Spike();
+			glPopMatrix();
+
+			glPushMatrix();
+			glTranslatef(x, 40, 0);
+			glScalef(5, 5, 10);
+			draw_LeftTower_Crown_Spike();
+			glPopMatrix();
+
+		} else {
+		
+		}
+
+	}
+	
+    glTranslatef(-5, 0, 140);
 
     glPushMatrix();
-    glScalef(40, 5, 10);
-    draw_LeftTower_Crown();
-    glPopMatrix();
-
-    glPushMatrix();
-    glTranslatef(0, 40, 0);
-    glScalef(40, 5, 10);
-    draw_LeftTower_Crown();
-    glPopMatrix();
-
-    glPushMatrix();
-    glScalef(5, 40, 10);
+    glScalef(5, 45, 10);
     draw_LeftTower_Crown();
     glPopMatrix();
 
     glPushMatrix();
     glTranslatef(40, 0, 0);
-    glScalef(5, 40, 10);
+    glScalef(5, 45, 10);
     draw_LeftTower_Crown();
     glPopMatrix();
 
@@ -190,47 +214,27 @@ void draw_LeftTower() {
     glPopMatrix();
 
     glTranslatef(0, 0, 10);
-
-    for (int x = 0; x < 45; x += 5) {
-
-        if (x % 2 == 0) {
-
-            glPushMatrix();
-            glTranslatef(x, 0, 0);
-            glScalef(5, 5, 10);
-            draw_LeftTower_Crown_Spike();
-            glPopMatrix();
-
-            glPushMatrix();
-            glTranslatef(x, 40, 0);
-            glScalef(5, 5, 10);
-            draw_LeftTower_Crown_Spike();
-            glPopMatrix();
-
-        }
-
-    }
-
+	
     for (int y = 5; y < 40; y += 5) {
 
-        if (y % 2 == 0) {
+        if (y % 2 != 0) {
 
             glPushMatrix();
             glTranslatef(0, y, 0);
             glScalef(5, 5, 10);
-            draw_LeftTower_Crown_Spike();
+			draw_LeftTower_Crown_Spike();
             glPopMatrix();
 
-            glPushMatrix();
-            glTranslatef(40, y, 0);
-            glScalef(5, 5, 10);
-            draw_LeftTower_Crown_Spike();
-            glPopMatrix();
+			glPushMatrix();
+			glTranslatef(40, y, 0);
+			glScalef(5, 5, 10);
+			draw_LeftTower_Crown_Spike();
+			glPopMatrix();
 
         }
 
     }
-
+	
     glPopMatrix();
 
 }
@@ -576,6 +580,101 @@ void draw_MiddleTower() {
 //right tower
 void draw_RightTower() {
 
+	/*
+	 * save the matrix status
+	 * translate the figure
+	 *      X_INITIAL + 20 units for the x value
+	 *      Y_INITIAL + 20 units for the y value
+	 * draw_LeftTower_Crown()
+	 * translate the figure
+	 *      7 units for the x value
+	 *      7 units for the y value
+	 * draw_LeftTower_Crown_Spikes_Part()
+	 * every vertex non modified keeps the same as it was, but the modified ones are changed
+	 * */
+	glPushMatrix();
+    glTranslatef(X_INITIAL + 407, Y_INITIAL + 17, 0);
+
+	glPushMatrix();
+	glScalef(43, 43, 140);
+	draw_RightTower_Body();
+	glPopMatrix();
+
+	glTranslatef(0, -7, 140);
+
+	glPushMatrix();
+	glScalef(43, 7, 10);
+	draw_RightTower_Crown();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0, 50, 0);
+	glScalef(43, 7, 10);
+	draw_RightTower_Crown();
+	glPopMatrix();
+
+	for (int x = 0; x < 36; x += 7) {
+
+		if (x % 2 != 0) {
+
+			glPushMatrix();
+			glTranslatef(x, 0, 0);
+			glScalef(7, 7, 10);
+			draw_RightTower_Spikes();
+			glPopMatrix();
+
+		} else {
+
+			glPushMatrix();
+			glTranslatef(x, 50, 0);
+			glScalef(7, 7, 10);
+			draw_RightTower_Spikes();
+			glPopMatrix();
+		
+		}
+
+	}
+	
+	glTranslatef(-7, 0, 140);
+
+	glPushMatrix();
+	glScalef(7, 57, 10);
+	draw_RightTower_Crown();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(50, 0, 0);
+	glScalef(7, 57, 10);
+	draw_RightTower_Crown();
+	glPopMatrix();
+
+	glTranslatef(0, 0, 10);
+
+	for (int y = 0; y < 50; y += 7) {
+
+		if (y % 2 == 0) {
+
+			glPushMatrix();
+			glTranslatef(0, y, 0);
+			glScalef(7, 7, 10);
+			draw_RightTower_Spikes();
+			glPopMatrix();
+
+		} else {
+
+			glPushMatrix();
+			glTranslatef(50, y, 0);
+			glScalef(7, 7, 10);
+			draw_RightTower_Spikes();
+			glPopMatrix();
+
+		}
+
+	}
+	
+	glPopMatrix();
+
+	/*
     glPushMatrix();
     glTranslatef(X_INITIAL + 400, Y_INITIAL + 10, 0);
     glScalef(57, 2, 1);
@@ -693,7 +792,7 @@ void draw_RightTower() {
     }
 
     glPopMatrix();
-
+	*/
 }
 
 /***********************************************************************************************************************
