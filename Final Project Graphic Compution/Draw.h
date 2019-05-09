@@ -172,6 +172,8 @@ void draw_LeftTower() {
 	draw_LeftTower_Crown();
 	glPopMatrix();
 
+	glTranslatef(0, 0, 10);
+
 	for (int x = 0; x < 40; x += 5) {
 
 		if (x % 2 == 0) {
@@ -532,41 +534,41 @@ void draw_MiddleTower() {
 
     for (int x = 0; x < 15; x += 5) {
 
-        if (x % 2 != 0) {
+		if (x % 2 != 0) {
 
-            glPushMatrix();
-            glTranslatef(x, 0, 0);
-            glScalef(5, 5, 10);
-            draw_MiddleTower_Crown_Spike();
-            glPopMatrix();
+			glPushMatrix();
+			glTranslatef(x, 0, 0);
+			glScalef(5, 5, 10);
+			draw_MiddleTower_Crown_Spike();
+			glPopMatrix();
 
-            glPushMatrix();
-            glTranslatef(x, 10, 0);
-            glScalef(5, 5, 10);
-            draw_MiddleTower_Crown_Spike();
-            glPopMatrix();
+			glPushMatrix();
+			glTranslatef(x, 10, 0);
+			glScalef(5, 5, 10);
+			draw_MiddleTower_Crown_Spike();
+			glPopMatrix();
 
-        }
+		}
 
     }
 
     for (int y = 0; y < 15; y += 5) {
 
-        if (y % 2 == 0) {
+		if (y % 2 != 0) {
 
-            glPushMatrix();
-            glTranslatef(0, y, 0);
-            glScalef(5, 5, 10);
-            draw_MiddleTower_Crown_Spike();
-            glPopMatrix();
+			glPushMatrix();
+			glTranslatef(0, y, 0);
+			glScalef(5, 5, 10);
+			draw_MiddleTower_Crown_Spike();
+			glPopMatrix();
 
-            glPushMatrix();
-            glTranslatef(10, y, 0);
-            glScalef(5, 5, 10);
-            draw_MiddleTower_Crown_Spike();
-            glPopMatrix();
+			glPushMatrix();
+			glTranslatef(10, y, 0);
+			glScalef(5, 5, 10);
+			draw_MiddleTower_Crown_Spike();
+			glPopMatrix();
 
-        }
+		}
 
     }
 
@@ -612,6 +614,8 @@ void draw_RightTower() {
 	glScalef(43, 7, 10);
 	draw_RightTower_Crown();
 	glPopMatrix();
+
+	glTranslatef(0, 0, 10);
 
 	for (int x = 0; x < 36; x += 7) {
 
