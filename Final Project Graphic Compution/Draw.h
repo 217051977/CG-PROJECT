@@ -194,7 +194,7 @@ void draw_LeftTower() {
 
 	}
 	
-    glTranslatef(-5, 0, 140);
+    glTranslatef(-5, 0, -10);
 
     glPushMatrix();
     glScalef(5, 45, 10);
@@ -635,7 +635,7 @@ void draw_RightTower() {
 
 	}
 	
-	glTranslatef(-7, 0, 140);
+	glTranslatef(-7, 0, -10);
 
 	glPushMatrix();
 	glScalef(7, 57, 10);

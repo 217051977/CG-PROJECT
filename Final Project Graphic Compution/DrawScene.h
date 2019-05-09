@@ -80,6 +80,6 @@ void drawScene(void) {
     draw_Castle_Buildings();
 
     //send the scene to be rendered
-    glFlush();
+    glutSwapBuffers();
 
 }
