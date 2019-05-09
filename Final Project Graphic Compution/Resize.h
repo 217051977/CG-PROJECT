@@ -40,9 +40,9 @@ void resize(int w, int h) {
 //    glRotatef(80, 1, 0, 0);
 //    glRotatef(80, 0, 0, 1);
 
-	gluPerspective(150, 1, 1, 600);
-	gluLookAt(X_INITIAL + 270, Y_INITIAL - 50, 300, X_INITIAL + 270, Y_INITIAL + 150, -200, 0, 1, 1);
-	//gluLookAt(X_INITIAL + 250, Y_INITIAL - 50, 0, X_INITIAL + 250, Y_INITIAL + 100, 10, 0, 0, 1);
+//	gluPerspective(150, 1, 1, 600);
+//	gluLookAt(X_INITIAL + 250, Y_INITIAL - 50, 300, X_INITIAL + 250, Y_INITIAL + 50, - 45, 0, 0, 1);
+    topOrtho;
     //glOrtho(X_MIN_VIEW, X_MAX_VIEW, Y_MIN_VIEW, Y_MAX_VIEW, Z_NEAR_VIEW, Z_FAR_VIEW);
     //glTranslatef(- X_INITIAL, - Y_INITIAL, 0);
 

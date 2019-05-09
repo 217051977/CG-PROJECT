@@ -137,6 +137,7 @@
     <ClInclude Include="LeftTower.h" />
     <ClInclude Include="LeftTower_Ruined.h" />
     <ClInclude Include="MiddleTower.h" />
+    <ClInclude Include="Perspectives.h" />
     <ClInclude Include="Resize.h" />
     <ClInclude Include="RightTower.h" />
     <ClInclude Include="RockBlocks.h" />

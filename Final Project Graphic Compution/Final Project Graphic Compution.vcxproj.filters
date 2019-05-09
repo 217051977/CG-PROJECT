@@ -100,6 +100,9 @@
     <Filter Include="Header Files\SemiDirectFunctions\View">
       <UniqueIdentifier>{d97da93c-b8e9-4999-91f3-42d78482ac32}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\DirectFunctions\Perspectives">
+      <UniqueIdentifier>{521fc334-576e-4cab-b656-fe5b44be9df8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RightTower.h">
@@ -179,6 +182,9 @@
     </ClInclude>
     <ClInclude Include="Main.h">
       <Filter>Header Files\IndirectFunctions\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Perspectives.h">
+      <Filter>Header Files\DirectFunctions\Perspectives</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

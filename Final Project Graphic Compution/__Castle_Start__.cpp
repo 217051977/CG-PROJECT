@@ -105,6 +105,7 @@ GLfloat X_INITIAL = 100, Y_INITIAL = 300;
 
 /*
  * includes the headers necessaries to draw the castle and the environment:
+ *		"Perspectives.h"
  *      "Faces.h"
  *      "Circle.h"
  *      "Figures.h"
@@ -132,6 +133,7 @@ GLfloat X_INITIAL = 100, Y_INITIAL = 300;
  *      
  * */
 
+#include "Perspectives.h"
 #include "Faces.h"
 #include "Circle.h"
 #include "Figures.h"
