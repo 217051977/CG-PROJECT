@@ -1,14 +1,23 @@
+/***********************************************************************************************************************
+*                                                                                                                      *
+*                                                    Perspectives.h                                                    *
+*                                                                                                                      *
+*                            This file is responsible to create and manage the perspectives                            *
+*                                                                                                                      *
+************************************************************************************************************************
+*                                                                         *                                            *
+*                               GROUP MEMBERS:                            *         GROUP MEMBERS' NUMBERS:            *
+*                                                                         *                                            *
+*                           Bruno Miguel Dias Leal                        *               Nº 21705197                  *
+*              Diana Margarida Simões Soares da Silva de Jesus            *               Nº 21703012                  *
+*                                                                         *                                            *
+***********************************************************************************************************************/
+
 #pragma once
 
 #define topOrtho glOrtho(X_MIN_VIEW, X_MAX_VIEW, Y_MIN_VIEW, Y_MAX_VIEW, Z_NEAR_VIEW, Z_FAR_VIEW);
 
-#define abovePerspective gluPerspective(150, 1, 1, 600);
-#define aboveLookAt gluLookAt(X_INITIAL + 250, Y_INITIAL - 50, 300, X_INITIAL + 250, Y_INITIAL + 50, -45, 0, 0, 1);
-
-#define downFrontPerspective gluPerspective(150, 1, 1, 600);
-#define downFrontLookAt gluLookAt(X_INITIAL + 250, Y_INITIAL - 50, 0, X_INITIAL + 250, Y_INITIAL + 50, 10, 0, 0, 1);
-
-//Regulares
+//Regulars
 
 //Ortho
 
@@ -53,86 +62,157 @@ void setBackOrtho() {
 
 //Perspective
 
-void setBotOrtho() {
+void setFrontPerspective() {
 
-	glRotatef(180, 1, 0, 0);
-	glRotatef(180, 0, 0, 1);
-	topOrtho;
-
-}
-
-void setLeftOrtho() {
-
-	glRotatef(90, 1, 0, 0);
-	glRotatef(90, 0, 0, 1);
-	topOrtho;
+    gluPerspective(150, 1, 1, 1000);
+    gluLookAt(X_INITIAL + 250, Y_INITIAL - 242, 80, X_INITIAL + 250, Y_INITIAL - 241, 80, 0, 0, 1);
 
 }
 
-void setRightOrtho() {
+void setRightPerspective() {
 
-	glRotatef(90, 1, 0, 0);
-	glRotatef(-90, 0, 0, 1);
-	topOrtho;
-
-}
-
-void setFrontOrtho() {
-
-	glRotatef(90, 1, 0, 0);
-	topOrtho;
+    gluPerspective(150, 1, 1, 1000);
+    gluLookAt(X_INITIAL + 561, Y_INITIAL + 200, 80, X_INITIAL + 560, Y_INITIAL + 200, 80, 0, 0, 1);
 
 }
 
-void setBackOrtho() {
+void setBackPerspective() {
 
-	glRotatef(90, 1, 0, 0);
-	glRotatef(180, 0, 0, 1);
-	topOrtho;
+    gluPerspective(150, 1, 1, 1000);
+    gluLookAt(X_INITIAL + 250, Y_INITIAL + 620, 110, X_INITIAL + 250, Y_INITIAL + 619, 110, 0, 0, 1);
 
 }
 
+void setTopPerspective() {
 
+    gluPerspective(150, 1, 1, 1000);
+    gluLookAt(X_INITIAL + 250, Y_INITIAL + 235, 322, X_INITIAL + 250, Y_INITIAL + 235, 321, 0, 1, 0);
+
+}
+
+void setLeftPerspective() {
+
+    gluPerspective(150, 1, 1, 1000);
+    gluLookAt(X_INITIAL - 44, Y_INITIAL + 200, 80, X_INITIAL - 43, Y_INITIAL + 200, 80, 0, 0, 1);
+
+}
+
+void setBotPerspective() {
+
+    gluPerspective(150, 1, 1, 1000);
+    gluLookAt(X_INITIAL + 250, Y_INITIAL + 195, -115, X_INITIAL + 250, Y_INITIAL + 195, -114, 0, 1, 0);
+
+}
+
+//Irregulars
+
+void setUnderFrontPerspective_Entrance() {
+
+    gluPerspective(150, 1, 1, 600);
+    gluLookAt(X_INITIAL + 250, Y_INITIAL - 50, 0, X_INITIAL + 250, Y_INITIAL + 50, 10, 0, 0, 1);
+
+}
+
+void setAboveFrontPerspective_Entrance() {
+
+    gluPerspective(150, 1, 1, 600);
+    gluLookAt(X_INITIAL + 250, Y_INITIAL - 50, 300, X_INITIAL + 250, Y_INITIAL + 50, -45, 0, 0, 1);
+
+}
+
+//chose perspective
 
 void setPerspectives(int option) {
 
-	switch (option) {
+    switch (option) {
 
-		//ortho
+        //ortho
 
+//      back view
+        case -5: {
 
-		//front view from front 
-		case -1: {
+            setBackOrtho();
 
+        }break;
 
+//      right view
+        case -4: {
 
-		}break;
+            setRightOrtho();
 
-		//prespective
-	
-		//front view from down front
-		case 0: {
+        }break;
 
-			downFrontPerspective;
-			downFrontLookAt;
+        case -3: {
 
-		}break;
-		
-		//front view from looking up
-		case 1: {
+            setFrontOrtho();
 
-			gluPerspective(150, 1, 1, 600);
-			gluLookAt(X_INITIAL + 250, Y_INITIAL - 50, 0, X_INITIAL + 250, Y_INITIAL + 50, 50, 0, 0, 1);
+        }break;
 
-		}break;
+//      bot view
+        case -2: {
 
-		//front view from above
-		case 2: {
+            setBotOrtho();
 
-			gluPerspective(150, 1, 1, 600);
-			gluLookAt(X_INITIAL + 250, Y_INITIAL - 50, 300, X_INITIAL + 250, Y_INITIAL + 50, -45, 0, 0, 1);
+        }break;
 
-		}
-	}
+//      left view
+        case -1: {
+
+            setLeftOrtho();
+
+        }break;
+
+//      top view
+        case 0: {
+
+            topOrtho;
+
+        }break;
+
+//      perspective
+
+//      top view
+        case 1: {
+
+            setTopPerspective();
+
+        }break;
+
+//      left view
+        case 2: {
+
+            setLeftPerspective();
+
+        }break;
+
+//      bot view
+        case 3: {
+
+            setBotPerspective();
+
+        }break;
+
+//      front view
+        case 4: {
+
+            setFrontPerspective();
+
+        }break;
+
+//      right view
+        case 5: {
+
+            setRightPerspective();
+
+        }break;
+
+//      back view
+        case 6: {
+
+            setBackPerspective();
+
+        }break;
+
+    }
 
 }

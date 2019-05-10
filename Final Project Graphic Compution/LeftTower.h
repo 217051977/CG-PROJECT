@@ -17,9 +17,15 @@
 #pragma once
 
 //body
-void draw_LeftTower_Body() {
+void draw_LeftTower_Body_Top() {
 
-    draw_6_Faces_Figure();
+    create_Left_Top_Body_Left_Tower_Figure();
+
+}
+
+void draw_LeftTower_Body_Down() {
+
+    create_Left_Bot_Body_Left_Tower_Figure();
 
 }
 

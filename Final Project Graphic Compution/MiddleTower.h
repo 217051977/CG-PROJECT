@@ -40,7 +40,7 @@ void draw_MiddleTower_Body_Top() {
 //body bottom pyramid spikes
 void draw_MiddleTower_Body_Bottom_Spikes() {
 
-	draw_Piramidal_Figure();
+	draw_Pyramidal_Figure();
 
 }
 

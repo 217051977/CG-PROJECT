@@ -152,11 +152,17 @@ void draw_LeftTower() {
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
     glPushMatrix();
-    glTranslatef(X_INITIAL + 20, Y_INITIAL + 20, 0);
+    glTranslatef(X_INITIAL + 25, Y_INITIAL + 20, 0);
 
     glPushMatrix();
-    glScalef(35, 35, 140);
-    draw_LeftTower_Body();
+    glScalef(35, 35, 85);
+    draw_LeftTower_Body_Down();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(0, 0, 85);
+    glScalef(35, 35, 55);
+    draw_LeftTower_Body_Top();
     glPopMatrix();
 
 	glTranslatef(0, -5, 140);
@@ -191,11 +197,11 @@ void draw_LeftTower() {
 			glPopMatrix();
 
 		} else {
-		
+
 		}
 
 	}
-	
+
     glTranslatef(-5, 0, -10);
 
     glPushMatrix();
@@ -216,7 +222,7 @@ void draw_LeftTower() {
     glPopMatrix();
 
     glTranslatef(0, 0, 10);
-	
+
     for (int y = 5; y < 40; y += 5) {
 
         if (y % 2 != 0) {
@@ -245,6 +251,20 @@ void draw_LeftTower() {
 //left tower ruined
 void draw_LeftTower_Ruined() {
 
+    glPushMatrix();
+    glTranslatef(X_INITIAL + 110, Y_INITIAL + 20, 85);
+    glScalef(30, 30, 50);
+    draw_LeftTower_Body_Top();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(X_INITIAL + 110, Y_INITIAL + 20, 35);
+    glScalef(30, 30, 50);
+//    create_Left_Ruined_Tower_Bot_Figure();
+
+    create_Left_Ruined_Tower_Bot_Left_Face();
+    glPopMatrix();
+
     /*
      * save the matrix status
      * translate the figure
@@ -256,13 +276,13 @@ void draw_LeftTower_Ruined() {
      *      5 units for the y value
      * draw_LeftTower_Crown_Spikes_Part()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
+     * *//*
     glPushMatrix();
     glTranslatef(X_INITIAL + 110, Y_INITIAL + 25, 0);
     draw_LeftTower_Ruined_Bottom();
     glTranslatef(5, 5, 0);
     draw_LeftTower_Ruined_Head();
-    glPopMatrix();
+    glPopMatrix();*/
 
 }
 
@@ -289,11 +309,11 @@ void draw_MiddleTower() {
     glTranslatef(X_INITIAL + 190, Y_INITIAL + 25, 0);
 
     glPushMatrix();
-    glScalef(30, 30, 140);
+    glScalef(30, 30, 160);
     draw_MiddleTower_Body_Bottom();
     glPopMatrix();
 
-    glTranslatef(0, 0, 140);
+    glTranslatef(0, 0, 160);
 
     for (int x = 0; x < 30; x += 5) {
 
@@ -442,11 +462,11 @@ void draw_MiddleTower() {
     glTranslatef(X_INITIAL + 320, Y_INITIAL + 25, 0);
 
     glPushMatrix();
-    glScalef(30, 30, 140);
+    glScalef(30, 30, 160);
     draw_MiddleTower_Body_Bottom();
     glPopMatrix();
 
-    glTranslatef(0, 0, 140);
+    glTranslatef(0, 0, 160);
 
     for (int x = 0; x < 30; x += 5) {
 
@@ -595,7 +615,7 @@ void draw_RightTower() {
 	 * every vertex non modified keeps the same as it was, but the modified ones are changed
 	 * */
 	glPushMatrix();
-    glTranslatef(X_INITIAL + 407, Y_INITIAL + 17, 0);
+    glTranslatef(X_INITIAL + 400, Y_INITIAL + 17, 0);
 
 	glPushMatrix();
 	glScalef(43, 43, 140);
@@ -805,8 +825,57 @@ void draw_RightTower() {
 ************************************************************************************************************************
 ***********************************************************************************************************************/
 
+void mount_ArcBridge(){
+
+    glPushMatrix();
+    glTranslatef(0, 5, 0);
+    glScalef(50, 10, 10);
+    draw_ArcBridge_Platform();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(0, 0, -20);
+    glScalef(50, 5, 40);
+    draw_ArcBridge_Border();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(0, 15, -20);
+    glScalef(50, 5, 40);
+    draw_ArcBridge_Border();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(0, 0, -30);
+    glScalef(50, 5, 10);
+    draw_Bridge_Border_Bot_Detail();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(0, 15, -30);
+    glScalef(50, 5, 10);
+    draw_Bridge_Border_Bot_Detail();
+    glPopMatrix();
+
+}
+
 //arc bridge
 void draw_ArcBridge() {
+
+    glPushMatrix();
+    glTranslatef(X_INITIAL + 60, Y_INITIAL + 30, 105);
+
+    mount_ArcBridge();
+
+    glTranslatef(80, 0, 0);
+
+    mount_ArcBridge();
+
+    glTranslatef(210, 0, 0);
+
+    mount_ArcBridge();
+
+    glPopMatrix();
 
     /*
      * save the matrix status
@@ -832,7 +901,7 @@ void draw_ArcBridge() {
      *      15 units for the y value
      * draw_ArcBridge_Border()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * */
+     * *//*
     glPushMatrix();
     glTranslatef(X_INITIAL + 60, Y_INITIAL + 30, 0);
     draw_ArcBridge_Border();
@@ -847,7 +916,7 @@ void draw_ArcBridge() {
     glTranslatef(0, 15, 0);
     draw_ArcBridge_Border();
     glPopMatrix();
-
+*/
 }
 
 /***********************************************************************************************************************

@@ -127,15 +127,15 @@ GLfloat X_INITIAL = 100, Y_INITIAL = 300;
  *      "Draw.h"
  *      "KeyInput.h"
  *      "Resize.h"
- *      DrawScene.h"
+ *      "DrawScene.h"
  *      "SetUp.h"
  *      "Main.h"
  *      
  * */
 
 #include "Perspectives.h"
-#include "Faces.h"
 #include "Circle.h"
+#include "Faces.h"
 #include "Figures.h"
 #include "RoofTiles.h"
 #include "Gate.h"

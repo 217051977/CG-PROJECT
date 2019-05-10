@@ -29,22 +29,12 @@ void resize(int w, int h) {
     //x_min, x_max, y_min, y_max, z_min, z_max (from the observer perspective!)
     //AKA -> left, right, top, down, near, far
 
-//    glRotatef(90, 1, 0, 0);
-//    glRotatef(90, 0, 1, 0);
-//    glRotatef(90, 0, 0, 1);
+    glRotatef(-90, 0, 1, 0);
+    glRotatef(90, 1, 0, 0);
 
-//    glRotatef(-90, 1, 0, 0);
-//    glRotatef(-90, 0, 1, 0);
-//    glRotatef(-90, 0, 0, 1);
-
-//    glRotatef(80, 1, 0, 0);
-//    glRotatef(80, 0, 0, 1);
-
-//	gluPerspective(150, 1, 1, 600);
-//	gluLookAt(X_INITIAL + 250, Y_INITIAL - 50, 300, X_INITIAL + 250, Y_INITIAL + 50, - 45, 0, 0, 1);
-    topOrtho;
-    //glOrtho(X_MIN_VIEW, X_MAX_VIEW, Y_MIN_VIEW, Y_MAX_VIEW, Z_NEAR_VIEW, Z_FAR_VIEW);
-    //glTranslatef(- X_INITIAL, - Y_INITIAL, 0);
+//    setPerspectives(-3);
+    glOrtho(X_MIN_VIEW + 105, X_MIN_VIEW + 145, 19, 51, - 150, 0);
+    glTranslatef(- X_INITIAL, - Y_INITIAL, 0);
 
     glMatrixMode(GL_MODELVIEW);
 
