@@ -260,9 +260,7 @@ void draw_LeftTower_Ruined() {
     glPushMatrix();
     glTranslatef(X_INITIAL + 110, Y_INITIAL + 20, 35);
     glScalef(30, 30, 50);
-//    create_Left_Ruined_Tower_Bot_Figure();
-
-    create_Left_Ruined_Tower_Bot_Left_Face();
+    create_Left_Ruined_Tower_Bot_Figure();
     glPopMatrix();
 
     /*
@@ -987,21 +985,21 @@ void draw_Gate_Entrance() {
     glPushMatrix();
     glTranslatef(X_INITIAL + 220, Y_INITIAL + 30, 0);
     glPushMatrix();
-    glScalef(100, 1, 1);
+    glScalef(100, 0.5, 100);
     draw_Gate();
     glPopMatrix();
 
-    glTranslatef(-5, -10, 0);
-    draw_Flag_Holder();
-
-    glTranslatef(100, 0, 0);
-    draw_Flag_Holder();
-
-    glTranslatef(-93, 2.5, 0);
-    draw_Flag();
-
-    glTranslatef(95, 0, 0);
-    draw_Flag();
+//    glTranslatef(-5, -10, 0);
+//    draw_Flag_Holder();
+//
+//    glTranslatef(100, 0, 0);
+//    draw_Flag_Holder();
+//
+//    glTranslatef(-93, 2.5, 0);
+//    draw_Flag();
+//
+//    glTranslatef(95, 0, 0);
+//    draw_Flag();
     glPopMatrix();
 
 }

@@ -48,10 +48,32 @@ void draw_Flag_Holder() {
      *
      * */
     glPushMatrix();
-    glScalef(10, 10, 70);
+    glScalef(10, 10, 53.6);
     draw_6_Faces_Figure();
     glPopMatrix();
 
+
+}
+
+void draw_Gate_Left_Door() {
+
+    glBegin(GL_LINE_LOOP);
+    glVertex3f(-0.5, -0.5, 0);
+    glVertex3f(0, -0.5, 0);
+    glVertex3f(0, 0, 0);
+    draw_Circle(PI / 2, PI, 0.5, 0.6, 0);
+    glEnd();
+
+}
+
+void draw_Gate_Right_Door() {
+
+    glBegin(GL_LINE_LOOP);
+    glVertex3f(0, -0.5, 0);
+    glVertex3f(0.5, -0.5, 0);
+    glVertex3f(0.5, 0, 0);
+    draw_Circle(0, PI / 2, 0.5, 0.6, 0);
+    glEnd();
 
 }
 
@@ -68,9 +90,8 @@ void draw_Gate() {
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      *
      * */
-    glPushMatrix();
-    glScalef(1, 5, 100);
-    draw_6_Faces_Figure();
-    glPopMatrix();
+
+    create_Left_Door();
+    create_Right_Door();
 
 }
