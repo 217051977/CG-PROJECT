@@ -36,6 +36,9 @@ int main(int argc, char **argv) {
 	glutReshapeFunc(resize);
 	//set the function that it will receive from the keyboard
 	glutKeyboardFunc(keyInput);
+
+    create_Menu();
+
 	//starts rendering the Scene
 	glutMainLoop();
 

@@ -106,17 +106,45 @@ void setBotPerspective() {
 
 //Irregulars
 
-void setUnderFrontPerspective_Entrance() {
+void setFrontPerspective_Entrance() {
 
-    gluPerspective(150, 1, 1, 600);
-    gluLookAt(X_INITIAL + 250, Y_INITIAL - 50, 0, X_INITIAL + 250, Y_INITIAL + 50, 10, 0, 0, 1);
+    gluPerspective(150, 1, 1, 130);
+    gluLookAt(X_INITIAL + 250, Y_INITIAL - 50, 80, X_INITIAL + 250, Y_INITIAL - 49, 80, 0, 0, 1);
 
 }
 
-void setAboveFrontPerspective_Entrance() {
+void setBackPerspective_Entrance() {
 
-    gluPerspective(150, 1, 1, 600);
-    gluLookAt(X_INITIAL + 250, Y_INITIAL - 50, 300, X_INITIAL + 250, Y_INITIAL + 50, -45, 0, 0, 1);
+    gluPerspective(150, 1, 1, 140);
+    gluLookAt(X_INITIAL + 250, Y_INITIAL + 122, 80, X_INITIAL + 250, Y_INITIAL + 121, 80, 0, 0, 1);
+
+}
+
+void setLeftPerspective_Entrance() {
+
+    gluPerspective(150, 1, 1, 480);
+    gluLookAt(X_INITIAL - 2, Y_INITIAL + 37, 80, X_INITIAL - 1, Y_INITIAL + 37, 80, 0, 0, 1);
+
+}
+
+void setRightPerspective_Entrance() {
+
+    gluPerspective(150, 1, 1, 480);
+    gluLookAt(X_INITIAL + 472, Y_INITIAL + 37, 80, X_INITIAL + 471, Y_INITIAL + 37, 80, 0, 0, 1);
+
+}
+
+void setTopPerspective_Entrance() {
+
+    gluPerspective(150, 1, 1, 1000);
+    gluLookAt(X_INITIAL + 250, Y_INITIAL + 45, 310, X_INITIAL + 250, Y_INITIAL + 45, 309, 0, 1, 0);
+
+}
+
+void setBotPerspective_Entrance() {
+
+    gluPerspective(150, 1, 1, 1000);
+    gluLookAt(X_INITIAL + 250, Y_INITIAL + 45, -61, X_INITIAL + 250, Y_INITIAL + 45, -60, 0, 1, 0);
 
 }
 
@@ -210,6 +238,50 @@ void setPerspectives(int option) {
         case 6: {
 
             setBackPerspective();
+
+        }break;
+
+//      Irregulars
+
+//      front
+        case 7: {
+
+            setFrontPerspective_Entrance();
+
+        }break;
+
+//      back
+        case 8: {
+
+            setBackPerspective_Entrance();
+
+        }break;
+
+//      back
+        case 9: {
+
+            setLeftPerspective_Entrance();
+
+        }break;
+
+//      back
+        case 10: {
+
+            setRightPerspective_Entrance();
+
+        }break;
+
+//      back
+        case 11: {
+
+            setTopPerspective_Entrance();
+
+        }break;
+
+//      back
+        case 12: {
+
+            setBotPerspective_Entrance();
 
         }break;
 

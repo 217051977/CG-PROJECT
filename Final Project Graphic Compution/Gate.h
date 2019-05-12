@@ -55,25 +55,25 @@ void draw_Flag_Holder() {
 
 }
 
-void draw_Gate_Left_Door() {
+void draw_Entrance_Gate_Left_Door(float angle) {
 
-    glBegin(GL_LINE_LOOP);
-    glVertex3f(-0.5, -0.5, 0);
-    glVertex3f(0, -0.5, 0);
-    glVertex3f(0, 0, 0);
-    draw_Circle(PI / 2, PI, 0.5, 0.6, 0);
-    glEnd();
+    glPushMatrix();
+    glRotatef(angle, 0, 0, 1);
+    glScalef(100, 0.5, 100);
+    create_Left_Door();
+    glPopMatrix();
 
 }
 
-void draw_Gate_Right_Door() {
+void draw_Entrance_Gate_Right_Door(float angle) {
 
-    glBegin(GL_LINE_LOOP);
-    glVertex3f(0, -0.5, 0);
-    glVertex3f(0.5, -0.5, 0);
-    glVertex3f(0.5, 0, 0);
-    draw_Circle(0, PI / 2, 0.5, 0.6, 0);
-    glEnd();
+    glPushMatrix();
+    glTranslatef(100, 0, 0);
+    glRotatef(angle, 0, 0, 1);
+    glTranslatef(-100, 0, 0);
+    glScalef(100, 0.5, 100);
+    create_Right_Door();
+    glPopMatrix();
 
 }
 

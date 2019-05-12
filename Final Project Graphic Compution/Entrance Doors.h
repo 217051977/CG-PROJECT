@@ -1,8 +1,8 @@
 /***********************************************************************************************************************
 *                                                                                                                      *
-*                                                      KeyInput.h                                                      *
+*                                                       Resize.h                                                       *
 *                                                                                                                      *
-*                                  This file is responsible manage the keyboard input                                  *
+*                                  This file is responsible manage the view settings                                   *
 *                                                                                                                      *
 ************************************************************************************************************************
 *                                                                         *                                            *
@@ -16,40 +16,32 @@
 //makes the program where this header will be used add it just one time this header to it
 #pragma once
 
-//keyboard input function
-void keyInput(unsigned char key, int x, int y) {
+void open_The_Door(int someValue) {
 
-    switch (key) {
+    entrance_Door_Angle += 0.5;
 
-        // if the key 27 (escape) has been pressed, the program ends
-        case 27: {
+    glutPostRedisplay();
 
-            exit(0);
+    if(entrance_Door_Angle < 60) {
 
-        } break;
-
-        case ' ': {
-
-            if(isAnimated == 0) {
-
-                isAnimated = 1;
-
-                glutTimerFunc(100, open_The_Door, 1);
-
-                printf("animation starting");
-
-            } else {
-
-                isAnimated = 0;
-
-                glutTimerFunc(100, close_The_Door, 1);
-
-                printf("animation starting");
-
-            }
-
-        }
+        glutTimerFunc(100, open_The_Door, 1);
 
     }
+
+}
+
+void close_The_Door(int someValue) {
+
+    entrance_Door_Angle -= 0.5;
+
+    glutPostRedisplay();
+
+    if(entrance_Door_Angle > 0) {
+
+        glutTimerFunc(100, close_The_Door, 1);
+
+    }
+
+
 
 }

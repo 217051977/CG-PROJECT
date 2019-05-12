@@ -103,6 +103,12 @@
     <Filter Include="Header Files\DirectFunctions\Perspectives">
       <UniqueIdentifier>{521fc334-576e-4cab-b656-fe5b44be9df8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\DirectFunctions\Menus\Main Menu">
+      <UniqueIdentifier>{aa3d60bc-b420-4aa4-903d-f75866dba8e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Menus\Sub Menu">
+      <UniqueIdentifier>{e5e03329-7884-412a-8723-53741ecaf0ef}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RightTower.h">
@@ -185,6 +191,12 @@
     </ClInclude>
     <ClInclude Include="Perspectives.h">
       <Filter>Header Files\DirectFunctions\Perspectives</Filter>
+    </ClInclude>
+    <ClInclude Include="Entrance Doors.h">
+      <Filter>Header Files\DirectFunctions\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>Header Files\DirectFunctions\Menus\Main Menu</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

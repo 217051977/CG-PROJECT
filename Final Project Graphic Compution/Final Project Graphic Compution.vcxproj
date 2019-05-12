@@ -126,6 +126,7 @@
     <ClInclude Include="DrawScene.h" />
     <ClInclude Include="KeyInput.h" />
     <ClInclude Include="Main.h" />
+    <ClInclude Include="Menu.h" />
     <ClInclude Include="OldCastle_Walls.h" />
     <ClInclude Include="Circle.h" />
     <ClInclude Include="DeliverRoad.h" />
@@ -137,6 +138,7 @@
     <ClInclude Include="LeftTower.h" />
     <ClInclude Include="LeftTower_Ruined.h" />
     <ClInclude Include="MiddleTower.h" />
+    <ClInclude Include="Entrance Doors.h" />
     <ClInclude Include="Perspectives.h" />
     <ClInclude Include="Resize.h" />
     <ClInclude Include="RightTower.h" />

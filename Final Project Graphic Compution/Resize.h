@@ -16,11 +16,8 @@
 //makes the program where this header will be used add it just one time this header to it
 #pragma once
 
-// reshapes the OpenGL window
-void resize(int w, int h) {
+void visualization_Manager() {
 
-    //set the view -> in this case it fills all the OpenGL Window
-    glViewport(0, 0, (GLsizei)w, (GLsizei)h);
     //set to the matrix projection style
     glMatrixMode(GL_PROJECTION);
     //reset the matrix for an identity one
@@ -32,10 +29,20 @@ void resize(int w, int h) {
 //    glRotatef(90, 0, 1, 0);
 //    glRotatef(90, 1, 0, 0);
 
-    setPerspectives(-3);
-//    glOrtho(X_MIN_VIEW + 215, X_MIN_VIEW + 325, 19, 51, - 150, 0);
+    printf("the perspective_Or_Animation is at %d", perspective_Or_Animation);
+
+    setPerspectives(perspective_Or_Animation);
+//    glOrtho(X_MIN_VIEW + 215, X_MIN_VIEW + 325, 19, 74, - 140, 5);
 //    glTranslatef(- X_INITIAL, - Y_INITIAL, 0);
 
-    glMatrixMode(GL_MODELVIEW);
+}
+
+// reshapes the OpenGL window
+void resize(int w, int h) {
+
+    //set the view -> in this case it fills all the OpenGL Window
+    glViewport(0, 0, (GLsizei)w, (GLsizei)h);
+
+    visualization_Manager();
 
 }
