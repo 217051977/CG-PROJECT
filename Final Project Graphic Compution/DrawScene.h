@@ -203,14 +203,6 @@ void drawScene(void) {
 
     }
 
-    //call the function with the original point position value
-/***********************************************************************************************************************
-*                                                                                                                      *
-*                  IMPORTANT: because the z component is always 0, this function does not receives it                  *
-*                                                                                                                      *
-***********************************************************************************************************************/
-
-
     //send the scene to be rendered
     glutSwapBuffers();
 

@@ -101,7 +101,7 @@ GLfloat X_INITIAL = 100, Y_INITIAL = 300;
 static float entrance_Door_Angle = 0.0;
 
 static int isAnimated = 0;
-static int perspective_Or_Animation = 0;
+static int perspective_Or_Animation = -10;
 static int scene_To_print = 1;
 
 /***********************************************************************************************************************

@@ -25,15 +25,11 @@ void visualization_Manager() {
     //set the orthographic view (perpendicular) with the size:
     //x_min, x_max, y_min, y_max, z_min, z_max (from the observer perspective!)
     //AKA -> left, right, top, down, near, far
+    printf("The value of the variable perspective_Or_Animation is at %d\n", perspective_Or_Animation);
 
-//    glRotatef(90, 0, 1, 0);
-//    glRotatef(90, 1, 0, 0);
-
-    printf("the perspective_Or_Animation is at %d", perspective_Or_Animation);
+    printf("The value of the variable scene_To_print to %d\n\n", scene_To_print);
 
     setPerspectives(perspective_Or_Animation);
-//    glOrtho(X_MIN_VIEW + 215, X_MIN_VIEW + 325, 19, 74, - 140, 5);
-//    glTranslatef(- X_INITIAL, - Y_INITIAL, 0);
 
 }
 
