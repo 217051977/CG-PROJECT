@@ -106,6 +106,59 @@ void setBotPerspective() {
 
 //Irregulars
 
+//Ortho
+
+void setFrontOrtho_Entrance() {
+
+    glRotatef(90, 1, 0, 0);
+    topOrtho;
+
+}
+
+void setBackOrtho_Entrance() {
+
+    glRotatef(90, 1, 0, 0);
+    glRotatef(180, 0, 0, 1);
+    topOrtho;
+
+}
+
+void setLeftOrtho_Entrance() {
+
+    glRotatef(90, 1, 0, 0);
+    glRotatef(90, 0, 0, 1);
+    topOrtho;
+
+}
+
+void setRightOrtho_Entrance() {
+
+    glRotatef(90, 1, 0, 0);
+    glRotatef(-90, 0, 0, 1);
+    topOrtho;
+
+}
+
+void setTopOrtho_Entrance() {
+
+    glRotatef(180, 1, 0, 0);
+    glRotatef(180, 0, 0, 1);
+    topOrtho;
+
+}
+
+void setBotOrtho_Entrance() {
+
+    glRotatef(180, 1, 0, 0);
+    glRotatef(180, 0, 0, 1);
+    topOrtho;
+
+}
+
+
+
+//Perspective
+
 void setFrontPerspective_Entrance() {
 
     gluPerspective(150, 1, 1, 130);
@@ -150,98 +203,159 @@ void setBotPerspective_Entrance() {
 
 //chose perspective
 
-void setPerspectives(int option) {
+void setOrtho_Entrance(int option) {
 
     switch (option) {
 
-        //ortho
+//      front
+        case -11: {
 
-//      back view
-        case -5: {
-
-            setBackOrtho();
+            setFrontOrtho_Entrance();
 
         }break;
 
-//      right view
-        case -4: {
+//      back
+        case -10: {
 
-            setRightOrtho();
+            setBackOrtho_Entrance();
 
         }break;
 
-        case -3: {
+//      left
+        case -9: {
+
+            setLeftOrtho_Entrance();
+
+        }break;
+
+//      right
+        case -8: {
+
+            setRightOrtho_Entrance();
+
+        }break;
+
+//      top
+        case -7: {
+
+            setTopOrtho_Entrance();
+
+        }break;
+
+//      bot
+        case -6: {
+
+            setBotOrtho_Entrance();
+
+        }
+
+    }
+
+}
+
+void setOrtho_Regular(int option) {
+
+    switch (option) {
+
+//      front
+        case 0: {
 
             setFrontOrtho();
 
         }break;
 
-//      bot view
-        case -2: {
+//      back view
+        case -1: {
 
-            setBotOrtho();
+            setBackOrtho();
 
         }break;
 
 //      left view
-        case -1: {
+        case -2: {
 
             setLeftOrtho();
 
         }break;
 
+//      right view
+        case -3: {
+
+            setRightOrtho();
+
+        }break;
+
 //      top view
-        case 0: {
+        case -4: {
 
             topOrtho;
 
         }break;
 
-//      perspective
-
-//      top view
-        case 1: {
-
-            setTopPerspective();
-
-        }break;
-
-//      left view
-        case 2: {
-
-            setLeftPerspective();
-
-        }break;
-
 //      bot view
-        case 3: {
+        case -5: {
 
-            setBotPerspective();
+            setBotOrtho();
 
         }break;
 
-//      front view
-        case 4: {
+    }
+
+}
+
+void setPerspective_Regular(int option) {
+
+    switch (option) {
+
+//      front
+        case 1: {
 
             setFrontPerspective();
 
         }break;
 
-//      right view
-        case 5: {
-
-            setRightPerspective();
-
-        }break;
-
-//      back view
-        case 6: {
+//      back
+        case 2: {
 
             setBackPerspective();
 
         }break;
 
-//      Irregulars
+//      left
+        case 3: {
+
+            setLeftPerspective();
+
+        }break;
+
+//      right
+        case 4: {
+
+            setRightPerspective();
+
+        }break;
+
+//      Top
+        case 5: {
+
+            setTopPerspective();
+
+        }break;
+
+//      bot
+        case 6: {
+
+            setBotPerspective();
+
+        }break;
+
+    }
+
+}
+
+void setPerspective_Entrance(int option) {
+
+    switch (option) {
 
 //      front
         case 7: {
@@ -257,31 +371,92 @@ void setPerspectives(int option) {
 
         }break;
 
-//      back
+//      Left
         case 9: {
 
             setLeftPerspective_Entrance();
 
         }break;
 
-//      back
+//      Right
         case 10: {
 
             setRightPerspective_Entrance();
 
         }break;
 
-//      back
+//      Top
         case 11: {
 
             setTopPerspective_Entrance();
 
         }break;
 
-//      back
+//      Bot
         case 12: {
 
             setBotPerspective_Entrance();
+
+        }break;
+
+    }
+
+}
+
+void setPerspectives(int option) {
+
+    switch (option) {
+
+//      Entrance
+
+        case -11: {}
+        case -10: {}
+        case -9: {}
+        case -8: {}
+        case -7: {}
+        case -6: {
+
+            setOrtho_Entrance(option);
+
+        }break;
+
+//      Regular
+
+        case -5: {}
+        case -4: {}
+        case -3: {}
+        case -2: {}
+        case -1: {}
+        case 0: {
+
+            setOrtho_Regular(option);
+
+        }break;
+
+//      Regular
+
+        case 1: {}
+        case 2: {}
+        case 3: {}
+        case 4: {}
+        case 5: {}
+        case 6: {
+
+            setPerspective_Regular();
+
+        }break;
+
+//      Irregulars
+
+//      front
+        case 7: {}
+        case 8: {}
+        case 9: {}
+        case 10: {}
+        case 11: {}
+        case 12: {
+
+            setPerspective_Entrance();
 
         }break;
 

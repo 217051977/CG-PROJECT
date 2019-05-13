@@ -1,13 +1,37 @@
+/***********************************************************************************************************************
+*                                                                                                                      *
+*                                                        Menu.h                                                        *
+*                                                                                                                      *
+*                                 This file is responsible manage and create the menus                                 *
+*                                                                                                                      *
+************************************************************************************************************************
+*                                                                         *                                            *
+*                               GROUP MEMBERS:                            *         GROUP MEMBERS' NUMBERS:            *
+*                                                                         *                                            *
+*                           Bruno Miguel Dias Leal                        *               Nº 21705197                  *
+*              Diana Margarida Simões Soares da Silva de Jesus            *               Nº 21703012                  *
+*                                                                         *                                            *
+***********************************************************************************************************************/
+
+//makes the program where this header will be used add it just one time this header to it
 #pragma once
 
+/***********************************************************************************************************************
+************************************************************************************************************************
+*************************************************Declares the menus IDs*************************************************
+************************************************************************************************************************
+***********************************************************************************************************************/
 int color_Menu_ID;
 
+/**********************************************************************/
 int perspective_Menu_ID;
 
+/**********************************************************************/
 int perspective_2D_Menu_ID;
 int regular_Perspective_2D_Menu_ID;
 int irregular_Perspective_2D_Menu_ID;
 
+/**********************************************************************/
 int entrance_Perspective_2D_Menu_ID;
 int hallway_Perspective_2D_Menu_ID;
 int courtyard_Perspective_2D_Menu_ID;
@@ -15,10 +39,12 @@ int main_Building_Perspective_2D_Menu_ID;
 int delivery_Door_Perspective_2D_Menu_ID;
 int castle_Perspective_2D_Menu_ID;
 
+/**********************************************************************/
 int perspective_3D_Menu_ID;
 int regular_Perspective_3D_Menu_ID;
 int irregular_Perspective_3D_Menu_ID;
 
+/**********************************************************************/
 int entrance_Perspective_3D_Menu_ID;
 int hallway_Perspective_3D_Menu_ID;
 int courtyard_Perspective_3D_Menu_ID;
@@ -26,63 +52,50 @@ int main_Building_Perspective_3D_Menu_ID;
 int delivery_Door_Perspective_3D_Menu_ID;
 int castle_Perspective_3D_Menu_ID;
 
-void makeSubMenu(int someValue) {}
-
-
-
+/***********************************************************************************************************************
+************************************************************************************************************************
+******************************************Manage the option chosen in the menu******************************************
+************************************************************************************************************************
+***********************************************************************************************************************/
 void quitOption(int optionID) {
 
     if (optionID == -1) {
 
         exit(0);
 
+        printf("Bye!");
+
+    } else {
+
+        printf("There's no %d as optionID\n", optionID);
+
     }
 
 }
 
-
-
+/**********************************************************************/
 void regular_Perspective_2D_Menu_Options(int optionID) {
 
     switch (optionID) {
 
+        case 0: {}
+        case -1: {}
+        case -2: {}
+        case -3: {}
+        case -4: {}
         case -5: {
 
-            perspective_Or_Animation = -5;
+            perspective_Or_Animation = optionID;
 
-            printf("set perspective_Or_Animation to %d", perspective_Or_Animation);
-
-        }break;
-
-        case -4: {
-
-            perspective_Or_Animation = -4;
+            printf("Changing the value of the variable perspective_Or_Animation to %d\n", optionID);
 
         }break;
 
-        case -3: {
+        default: {
 
-            perspective_Or_Animation = -3;
+            printf("There's no %d as optionID\n", optionID);
 
-        }break;
-
-        case -2: {
-
-            perspective_Or_Animation = -2;
-
-        }break;
-
-        case -1: {
-
-            perspective_Or_Animation = -1;
-
-        }break;
-
-        case 0: {
-
-            perspective_Or_Animation = 0;
-
-        }break;
+        }
 
     }
 
@@ -92,47 +105,29 @@ void regular_Perspective_2D_Menu_Options(int optionID) {
 
 }
 
-
-
+/**********************************************************************/
 void regular_Perspective_3D_Menu_Options(int optionID) {
 
     switch (optionID) {
 
-        case 1: {
-
-            perspective_Or_Animation = 1;
-
-        }break;
-
-        case 2: {
-
-            perspective_Or_Animation = 2;
-
-        }break;
-
-        case 3: {
-
-            perspective_Or_Animation = 3;
-
-        }break;
-
-        case 4: {
-
-            perspective_Or_Animation = 4;
-
-        }break;
-
-        case 5: {
-
-            perspective_Or_Animation = 5;
-
-        }break;
-
+        case 1: {}
+        case 2: {}
+        case 3: {}
+        case 4: {}
+        case 5: {}
         case 6: {
 
-            perspective_Or_Animation = 6;
+            perspective_Or_Animation = optionID;
+
+            printf("Changing the value of the variable perspective_Or_Animation to %d\n", optionID);
 
         }break;
+
+        default: {
+
+            printf("There's no %d as optionID\n", optionID);
+
+        }
 
     }
 
@@ -144,45 +139,32 @@ void regular_Perspective_3D_Menu_Options(int optionID) {
 
 void entrance_Perspective_3D_Menu_Options(int optionID) {
 
-    scene_To_print = 1;
+    int sceneAux = 1;
 
     switch (optionID) {
 
-        case 0: {
+        case 7: {}
+        case 8: {}
+        case 9: {}
+        case 10: {}
+        case 11: {}
+        case 12: {
 
-            perspective_Or_Animation = 7;
+            scene_To_print = sceneAux;
 
-        }break;
+            perspective_Or_Animation = optionID;
 
-        case 1: {
+            printf("Changing the value of the variable perspective_Or_Animation to %d\n", optionID);
 
-            perspective_Or_Animation = 8;
-
-        }break;
-
-        case 2: {
-
-            perspective_Or_Animation = 9;
-
-        }break;
-
-        case 3: {
-
-            perspective_Or_Animation = 10;
+            printf("Changing the value of the variable scene_To_print to %d\n", optionID);
 
         }break;
 
-        case 4: {
+        default: {
 
-            perspective_Or_Animation = 11;
+            printf("There's no %d as optionID\n", optionID);
 
-        }break;
-
-        case 5: {
-
-            perspective_Or_Animation = 12;
-
-        }break;
+        }
 
     }
 
@@ -192,27 +174,30 @@ void entrance_Perspective_3D_Menu_Options(int optionID) {
 
 }
 
+/***********************************************************************************************************************
+************************************************************************************************************************
+*******************************************Create the menus and menus option********************************************
+************************************************************************************************************************
+***********************************************************************************************************************/
+void makeSubMenu(int someValue) {}
 
-
-
+/**********************************************************************/
 void create_Regular_perspective_2D_Menu() {
 
     regular_Perspective_2D_Menu_ID = glutCreateMenu(regular_Perspective_2D_Menu_Options);
-    glutAddMenuEntry("Top", 0);
-    glutAddMenuEntry("Bot", -2);
-    glutAddMenuEntry("Front", -3);
-    glutAddMenuEntry("Back", -5);
-    glutAddMenuEntry("Left", -1);
-    glutAddMenuEntry("Right", -4);
+    glutAddMenuEntry("Front", 0);
+    glutAddMenuEntry("Back", -1);
+    glutAddMenuEntry("Left", -2);
+    glutAddMenuEntry("Right", -3);
+    glutAddMenuEntry("Top", -4);
+    glutAddMenuEntry("Bot", -5);
 
 }
 
-
-
+/**********************************************************************/
 void create_Entrance_Perspective_2D_Menu() {}
 
-
-
+/**********************************************************************/
 void create_Irregular_perspective_2D_Menu() {
 
     irregular_Perspective_2D_Menu_ID = glutCreateMenu(makeSubMenu);
@@ -225,8 +210,7 @@ void create_Irregular_perspective_2D_Menu() {
 
 }
 
-
-
+/**********************************************************************/
 void create_perspective_2D_Menu() {
 
     create_Regular_perspective_2D_Menu();
@@ -238,46 +222,48 @@ void create_perspective_2D_Menu() {
 
 }
 
-
-
+/**********************************************************************/
 void create_Regular_perspective_3D_Menu() {
 
     regular_Perspective_3D_Menu_ID = glutCreateMenu(regular_Perspective_3D_Menu_Options);
-    glutAddMenuEntry("Top", 1);
-    glutAddMenuEntry("Bot", 3);
-    glutAddMenuEntry("Front", 4);
-    glutAddMenuEntry("Back", 6);
-    glutAddMenuEntry("Left", 2);
-    glutAddMenuEntry("Right", 5);
+    glutAddMenuEntry("Front", 1);
+    glutAddMenuEntry("Back", 2);
+    glutAddMenuEntry("Left", 3);
+    glutAddMenuEntry("Right", 4);
+    glutAddMenuEntry("Top", 5);
+    glutAddMenuEntry("Bot", 6);
 
 }
 
-
-
+/**********************************************************************/
 void create_Entrance_perspective_3D_Menu() {
 
     entrance_Perspective_3D_Menu_ID = glutCreateMenu(entrance_Perspective_3D_Menu_Options);
-    glutAddMenuEntry("Front", 0);
-    glutAddMenuEntry("Back", 1);
-    glutAddMenuEntry("Left", 2);
-    glutAddMenuEntry("Right", 3);
-    glutAddMenuEntry("Top", 4);
-    glutAddMenuEntry("Bot", 5);
+    glutAddMenuEntry("Front", 7);
+    glutAddMenuEntry("Back", 8);
+    glutAddMenuEntry("Left", 9);
+    glutAddMenuEntry("Right", 10);
+    glutAddMenuEntry("Top", 11);
+    glutAddMenuEntry("Bot", 12);
 
 }
 
+/**********************************************************************/
 void create_Hallway_perspective_3D_Menu() {}
 
+/**********************************************************************/
 void create_Courtyard_perspective_3D_Menu() {}
 
+/**********************************************************************/
 void create_Main_Building_perspective_3D_Menu() {}
 
+/**********************************************************************/
 void create_Delivery_Building_perspective_3D_Menu() {}
 
+/**********************************************************************/
 void create_Castle_perspective_3D_Menu() {}
 
-
-
+/**********************************************************************/
 void create_Irregular_perspective_3D_Menu() {
 
     create_Entrance_perspective_3D_Menu();
@@ -292,6 +278,7 @@ void create_Irregular_perspective_3D_Menu() {
 
 }
 
+/**********************************************************************/
 void create_perspective_3D_Menu() {
 
     create_Regular_perspective_3D_Menu();
@@ -304,6 +291,7 @@ void create_perspective_3D_Menu() {
 
 }
 
+/**********************************************************************/
 void create_perspective_Menu() {
 
     create_perspective_2D_Menu();
@@ -315,6 +303,7 @@ void create_perspective_Menu() {
 
 }
 
+/**********************************************************************/
 void create_Menu() {
 
     create_perspective_Menu();
