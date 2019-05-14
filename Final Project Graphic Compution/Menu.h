@@ -184,6 +184,122 @@ void hallway_Perspective_2D_Menu_Options(int optionID) {
 
 }
 
+void courtyard_Perspective_2D_Menu_Options(int optionID) {
+
+    switch (optionID) {
+
+        case -18: {}
+        case -19: {}
+        case -20: {}
+        case -21: {}
+        case -22: {}
+        case -23: {
+
+            changeViewAndScene(3, optionID);
+
+            visualization_Manager();
+
+            glutPostRedisplay();
+
+        }break;
+
+        default: {
+
+            printf("There's no %d as optionID\n", optionID);
+
+        }
+
+    }
+
+}
+
+void Main_Building_Perspective_2D_Menu_Options(int optionID) {
+
+    switch (optionID) {
+
+        case -24: {}
+        case -25: {}
+        case -26: {}
+        case -27: {}
+        case -28: {}
+        case -29: {
+
+            changeViewAndScene(4, optionID);
+
+            visualization_Manager();
+
+            glutPostRedisplay();
+
+        }break;
+
+        default: {
+
+            printf("There's no %d as optionID\n", optionID);
+
+        }
+
+    }
+
+}
+
+void Delivery_Door_Perspective_2D_Menu_Options(int optionID) {
+
+    switch (optionID) {
+
+        case -30: {}
+        case -31: {}
+        case -32: {}
+        case -33: {}
+        case -34: {}
+        case -35: {
+
+            changeViewAndScene(5, optionID);
+
+            visualization_Manager();
+
+            glutPostRedisplay();
+
+        }break;
+
+        default: {
+
+            printf("There's no %d as optionID\n", optionID);
+
+        }
+
+    }
+
+}
+
+void castle_Perspective_2D_Menu_Options(int optionID) {
+
+    switch (optionID) {
+
+        case -36: {}
+        case -37: {}
+        case -38: {}
+        case -39: {}
+        case -40: {}
+        case -41: {
+
+            changeViewAndScene(6, optionID);
+
+            visualization_Manager();
+
+            glutPostRedisplay();
+
+        }break;
+
+        default: {
+
+            printf("There's no %d as optionID\n", optionID);
+
+        }
+
+    }
+
+}
+
 /***********************************************************************************************************************
 *                                                                                                                      *
 *                                                          3D                                                          *
@@ -277,9 +393,125 @@ void hallway_Perspective_3D_Menu_Options(int optionID) {
 
 }
 
+void courtyard_Perspective_3D_Menu_Options(int optionID) {
+
+    switch (optionID) {
+
+        case 19: {}
+        case 20: {}
+        case 21: {}
+        case 22: {}
+        case 23: {}
+        case 24: {
+
+            changeViewAndScene(3, optionID);
+
+            visualization_Manager();
+
+            glutPostRedisplay();
+
+        }break;
+
+        default: {
+
+            printf("There's no %d as optionID\n", optionID);
+
+        }
+
+    }
+
+}
+
+void Main_Building_Perspective_3D_Menu_Options(int optionID) {
+
+    switch (optionID) {
+
+        case 25: {}
+        case 26: {}
+        case 27: {}
+        case 28: {}
+        case 29: {}
+        case 30: {
+
+            changeViewAndScene(4, optionID);
+
+            visualization_Manager();
+
+            glutPostRedisplay();
+
+        }break;
+
+        default: {
+
+            printf("There's no %d as optionID\n", optionID);
+
+        }
+
+    }
+
+}
+
+void Delivery_Door_Perspective_3D_Menu_Options(int optionID) {
+
+    switch (optionID) {
+
+        case 31: {}
+        case 32: {}
+        case 33: {}
+        case 34: {}
+        case 35: {}
+        case 36: {
+
+            changeViewAndScene(5, optionID);
+
+            visualization_Manager();
+
+            glutPostRedisplay();
+
+        }break;
+
+        default: {
+
+            printf("There's no %d as optionID\n", optionID);
+
+        }
+
+    }
+
+}
+
+void castle_Perspective_3D_Menu_Options(int optionID) {
+
+    switch (optionID) {
+
+        case 37: {}
+        case 38: {}
+        case 39: {}
+        case 40: {}
+        case 41: {}
+        case 42: {
+
+            changeViewAndScene(6, optionID);
+
+            visualization_Manager();
+
+            glutPostRedisplay();
+
+        }break;
+
+        default: {
+
+            printf("There's no %d as optionID\n", optionID);
+
+        }
+
+    }
+
+}
+
 /***********************************************************************************************************************
 ************************************************************************************************************************
-*******************************************Create the menus and menus option********************************************
+************************************************Create the menus options************************************************
 ************************************************************************************************************************
 ***********************************************************************************************************************/
 void makeSubMenu(int someValue) {}
@@ -331,7 +563,7 @@ void create_Hallway_Perspective_2D_Menu() {
 /**********************************************************************/
 void create_Courtyard_perspective_2D_Menu() {
 
-    courtyard_Perspective_2D_Menu_ID = glutCreateMenu(hallway_Perspective_2D_Menu_Options);
+    courtyard_Perspective_2D_Menu_ID = glutCreateMenu(courtyard_Perspective_2D_Menu_Options);
     glutAddMenuEntry("Front", -18);
     glutAddMenuEntry("Back", -19);
     glutAddMenuEntry("Left", -20);
@@ -344,7 +576,7 @@ void create_Courtyard_perspective_2D_Menu() {
 /**********************************************************************/
 void create_Main_Building_perspective_2D_Menu() {
 
-    main_Building_Perspective_2D_Menu_ID = glutCreateMenu(hallway_Perspective_2D_Menu_Options);
+    main_Building_Perspective_2D_Menu_ID = glutCreateMenu(Main_Building_Perspective_2D_Menu_Options);
     glutAddMenuEntry("Front", -24);
     glutAddMenuEntry("Back", -25);
     glutAddMenuEntry("Left", -26);
@@ -357,7 +589,7 @@ void create_Main_Building_perspective_2D_Menu() {
 /**********************************************************************/
 void create_Delivery_Door_perspective_2D_Menu() {
 
-    delivery_Door_Perspective_2D_Menu_ID = glutCreateMenu(hallway_Perspective_2D_Menu_Options);
+    delivery_Door_Perspective_2D_Menu_ID = glutCreateMenu(Delivery_Door_Perspective_2D_Menu_Options);
     glutAddMenuEntry("Front", -30);
     glutAddMenuEntry("Back", -31);
     glutAddMenuEntry("Left", -32);
@@ -370,7 +602,7 @@ void create_Delivery_Door_perspective_2D_Menu() {
 /**********************************************************************/
 void create_Castle_perspective_2D_Menu() {
 
-    castle_Perspective_2D_Menu_ID = glutCreateMenu(hallway_Perspective_2D_Menu_Options);
+    castle_Perspective_2D_Menu_ID = glutCreateMenu(castle_Perspective_2D_Menu_Options);
     glutAddMenuEntry("Front", -36);
     glutAddMenuEntry("Back", -37);
     glutAddMenuEntry("Left", -38);
@@ -459,7 +691,7 @@ void create_Hallway_perspective_3D_Menu() {
 /**********************************************************************/
 void create_Courtyard_perspective_3D_Menu() {
 
-    courtyard_Perspective_3D_Menu_ID = glutCreateMenu(hallway_Perspective_3D_Menu_Options);
+    courtyard_Perspective_3D_Menu_ID = glutCreateMenu(courtyard_Perspective_3D_Menu_Options);
     glutAddMenuEntry("Front", 19);
     glutAddMenuEntry("Back", 20);
     glutAddMenuEntry("Left", 21);
@@ -472,7 +704,7 @@ void create_Courtyard_perspective_3D_Menu() {
 /**********************************************************************/
 void create_Main_Building_perspective_3D_Menu() {
 
-    main_Building_Perspective_3D_Menu_ID = glutCreateMenu(hallway_Perspective_3D_Menu_Options);
+    main_Building_Perspective_3D_Menu_ID = glutCreateMenu(Main_Building_Perspective_3D_Menu_Options);
     glutAddMenuEntry("Front", 25);
     glutAddMenuEntry("Back", 26);
     glutAddMenuEntry("Left", 27);
@@ -485,7 +717,7 @@ void create_Main_Building_perspective_3D_Menu() {
 /**********************************************************************/
 void create_Delivery_Door_perspective_3D_Menu() {
 
-    delivery_Door_Perspective_3D_Menu_ID = glutCreateMenu(hallway_Perspective_3D_Menu_Options);
+    delivery_Door_Perspective_3D_Menu_ID = glutCreateMenu(Delivery_Door_Perspective_3D_Menu_Options);
     glutAddMenuEntry("Front", 31);
     glutAddMenuEntry("Back", 32);
     glutAddMenuEntry("Left", 33);
@@ -498,7 +730,7 @@ void create_Delivery_Door_perspective_3D_Menu() {
 /**********************************************************************/
 void create_Castle_perspective_3D_Menu() {
 
-    castle_Perspective_3D_Menu_ID = glutCreateMenu(hallway_Perspective_3D_Menu_Options);
+    castle_Perspective_3D_Menu_ID = glutCreateMenu(castle_Perspective_3D_Menu_Options);
     glutAddMenuEntry("Front", 37);
     glutAddMenuEntry("Back", 38);
     glutAddMenuEntry("Left", 39);
@@ -541,7 +773,12 @@ void create_perspective_3D_Menu() {
 
 }
 
-/**********************************************************************/
+/***********************************************************************************************************************
+************************************************************************************************************************
+****************************************************Create the menus****************************************************
+************************************************************************************************************************
+***********************************************************************************************************************/
+
 void create_perspective_Menu() {
 
     create_perspective_2D_Menu();
