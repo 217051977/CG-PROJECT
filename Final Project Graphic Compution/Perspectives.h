@@ -179,7 +179,7 @@ void setBotOrtho_Entrance() {
 void setFrontOrtho_Hallway() {
 
     glRotatef(90, 1, 0, 0);
-    glOrtho(X_MIN_VIEW + 272, X_MAX_VIEW - 535, Y_MIN_VIEW, Y_MAX_VIEW, Z_NEAR_VIEW + 958, Z_FAR_VIEW - 999);
+    glOrtho(X_MIN_VIEW + 272, X_MAX_VIEW - 535, Y_MIN_VIEW, Y_MAX_VIEW, Z_NEAR_VIEW + 710, Z_FAR_VIEW - 999);
 
 }
 
@@ -187,7 +187,7 @@ void setBackOrtho_Hallway() {
 
     glRotatef(90, 1, 0, 0);
     glRotatef(180, 0, 0, 1);
-    glOrtho(X_MIN_VIEW + 272, X_MAX_VIEW - 535, Y_MIN_VIEW, Y_MAX_VIEW, Z_NEAR_VIEW + 958, Z_FAR_VIEW - 999);
+    glOrtho(X_MIN_VIEW + 272, X_MAX_VIEW - 535, Y_MIN_VIEW, Y_MAX_VIEW, Z_NEAR_VIEW + 710, Z_FAR_VIEW - 999);
 
 }
 
@@ -195,7 +195,7 @@ void setLeftOrtho_Hallway() {
 
     glRotatef(90, 1, 0, 0);
     glRotatef(90, 0, 0, 1);
-    glOrtho(X_MIN_VIEW + 272, X_MAX_VIEW - 535, Y_MIN_VIEW + 563, Y_MAX_VIEW - 233, Z_NEAR_VIEW + 958, Z_FAR_VIEW - 999);
+    glOrtho(X_MIN_VIEW + 272, X_MAX_VIEW - 535, Y_MIN_VIEW + 563, Y_MAX_VIEW - 233, Z_NEAR_VIEW + 710, Z_FAR_VIEW - 999);
 
 }
 
@@ -203,13 +203,13 @@ void setRightOrtho_Hallway() {
 
     glRotatef(90, 1, 0, 0);
     glRotatef(-90, 0, 0, 1);
-    glOrtho(X_MIN_VIEW + 272, X_MAX_VIEW - 535, Y_MIN_VIEW + 563, Y_MAX_VIEW - 233, Z_NEAR_VIEW + 958, Z_FAR_VIEW - 999);
+    glOrtho(X_MIN_VIEW + 272, X_MAX_VIEW - 535, Y_MIN_VIEW + 563, Y_MAX_VIEW - 233, Z_NEAR_VIEW + 710, Z_FAR_VIEW - 999);
 
 }
 
 void setTopOrtho_Hallway() {
 
-    glOrtho(X_MIN_VIEW + 272, X_MAX_VIEW - 535, Y_MIN_VIEW + 563, Y_MAX_VIEW - 233, Z_NEAR_VIEW + 958, Z_FAR_VIEW - 999);
+    glOrtho(X_MIN_VIEW + 272, X_MAX_VIEW - 535, Y_MIN_VIEW + 563, Y_MAX_VIEW - 233, Z_NEAR_VIEW + 710, Z_FAR_VIEW - 999);
 
 }
 
@@ -217,37 +217,103 @@ void setBotOrtho_Hallway() {
 
     glRotatef(180, 1, 0, 0);
     glRotatef(180, 0, 0, 1);
-    glOrtho(X_MIN_VIEW + 272, X_MAX_VIEW - 535, Y_MIN_VIEW + 563, Y_MAX_VIEW - 233, Z_NEAR_VIEW + 958, Z_FAR_VIEW - 999);
+    glOrtho(X_MIN_VIEW + 272, X_MAX_VIEW - 535, Y_MIN_VIEW + 563, Y_MAX_VIEW - 233, Z_NEAR_VIEW + 710, Z_FAR_VIEW - 999);
 
 }
 
 /*******************************************************Courtyard******************************************************/
 
-void setFrontOrtho_Courtyard() {}
+void setFrontOrtho_Courtyard() {
 
-void setBackOrtho_Courtyard() {}
+    glRotatef(90, 1, 0, 0);
+    glOrtho(X_MIN_VIEW + 272, X_MAX_VIEW - 535, Y_MIN_VIEW, Y_MAX_VIEW, Z_NEAR_VIEW + 710, Z_FAR_VIEW - 999);
 
-void setLeftOrtho_Courtyard() {}
+}
 
-void setRightOrtho_Courtyard() {}
+void setBackOrtho_Courtyard() {
 
-void setTopOrtho_Courtyard() {}
+    glRotatef(90, 1, 0, 0);
+    glRotatef(180, 0, 0, 1);
+    glOrtho(X_MIN_VIEW + 272, X_MAX_VIEW - 535, Y_MIN_VIEW, Y_MAX_VIEW, Z_NEAR_VIEW + 710, Z_FAR_VIEW - 999);
 
-void setBotOrtho_Courtyard() {}
+}
+
+void setLeftOrtho_Courtyard() {
+
+    glRotatef(90, 1, 0, 0);
+    glRotatef(90, 0, 0, 1);
+    glOrtho(X_MIN_VIEW + 272, X_MAX_VIEW - 535, Y_MIN_VIEW + 463, Y_MAX_VIEW - 433, Z_NEAR_VIEW + 710, Z_FAR_VIEW - 999);
+
+}
+
+void setRightOrtho_Courtyard() {
+
+    glRotatef(90, 1, 0, 0);
+    glRotatef(-90, 0, 0, 1);
+    glOrtho(X_MIN_VIEW + 272, X_MAX_VIEW - 535, Y_MIN_VIEW + 463, Y_MAX_VIEW - 433, Z_NEAR_VIEW + 710, Z_FAR_VIEW - 999);
+
+}
+
+void setTopOrtho_Courtyard() {
+
+    glOrtho(X_MIN_VIEW + 272, X_MAX_VIEW - 535, Y_MIN_VIEW + 463, Y_MAX_VIEW - 433, Z_NEAR_VIEW + 710, Z_FAR_VIEW - 999);
+
+}
+
+void setBotOrtho_Courtyard() {
+
+    glRotatef(180, 1, 0, 0);
+    glRotatef(180, 0, 0, 1);
+    glOrtho(X_MIN_VIEW + 272, X_MAX_VIEW - 535, Y_MIN_VIEW + 463, Y_MAX_VIEW - 433, Z_NEAR_VIEW + 710, Z_FAR_VIEW - 999);
+
+}
 
 /*****************************************************Main Building****************************************************/
 
-void setFrontOrtho_Main_Building() {}
+void setFrontOrtho_Main_Building() {
 
-void setBackOrtho_Main_Building() {}
+    glRotatef(90, 1, 0, 0);
+    glOrtho(X_MIN_VIEW + 272, X_MAX_VIEW - 535, Y_MIN_VIEW, Y_MAX_VIEW, Z_NEAR_VIEW + 710, Z_FAR_VIEW - 999);
 
-void setLeftOrtho_Main_Building() {}
+}
 
-void setRightOrtho_Main_Building() {}
+void setBackOrtho_Main_Building() {
 
-void setTopOrtho_Main_Building() {}
+    glRotatef(90, 1, 0, 0);
+    glRotatef(180, 0, 0, 1);
+    glOrtho(X_MIN_VIEW + 272, X_MAX_VIEW - 535, Y_MIN_VIEW, Y_MAX_VIEW, Z_NEAR_VIEW + 710, Z_FAR_VIEW - 999);
 
-void setBotOrtho_Main_Building() {}
+}
+
+void setLeftOrtho_Main_Building() {
+
+    glRotatef(90, 1, 0, 0);
+    glRotatef(90, 0, 0, 1);
+    glOrtho(X_MIN_VIEW + 272, X_MAX_VIEW - 535, Y_MIN_VIEW + 563, Y_MAX_VIEW - 233, Z_NEAR_VIEW + 710, Z_FAR_VIEW - 999);
+
+}
+
+void setRightOrtho_Main_Building() {
+
+    glRotatef(90, 1, 0, 0);
+    glRotatef(-90, 0, 0, 1);
+    glOrtho(X_MIN_VIEW + 272, X_MAX_VIEW - 535, Y_MIN_VIEW + 563, Y_MAX_VIEW - 233, Z_NEAR_VIEW + 710, Z_FAR_VIEW - 999);
+
+}
+
+void setTopOrtho_Main_Building() {
+
+    glOrtho(X_MIN_VIEW + 272, X_MAX_VIEW - 535, Y_MIN_VIEW + 563, Y_MAX_VIEW - 233, Z_NEAR_VIEW + 710, Z_FAR_VIEW - 999);
+
+}
+
+void setBotOrtho_Main_Building() {
+
+    glRotatef(180, 1, 0, 0);
+    glRotatef(180, 0, 0, 1);
+    glOrtho(X_MIN_VIEW + 272, X_MAX_VIEW - 535, Y_MIN_VIEW + 563, Y_MAX_VIEW - 233, Z_NEAR_VIEW + 710, Z_FAR_VIEW - 999);
+
+}
 
 /*****************************************************Delivery Door****************************************************/
 
@@ -664,42 +730,42 @@ void setOrtho_Courtyard(int option) {
 //      front
         case -18: {
 
-//            setFrontOrtho_Courtyard();
+            setFrontOrtho_Courtyard();
 
         }break;
 
 //      back
         case -19: {
 
-//            setBackOrtho_Courtyard();
+            setBackOrtho_Courtyard();
 
         }break;
 
 //      Left
         case -20: {
 
-//            setLeftOrtho_Courtyard();
+            setLeftOrtho_Courtyard();
 
         }break;
 
 //      Right
         case -21: {
 
-//            setRightOrtho_Courtyard();
+            setRightOrtho_Courtyard();
 
         }break;
 
 //      Top
         case -22: {
 
-//            setTopOrtho_Courtyard();
+            setTopOrtho_Courtyard();
 
         }break;
 
 //      Bot
         case -23: {
 
-//            setBotOrtho_Courtyard();
+            setBotOrtho_Courtyard();
 
         }break;
 
@@ -714,42 +780,42 @@ void setOrtho_Main_Building(int option) {
 //      front
         case -24: {
 
-//            setFrontOrtho_Main_Building();
+            setFrontOrtho_Main_Building();
 
         }break;
 
 //      back
         case -25: {
 
-//            setBackOrtho_Main_Building();
+            setBackOrtho_Main_Building();
 
         }break;
 
 //      Left
         case -26: {
 
-//            setLeftOrtho_Main_Building();
+            setLeftOrtho_Main_Building();
 
         }break;
 
 //      Right
         case -27: {
 
-//            setRightOrtho_Main_Building();
+            setRightOrtho_Main_Building();
 
         }break;
 
 //      Top
         case -28: {
 
-//            setTopOrtho_Main_Building();
+            setTopOrtho_Main_Building();
 
         }break;
 
 //      Bot
         case -29: {
 
-//            setBotOrtho_Main_Building();
+            setBotOrtho_Main_Building();
 
         }break;
 
@@ -764,42 +830,42 @@ void setOrtho_Delivery_Door(int option) {
 //      front
         case -30: {
 
-//            setFrontOrtho_Delivery_Door();
+            setFrontOrtho_Delivery_Door();
 
         }break;
 
 //      back
         case -31: {
 
-//            setBackOrtho_Delivery_Door();
+            setBackOrtho_Delivery_Door();
 
         }break;
 
 //      Left
         case -32: {
 
-//            setLeftOrtho_Delivery_Door();
+            setLeftOrtho_Delivery_Door();
 
         }break;
 
 //      Right
         case -33: {
 
-//            setRightOrtho_Delivery_Door();
+            setRightOrtho_Delivery_Door();
 
         }break;
 
 //      Top
         case -34: {
 
-//            setTopOrtho_Delivery_Door();
+            setTopOrtho_Delivery_Door();
 
         }break;
 
 //      Bot
         case -35: {
 
-//            setBotOrtho_Delivery_Door();
+            setBotOrtho_Delivery_Door();
 
         }break;
 
