@@ -55,7 +55,7 @@ void setRightOrtho() {
 void setFrontOrtho() {
 
 	glRotatef(90, 1, 0, 0);
-    glOrtho(X_MIN_VIEW, X_MAX_VIEW, Y_MIN_VIEW, Y_MAX_VIEW, Z_NEAR_VIEW, Z_FAR_VIEW);
+    glOrtho(X_MIN_VIEW + 90, X_MAX_VIEW + 90 - 465, Y_MIN_VIEW, Y_MAX_VIEW, Z_NEAR_VIEW + 465 + 160, Z_FAR_VIEW + 160);
 
 }
 
@@ -132,7 +132,7 @@ void setBotPerspective() {
 void setFrontOrtho_Entrance() {
 
     glRotatef(90, 1, 0, 0);
-    glOrtho(X_MIN_VIEW + 115, X_MAX_VIEW - 445, Y_MIN_VIEW + 125, Y_MAX_VIEW - 450, Z_NEAR_VIEW + 710, Z_FAR_VIEW - 998);
+    glOrtho(X_MIN_VIEW + 110, X_MAX_VIEW + 110 - 550, Y_MIN_VIEW, Y_MAX_VIEW, Z_NEAR_VIEW + 550 + 100, Z_FAR_VIEW + 100);
 
 }
 
@@ -353,7 +353,7 @@ void setBotOrtho_Castle() {}
 
 void setFrontPerspective_Entrance() {
 
-    gluPerspective(150, 1, 1, 130);
+    gluPerspective(150, 1, 1, 1000);
     gluLookAt(X_INITIAL + 250, Y_INITIAL - 50, 80, X_INITIAL + 250, Y_INITIAL - 49, 80, 0, 0, 1);
 
 }
@@ -1326,7 +1326,7 @@ void setPerspectives(int option) {
 
         }break;
 
-//      Regular
+//      IRegular
 
         case 1: {}
         case 2: {}
@@ -1338,8 +1338,6 @@ void setPerspectives(int option) {
             setPerspective_Regular(option);
 
         }break;
-
-//      Irregulars
 
 //      Entrance
         case 7: {}

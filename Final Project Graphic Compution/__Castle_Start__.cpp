@@ -1,6 +1,6 @@
 /***********************************************************************************************************************
 *                                                                                                                      *
-*                                                   Castle_Start.cpp                                                   *
+*                                                 __Castle_Start__.cpp                                                 *
 *                                                                                                                      *
 *                                  This file is responsible to manage the dependencies                                 *
 *                                                                                                                      *
@@ -60,7 +60,7 @@ double D_RED = 0, D_GREEN = 0, D_BLUE = 0;
  *      x
  *      y
  * */
-double X_WINDOW_SIZE = 950, Y_WINDOW_SIZE = X_WINDOW_SIZE + 30;
+double X_WINDOW_SIZE = 950, Y_WINDOW_SIZE = X_WINDOW_SIZE;
 /*
  * window position
  *      x
@@ -82,11 +82,11 @@ GLfloat X_MAX_VIEW = 1000, Y_MAX_VIEW = 1000;
 /*
  * window near value view
  * */
-GLfloat Z_NEAR_VIEW = -1000;
+GLfloat Z_NEAR_VIEW = -990;
 /*
  * window far value view
  * */
-GLfloat Z_FAR_VIEW = 1000;
+GLfloat Z_FAR_VIEW = 10;
 /*
  * initial position
  *      x
@@ -99,10 +99,14 @@ GLfloat X_INITIAL = 100, Y_INITIAL = 300;
 
 //initialize the angle to the open_The_Door function
 static float entrance_Door_Angle = 0.0;
+static float delivery_Door_Angle = 0.0;
 
-static int isAnimated = 0;
-static int perspective_Or_Animation = -24;
-static int scene_To_print = 4;
+static int entranceDoors_AreOpening = 0;
+static int deliveryDoors_AreOpening = 0;
+
+
+static int perspective_Or_Animation = -4;
+static int scene_To_print = 0;
 
 /***********************************************************************************************************************
 ************************************************************************************************************************
@@ -113,31 +117,32 @@ static int scene_To_print = 4;
 /*
  * includes the headers necessaries to draw the castle and the environment:
  *		"Perspectives.h"
- *      "Faces.h"
- *      "Circle.h"
- *      "Figures.h"
- *      "RoofTiles.h"
- *      "Gate.h"
- *      "OldCastle_Walls.h"
- *      "HallWay.h"
- *      "Stores.h"
- *      "CastleRoads.h"
- *      "DeliverRoad.h"
- *      "Gargoyles.h"
- *      "ArcBridge_Ruined.h"
- *      "ArcBridge.h"
- *      "RightTower.h"
- *      "MiddleTower.h"
- *      "LeftTower_Ruined.h"
- *      "LeftTower.h"
- *      "RockBlocks.h"
- *      "Draw.h"
- *      "KeyInput.h"
- *      "Resize.h"
- *      "DrawScene.h"
- *      "SetUp.h"
- *      "Main.h"
- *      
+ *		"Circle.h"
+ *		"Faces.h"
+ *		"Figures.h"
+ *		"RoofTiles.h"
+ *		"Gate.h"
+ *		"Entrance Doors.h"
+ *		"OldCastle_Walls.h"
+ *		"HallWay.h"
+ *		"Stores.h"
+ *		"CastleRoads.h"
+ *		"DeliverRoad.h"
+ *		"Gargoyles.h"
+ *		"ArcBridge_Ruined.h"
+ *		"ArcBridge.h"
+ *		"RightTower.h"
+ *		"MiddleTower.h"
+ *		"LeftTower_Ruined.h"
+ *		"LeftTower.h"
+ *		"RockBlocks.h"
+ *		"Draw.h"
+ *		"KeyInput.h"
+ *		"Resize.h"
+ *		"Menu.h"
+ *		"DrawScene.h"
+ *		"SetUp.h"
+ *		"Main.h"
  * */
 
 #include "Perspectives.h"
@@ -146,7 +151,7 @@ static int scene_To_print = 4;
 #include "Figures.h"
 #include "RoofTiles.h"
 #include "Gate.h"
-#include "Entrance Doors.h"
+#include "Animation_Doors.h"
 #include "OldCastle_Walls.h"
 #include "HallWay.h"
 #include "Stores.h"
@@ -161,29 +166,19 @@ static int scene_To_print = 4;
 #include "LeftTower.h"
 #include "RockBlocks.h"
 #include "Draw.h"
-#include "KeyInput.h"
 #include "Resize.h"
+#include "KeyInput.h"
+#include "SetUp.h"
 #include "Menu.h"
 #include "DrawScene.h"
-#include "SetUp.h"
 #include "Main.h"
 
 /*
- * TODO: try to merge headers functions (especially in the towers) -> create a directory in the solution (not in the folder) called common in side the tower directory
- *
- * TODO: make a pyramidal figure
- *
  * TODO: create a private functions to prevent double code
- *
- * TODO: set the height of the right tower
  *
  * TODO: try to make the right tower rising
  *
- * TODO: make the towers body and the base of the crown it self
- *
  * TODO: make the middle tower connection (building)
- *
- * TODO: make the ark bridges
  *
  * TODO: all the effects of the gates
  *

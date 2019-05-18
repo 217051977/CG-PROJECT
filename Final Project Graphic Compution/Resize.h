@@ -22,12 +22,37 @@ void visualization_Manager() {
     glMatrixMode(GL_PROJECTION);
     //reset the matrix for an identity one
     glLoadIdentity();
-    //set the orthographic view (perpendicular) with the size:
-    //x_min, x_max, y_min, y_max, z_min, z_max (from the observer perspective!)
-    //AKA -> left, right, top, down, near, far
-    printf("The value of the variable perspective_Or_Animation is at %d\n", perspective_Or_Animation);
 
-    printf("The value of the variable scene_To_print to %d\n\n", scene_To_print);
+//  debug
+    printf(" *                     B_RED = %lf, B_GREEN = %lf, B_BLUE = %lf                     *\n", B_RED, B_GREEN, B_BLUE);
+
+    printf(" *                     D_RED = %lf, D_GREEN = %lf, D_BLUE = %lf                     *\n", D_RED, D_GREEN, D_BLUE);
+
+    printf(" *                                                                                                 * \n");
+
+    if (perspective_Or_Animation < 0 || perspective_Or_Animation > 9) {
+
+        printf(" *                                  perspective_Or_Animation = %d                                  *\n",perspective_Or_Animation);
+
+    } else {
+
+        printf(" *                                  perspective_Or_Animation = %d                                 *\n",perspective_Or_Animation);
+
+    }
+
+    printf(" *                                        scene_To_print = %d                                       *\n", scene_To_print);
+
+    printf(" *                                                                                                 * \n");
+
+    printf(" *                                   entranceDoors_AreOpening = %d                                  *\n", entranceDoors_AreOpening);
+
+    printf(" *                                   deliveryDoors_AreOpening = %d                                  *\n", deliveryDoors_AreOpening);
+
+    printf("\\***************************************************************************************************/\n");
+
+    printf(" *                                                                                                 * \n");
+
+    printf("/***************************************************************************************************\\\n");
 
     setPerspectives(perspective_Or_Animation);
 
@@ -38,6 +63,12 @@ void resize(int w, int h) {
 
     //set the view -> in this case it fills all the OpenGL Window
     glViewport(0, 0, (GLsizei)w, (GLsizei)h);
+
+    printf("\\***************************************************************************************************/\n");
+
+    printf(" *                                                                                                 * \n");
+
+    printf("/***************************************************************************************************\\\n");
 
     visualization_Manager();
 

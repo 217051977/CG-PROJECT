@@ -192,11 +192,11 @@
     <ClInclude Include="Perspectives.h">
       <Filter>Header Files\DirectFunctions\Perspectives</Filter>
     </ClInclude>
-    <ClInclude Include="Entrance Doors.h">
-      <Filter>Header Files\DirectFunctions\Animations</Filter>
-    </ClInclude>
     <ClInclude Include="Menu.h">
       <Filter>Header Files\DirectFunctions\Menus\Main Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation_Doors.h">
+      <Filter>Header Files\DirectFunctions\Animations</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

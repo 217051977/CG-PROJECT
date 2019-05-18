@@ -281,8 +281,6 @@ void create_Left_Ruined_Tower_Bot_Front_Face() {
     glVertex3f(0.48, 0, 0.05);
     glVertex3f(0.5, 0, 0);
     glVertex3f(0.52, 0, 0.1);
-
-
     glVertex3f(0.6, 0, 0.15);
     glVertex3f(0.7, 0, 0.32);
     glVertex3f(0.75, 0, 0.35);
@@ -478,7 +476,6 @@ void create_Gate_Left_Door_Front_Face() {
     glBegin(GL_LINE_LOOP);
     glVertex3f(-0.5, -0.5, 0);
     glVertex3f(0, -0.5, 0);
-    glVertex3f(0, 0, 0);
     draw_Circle(PI / 2, PI, 0.5, 0.6, 0);
     glEnd();
     glPopMatrix();
@@ -493,7 +490,6 @@ void create_Gate_Right_Door_Front_Face() {
     glBegin(GL_LINE_LOOP);
     glVertex3f(0, -0.5, 0);
     glVertex3f(0.5, -0.5, 0);
-    glVertex3f(0.5, 0, 0);
     draw_Circle(0, PI / 2, 0.5, 0.6, 0);
     glEnd();
     glPopMatrix();

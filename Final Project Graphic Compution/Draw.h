@@ -984,10 +984,8 @@ void draw_Gate_Entrance() {
      * */
     glPushMatrix();
     glTranslatef(X_INITIAL + 220, Y_INITIAL + 30, 0);
-    glPushMatrix();
     draw_Entrance_Gate_Left_Door(entrance_Door_Angle);
     draw_Entrance_Gate_Right_Door(-entrance_Door_Angle);
-    glPopMatrix();
 
     glTranslatef(-5, -10, 0);
     draw_Flag_Holder();

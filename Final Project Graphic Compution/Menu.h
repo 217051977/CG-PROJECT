@@ -21,7 +21,6 @@
 ***********************************************Set the new scene and view***********************************************
 ************************************************************************************************************************
 ***********************************************************************************************************************/
-
 void changeViewAndScene(int scene, int view) {
 
     scene_To_print = scene;
@@ -43,6 +42,14 @@ int color_Menu_ID;
 
 /**********************************************************************/
 int perspective_Menu_ID;
+
+/**********************************************************************/
+int animation_Menu_ID;
+
+/**********************************************************************/
+int animation_Entrance_Doors_Menu_ID;
+int animation_Delivery_Doors_Menu_ID;
+int animation_Both_Doors_Menu_ID;
 
 /**********************************************************************/
 int perspective_2D_Menu_ID;
@@ -96,7 +103,6 @@ void quitOption(int optionID) {
 *                                                          2D                                                          *
 *                                                                                                                      *
 ***********************************************************************************************************************/
-
 void regular_Perspective_2D_Menu_Options(int optionID) {
 
     switch (optionID) {
@@ -126,6 +132,7 @@ void regular_Perspective_2D_Menu_Options(int optionID) {
 
 }
 
+/**********************************************************************************************************************/
 void entrance_Perspective_2D_Menu_Options(int optionID) {
 
     switch (optionID) {
@@ -305,7 +312,6 @@ void castle_Perspective_2D_Menu_Options(int optionID) {
 *                                                          3D                                                          *
 *                                                                                                                      *
 ***********************************************************************************************************************/
-
 void regular_Perspective_3D_Menu_Options(int optionID) {
 
     switch (optionID) {
@@ -335,6 +341,7 @@ void regular_Perspective_3D_Menu_Options(int optionID) {
 
 }
 
+/**********************************************************************************************************************/
 void entrance_Perspective_3D_Menu_Options(int optionID) {
 
     switch (optionID) {
@@ -510,6 +517,272 @@ void castle_Perspective_3D_Menu_Options(int optionID) {
 }
 
 /***********************************************************************************************************************
+*                                                                                                                      *
+*                                                      Animation                                                       *
+*                                                                                                                      *
+***********************************************************************************************************************/
+void doors_Menu_Options(int optionID) {
+
+    switch (optionID) {
+
+//      Entrance
+//      Open doors
+        case 0: {
+
+            if(entranceDoors_AreOpening == 0) {
+
+                entranceDoors_AreOpening = 1;
+
+                glutTimerFunc(100, open_The_Entrance_Doors, 1);
+
+                printf(" *                          Animation started - Entrance doors are opening                         *\n");
+
+                printf(" *                                                                                                 * \n");
+
+            }
+
+            visualization_Manager();
+
+            glutPostRedisplay();
+
+        }break;
+
+//      Close doors
+        case 1: {
+
+            if(entranceDoors_AreOpening == 1) {
+
+                entranceDoors_AreOpening = 0;
+
+                glutTimerFunc(100, close_The_Entrance_Doors, 1);
+
+                printf(" *                          Animation started - Entrance doors are closing                         *\n");
+
+                printf(" *                                                                                                 * \n");
+
+            }
+
+            visualization_Manager();
+
+            glutPostRedisplay();
+
+        }break;
+
+//      Delivery
+//      Open doors
+        case 2: {
+
+            if(deliveryDoors_AreOpening == 0) {
+
+                deliveryDoors_AreOpening = 1;
+
+                glutTimerFunc(100, open_The_Delivery_Doors, 1);
+
+                printf(" *                          Animation started - Delivery doors are opening                         *\n");
+
+                printf(" *                                                                                                 * \n");
+
+            }
+
+            visualization_Manager();
+
+            glutPostRedisplay();
+
+        }break;
+
+//      Close doors
+        case 3: {
+
+            if(deliveryDoors_AreOpening == 1) {
+
+                deliveryDoors_AreOpening = 0;
+
+                glutTimerFunc(100, close_The_Delivery_Doors, 1);
+
+                printf(" *                          Animation started - Delivery doors are closing                         *\n");
+
+                printf(" *                                                                                                 * \n");
+
+            }
+
+            visualization_Manager();
+
+            glutPostRedisplay();
+
+        }break;
+
+//      Both
+//      Open doors
+        case 4: {
+
+            if(deliveryDoors_AreOpening == 0) {
+
+                if(entranceDoors_AreOpening == 0) {
+
+                    entranceDoors_AreOpening = 1;
+                    deliveryDoors_AreOpening = 1;
+
+                    glutTimerFunc(100, open_The_Doors, 1);
+
+                    printf(" *                            Animation started - Both doors are opening                           *\n");
+
+                    printf(" *                                                                                                 * \n");
+
+                } else {
+
+                    deliveryDoors_AreOpening = 1;
+
+                    glutTimerFunc(100, open_The_Delivery_Doors, 1);
+
+                    printf(" *                          Animation started - Delivery doors are opening                         *\n");
+
+                    printf(" *                                                                                                 * \n");
+
+                }
+
+            } else {
+
+                if(entranceDoors_AreOpening == 0) {
+
+                    entranceDoors_AreOpening = 1;
+
+                    glutTimerFunc(100, open_The_Entrance_Doors, 1);
+
+                    printf(" *                          Animation started - Entrance doors are opening                         *\n");
+
+                    printf(" *                                                                                                 * \n");
+
+                }
+
+            }
+
+            visualization_Manager();
+
+            glutPostRedisplay();
+
+        }break;
+
+//      Close doors
+        case 5: {
+
+            if(deliveryDoors_AreOpening == 1) {
+
+                if(entranceDoors_AreOpening == 1) {
+
+                    entranceDoors_AreOpening = 0;
+                    deliveryDoors_AreOpening = 0;
+
+                    glutTimerFunc(100, close_The_Doors, 1);
+
+                    printf(" *                            Animation started - Both doors are opening                           *\n");
+
+                    printf(" *                                                                                                 * \n");
+
+                } else {
+
+                    deliveryDoors_AreOpening = 0;
+
+                    glutTimerFunc(100, close_The_Delivery_Doors, 1);
+
+                    printf(" *                          Animation started - Delivery doors are opening                         *\n");
+
+                    printf(" *                                                                                                 * \n");
+
+                }
+
+            } else {
+
+                if(entranceDoors_AreOpening == 1) {
+
+                    entranceDoors_AreOpening = 0;
+
+                    glutTimerFunc(100, close_The_Entrance_Doors, 1);
+
+                    printf(" *                          Animation started - Entrance doors are opening                         *\n");
+
+                    printf(" *                                                                                                 * \n");
+
+                }
+
+            }
+
+            visualization_Manager();
+
+            glutPostRedisplay();
+
+        }break;
+
+        default: {
+
+            printf("There's no %d as optionID\n", optionID);
+
+        }
+
+    }
+
+}
+
+/***********************************************************************************************************************
+*                                                                                                                      *
+*                                                        Color                                                         *
+*                                                                                                                      *
+***********************************************************************************************************************/
+void color_Menu_Options(int optionID) {
+
+    switch (optionID) {
+
+//      Black and white
+        case 0: {
+
+//          background -> black
+            B_RED = 0;
+            B_GREEN = 0;
+            B_BLUE = 0;
+//          draw line -> white
+            D_RED = 1;
+            D_GREEN = 1;
+            D_BLUE = 1;
+
+            //call the function
+            setup();
+
+            visualization_Manager();
+
+            glutPostRedisplay();
+
+        }break;
+
+//      White and black
+        case 1: {
+
+//          background -> black
+            B_RED = 1;
+            B_GREEN = 1;
+            B_BLUE = 1;
+//          draw line -> white
+            D_RED = 0;
+            D_GREEN = 0;
+            D_BLUE = 0;
+
+            //call the function
+            setup();
+
+            visualization_Manager();
+
+            glutPostRedisplay();
+
+        }break;
+
+        default: {
+
+            printf("There's no %d as optionID\n", optionID);
+
+        }
+
+    }
+
+}
+/***********************************************************************************************************************
 ************************************************************************************************************************
 ************************************************Create the menus options************************************************
 ************************************************************************************************************************
@@ -521,7 +794,6 @@ void makeSubMenu(int someValue) {}
 *                                                          2D                                                          *
 *                                                                                                                      *
 ***********************************************************************************************************************/
-
 void create_Regular_perspective_2D_Menu() {
 
     regular_Perspective_2D_Menu_ID = glutCreateMenu(regular_Perspective_2D_Menu_Options);
@@ -649,7 +921,6 @@ void create_perspective_2D_Menu() {
 *                                                          3D                                                          *
 *                                                                                                                      *
 ***********************************************************************************************************************/
-
 void create_Regular_perspective_3D_Menu() {
 
     regular_Perspective_3D_Menu_ID = glutCreateMenu(regular_Perspective_3D_Menu_Options);
@@ -774,11 +1045,42 @@ void create_perspective_3D_Menu() {
 }
 
 /***********************************************************************************************************************
+*                                                                                                                      *
+*                                                      Animation                                                       *
+*                                                                                                                      *
+***********************************************************************************************************************/
+void create_Animation_Menu_Entrance_Doors() {
+
+    animation_Entrance_Doors_Menu_ID = glutCreateMenu(doors_Menu_Options);
+    glutAddMenuEntry("Open doors", 0);
+    glutAddMenuEntry("Close doors", 1);
+
+
+}
+
+void create_Animation_Menu_Delivery_Doors() {
+
+    animation_Delivery_Doors_Menu_ID = glutCreateMenu(doors_Menu_Options);
+    glutAddMenuEntry("Open doors", 2);
+    glutAddMenuEntry("Close doors", 3);
+
+
+}
+
+void create_Animation_Menu_Both_Doors() {
+
+    animation_Both_Doors_Menu_ID = glutCreateMenu(doors_Menu_Options);
+    glutAddMenuEntry("Open doors", 4);
+    glutAddMenuEntry("Close doors", 5);
+
+
+}
+
+/***********************************************************************************************************************
 ************************************************************************************************************************
 ****************************************************Create the menus****************************************************
 ************************************************************************************************************************
 ***********************************************************************************************************************/
-
 void create_perspective_Menu() {
 
     create_perspective_2D_Menu();
@@ -790,13 +1092,39 @@ void create_perspective_Menu() {
 
 }
 
+void create_Animation_Menu() {
+
+    create_Animation_Menu_Entrance_Doors();
+    create_Animation_Menu_Delivery_Doors();
+    create_Animation_Menu_Both_Doors();
+
+    animation_Menu_ID = glutCreateMenu(makeSubMenu);
+    glutAddSubMenu("Entrance doors", animation_Entrance_Doors_Menu_ID);
+    glutAddSubMenu("Delivery doors", animation_Delivery_Doors_Menu_ID);
+    glutAddSubMenu("Both doors", animation_Both_Doors_Menu_ID);
+
+
+}
+
+void create_Color_Menu() {
+
+    color_Menu_ID = glutCreateMenu(color_Menu_Options);
+    glutAddMenuEntry("Black and white", 0);
+    glutAddMenuEntry("White and black", 1);
+
+
+}
+
 /**********************************************************************/
 void create_Menu() {
 
     create_perspective_Menu();
+    create_Animation_Menu();
+    create_Color_Menu();
 
     glutCreateMenu(quitOption);
-    glutAddMenuEntry("Animation", 1);
+    glutAddSubMenu("Color", color_Menu_ID);
+    glutAddSubMenu("Animation", animation_Menu_ID);
     glutAddSubMenu("Perspective", perspective_Menu_ID);
     glutAddMenuEntry("Quit", -1);
 

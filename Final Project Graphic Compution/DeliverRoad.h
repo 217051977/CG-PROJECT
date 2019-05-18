@@ -102,9 +102,8 @@ void draw_FrontDoor() {
      * */
     glPushMatrix();
     glTranslatef(7, 0, 0);
-    glScalef(26, 1, 1);
-    draw_Gate();
-    glPopMatrix();
+    draw_Delivery_Gate_Left_Door(delivery_Door_Angle);
+    draw_Delivery_Gate_Right_Door(-delivery_Door_Angle);
     glPopMatrix();
 
 }
