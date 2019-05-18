@@ -54,7 +54,10 @@ void visualization_Manager() {
 
     printf("/***************************************************************************************************\\\n");
 
-    setPerspectives(perspective_Or_Animation);
+//    setPerspectives(perspective_Or_Animation);
+
+    gluPerspective(150, 1, 1, 1000);
+    gluLookAt(X_INITIAL + 100, Y_INITIAL - 2 + 40, 80, X_INITIAL + 101, Y_INITIAL - 2 + 40, 80, 0, 0, 1);
 
 }
 

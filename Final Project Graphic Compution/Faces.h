@@ -454,6 +454,7 @@ void create_Left_Ruined_Tower_Bot_Bot_Face() {
     glVertex3f(1, 0.55, 0.65);
     glVertex3f(1, 0.6, 0.8);
     glVertex3f(1, 0.7, 0.85);
+    glVertex3f(1, 1, 0.85);
     glVertex3f(1, 1, 0.75);
 
     glEnd();
