@@ -459,14 +459,6 @@ void create_Left_Ruined_Tower_Bot_Bot_Face() {
 
     glEnd();
 
-//    glBegin(GL_LINE_LOOP);
-//    glVertex3f(0, 1, 1);
-//    glVertex3f(0, 1, 0.65);
-//    glVertex3f(1, 1, 0.75);
-//    glVertex3f(1, 1, 1);
-//    glVertex3f(0.5, 1, 0.75);
-//    glEnd();
-
 }
 
 void create_Gate_Left_Door_Front_Face() {
