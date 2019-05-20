@@ -2,7 +2,7 @@
 
 void changeViewAndScene(int scene, int view) {
 
-	scene_To_print = scene;
+	//scene_To_print = scene;
 
 	perspective_Or_Animation = view;
 

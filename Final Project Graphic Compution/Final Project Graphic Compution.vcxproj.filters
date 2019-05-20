@@ -148,6 +148,60 @@
     <Filter Include="Header Files\DirectFunctions\Menus\Menus\Perspective\3D">
       <UniqueIdentifier>{32268778-7a41-480f-b23e-14f1736c2a29}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\DirectFunctions\Perspectives\Regular">
+      <UniqueIdentifier>{0def836b-200e-4b56-8f56-b3ef9d6560c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Perspectives\Irregular">
+      <UniqueIdentifier>{7fa3ce6a-7cab-4125-b5bc-1ffe87d79e2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Perspectives\Regular\2D">
+      <UniqueIdentifier>{a54286e8-196f-45db-a480-565ac8a50e7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Perspectives\Regular\3D">
+      <UniqueIdentifier>{9214058a-f7c1-4db6-b3fe-02b6468aba73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Perspectives\Irregular\2D">
+      <UniqueIdentifier>{f23698c1-f547-468e-87f1-f37a51457703}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Perspectives\Irregular\3D">
+      <UniqueIdentifier>{afd8ee77-64d1-403d-90ac-a54db446bf7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Perspectives\Irregular\2D\Entrance">
+      <UniqueIdentifier>{cc6cba0c-54ec-4af4-b67a-720138bf56e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Perspectives\Irregular\2D\Hallway">
+      <UniqueIdentifier>{bc57405e-f8c8-455b-ab94-2d8db28e9320}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Perspectives\Irregular\2D\Courtyard">
+      <UniqueIdentifier>{2fc95fe7-2a4d-4c51-9924-0a0f8f4ec50c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Perspectives\Irregular\2D\MainBuilding">
+      <UniqueIdentifier>{5c92a9a2-b977-4ac2-83f9-9816dbb1627c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Perspectives\Irregular\2D\DeliveryDoor">
+      <UniqueIdentifier>{6332b1fa-8bef-4271-bcdd-35263de5fb94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Perspectives\Irregular\2D\Castle">
+      <UniqueIdentifier>{7b324baa-5d91-4a52-9ec0-47ab387bd360}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Perspectives\Irregular\3D\Entrance">
+      <UniqueIdentifier>{201a9686-4d21-4bf3-b6ff-17398763a1a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Perspectives\Irregular\3D\Hallway">
+      <UniqueIdentifier>{ae295ed9-4c35-4bff-8516-f48cbae2d4ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Perspectives\Irregular\3D\Courtyard">
+      <UniqueIdentifier>{f130a67a-2b6e-4aa8-aef2-9f8b5d3a5a17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Perspectives\Irregular\3D\MainBuilding">
+      <UniqueIdentifier>{ec015437-b05a-4d74-9aa6-83b4fa3429f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Perspectives\Irregular\3D\DeliveryDoor">
+      <UniqueIdentifier>{760c62c6-3476-4b80-a320-4751e3d2e0f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Perspectives\Irregular\3D\Castle">
+      <UniqueIdentifier>{0c13d113-b053-47a1-84ff-cad577c8d873}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RightTower.h">
@@ -284,6 +338,48 @@
     </ClInclude>
     <ClInclude Include="SubMenu.h">
       <Filter>Header Files\DirectFunctions\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="Perspective_Regular_2D.h">
+      <Filter>Header Files\DirectFunctions\Perspectives\Regular\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Perspective_Regular_3D.h">
+      <Filter>Header Files\DirectFunctions\Perspectives\Regular\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Perspective_Entrance_2D.h">
+      <Filter>Header Files\DirectFunctions\Perspectives\Irregular\2D\Entrance</Filter>
+    </ClInclude>
+    <ClInclude Include="Perspective_Hallway_2D.h">
+      <Filter>Header Files\DirectFunctions\Perspectives\Irregular\2D\Hallway</Filter>
+    </ClInclude>
+    <ClInclude Include="Perspective_Courtyard_2D.h">
+      <Filter>Header Files\DirectFunctions\Perspectives\Irregular\2D\Courtyard</Filter>
+    </ClInclude>
+    <ClInclude Include="Perspective_MainBuilding_2D.h">
+      <Filter>Header Files\DirectFunctions\Perspectives\Irregular\2D\MainBuilding</Filter>
+    </ClInclude>
+    <ClInclude Include="Perspective_DeliveryDoor_2D.h">
+      <Filter>Header Files\DirectFunctions\Perspectives\Irregular\2D\DeliveryDoor</Filter>
+    </ClInclude>
+    <ClInclude Include="Perspective_Castle_2D.h">
+      <Filter>Header Files\DirectFunctions\Perspectives\Irregular\2D\Castle</Filter>
+    </ClInclude>
+    <ClInclude Include="Perspective_Castle_3D.h">
+      <Filter>Header Files\DirectFunctions\Perspectives\Irregular\3D\Castle</Filter>
+    </ClInclude>
+    <ClInclude Include="Perspective_Entrance_3D.h">
+      <Filter>Header Files\DirectFunctions\Perspectives\Irregular\3D\Entrance</Filter>
+    </ClInclude>
+    <ClInclude Include="Perspective_Hallway_3D.h">
+      <Filter>Header Files\DirectFunctions\Perspectives\Irregular\3D\Hallway</Filter>
+    </ClInclude>
+    <ClInclude Include="Perspective_DeliveryDoor_3D.h">
+      <Filter>Header Files\DirectFunctions\Perspectives\Irregular\3D\DeliveryDoor</Filter>
+    </ClInclude>
+    <ClInclude Include="Perspective_MainBuilding_3D.h">
+      <Filter>Header Files\DirectFunctions\Perspectives\Irregular\3D\MainBuilding</Filter>
+    </ClInclude>
+    <ClInclude Include="Perspective_Courtyard_3D.h">
+      <Filter>Header Files\DirectFunctions\Perspectives\Irregular\3D\Courtyard</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -161,6 +161,20 @@ static int scene_To_print = 0;
  *		"Main.h"
  * */
 
+#include "Perspective_Regular_2D.h"
+#include "Perspective_Regular_3D.h"
+#include "Perspective_Entrance_2D.h"
+#include "Perspective_Hallway_2D.h"
+#include "Perspective_Courtyard_2D.h"
+#include "Perspective_MainBuilding_2D.h"
+#include "Perspective_DeliveryDoor_2D.h"
+#include "Perspective_Castle_2D.h"
+#include "Perspective_Entrance_3D.h"
+#include "Perspective_Hallway_3D.h"
+#include "Perspective_Courtyard_3D.h"
+#include "Perspective_MainBuilding_3D.h"
+#include "Perspective_DeliveryDoor_3D.h"
+#include "Perspective_Castle_3D.h"
 #include "Perspectives.h"
                         /**********************************************************************/
 #include "Circle.h"
