@@ -122,11 +122,26 @@
     <ClInclude Include="ArcBridge_Ruined.h" />
     <ClInclude Include="CastleRoads.h" />
     <ClInclude Include="CastleWalls.h" />
+    <ClInclude Include="Change_View_And_Scene.h" />
     <ClInclude Include="Draw.h" />
     <ClInclude Include="DrawScene.h" />
     <ClInclude Include="KeyInput.h" />
     <ClInclude Include="Main.h" />
     <ClInclude Include="Menu.h" />
+    <ClInclude Include="Menus_2D_Option.h" />
+    <ClInclude Include="Menus_3D_Option.h" />
+    <ClInclude Include="Menus_ID.h" />
+    <ClInclude Include="Menu_2D_Perspective.h" />
+    <ClInclude Include="Menu_3D_Perspective.h" />
+    <ClInclude Include="Menu_Animation.h" />
+    <ClInclude Include="Menu_Animation_Both_Doors.h" />
+    <ClInclude Include="Menu_Animation_Delivery_Doors.h" />
+    <ClInclude Include="Menu_Animation_Entrance_Doors.h" />
+    <ClInclude Include="Menu_Animation_Option.h" />
+    <ClInclude Include="Menu_Color.h" />
+    <ClInclude Include="Menu_Color_Option.h" />
+    <ClInclude Include="Menu_Perspective.h" />
+    <ClInclude Include="Menu_Quit_Option.h" />
     <ClInclude Include="OldCastle_Walls.h" />
     <ClInclude Include="Circle.h" />
     <ClInclude Include="DeliverRoad.h" />
@@ -147,6 +162,7 @@
     <ClInclude Include="RoofTiles.h" />
     <ClInclude Include="SetUp.h" />
     <ClInclude Include="Stores.h" />
+    <ClInclude Include="SubMenu.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

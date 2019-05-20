@@ -122,7 +122,7 @@ static int scene_To_print = 0;
  *		"Figures.h"
  *		"RoofTiles.h"
  *		"Gate.h"
- *		"Entrance Doors.h"
+ *		"Animation_Doors.h"
  *		"OldCastle_Walls.h"
  *		"HallWay.h"
  *		"Stores.h"
@@ -137,40 +137,87 @@ static int scene_To_print = 0;
  *		"LeftTower.h"
  *		"RockBlocks.h"
  *		"Draw.h"
- *		"KeyInput.h"
  *		"Resize.h"
+ *		"KeyInput.h"
+ *		"SetUp.h"
+ *		"Change_View_And_Scene.h"
+ *		"Menus_ID.h"
+ *		"Menu_Quit_Option.h"
+ *		"Menus_2D_Option.h"
+ *		"Menus_3D_Option.h"
+ *		"Menu_Animation_Option.h"
+ *		"Menu_Color_Option.h"
+ *		"SubMenu.h"
+ *		"Menu_2D_Perspective.h"
+ *		"Menu_3D_Perspective.h"
+ *		"Menu_Animation_Entrance_Doors.h"
+ *		"Menu_Animation_Delivery_Doors.h"
+ *		"Menu_Animation_Both_Doors.h"
+ *		"Menu_Perspective.h"
+ *		"Menu_Animation.h"
+ *		"Menu_Color.h"
  *		"Menu.h"
  *		"DrawScene.h"
- *		"SetUp.h"
  *		"Main.h"
  * */
 
 #include "Perspectives.h"
+                        /**********************************************************************/
 #include "Circle.h"
 #include "Faces.h"
 #include "Figures.h"
 #include "RoofTiles.h"
+                        /**********************************************************************/
 #include "Gate.h"
+                        /**********************************************************************/
 #include "Animation_Doors.h"
+                        /**********************************************************************/
 #include "OldCastle_Walls.h"
 #include "HallWay.h"
 #include "Stores.h"
 #include "CastleRoads.h"
 #include "DeliverRoad.h"
+                        /**********************************************************************/
 #include "Gargoyles.h"
+                        /**********************************************************************/
 #include "ArcBridge_Ruined.h"
 #include "ArcBridge.h"
+                        /**********************************************************************/
 #include "RightTower.h"
 #include "MiddleTower.h"
 #include "LeftTower_Ruined.h"
 #include "LeftTower.h"
+                        /**********************************************************************/
 #include "RockBlocks.h"
+                        /**********************************************************************/
 #include "Draw.h"
+                        /**********************************************************************/
 #include "Resize.h"
+                        /**********************************************************************/
 #include "KeyInput.h"
+                        /**********************************************************************/
 #include "SetUp.h"
+                        /**********************************************************************/
+#include "Change_View_And_Scene.h"
+#include "Menus_ID.h"
+#include "Menu_Quit_Option.h"
+#include "Menus_2D_Option.h"
+#include "Menus_3D_Option.h"
+#include "Menu_Animation_Option.h"
+#include "Menu_Color_Option.h"
+#include "SubMenu.h"
+#include "Menu_2D_Perspective.h"
+#include "Menu_3D_Perspective.h"
+#include "Menu_Animation_Entrance_Doors.h"
+#include "Menu_Animation_Delivery_Doors.h"
+#include "Menu_Animation_Both_Doors.h"
+#include "Menu_Perspective.h"
+#include "Menu_Animation.h"
+#include "Menu_Color.h"
 #include "Menu.h"
+                        /**********************************************************************/
 #include "DrawScene.h"
+                        /**********************************************************************/
 #include "Main.h"
 
 /*

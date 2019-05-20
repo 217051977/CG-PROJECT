@@ -103,11 +103,50 @@
     <Filter Include="Header Files\DirectFunctions\Perspectives">
       <UniqueIdentifier>{521fc334-576e-4cab-b656-fe5b44be9df8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\DirectFunctions\Menus\Main Menu">
-      <UniqueIdentifier>{aa3d60bc-b420-4aa4-903d-f75866dba8e0}</UniqueIdentifier>
+    <Filter Include="Header Files\DirectFunctions\Menus\ID">
+      <UniqueIdentifier>{c3797149-495c-4069-82fb-7e08810aecdf}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\DirectFunctions\Menus\Sub Menu">
+    <Filter Include="Header Files\DirectFunctions\Menus\Option">
+      <UniqueIdentifier>{68085802-0266-4f38-bb0a-69bc7e47c9ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Menus\Option\Quit">
+      <UniqueIdentifier>{ae01208a-ca6b-4845-95fb-482443d2a9f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Menus\Option\2D">
+      <UniqueIdentifier>{8362ce0c-2dc9-4050-8ab5-1b31ed71624d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Menus\Option\3D">
+      <UniqueIdentifier>{494a7caa-5c44-4bae-84f5-995efeb22a3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Menus\Option\Color">
+      <UniqueIdentifier>{68d88ec2-6870-4dfb-8591-ff20150bcc74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Menus\Option\Animation">
+      <UniqueIdentifier>{f38ce5e2-0757-4dc1-9dd5-741dbd52fc22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Menus\Debug">
+      <UniqueIdentifier>{c9851494-c47e-4b4a-8096-aca42acf8950}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Menus\Menus">
       <UniqueIdentifier>{e5e03329-7884-412a-8723-53741ecaf0ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Menus\Menus\Color">
+      <UniqueIdentifier>{72e50a4d-904b-466d-96a7-6aa077d744fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Menus\Menus\Animation">
+      <UniqueIdentifier>{1435a504-10e5-46f6-99ed-97dddc6283c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Menus\Menus\Perspective">
+      <UniqueIdentifier>{fa6022ba-33c1-46b7-a327-bcefea0be631}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Menus\Menus\Animation\Sub Menu">
+      <UniqueIdentifier>{a1f14e8a-bc53-4294-a215-335124a7a7fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Menus\Menus\Perspective\2D">
+      <UniqueIdentifier>{39042546-4081-4050-861e-58b4e53454cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Menus\Menus\Perspective\3D">
+      <UniqueIdentifier>{32268778-7a41-480f-b23e-14f1736c2a29}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -192,11 +231,59 @@
     <ClInclude Include="Perspectives.h">
       <Filter>Header Files\DirectFunctions\Perspectives</Filter>
     </ClInclude>
-    <ClInclude Include="Menu.h">
-      <Filter>Header Files\DirectFunctions\Menus\Main Menu</Filter>
-    </ClInclude>
     <ClInclude Include="Animation_Doors.h">
       <Filter>Header Files\DirectFunctions\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>Header Files\DirectFunctions\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="Menus_ID.h">
+      <Filter>Header Files\DirectFunctions\Menus\ID</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu_Quit_Option.h">
+      <Filter>Header Files\DirectFunctions\Menus\Option\Quit</Filter>
+    </ClInclude>
+    <ClInclude Include="Menus_2D_Option.h">
+      <Filter>Header Files\DirectFunctions\Menus\Option\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Menus_3D_Option.h">
+      <Filter>Header Files\DirectFunctions\Menus\Option\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu_Animation_Option.h">
+      <Filter>Header Files\DirectFunctions\Menus\Option\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu_Color_Option.h">
+      <Filter>Header Files\DirectFunctions\Menus\Option\Color</Filter>
+    </ClInclude>
+    <ClInclude Include="Change_View_And_Scene.h">
+      <Filter>Header Files\DirectFunctions\Menus\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu_Color.h">
+      <Filter>Header Files\DirectFunctions\Menus\Menus\Color</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu_Animation.h">
+      <Filter>Header Files\DirectFunctions\Menus\Menus\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu_Perspective.h">
+      <Filter>Header Files\DirectFunctions\Menus\Menus\Perspective</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu_Animation_Entrance_Doors.h">
+      <Filter>Header Files\DirectFunctions\Menus\Menus\Animation\Sub Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu_Animation_Delivery_Doors.h">
+      <Filter>Header Files\DirectFunctions\Menus\Menus\Animation\Sub Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu_Animation_Both_Doors.h">
+      <Filter>Header Files\DirectFunctions\Menus\Menus\Animation\Sub Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu_3D_Perspective.h">
+      <Filter>Header Files\DirectFunctions\Menus\Menus\Perspective\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu_2D_Perspective.h">
+      <Filter>Header Files\DirectFunctions\Menus\Menus\Perspective\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="SubMenu.h">
+      <Filter>Header Files\DirectFunctions\Menus</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
