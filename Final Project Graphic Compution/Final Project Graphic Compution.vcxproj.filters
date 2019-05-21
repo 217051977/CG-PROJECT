@@ -202,6 +202,27 @@
     <Filter Include="Header Files\DirectFunctions\Perspectives\Irregular\3D\Castle">
       <UniqueIdentifier>{0c13d113-b053-47a1-84ff-cad577c8d873}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\DirectFunctions\Perspectives\SetPerspective">
+      <UniqueIdentifier>{0744701a-80a7-4e00-a5d7-90839e535a01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Perspectives\SetPerspective\2D">
+      <UniqueIdentifier>{fe8a2a89-af00-4573-8e5a-df1cf2dc5179}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Perspectives\SetPerspective\3D">
+      <UniqueIdentifier>{98f685d0-2a3b-4571-87ab-16fdef398c75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Perspectives\SetPerspective\2D\Regular">
+      <UniqueIdentifier>{dbad9b37-f480-467c-bcef-007f2f9bb30f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Perspectives\SetPerspective\2D\Irregular">
+      <UniqueIdentifier>{6f4a3b02-1fc8-4fe4-97b5-a1f44b995a0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Perspectives\SetPerspective\3D\Irregular">
+      <UniqueIdentifier>{068219f6-2a26-4772-8045-42367e2d676b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectFunctions\Perspectives\SetPerspective\3D\Regular">
+      <UniqueIdentifier>{962aac22-e0d4-455a-9a8f-a558e6476c36}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RightTower.h">
@@ -380,6 +401,48 @@
     </ClInclude>
     <ClInclude Include="Perspective_Courtyard_3D.h">
       <Filter>Header Files\DirectFunctions\Perspectives\Irregular\3D\Courtyard</Filter>
+    </ClInclude>
+    <ClInclude Include="set_2D_Perspective.h">
+      <Filter>Header Files\DirectFunctions\Perspectives\SetPerspective\2D\Regular</Filter>
+    </ClInclude>
+    <ClInclude Include="set_3D_Perspective.h">
+      <Filter>Header Files\DirectFunctions\Perspectives\SetPerspective\3D\Regular</Filter>
+    </ClInclude>
+    <ClInclude Include="set_2D_Castle_Perspective.h">
+      <Filter>Header Files\DirectFunctions\Perspectives\SetPerspective\2D\Irregular</Filter>
+    </ClInclude>
+    <ClInclude Include="set_2D_Courtyard_Perspective.h">
+      <Filter>Header Files\DirectFunctions\Perspectives\SetPerspective\2D\Irregular</Filter>
+    </ClInclude>
+    <ClInclude Include="set_2D_DeliveryDoor_Perspective.h">
+      <Filter>Header Files\DirectFunctions\Perspectives\SetPerspective\2D\Irregular</Filter>
+    </ClInclude>
+    <ClInclude Include="set_2D_Entrance_Perspective.h">
+      <Filter>Header Files\DirectFunctions\Perspectives\SetPerspective\2D\Irregular</Filter>
+    </ClInclude>
+    <ClInclude Include="set_2D_Hallway_Perspective.h">
+      <Filter>Header Files\DirectFunctions\Perspectives\SetPerspective\2D\Irregular</Filter>
+    </ClInclude>
+    <ClInclude Include="set_2D_MainBuilding_Perspective.h">
+      <Filter>Header Files\DirectFunctions\Perspectives\SetPerspective\2D\Irregular</Filter>
+    </ClInclude>
+    <ClInclude Include="set_3D_Castle_Perspective.h">
+      <Filter>Header Files\DirectFunctions\Perspectives\SetPerspective\3D\Irregular</Filter>
+    </ClInclude>
+    <ClInclude Include="set_3D_Courtyard_Perspective.h">
+      <Filter>Header Files\DirectFunctions\Perspectives\SetPerspective\3D\Irregular</Filter>
+    </ClInclude>
+    <ClInclude Include="set_3D_DeliveryDoor_Perspective.h">
+      <Filter>Header Files\DirectFunctions\Perspectives\SetPerspective\3D\Irregular</Filter>
+    </ClInclude>
+    <ClInclude Include="set_3D_Entrance_Perspective.h">
+      <Filter>Header Files\DirectFunctions\Perspectives\SetPerspective\3D\Irregular</Filter>
+    </ClInclude>
+    <ClInclude Include="set_3D_Hallway_Perspective.h">
+      <Filter>Header Files\DirectFunctions\Perspectives\SetPerspective\3D\Irregular</Filter>
+    </ClInclude>
+    <ClInclude Include="set_3D_MainBuilding_Perspective.h">
+      <Filter>Header Files\DirectFunctions\Perspectives\SetPerspective\3D\Irregular</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

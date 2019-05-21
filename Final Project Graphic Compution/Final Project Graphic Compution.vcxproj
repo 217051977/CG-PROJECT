@@ -175,6 +175,20 @@
     <ClInclude Include="MiddleTowersConnection.h" />
     <ClInclude Include="RoofTiles.h" />
     <ClInclude Include="SetUp.h" />
+    <ClInclude Include="set_2D_Castle_Perspective.h" />
+    <ClInclude Include="set_2D_Courtyard_Perspective.h" />
+    <ClInclude Include="set_2D_DeliveryDoor_Perspective.h" />
+    <ClInclude Include="set_2D_Entrance_Perspective.h" />
+    <ClInclude Include="set_2D_Hallway_Perspective.h" />
+    <ClInclude Include="set_2D_MainBuilding_Perspective.h" />
+    <ClInclude Include="set_2D_Perspective.h" />
+    <ClInclude Include="set_3D_Castle_Perspective.h" />
+    <ClInclude Include="set_3D_Courtyard_Perspective.h" />
+    <ClInclude Include="set_3D_DeliveryDoor_Perspective.h" />
+    <ClInclude Include="set_3D_Entrance_Perspective.h" />
+    <ClInclude Include="set_3D_Hallway_Perspective.h" />
+    <ClInclude Include="set_3D_MainBuilding_Perspective.h" />
+    <ClInclude Include="set_3D_Perspective.h" />
     <ClInclude Include="Stores.h" />
     <ClInclude Include="SubMenu.h" />
   </ItemGroup>
