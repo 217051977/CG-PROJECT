@@ -105,8 +105,9 @@ static int entranceDoors_AreOpening = 0;
 static int deliveryDoors_AreOpening = 0;
 
 
-static int perspective_Or_Animation = -4;
-static int scene_To_print = 0;
+static int perspective_Or_Animation = /*-4*/ -14;
+static int lookAt = 0;
+static int scene_To_print = /*0*/2;
 
 /***********************************************************************************************************************
 ************************************************************************************************************************
@@ -161,6 +162,8 @@ static int scene_To_print = 0;
  *		"Main.h"
  * */
 
+#include "Set_LookAt.h"
+/**********************************************************************/
 #include "Perspective_Regular_2D.h"
 #include "Perspective_Entrance_2D.h"
 #include "Perspective_Hallway_2D.h"
@@ -202,7 +205,13 @@ static int scene_To_print = 0;
                         /**********************************************************************/
 #include "Gate.h"
                         /**********************************************************************/
-#include "Animation_Doors.h"
+#include "Animation_Close_The_Delivery_Doors.h"
+#include "Animation_Close_The_Doors.h"
+#include "Animation_Close_The_Entrance_Doors.h"
+/**********************************************************************/
+#include "Animation_Open_The_Doors.h"
+#include "Animation_Open_The_Entrance_Doors.h"
+#include "Animation_Open_The_Delivery_Doors.h"
                         /**********************************************************************/
 #include "OldCastle_Walls.h"
 #include "HallWay.h"

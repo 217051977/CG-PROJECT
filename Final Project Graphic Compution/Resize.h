@@ -36,7 +36,7 @@ void visualization_Manager() {
 
     } else {
 
-        printf(" *                                  perspective_Or_Animation = %d                                 *\n",perspective_Or_Animation);
+        printf(" *                                  perspective_Or_Animation = %d                                   *\n",perspective_Or_Animation);
 
     }
 

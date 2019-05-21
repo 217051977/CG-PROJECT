@@ -150,6 +150,10 @@ void drawScene(void) {
 
     glMatrixMode(GL_MODELVIEW);
 
+	glLoadIdentity();
+
+    set_LookAt(perspective_Or_Animation);
+
     //set the screen to the background color
     glClear(GL_COLOR_BUFFER_BIT);
 

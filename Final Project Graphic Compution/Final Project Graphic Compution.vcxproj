@@ -118,6 +118,12 @@
     <ClCompile Include="__Castle_Start__.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Animation_Close_The_Delivery_Doors.h" />
+    <ClInclude Include="Animation_Close_The_Doors.h" />
+    <ClInclude Include="Animation_Close_The_Entrance_Doors.h" />
+    <ClInclude Include="Animation_Open_The_Delivery_Doors.h" />
+    <ClInclude Include="Animation_Open_The_Doors.h" />
+    <ClInclude Include="Animation_Open_The_Entrance_Doors.h" />
     <ClInclude Include="ArcBridge.h" />
     <ClInclude Include="ArcBridge_Ruined.h" />
     <ClInclude Include="CastleRoads.h" />
@@ -153,7 +159,6 @@
     <ClInclude Include="LeftTower.h" />
     <ClInclude Include="LeftTower_Ruined.h" />
     <ClInclude Include="MiddleTower.h" />
-    <ClInclude Include="Animation_Doors.h" />
     <ClInclude Include="Perspectives.h" />
     <ClInclude Include="Perspective_Castle_2D.h" />
     <ClInclude Include="Perspective_Castle_3D.h" />
@@ -189,6 +194,7 @@
     <ClInclude Include="set_3D_Hallway_Perspective.h" />
     <ClInclude Include="set_3D_MainBuilding_Perspective.h" />
     <ClInclude Include="set_3D_Perspective.h" />
+    <ClInclude Include="Set_LookAt.h" />
     <ClInclude Include="Stores.h" />
     <ClInclude Include="SubMenu.h" />
   </ItemGroup>

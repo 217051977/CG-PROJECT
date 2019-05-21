@@ -306,9 +306,6 @@
     <ClInclude Include="Perspectives.h">
       <Filter>Header Files\DirectFunctions\Perspectives</Filter>
     </ClInclude>
-    <ClInclude Include="Animation_Doors.h">
-      <Filter>Header Files\DirectFunctions\Animations</Filter>
-    </ClInclude>
     <ClInclude Include="Menu.h">
       <Filter>Header Files\DirectFunctions\Menus</Filter>
     </ClInclude>
@@ -443,6 +440,27 @@
     </ClInclude>
     <ClInclude Include="set_3D_MainBuilding_Perspective.h">
       <Filter>Header Files\DirectFunctions\Perspectives\SetPerspective\3D\Irregular</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation_Close_The_Delivery_Doors.h">
+      <Filter>Header Files\DirectFunctions\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation_Close_The_Doors.h">
+      <Filter>Header Files\DirectFunctions\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation_Close_The_Entrance_Doors.h">
+      <Filter>Header Files\DirectFunctions\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation_Open_The_Doors.h">
+      <Filter>Header Files\DirectFunctions\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation_Open_The_Entrance_Doors.h">
+      <Filter>Header Files\DirectFunctions\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="Set_LookAt.h">
+      <Filter>Header Files\SemiDirectFunctions\View</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation_Open_The_Delivery_Doors.h">
+      <Filter>Header Files\DirectFunctions\Animations</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

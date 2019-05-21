@@ -2,50 +2,50 @@
 
 void setOrtho_Regular(int option) {
 
-	switch (option) {
+    switch (option) {
 
-		//      front
-	case 0: {
+        //      front
+        case 0: {
 
-		setFrontOrtho();
+            setFrontOrtho();
 
-	}break;
+        }break;
 
-		//      back view
-	case -1: {
+            //      back view
+        case -1: {
 
-		setBackOrtho();
+            setBackOrtho();
 
-	}break;
+        }break;
 
-		//      left view
-	case -2: {
+            //      left view
+        case -2: {
 
-		setLeftOrtho();
+            setLeftOrtho();
 
-	}break;
+        }break;
 
-		//      right view
-	case -3: {
+            //      right view
+        case -3: {
 
-		setRightOrtho();
+            setRightOrtho();
 
-	}break;
+        }break;
 
-		//      top view
-	case -4: {
+            //      top view
+        case -4: {
 
-		glOrtho(X_MIN_VIEW, X_MAX_VIEW, Y_MIN_VIEW, Y_MAX_VIEW, Z_NEAR_VIEW, Z_FAR_VIEW);
+            glOrtho(X_MIN_VIEW + 80 - 150, X_MAX_VIEW - 80 - 150, Y_MIN_VIEW + 80 - 15, Y_MAX_VIEW - 80 - 15, Z_NEAR_VIEW + 357.5 + 70, Z_FAR_VIEW + 357.5 - 70);
 
-	}break;
+        }break;
 
-		//      bot view
-	case -5: {
+            //      bot view
+        case -5: {
 
-		setBotOrtho();
+            setBotOrtho();
 
-	}break;
+        }break;
 
-	}
+    }
 
 }

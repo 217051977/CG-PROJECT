@@ -59,7 +59,7 @@ void draw_Entrance_Gate_Left_Door(float angle) {
 
     glPushMatrix();
     glRotatef(angle, 0, 0, 1);
-    glScalef(100, 0.5, 100);
+    glScalef(100, 2.5, 100);
     create_Left_Door();
     glPopMatrix();
 
@@ -71,7 +71,7 @@ void draw_Entrance_Gate_Right_Door(float angle) {
     glTranslatef(100, 0, 0);
     glRotatef(angle, 0, 0, 1);
     glTranslatef(-100, 0, 0);
-    glScalef(100, 0.5, 100);
+    glScalef(100, 2.5, 100);
     create_Right_Door();
     glPopMatrix();
 
@@ -81,7 +81,7 @@ void draw_Delivery_Gate_Left_Door(float angle) {
 
     glPushMatrix();
     glRotatef(angle, 0, 0, 1);
-    glScalef(26, 0.5, 75);
+    glScalef(26, 2.5, 75);
     create_Left_Door();
     glPopMatrix();
 
@@ -93,27 +93,8 @@ void draw_Delivery_Gate_Right_Door(float angle) {
     glTranslatef(26, 0, 0);
     glRotatef(angle, 0, 0, 1);
     glTranslatef(-26, 0, 0);
-    glScalef(26, 0.5, 75);
+    glScalef(26, 2.5, 75);
     create_Right_Door();
     glPopMatrix();
-
-}
-
-//gate
-void draw_Gate() {
-
-    /*
-     * save the matrix status
-     * increase the figure size by
-     *     xSize times of the x value
-     *     5 times of the y value
-     *     100 times of the z value
-     * draw_6_Faces_Figure()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     *
-     * */
-
-    create_Left_Door();
-    create_Right_Door();
 
 }
