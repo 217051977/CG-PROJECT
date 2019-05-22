@@ -110,11 +110,11 @@ void setPerspectives(int option) {
         case 3: {}
         case 4: {}
         case 5: {}
-        case 6: {
+        case 6: {}
 
-            setPerspective_Regular(option);
+//            setPerspective_Regular(option);
 
-        }break;
+//        }break;
 
 //      Entrance
         case 7: {}
@@ -122,11 +122,11 @@ void setPerspectives(int option) {
         case 9: {}
         case 10: {}
         case 11: {}
-        case 12: {
+        case 12: {}
 
-            setPerspective_Entrance(option);
+//            setPerspective_Entrance(option);
 
-        }break;
+//        }break;
 
 //      Hallway
         case 13: {}
@@ -134,11 +134,11 @@ void setPerspectives(int option) {
         case 15: {}
         case 16: {}
         case 17: {}
-        case 18: {
+        case 18: {}
 
-            setPerspective_Hallway(option);
+//            setPerspective_Hallway(option);
 
-        }break;
+//        }break;
 
 //      Courtyard
         case 19: {}
@@ -146,11 +146,11 @@ void setPerspectives(int option) {
         case 21: {}
         case 22: {}
         case 23: {}
-        case 24: {
+        case 24: {}
 
-            setPerspective_Courtyard(option);
+//            setPerspective_Courtyard(option);
 
-        }break;
+//        }break;
 
 //      Main Building
         case 25: {}
@@ -158,11 +158,11 @@ void setPerspectives(int option) {
         case 27: {}
         case 28: {}
         case 29: {}
-        case 30: {
+        case 30: {}
 
-            setPerspective_Main_Building(option);
+//            setPerspective_Main_Building(option);
 
-        }break;
+//        }break;
 
 //      Delivery Door
         case 31: {}
@@ -170,11 +170,11 @@ void setPerspectives(int option) {
         case 33: {}
         case 34: {}
         case 35: {}
-        case 36: {
+        case 36: {}
 
-            setPerspective_Delivery_Door(option);
+//            setPerspective_Delivery_Door(option);
 
-        }break;
+//        }break;
 
 //      Castle
         case 37: {}
@@ -184,9 +184,13 @@ void setPerspectives(int option) {
         case 41: {}
         case 42: {
 
-            setPerspective_Castle(option);
+            gluPerspective(150, 1, 1, 1000);
 
-        }break;
+        }
+
+//            setPerspective_Castle(option);
+
+//        }break;
 
     }
 

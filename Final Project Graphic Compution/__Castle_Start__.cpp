@@ -105,9 +105,9 @@ static int entranceDoors_AreOpening = 0;
 static int deliveryDoors_AreOpening = 0;
 
 
-static int perspective_Or_Animation = /*-4*/ -22;
+static int perspective_Or_Animation = -4;
 static int lookAt = 0;
-static int scene_To_print = /*0*/3;
+static int scene_To_print = 0;
 
 /***********************************************************************************************************************
 ************************************************************************************************************************
@@ -205,8 +205,8 @@ static int scene_To_print = /*0*/3;
                         /**********************************************************************/
 #include "Gate.h"
                         /**********************************************************************/
-#include "Animation_Close_The_Delivery_Doors.h"
 #include "Animation_Close_The_Doors.h"
+#include "Animation_Close_The_Delivery_Doors.h"
 #include "Animation_Close_The_Entrance_Doors.h"
 /**********************************************************************/
 #include "Animation_Open_The_Doors.h"

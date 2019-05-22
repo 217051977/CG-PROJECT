@@ -93,9 +93,27 @@ void keyInput(unsigned char key, int x, int y) {
 
                 entranceDoors_AreOpening = 1;
 
-                glutTimerFunc(100, open_The_Entrance_Doors, 1);
+                if (deliveryDoors_AreOpening == 0 && delivery_Door_Angle > 0) {
 
-                printf(" *                          Animation started - Entrance doors are opening                         *\n");
+                    glutTimerFunc(100, open_The_Entrance_Doors_And_Close_The_Delivery_Doors, 1);
+
+                    printf(" *                          Animation started - Delivery doors are closing                         *\n");
+
+                    printf(" *                          Animation started - Entrance doors are opening                         *\n");
+
+                } else if (deliveryDoors_AreOpening == 1 && delivery_Door_Angle < 60) {
+
+                    glutTimerFunc(100, open_The_Doors, 1);
+
+                    printf(" *                            Animation started - Both doors are opening                           *\n");
+
+                } else {
+
+                    glutTimerFunc(100, open_The_Entrance_Doors, 1);
+
+                    printf(" *                          Animation started - Entrance doors are opening                         *\n");
+
+                }
 
                 printf(" *                                                                                                 * \n");
 
@@ -103,7 +121,23 @@ void keyInput(unsigned char key, int x, int y) {
 
                 entranceDoors_AreOpening = 0;
 
-                glutTimerFunc(100, close_The_Entrance_Doors, 1);
+                if (deliveryDoors_AreOpening == 1 && delivery_Door_Angle < 60) {
+
+                    glutTimerFunc(100, open_The_Delivery_Doors_And_Close_The_Entrance_Doors, 1);
+
+                    printf(" *                          Animation started - Delivery doors are opening                         *\n");
+
+                } else if (deliveryDoors_AreOpening == 0 && delivery_Door_Angle > 0) {
+
+                    glutTimerFunc(100, close_The_Doors, 1);
+
+                    printf(" *                          Animation started - Entrance doors are closing                         *\n");
+
+                } else {
+
+                    glutTimerFunc(100, close_The_Entrance_Doors, 1);
+
+                }
 
                 printf(" *                          Animation started - Entrance doors are closing                         *\n");
 
@@ -122,7 +156,23 @@ void keyInput(unsigned char key, int x, int y) {
 
                 deliveryDoors_AreOpening = 1;
 
-                glutTimerFunc(100, open_The_Delivery_Doors, 1);
+                if (entranceDoors_AreOpening == 0 && entrance_Door_Angle > 0) {
+
+                    glutTimerFunc(100, open_The_Delivery_Doors_And_Close_The_Entrance_Doors, 1);
+
+                    printf(" *                          Animation started - Entrance doors are closing                         *\n");
+
+                } else if (entranceDoors_AreOpening == 1 && entrance_Door_Angle < 60) {
+
+                    glutTimerFunc(100, open_The_Doors, 1);
+
+                    printf(" *                            Animation started - Both doors are opening                           *\n");
+
+                } else {
+
+                    glutTimerFunc(100, open_The_Delivery_Doors, 1);
+
+                }
 
                 printf(" *                          Animation started - Delivery doors are opening                         *\n");
 
@@ -132,7 +182,23 @@ void keyInput(unsigned char key, int x, int y) {
 
                 deliveryDoors_AreOpening = 0;
 
-                glutTimerFunc(100, close_The_Delivery_Doors, 1);
+                if (entranceDoors_AreOpening == 1 && entrance_Door_Angle < 60) {
+
+                    glutTimerFunc(100, open_The_Entrance_Doors_And_Close_The_Delivery_Doors, 1);
+
+                    printf(" *                          Animation started - Entrance doors are opening                         *\n");
+
+                } else if (entranceDoors_AreOpening == 0 && entrance_Door_Angle > 0) {
+
+                    glutTimerFunc(100, close_The_Doors, 1);
+
+                    printf(" *                          Animation started - Entrance doors are closing                         *\n");
+
+                } else {
+
+                    glutTimerFunc(100, close_The_Delivery_Doors, 1);
+
+                }
 
                 printf(" *                          Animation started - Delivery doors are closing                         *\n");
 
