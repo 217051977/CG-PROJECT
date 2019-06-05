@@ -29,7 +29,8 @@ void draw_Castle_Road(GLfloat xSize, GLfloat ySize) {
      * */
     glPushMatrix();
     glScalef(xSize, ySize, 0);
-    create_Bot_Face();
+	glTranslatef(0, 0, -1);
+	create_Top_Face();
     glPopMatrix();
 
 }

@@ -1211,7 +1211,8 @@ void draw_Castle_Courtyard() {
 //	make the courtyard limit (ground)
     glPushMatrix();
     glScalef(190, 65, 1);
-    create_Bot_Face();
+	glTranslatef(0, 0, -1);
+    create_Top_Face();
     glPopMatrix();
 
     /*
@@ -1236,6 +1237,7 @@ void draw_Castle_Courtyard() {
      * */
     glTranslatef(94.5, 29.5, 0);
 
+	glColor3f(0, 0, 0);									//CW mas tem de ser CCW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //	make the outside part of the roundabout
     glBegin(GL_LINE_LOOP);
     draw_Circle(0, 2 * PI, 7.5, 7.5, 0);
@@ -1247,8 +1249,7 @@ void draw_Castle_Courtyard() {
     draw_Circle(0, 2 * PI, 2.5, 2.5, 0);
     draw_Circle(0, 2 * PI, 2.5, 2.5, 10);
     glEnd();
-
-    glPopMatrix();
+	glPopMatrix();
 
     /*
      * make the stores
@@ -1378,7 +1379,8 @@ void draw_Castle_Courtyard() {
 //			make the courtyard road (1 square)
             glPushMatrix();
             glScalef(5, 5, 1);
-            create_Bot_Face();
+			glTranslatef(0, 0, -1);
+			create_Top_Face();
             glPopMatrix();
 
             glPopMatrix();
@@ -1398,7 +1400,8 @@ void draw_Castle_Courtyard() {
 //			make the courtyard road (1 square)
             glPushMatrix();
             glScalef(5, 5, 1);
-            create_Bot_Face();
+			glTranslatef(0, 0, -1);
+			create_Top_Face();
             glPopMatrix();
 
             glPopMatrix();
@@ -1497,8 +1500,7 @@ void draw_Castle_Buildings() {
      * */
     glPushMatrix();
     glScalef(60, 60, 70);
-    draw_6_Faces_Figure();
-    glPopMatrix();
+    draw_6_Faces_Figure();	
     glPopMatrix();
 
     glPopMatrix();
@@ -1514,6 +1516,8 @@ void draw_Castle_Buildings() {
 //castle old tower
 void draw_Castle_OldTower(/*values*/) {
 
+	glPushMatrix();
+	glColor3f(0, 0, 0);
     /*
      * save the matrix status
      * translate the figure
@@ -1530,6 +1534,8 @@ void draw_Castle_OldTower(/*values*/) {
     draw_Castle_OldTower_Central(20);
     draw_Castle_OldTower_Right(20);
     glPopMatrix();
+
+	glPopMatrix();
 
 }
 

@@ -52,10 +52,7 @@ void draw_6_Faces_Figure() {
      * */
 
     //top
-    glPushMatrix();
-    glTranslatef(0, 0, 1);
-    create_Bot_Face();
-    glPopMatrix();
+    create_Top_Face();
 
     //bot
     create_Bot_Face();
@@ -64,19 +61,13 @@ void draw_6_Faces_Figure() {
     create_Front_Face();
 
     //back
-    glPushMatrix();
-    glTranslatef(0, 1, 0);
-    create_Front_Face();
-    glPopMatrix();
+	create_Back_Face();
 
     //left
     create_Left_Face();
 
     //right
-    glPushMatrix();
-    glTranslatef(1, 0, 0);
-    create_Left_Face();
-    glPopMatrix();
+    create_Right_Face();
 
 }
 
@@ -134,25 +125,13 @@ void draw_Pyramidal_Figure() {
 	//bot
 	create_Bot_Face();
 
-	create_Pyramidal_Face();
+	create_Front_Pyramidal_Face();
 
-	glPushMatrix();
-	glTranslatef(1, 0, 0);
-	glRotatef(90, 0, 0, 1);
-	create_Pyramidal_Face();
-	glPopMatrix();
+	create_Right_Pyramidal_Face();
 
-	glPushMatrix();
-	glTranslatef(1, 1, 0);
-	glRotatef(180, 0, 0, 1);
-	create_Pyramidal_Face();
-	glPopMatrix();
+	create_Back_Pyramidal_Face();
 
-	glPushMatrix();
-	glTranslatef(0, 1, 0);
-	glRotatef(-90, 0, 0, 1);
-	create_Pyramidal_Face();
-	glPopMatrix();
+	create_Left_Pyramidal_Face();
 
 }
 
@@ -207,69 +186,40 @@ void draw_Bridge_Border_Bot_Detail_Figure() {
 }
 
 void create_Left_Bot_Body_Left_Tower_Figure() {
+	
+    create_Left___Bot_Body_Left_Tower_Face();
+	
+	create_Front___Bot_Body_Left_Tower_Face();
 
-    create_Left_Bot_Body_Left_Tower_Face();
+	create_Right___Bot_Body_Left_Tower_Face();
 
-    glPushMatrix();
-    glRotatef(-90, 0, 0, 1);
-    create_Left_Bot_Body_Left_Tower_Face();
-    glPopMatrix();
-
-    glPushMatrix();
-    glTranslatef(1, 0, 0);
-    create_Left_Bot_Body_Left_Tower_Face();
-    glPopMatrix();
-
-    glPushMatrix();
-    glTranslatef(0, 1, 0);
-    glRotatef(-90, 0, 0, 1);
-    create_Left_Bot_Body_Left_Tower_Face();
-    glPopMatrix();
+	create_Back___Bot_Body_Left_Tower_Face();
 
     create_Bot_Face();
-
-    create_Top_Bot_Body_Left_Tower_Face();
 
 }
 
 void create_Left_Top_Body_Left_Tower_Figure() {
 
-    create_Left_Top_Body_Left_Tower_Face();
+    create_Left___Top_Body_Left_Tower_Face();
 
-    glPushMatrix();
-    glRotatef(-90, 0, 0, 1);
-    create_Left_Top_Body_Left_Tower_Face();
-    glPopMatrix();
+	create_Front___Top_Body_Left_Tower_Face();
 
-    glPushMatrix();
-    glTranslatef(1, 0, 0);
-    create_Left_Top_Body_Left_Tower_Face();
-    glPopMatrix();
+	create_Right___Top_Body_Left_Tower_Face();
 
-    glPushMatrix();
-    glTranslatef(0, 1, 0);
-    glRotatef(-90, 0, 0, 1);
-    create_Left_Top_Body_Left_Tower_Face();
-    glPopMatrix();
+	create_Back___Top_Body_Left_Tower_Face();
 
-    glPushMatrix();
-    create_Bot_Top_Body_Left_Tower_Face();
-    glPopMatrix();
-
-    glPushMatrix();
-    glTranslatef(0, 0, 1);
-    create_Bot_Face();
-    glPopMatrix();
+    create_Top_Face();
 
 }
 
 void create_Left_Ruined_Tower_Bot_Figure() {
 
-    create_Left_Ruined_Tower_Bot_Front_Face();
-    create_Left_Ruined_Tower_Bot_Left_Face();
-    create_Left_Ruined_Tower_Bot_Right_Face();
-    create_Left_Ruined_Tower_Bot_Back_Face();
-    create_Left_Ruined_Tower_Bot_Bot_Face();
+    create_Left_Ruined_Tower_Bot___Front_Face();
+    create_Left_Ruined_Tower_Bot___Back_Face();
+    create_Left_Ruined_Tower_Bot___Left_Face();
+    create_Left_Ruined_Tower_Bot___Right_Face();
+    create_Left_Ruined_Tower_Bot___Bot_Face();
 
 }
 

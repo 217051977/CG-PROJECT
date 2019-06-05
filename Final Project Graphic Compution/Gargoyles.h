@@ -22,7 +22,8 @@ void draw_Gargoyles() {
     //sets the beginning of the inside draw part
     glBegin(GL_LINE_LOOP);
 
-    create_Bot_Face();
+	glTranslatef(0, 0, -1);
+	create_Top_Face();
 
     //sets the ending of the draw
     glEnd();
