@@ -215,11 +215,13 @@ void create_Left_Top_Body_Left_Tower_Figure() {
 
 void create_Left_Ruined_Tower_Bot_Figure() {
 
-    create_Left_Ruined_Tower_Bot___Front_Face();
-    create_Left_Ruined_Tower_Bot___Back_Face();
+    //create_Left_Ruined_Tower_Bot___Front_Face();
+    //create_Left_Ruined_Tower_Bot___Back_Face();
     create_Left_Ruined_Tower_Bot___Left_Face();
-    create_Left_Ruined_Tower_Bot___Right_Face();
+    //create_Left_Ruined_Tower_Bot___Right_Face();
+	glColor3f(1, 0, 0);
     create_Left_Ruined_Tower_Bot___Bot_Face();
+	glColor3f(0, 0, 0);
 
 }
 
