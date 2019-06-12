@@ -107,7 +107,7 @@ static int entranceDoors_AreOpening = 0;
 static int deliveryDoors_AreOpening = 0;
 
 
-static int perspective_Or_Animation = /*-4*/-8;
+static int perspective_Or_Animation = /*-4*/-6;
 static int lookAt = 0;
 static int scene_To_print = /*0*/1;
 

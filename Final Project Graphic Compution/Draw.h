@@ -250,13 +250,13 @@ void draw_LeftTower() {
 /**********************************************************************/
 //left tower ruined
 void draw_LeftTower_Ruined() {
-	/*
+
     glPushMatrix();
     glTranslatef(X_INITIAL + 110, Y_INITIAL + 25, 85);
     glScalef(30, 30, 50);
     draw_LeftTower_Body_Top();
     glPopMatrix();
-	*/
+
     glPushMatrix();
     glTranslatef(X_INITIAL + 110, Y_INITIAL + 25, 35);
     glScalef(30, 30, 50);

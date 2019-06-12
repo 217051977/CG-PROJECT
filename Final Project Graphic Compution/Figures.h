@@ -215,26 +215,28 @@ void create_Left_Top_Body_Left_Tower_Figure() {
 
 void create_Left_Ruined_Tower_Bot_Figure() {
 
-    //create_Left_Ruined_Tower_Bot___Front_Face();
-    //create_Left_Ruined_Tower_Bot___Back_Face();
+    create_Left_Ruined_Tower_Bot___Front_Face();
+    create_Left_Ruined_Tower_Bot___Back_Face();
     create_Left_Ruined_Tower_Bot___Left_Face();
-    //create_Left_Ruined_Tower_Bot___Right_Face();
-	glColor3f(1, 0, 0);
+    create_Left_Ruined_Tower_Bot___Right_Face();
     create_Left_Ruined_Tower_Bot___Bot_Face();
-	glColor3f(0, 0, 0);
 
 }
 
 void create_Left_Door() {
 
 //  front
-    create_Gate_Left_Door_Front_Face();
+	glColor3f(0, 0, 1);
+	create_Gate_Left_Door_Front_Face();
+	glColor3f(0, 0, 0);
 
 //  back
+	glColor3f(1, 0, 0);
     glPushMatrix();
     glTranslatef(0, 1, 0);
     create_Gate_Left_Door_Front_Face();
     glPopMatrix();
+	glColor3f(0, 0, 0);
 
 //  top
     create_Gate_Left_Door_Top_Face();
@@ -263,13 +265,17 @@ void create_Left_Door() {
 void create_Right_Door() {
 
 //  front
-    create_Gate_Right_Door_Front_Face();
+	glColor3f(0, 0, 1);
+	create_Gate_Right_Door_Front_Face();
+	glColor3f(0, 0, 0);
 
-//  back
-    glPushMatrix();
-    glTranslatef(0, 1, 0);
-    create_Gate_Right_Door_Front_Face();
-    glPopMatrix();
+	//  back
+	glColor3f(1, 0, 0);
+	glPushMatrix();
+	glTranslatef(0, 1, 0);
+	create_Gate_Right_Door_Front_Face();
+	glPopMatrix();
+	glColor3f(0, 0, 0);
 
 //  top
     create_Gate_Right_Door_Top_Face();

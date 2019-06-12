@@ -21,7 +21,7 @@ int main(int argc, char **argv) {
 	//initialize the glut
 	glutInit(&argc, argv);
 	//set the display mode
-	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
+	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
 	//set the size of the OpenGL window that it will be open
 	glutInitWindowSize(X_WINDOW_SIZE, Y_WINDOW_SIZE);
 	//sets the position of the window based on the top left corner

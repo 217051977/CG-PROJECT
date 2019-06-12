@@ -22,4 +22,6 @@ void setup(void) {
     //set the color of the background
     glClearColor(B_RED, B_GREEN, B_BLUE, B_ALPHA);
 
+	glEnable(GL_DEPTH_TEST);
+
 }
