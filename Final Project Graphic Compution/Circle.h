@@ -28,11 +28,7 @@ void draw_Circle(GLfloat starAngle, GLfloat finalAngle, GLfloat xSize, GLfloat y
          *      height for the z axis
          *              angle is the value fo the current angle set by this loop (for)
          * */
-		glBegin(GL_TRIANGLE_STRIP);
-		glVertex3f(xSize * cosf(angle), ySize * sinf(angle), height);
-		glVertex3f(xSize * cosf(angle + 0.0001), ySize * sinf(angle + 0.0001), height);
-		glVertex3f(0, 0, 0);
-		glEnd();
+        glVertex3f(xSize * cosf(angle), ySize * sinf(angle), height);
 
     }
 
@@ -50,11 +46,7 @@ void draw_Inverted_Circle(GLfloat starAngle, GLfloat finalAngle, GLfloat xSize, 
          *      height for the z axis
          *              angle is the value fo the current angle set by this loop (for)
          * */
-		glBegin(GL_TRIANGLE_STRIP);
         glVertex3f(xSize * cosf(angle), ySize * sinf(angle), height);
-		glVertex3f(xSize * cosf(angle - 0.0001), ySize * sinf(angle - 0.0001), height);
-		glVertex3f(0, 0, 0);
-		glEnd();
 
     }
 

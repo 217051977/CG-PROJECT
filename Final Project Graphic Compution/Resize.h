@@ -56,6 +56,9 @@ void visualization_Manager() {
 
     setPerspectives(perspective_Or_Animation);
 
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+
 }
 
 // reshapes the OpenGL window

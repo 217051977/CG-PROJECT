@@ -115,6 +115,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="getbmp.cpp" />
     <ClCompile Include="__Castle_Start__.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -131,6 +132,7 @@
     <ClInclude Include="Change_View_And_Scene.h" />
     <ClInclude Include="Draw.h" />
     <ClInclude Include="DrawScene.h" />
+    <ClInclude Include="getbmp.h" />
     <ClInclude Include="KeyInput.h" />
     <ClInclude Include="Main.h" />
     <ClInclude Include="Menu.h" />
@@ -197,6 +199,7 @@
     <ClInclude Include="Set_LookAt.h" />
     <ClInclude Include="Stores.h" />
     <ClInclude Include="SubMenu.h" />
+    <ClInclude Include="Texture.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

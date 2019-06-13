@@ -223,6 +223,12 @@
     <Filter Include="Header Files\DirectFunctions\Perspectives\SetPerspective\3D\Regular">
       <UniqueIdentifier>{962aac22-e0d4-455a-9a8f-a558e6476c36}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Textures">
+      <UniqueIdentifier>{94317e8e-0836-4df5-ab8f-e6613c63f05b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\getBMP">
+      <UniqueIdentifier>{d6a7af7c-0b09-48f5-9e91-900f16aff791}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RightTower.h">
@@ -462,10 +468,19 @@
     <ClInclude Include="Animation_Open_The_Delivery_Doors.h">
       <Filter>Header Files\DirectFunctions\Animations</Filter>
     </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Resource Files\Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="getbmp.h">
+      <Filter>Resource Files\getBMP</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="__Castle_Start__.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="getbmp.cpp">
+      <Filter>Resource Files\getBMP</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

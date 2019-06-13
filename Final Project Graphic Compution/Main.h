@@ -36,6 +36,7 @@ int main(int argc, char **argv) {
 	glutReshapeFunc(resize);
 	//set the function that it will receive from the keyboard
 	glutKeyboardFunc(keyInput);
+	glutSpecialFunc(specialKeyInput);
 
     create_Menu();
 

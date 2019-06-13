@@ -24,13 +24,7 @@ void draw_ArcBridge_Platform() {
 
 void draw_ArcBridge_Border() {
 
-    draw_Bridge_Border_Figure();
-
-}
-
-void draw_Bridge_Border_Bot_Detail() {
-
-    draw_Bridge_Border_Bot_Detail_Figure();
+    draw_6_Faces_Figure();
 
 }
 

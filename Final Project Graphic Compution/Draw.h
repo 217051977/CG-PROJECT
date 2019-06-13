@@ -843,18 +843,6 @@ void mount_ArcBridge(){
     draw_ArcBridge_Border();
     glPopMatrix();
 
-    glPushMatrix();
-    glTranslatef(0, 0, -30);
-    glScalef(50, 5, 10);
-    draw_Bridge_Border_Bot_Detail();
-    glPopMatrix();
-
-    glPushMatrix();
-    glTranslatef(0, 15, -30);
-    glScalef(50, 5, 10);
-    draw_Bridge_Border_Bot_Detail();
-    glPopMatrix();
-
 }
 
 //arc bridge

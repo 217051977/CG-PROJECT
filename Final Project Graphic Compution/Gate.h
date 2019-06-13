@@ -59,8 +59,8 @@ void draw_Entrance_Gate_Left_Door(float angle) {
 
     glPushMatrix();
     glRotatef(angle, 0, 0, 1);
-    glScalef(100, 2.5, 100);
-    create_Left_Door();
+    glScalef(50, 2.5, 100);
+    draw_6_Faces_Figure();
     glPopMatrix();
 
 }
@@ -70,9 +70,9 @@ void draw_Entrance_Gate_Right_Door(float angle) {
     glPushMatrix();
     glTranslatef(100, 0, 0);
     glRotatef(angle, 0, 0, 1);
-    glTranslatef(-100, 0, 0);
-    glScalef(100, 2.5, 100);
-    create_Right_Door();
+    glTranslatef(-50, 0, 0);
+    glScalef(50, 2.5, 100);
+    draw_6_Faces_Figure();
     glPopMatrix();
 
 }
@@ -81,8 +81,8 @@ void draw_Delivery_Gate_Left_Door(float angle) {
 
     glPushMatrix();
     glRotatef(angle, 0, 0, 1);
-    glScalef(26, 2.5, 75);
-    create_Left_Door();
+    glScalef(13, 1.5, 75);
+    draw_6_Faces_Figure();
     glPopMatrix();
 
 }
@@ -92,9 +92,9 @@ void draw_Delivery_Gate_Right_Door(float angle) {
     glPushMatrix();
     glTranslatef(26, 0, 0);
     glRotatef(angle, 0, 0, 1);
-    glTranslatef(-26, 0, 0);
-    glScalef(26, 2.5, 75);
-    create_Right_Door();
+    glTranslatef(-13, 0, 0);
+    glScalef(13, 1.5, 75);
+    draw_6_Faces_Figure();
     glPopMatrix();
 
 }

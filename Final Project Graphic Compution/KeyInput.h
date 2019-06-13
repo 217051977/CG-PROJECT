@@ -213,3 +213,60 @@ void keyInput(unsigned char key, int x, int y) {
     }
 
 }
+
+void specialKeyInput(int key, int x, int y)
+{
+	if (key == GLUT_KEY_DOWN)
+	{
+		if (draw_angleUp = -360) {
+
+			draw_angleUp = 0;
+
+		}
+		else {
+
+			draw_angleUp--;
+
+		}
+	}
+	if (key == GLUT_KEY_UP)
+	{
+		if (draw_angleUp = 360) {
+
+			draw_angleUp = 0;
+
+		}
+		else {
+
+			draw_angleUp++;
+
+		}
+	}
+	if (key == GLUT_KEY_LEFT)
+	{
+		if (draw_angleRight = -360) {
+
+			draw_angleRight = 0;
+
+		}
+		else {
+
+			draw_angleRight--;
+
+		}
+	}
+	if (key == GLUT_KEY_RIGHT)
+	{
+		if (draw_angleRight = 360) {
+
+			draw_angleRight = 0;
+
+		}
+		else {
+
+			draw_angleRight++;
+
+		}
+	}
+	glutPostRedisplay();
+}

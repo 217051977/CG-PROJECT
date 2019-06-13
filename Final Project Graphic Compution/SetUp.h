@@ -24,4 +24,15 @@ void setup(void) {
 
 	glEnable(GL_DEPTH_TEST);
 
+	glGenTextures(2, texture);
+
+	loadExternalTextures();
+
+	glEnable(GL_TEXTURE_2D);
+
+	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
+
+	glEnable(GL_CULL_FACE);
+	glCullFace(GL_BACK);
+
 }

@@ -148,19 +148,18 @@ void castle() {
 // Drawing routine.
 void drawScene(void) {
 
-    glMatrixMode(GL_MODELVIEW);
+	//set the screen to the background color
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	glFrontFace(GL_CW);
-
 	glPolygonMode(GL_FRONT, GL_FILL);
 	glPolygonMode(GL_BACK, GL_LINE);
 
 	glLoadIdentity();
 
-    set_LookAt(perspective_Or_Animation);
-
-    //set the screen to the background color
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	set_LookAt(perspective_Or_Animation);
+	glRotatef(draw_angleUp, 1, 0, 0);
+	glRotatef(draw_angleUp, 0, 0, 1);
 
     //set the next draw color
     // RBG (Red Blue Green) -> (0-1, 0-1, 0-1)
