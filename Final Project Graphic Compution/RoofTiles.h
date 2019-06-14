@@ -40,6 +40,7 @@ void draw_WallEdification_Roof(GLfloat width, GLfloat height) {
 			glPushMatrix();
 			glTranslatef(h, v, 0);
 			glScalef(2.5, 2.5, 0.5);
+
 			draw_6_Faces_Figure();
 			glPopMatrix();
 

@@ -52,22 +52,22 @@ void draw_6_Faces_Figure() {
      * */
 
     //top
-    create_Top_Face();
+    create_Top_Face(0, 0, 1, 1);
 
-    //bot
-    create_Bot_Face();
+	//bot
+	create_Bot_Face(0, 0, 1, 1);
 
-    //front
-    create_Front_Face();
+	//front
+	create_Front_Face(0, 0, 1, 1);
 
-    //back
-	create_Back_Face();
+	//back
+	create_Back_Face(0, 0, 1, 1);
 
-    //left
-    create_Left_Face();
+	//left
+	create_Left_Face(0, 0, 1, 1);
 
-    //right
-    create_Right_Face();
+	//right
+	create_Right_Face(0, 0, 1, 1);
 
 }
 
@@ -123,7 +123,7 @@ void draw_Pyramidal_Figure() {
 	 * */
 
 	//bot
-	create_Bot_Face();
+	create_Bot_Face(0, 0, 1, 1);
 
 	create_Front_Pyramidal_Face();
 
@@ -147,7 +147,7 @@ void create_Left_Bot_Body_Left_Tower_Figure() {
 
 	create_Back___Bot_Body_Left_Tower_Face();
 
-    create_Bot_Face();
+    create_Bot_Face(0, 0, 1, 1);
 
 }
 
@@ -167,7 +167,7 @@ void create_Left_Top_Body_Left_Tower_Figure() {
 
 	glBindTexture(GL_TEXTURE_2D, texture[3]);
 
-    create_Top_Face();
+    create_Top_Face(0, 0, 1, 1);
 
 	glBindTexture(GL_TEXTURE_2D, 0);
 

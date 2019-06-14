@@ -926,7 +926,7 @@ void draw_MiddleTowers_connection() {
 			glPushMatrix();
 			glTranslatef(x, y, 0);
 			glScalef(5, 5, 1);
-			create_Top_Face();
+			create_Top_Face(0, 0, 1, 1);
 			glPopMatrix();
 
 		}
@@ -942,7 +942,7 @@ void draw_MiddleTowers_connection() {
 			glPushMatrix();
 			glTranslatef(x, y, 0);
 			glScalef(5, 5, 1);
-			create_Top_Face();
+			create_Top_Face(0, 0, 1, 1);
 			glPopMatrix();
 
 		}
@@ -1332,29 +1332,41 @@ void draw_Castle_Courtyard() {
     glPushMatrix();
     glTranslatef(X_INITIAL + 177.5, Y_INITIAL + 230, 0);
 
-    draw_Store(10, 32);
+    draw_Store_Vertical(10, 32, 12, 2, 0.25);
 
     glTranslatef(10, 22, 0);
 
-    draw_Store(30, 10);
+	draw_Store_Horizontal(30, 10, 6, 4, 0);
 
     glTranslatef(10, -32, 0);
-    draw_Store(30, 20);
+	draw_Store_Vertical(30, 20, 8, 6, 0.35);
 
     glTranslatef(-10, -20, 0);
-    draw_Store(40, 10);
+	glPushMatrix();
+	glTranslatef(40, 10, 0);
+	glRotatef(180, 0, 0, 1);
+	draw_Store_Horizontal(40, 10, 8, 4, 0.25);
+	glPopMatrix();
 
-    glTranslatef(110, 0, 0);
-    draw_Store(20, 40);
+	glTranslatef(110, 0, 0);
+	glPushMatrix();
+	glTranslatef(20, 40, 0);
+	glRotatef(180, 0, 0, 1);
+	draw_Store_Vertical(20, 40, 14, 4, 0.25);
+	glPopMatrix();
 
-    glTranslatef(30, 0, 0);
-    draw_Store(20, 20);
+	glTranslatef(30, 0, 0);
+	draw_Store_Horizontal(20, 20, 4, 8, 0.25);
 
-    glTranslatef(20, 30, 0);
-    draw_Store(12, 32);
+	glTranslatef(20, 30, 0);
+	glPushMatrix();
+	glTranslatef(12, 32, 0);
+	glRotatef(180, 0, 0, 1);
+	draw_Store_Vertical(12, 32, 12, 2, 0.25);
+	glPopMatrix();
 
-    glTranslatef(-50, 22, 0);
-    draw_Store(40, 10);
+	glTranslatef(-50, 22, 0);
+	draw_Store_Horizontal(40, 10, 8, 4, 0.25);
     glPopMatrix();
 
     /*
@@ -1417,7 +1429,7 @@ void draw_Castle_Courtyard() {
             glPushMatrix();
             glScalef(5, 5, 1);
 			glTranslatef(0, 0, -1);
-			create_Top_Face();
+			create_Top_Face(0, 0, 1, 1);
             glPopMatrix();
 
             glPopMatrix();
@@ -1460,16 +1472,21 @@ void draw_Castle_Hallway() {
      * */
     glPushMatrix();
     glTranslatef(X_INITIAL + 333.5, Y_INITIAL + 265, 0);
-    draw_Hallway_Section(30, 200);
 
-    glTranslatef(-130, 170, 0);
-    draw_Hallway_Section(130, 30);
+	glPushMatrix();
+	glTranslatef(30, 200, 0);
+	glRotatef(-180, 0, 0, 1);
+	draw_Hallway_Section_Vertical();
+	glPopMatrix();
 
-    glTranslatef(0, -170, 0);
-    draw_Hallway_Section(130, 30);
+	glTranslatef(-130, 170, 0);
+	draw_Hallway_Section_Horizontal();
 
-    glTranslatef(-30, 0, 0);
-    draw_Hallway_Section(30, 200);
+	glTranslatef(0, -170, 0);
+	draw_Hallway_Section_Horizontal();
+
+	glTranslatef(-30, 0, 0);
+	draw_Hallway_Section_Vertical();
 
     glPopMatrix();
 
@@ -1518,6 +1535,8 @@ void draw_Castle_Buildings() {
     glScalef(60, 60, 70);
 
 	create_Main_Building();
+
+	glPopMatrix();
 
     glPopMatrix();
 

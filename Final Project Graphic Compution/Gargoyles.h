@@ -23,7 +23,7 @@ void draw_Gargoyles() {
     glBegin(GL_LINE_LOOP);
 
 	glTranslatef(0, 0, -1);
-	create_Top_Face();
+	create_Top_Face(0, 0, 1, 1);
 
     //sets the ending of the draw
     glEnd();

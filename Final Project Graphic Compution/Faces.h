@@ -215,15 +215,15 @@ void create_Right___Bot_Body_Left_Tower_Face() {
 }
 /**********************************************************************************************************************/
 //CW
-void create_Front_Face() {
+void create_Front_Face(float xI, float yI, float xF, float yF) {
 
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
 
-	glTexCoord2f(0, 0); glVertex3f(0, 0, 0);
-	glTexCoord2f(0, 1); glVertex3f(0, 0, 1);
-	glTexCoord2f(1, 1); glVertex3f(1, 0, 1);
-	glTexCoord2f(1, 0); glVertex3f(1, 0, 0);
+	glTexCoord2f(xI, yI); glVertex3f(0, 0, 0);
+	glTexCoord2f(xI, yF); glVertex3f(0, 0, 1);
+	glTexCoord2f(xF, yF); glVertex3f(1, 0, 1);
+	glTexCoord2f(xF, yI); glVertex3f(1, 0, 0);
 
 	//	sets the ending of the draw connecting the first vertex draw with the last
 	glEnd();
@@ -231,15 +231,15 @@ void create_Front_Face() {
 }
 
 //CCW
-void create_Back_Face() {
+void create_Back_Face(float xI, float yI, float xF, float yF) {
 
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
 
-	glTexCoord2f(0, 0); glVertex3f(0, 1, 0);
-	glTexCoord2f(0, 1); glVertex3f(1, 1, 0);
-	glTexCoord2f(1, 1); glVertex3f(1, 1, 1);
-	glTexCoord2f(1, 0); glVertex3f(0, 1, 1);
+	glTexCoord2f(xI, yI); glVertex3f(1, 1, 0);
+	glTexCoord2f(xI, yF); glVertex3f(1, 1, 1);
+	glTexCoord2f(xF, yF); glVertex3f(0, 1, 1);
+	glTexCoord2f(xF, yI); glVertex3f(0, 1, 0);
 
 	//	sets the ending of the draw connecting the first vertex draw with the last
 	glEnd();
@@ -247,15 +247,15 @@ void create_Back_Face() {
 }
 
 //CCW
-void create_Bot_Face() {
+void create_Bot_Face(float xI, float yI, float xF, float yF) {
 
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
 
-	glTexCoord2f(0, 0); glVertex3f(0, 0, 0);
-	glTexCoord2f(0, 1); glVertex3f(1, 0, 0);
-	glTexCoord2f(1, 1); glVertex3f(1, 1, 0);
-	glTexCoord2f(1, 0); glVertex3f(0, 1, 0);
+	glTexCoord2f(xI, yI); glVertex3f(0, 0, 0);
+	glTexCoord2f(xI, yF); glVertex3f(1, 0, 0);
+	glTexCoord2f(xF, yF); glVertex3f(1, 1, 0);
+	glTexCoord2f(xF, yI); glVertex3f(0, 1, 0);
 
 	//	sets the ending of the draw connecting the first vertex draw with the last
 	glEnd();
@@ -263,15 +263,15 @@ void create_Bot_Face() {
 }
 
 //CW
-void create_Top_Face() {
+void create_Top_Face(float xI, float yI, float xF, float yF) {
 
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
 
-	glTexCoord2f(0, 0); glVertex3f(0, 0, 1);
-	glTexCoord2f(0, 1); glVertex3f(0, 1, 1);
-	glTexCoord2f(1, 1); glVertex3f(1, 1, 1);
-	glTexCoord2f(1, 0); glVertex3f(1, 0, 1);
+	glTexCoord2f(xI, yI); glVertex3f(0, 0, 1);
+	glTexCoord2f(xI, yF); glVertex3f(0, 1, 1);
+	glTexCoord2f(xF, yF); glVertex3f(1, 1, 1);
+	glTexCoord2f(xF, yI); glVertex3f(1, 0, 1);
 
 	//	sets the ending of the draw connecting the first vertex draw with the last
 	glEnd();
@@ -279,15 +279,15 @@ void create_Top_Face() {
 }
 
 //CW
-void create_Left_Face() {
+void create_Left_Face(float xI, float yI, float xF, float yF) {
 
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
 
-	glTexCoord2f(0, 0); glVertex3f(0, 0, 0);
-	glTexCoord2f(0, 1); glVertex3f(0, 1, 0);
-	glTexCoord2f(1, 1); glVertex3f(0, 1, 1);
-	glTexCoord2f(1, 0); glVertex3f(0, 0, 1);
+	glTexCoord2f(xI, yI); glVertex3f(0, 1, 0);
+	glTexCoord2f(xI, yF); glVertex3f(0, 1, 1);
+	glTexCoord2f(xF, yF); glVertex3f(0, 0, 1);
+	glTexCoord2f(xF, yI); glVertex3f(0, 0, 0);
 
 	//	sets the ending of the draw connecting the first vertex draw with the last
 	glEnd();
@@ -295,15 +295,15 @@ void create_Left_Face() {
 }
 
 //CCW
-void create_Right_Face() {
+void create_Right_Face(float xI, float yI, float xF, float yF) {
 
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
 
-	glTexCoord2f(0, 0); glVertex3f(1, 0, 0);
-	glTexCoord2f(0, 1); glVertex3f(1, 0, 1);
-	glTexCoord2f(1, 1); glVertex3f(1, 1, 1);
-	glTexCoord2f(1, 0); glVertex3f(1, 1, 0);
+	glTexCoord2f(xI, yI); glVertex3f(1, 0, 0);
+	glTexCoord2f(xI, yF); glVertex3f(1, 0, 1);
+	glTexCoord2f(xF, yF); glVertex3f(1, 1, 1);
+	glTexCoord2f(xF, yI); glVertex3f(1, 1, 0);
 
 	//	sets the ending of the draw connecting the first vertex draw with the last
 	glEnd();

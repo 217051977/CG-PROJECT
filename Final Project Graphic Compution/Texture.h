@@ -227,4 +227,104 @@ void loadExternalTextures() {
 
 	glBindTexture(GL_TEXTURE_2D, 0);
 
+	// Load the texture.
+	image[11] = getbmp("./Textures/Tower/RoofTiles.bmp");
+
+	// Activate texture index texture[11]. 
+	glBindTexture(GL_TEXTURE_2D, texture[11]);
+
+	// Set texture parameters for wrapping.
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+
+	// Set texture parameters for filtering.
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+
+	// Specify an image as the texture to be bound with the currently active texture index.
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, image[11]->sizeX, image[11]->sizeY, 0,
+		GL_RGBA, GL_UNSIGNED_BYTE, image[11]->data);
+
+	glBindTexture(GL_TEXTURE_2D, 0);
+
+	// Load the texture.
+	image[12] = getbmp("./Textures/Tower/Store_Wall_1.bmp");
+
+	// Activate texture index texture[12]. 
+	glBindTexture(GL_TEXTURE_2D, texture[12]);
+
+	// Set texture parameters for wrapping.
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+
+	// Set texture parameters for filtering.
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+
+	// Specify an image as the texture to be bound with the currently active texture index.
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, image[12]->sizeX, image[12]->sizeY, 0,
+		GL_RGBA, GL_UNSIGNED_BYTE, image[12]->data);
+
+	glBindTexture(GL_TEXTURE_2D, 0);
+
+	// Load the texture.
+	image[13] = getbmp("./Textures/Tower/Store_Wall_2.bmp");
+
+	// Activate texture index texture[13]. 
+	glBindTexture(GL_TEXTURE_2D, texture[13]);
+
+	// Set texture parameters for wrapping.
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+
+	// Set texture parameters for filtering.
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+
+	// Specify an image as the texture to be bound with the currently active texture index.
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, image[13]->sizeX, image[13]->sizeY, 0,
+		GL_RGBA, GL_UNSIGNED_BYTE, image[13]->data);
+
+	glBindTexture(GL_TEXTURE_2D, 0);
+
+	// Load the texture.
+	image[14] = getbmp("./Textures/Tower/Store_Wall_3.bmp");
+
+	// Activate texture index texture[14]. 
+	glBindTexture(GL_TEXTURE_2D, texture[14]);
+
+	// Set texture parameters for wrapping.
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+
+	// Set texture parameters for filtering.
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+
+	// Specify an image as the texture to be bound with the currently active texture index.
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, image[14]->sizeX, image[14]->sizeY, 0,
+		GL_RGBA, GL_UNSIGNED_BYTE, image[14]->data);
+
+	glBindTexture(GL_TEXTURE_2D, 0);
+
+	// Load the texture.
+	image[15] = getbmp("./Textures/Tower/Store_Door_1.bmp");
+
+	// Activate texture index texture[15]. 
+	glBindTexture(GL_TEXTURE_2D, texture[15]);
+
+	// Set texture parameters for wrapping.
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+
+	// Set texture parameters for filtering.
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+
+	// Specify an image as the texture to be bound with the currently active texture index.
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, image[15]->sizeX, image[15]->sizeY, 0,
+		GL_RGBA, GL_UNSIGNED_BYTE, image[15]->data);
+
+	glBindTexture(GL_TEXTURE_2D, 0);
+
 }

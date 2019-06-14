@@ -65,7 +65,7 @@ void draw_Castle_Road_Vertical_Core() {
 	glPushMatrix();
 	glScalef(30, 40, 0);
 	glTranslatef(0, 0, -1);
-	create_Top_Face();
+	create_Top_Face(0, 0, 1, 1);
 	glPopMatrix();
 
 }
@@ -150,7 +150,7 @@ void draw_Castle_Road_Horizontal_Core() {
 	glPushMatrix();
 	glScalef(35, 30, 0);
 	glTranslatef(0, 0, -1);
-	create_Top_Face();
+	create_Top_Face(0, 0, 1, 1);
 	glPopMatrix();
 
 }

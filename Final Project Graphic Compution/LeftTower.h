@@ -201,6 +201,6 @@ void draw_LeftTower_Crown_Spike() {
 //trapdoor
 void draw_LeftTower_Trapdoor() {
 
-    create_Top_Face();
+    create_Top_Face(0, 0, 1, 1);
 
 }
