@@ -24,7 +24,7 @@ void setup(void) {
 
 	glEnable(GL_DEPTH_TEST);
 
-	glGenTextures(2, texture);
+	glGenTextures(20, texture);
 
 	loadExternalTextures();
 

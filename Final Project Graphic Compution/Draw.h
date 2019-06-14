@@ -159,11 +159,17 @@ void draw_LeftTower() {
     draw_LeftTower_Body_Down();
     glPopMatrix();
 
+	glBindTexture(GL_TEXTURE_2D, 0);
+
     glPushMatrix();
     glTranslatef(0, 0, 85);
     glScalef(35, 35, 55);
     draw_LeftTower_Body_Top();
     glPopMatrix();
+
+	glBindTexture(GL_TEXTURE_2D, 0);
+
+	glBindTexture(GL_TEXTURE_2D, texture[3]);
 
 	glTranslatef(0, -5, 140);
 
@@ -177,6 +183,10 @@ void draw_LeftTower() {
 	glScalef(35, 5, 10);
 	draw_LeftTower_Crown();
 	glPopMatrix();
+
+	glBindTexture(GL_TEXTURE_2D, 0);
+
+	glBindTexture(GL_TEXTURE_2D, texture[0]);
 
 	glTranslatef(0, 0, 10);
 
@@ -202,24 +212,34 @@ void draw_LeftTower() {
 
 	}
 
+	glBindTexture(GL_TEXTURE_2D, 0);
+
+	glBindTexture(GL_TEXTURE_2D, texture[3]);
+
     glTranslatef(-5, 0, -10);
 
     glPushMatrix();
     glScalef(5, 45, 10);
-    draw_LeftTower_Crown();
+    draw_LeftTower_Crown_Y_Axis();
     glPopMatrix();
 
     glPushMatrix();
     glTranslatef(40, 0, 0);
     glScalef(5, 45, 10);
-    draw_LeftTower_Crown();
+    draw_LeftTower_Crown_Y_Axis();
     glPopMatrix();
+
+	glBindTexture(GL_TEXTURE_2D, 0);
+
+	glBindTexture(GL_TEXTURE_2D, texture[1]);
 
     glPushMatrix();
     glTranslatef(10, 10, 0);
     glScalef(10, 10, 1);
     draw_LeftTower_Trapdoor();
     glPopMatrix();
+
+	glBindTexture(GL_TEXTURE_2D, texture[0]);
 
     glTranslatef(0, 0, 10);
 
@@ -242,6 +262,8 @@ void draw_LeftTower() {
         }
 
     }
+
+	glBindTexture(GL_TEXTURE_2D, 0);
 	
     glPopMatrix();
 
@@ -612,6 +634,8 @@ void draw_RightTower() {
 	 * draw_LeftTower_Crown_Spikes_Part()
 	 * every vertex non modified keeps the same as it was, but the modified ones are changed
 	 * */
+
+	glBindTexture(GL_TEXTURE_2D, texture[0]);
 	glPushMatrix();
     glTranslatef(X_INITIAL + 400, Y_INITIAL + 17, 0);
 
@@ -825,6 +849,8 @@ void draw_RightTower() {
 
 void mount_ArcBridge(){
 
+	glBindTexture(GL_TEXTURE_2D, texture[2]);
+
     glPushMatrix();
     glTranslatef(0, 5, 0);
     glScalef(50, 10, 10);
@@ -863,46 +889,6 @@ void draw_ArcBridge() {
 
     glPopMatrix();
 
-    /*
-     * save the matrix status
-     * translate the figure
-     *      X_INITIAL + 60 units for the x value
-     *      Y_INITIAL + 30 units for the y value
-     * draw_ArcBridge_Border()
-     * translate the figure
-     *      15 units for the y value
-     * draw_ArcBridge_Border()
-     * translate the figure
-     *      80 units for the x value
-     *      -15 units for the y value
-     * draw_ArcBridge_Border()
-     * translate the figure
-     *      15 units for the y value
-     * draw_ArcBridge_Border()
-     * translate the figure
-     *      210 units for the x value
-     *      -15 units for the y value
-     * draw_ArcBridge_Border()
-     * translate the figure
-     *      15 units for the y value
-     * draw_ArcBridge_Border()
-     * every vertex non modified keeps the same as it was, but the modified ones are changed
-     * *//*
-    glPushMatrix();
-    glTranslatef(X_INITIAL + 60, Y_INITIAL + 30, 0);
-    draw_ArcBridge_Border();
-    glTranslatef(0, 15, 0);
-    draw_ArcBridge_Border();
-    glTranslatef(80, -15, 0);
-    draw_ArcBridge_Border();
-    glTranslatef(0, 15, 0);
-    draw_ArcBridge_Border();
-    glTranslatef(210, -15, 0);
-    draw_ArcBridge_Border();
-    glTranslatef(0, 15, 0);
-    draw_ArcBridge_Border();
-    glPopMatrix();
-*/
 }
 
 /***********************************************************************************************************************
@@ -926,11 +912,43 @@ void draw_MiddleTowers_connection() {
      * draw_WallEdification_Roof()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
+
+	glBindTexture(GL_TEXTURE_2D, 0);
+
+	glBindTexture(GL_TEXTURE_2D, texture[5]);
     glPushMatrix();
     glTranslatef(X_INITIAL + 195, Y_INITIAL + 55, 0);
-    draw_WallEdification_Roof(150, 25);
-    glTranslatef(25, -20, 0);
-    draw_WallEdification_Roof(100, 20);
+
+	for (int y = 0; y < 25; y += 5) {
+
+		for (int x = 0; x < 150; x += 5) {
+
+			glPushMatrix();
+			glTranslatef(x, y, 0);
+			glScalef(5, 5, 1);
+			create_Top_Face();
+			glPopMatrix();
+
+		}
+
+	}
+
+	glTranslatef(25, -20, 0);
+
+	for (int y = 0; y < 20; y += 5) {
+
+		for (int x = 0; x < 100; x += 5) {
+
+			glPushMatrix();
+			glTranslatef(x, y, 0);
+			glScalef(5, 5, 1);
+			create_Top_Face();
+			glPopMatrix();
+
+		}
+
+	}
+
     glPopMatrix();
 
 }
@@ -970,16 +988,27 @@ void draw_Gate_Entrance() {
      * draw_Flag()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
+
+	glBindTexture(GL_TEXTURE_2D, 0);
+
+	glBindTexture(GL_TEXTURE_2D, texture[1]);
+
     glPushMatrix();
     glTranslatef(X_INITIAL + 220, Y_INITIAL + 30, 0);
     draw_Entrance_Gate_Left_Door(entrance_Door_Angle);
     draw_Entrance_Gate_Right_Door(-entrance_Door_Angle);
+
+	glBindTexture(GL_TEXTURE_2D, 0);
+
+	glBindTexture(GL_TEXTURE_2D, texture[2]);
 
     glTranslatef(-5, -10, 0);
     draw_Flag_Holder();
 
     glTranslatef(100, 0, 0);
     draw_Flag_Holder();
+
+	glBindTexture(GL_TEXTURE_2D, 0);
 
     glTranslatef(-93, 2.5, 0);
     draw_Flag();
@@ -1026,22 +1055,22 @@ void draw_EntranceGargoyles() {
      *
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
-    glPushMatrix();
-    glTranslatef(X_INITIAL + 220, Y_INITIAL - 10, 0);
-
-    glPushMatrix();
-    glScalef(10, 10 , 10);
-    draw_Gargoyles();
-    glPopMatrix();
-
-    glTranslatef(90, 0, 0);
-
-    glPushMatrix();
-    glScalef(10, 10 , 10);
-    draw_Gargoyles();
-    glPopMatrix();
-
-    glPopMatrix();
+    //glPushMatrix();
+    //glTranslatef(X_INITIAL + 220, Y_INITIAL - 10, 0);
+	//
+    //glPushMatrix();
+    //glScalef(10, 10 , 10);
+    //draw_Gargoyles();
+    //glPopMatrix();
+	//
+    //glTranslatef(90, 0, 0);
+	//
+    //glPushMatrix();
+    //glScalef(10, 10 , 10);
+    //draw_Gargoyles();
+    //glPopMatrix();
+	//
+    //glPopMatrix();
 
 }
 
@@ -1132,40 +1161,40 @@ void draw_Castle_Roads() {
      * */
     glPushMatrix();
     glTranslatef(X_INITIAL + 252.5, Y_INITIAL + 295, 0);
-    draw_Castle_Road(30, 40);
+    draw_Castle_Road_Vertical_Core();
 
     glTranslatef(0, 100, 0);
-    draw_Castle_Road(30, 40);
+    draw_Castle_Road_Vertical_Core();
 
     glTranslatef(0, 70, 0);
-    draw_Castle_Road(30, 10);
+    draw_Castle_Road_Vertical_Inside();
 
     glTranslatef(121, -265, 0);
-    draw_Castle_Road(30, 305);
+    draw_Castle_Road_Vertical_OutSide();
 
     glTranslatef(-240, 0, 0);
-    draw_Castle_Road(30, 305);
+    draw_Castle_Road_Vertical_OutSide();
 
     glTranslatef(30, 0, 0);
-    draw_Castle_Road(10, 30);
+	draw_Castle_Road_Horizontal_Inside();
 
-    glTranslatef(200, 0, 0);
-    draw_Castle_Road(10, 30);
+	glTranslatef(200, 0, 0);
+	draw_Castle_Road_Horizontal_Inside();
 
-    glTranslatef(-200, 275, 0);
-    draw_Castle_Road(210, 30);
+	glTranslatef(-200, 275, 0);
+	draw_Castle_Road_Horizontal_OutSide();
 
-    glTranslatef(0, -125, 0);
-    draw_Castle_Road(10, 30);
+	glTranslatef(0, -125, 0);
+	draw_Castle_Road_Horizontal_Inside();
 
-    glTranslatef(40, 0, 0);
-    draw_Castle_Road(35, 30);
+	glTranslatef(40, 0, 0);
+	draw_Castle_Road_Horizontal_Core();
 
-    glTranslatef(95, 0, 0);
-    draw_Castle_Road(35, 30);
+	glTranslatef(95, 0, 0);
+	draw_Castle_Road_Horizontal_Core();
 
-    glTranslatef(65, 0, 0);
-    draw_Castle_Road(10, 30);
+	glTranslatef(65, 0, 0);
+	draw_Castle_Road_Horizontal_Inside();
     glPopMatrix();
 
 }
@@ -1193,6 +1222,9 @@ void draw_Castle_Courtyard() {
      *
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
+
+	glBindTexture(GL_TEXTURE_2D, texture[9]);
+
     glPushMatrix();
     glTranslatef(X_INITIAL + 173.5, Y_INITIAL + 200, 0);
 
@@ -1200,7 +1232,18 @@ void draw_Castle_Courtyard() {
     glPushMatrix();
     glScalef(190, 65, 1);
 	glTranslatef(0, 0, -1);
-    create_Top_Face();
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0, 0, 1);
+	glTexCoord2f(0, 2); glVertex3f(0, 1, 1);
+	glTexCoord2f(4, 2); glVertex3f(1, 1, 1);
+	glTexCoord2f(4, 0); glVertex3f(1, 0, 1);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
     glPopMatrix();
 
     /*
@@ -1223,6 +1266,9 @@ void draw_Castle_Courtyard() {
      * draw_Castle_Courtyard_Roundabout_Inside()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
+
+	glBindTexture(GL_TEXTURE_2D, texture[1]);
+
     glTranslatef(94.5, 29.5, 0);
 
 	glColor3f(0, 0, 0);									//CW mas tem de ser CCW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -1355,32 +1401,14 @@ void draw_Castle_Courtyard() {
      *
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
+
+	glBindTexture(GL_TEXTURE_2D, texture[1]);
+
     glPushMatrix();
     glTranslatef(253, 165, 0);
     for (int h = 0; h < 28; h += 5) {
 
         for (int v = 0; v < 45; v += 5) {
-
-            glPushMatrix();
-            glTranslatef(X_INITIAL + h, Y_INITIAL + v, 0);
-
-//			make the courtyard road (1 square)
-            glPushMatrix();
-            glScalef(5, 5, 1);
-			glTranslatef(0, 0, -1);
-			create_Top_Face();
-            glPopMatrix();
-
-            glPopMatrix();
-
-        }
-
-    }
-
-    glTranslatef(-5, 45, 0);
-    for (int h = 0; h < 38; h += 5) {
-
-        for (int v = 0; v < 40; v += 5) {
 
             glPushMatrix();
             glTranslatef(X_INITIAL + h, Y_INITIAL + v, 0);
@@ -1488,8 +1516,8 @@ void draw_Castle_Buildings() {
      * */
     glPushMatrix();
     glScalef(60, 60, 70);
-    draw_6_Faces_Figure();	
-    glPopMatrix();
+
+	create_Main_Building();
 
     glPopMatrix();
 

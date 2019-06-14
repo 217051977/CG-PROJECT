@@ -19,21 +19,243 @@
 //body bottom
 void draw_MiddleTower_Body_Bottom() {
 
-    draw_6_Faces_Figure();
+	glBindTexture(GL_TEXTURE_2D, texture[0]);
+
+	//front
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0, 0, 0);
+	glTexCoord2f(0, 2); glVertex3f(0, 0, 1);
+	glTexCoord2f(1, 2); glVertex3f(1, 0, 1);
+	glTexCoord2f(1, 0); glVertex3f(1, 0, 0);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	//back
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0, 1, 0);
+	glTexCoord2f(0, 2); glVertex3f(1, 1, 0);
+	glTexCoord2f(1, 2); glVertex3f(1, 1, 1);
+	glTexCoord2f(1, 0); glVertex3f(0, 1, 1);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	//bot
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0, 0, 0);
+	glTexCoord2f(0, 1); glVertex3f(1, 0, 0);
+	glTexCoord2f(1, 1); glVertex3f(1, 1, 0);
+	glTexCoord2f(1, 0); glVertex3f(0, 1, 0);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	//top
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0, 0, 1);
+	glTexCoord2f(0, 1); glVertex3f(0, 1, 1);
+	glTexCoord2f(1, 1); glVertex3f(1, 1, 1);
+	glTexCoord2f(1, 0); glVertex3f(1, 0, 1);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0, 0, 0);
+	glTexCoord2f(0, 2); glVertex3f(0, 1, 0);
+	glTexCoord2f(1, 2); glVertex3f(0, 1, 1);
+	glTexCoord2f(1, 0); glVertex3f(0, 0, 1);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(1, 0, 0);
+	glTexCoord2f(0, 2); glVertex3f(1, 0, 1);
+	glTexCoord2f(1, 2); glVertex3f(1, 1, 1);
+	glTexCoord2f(1, 0); glVertex3f(1, 1, 0);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
 
 }
 
 //body middle
 void draw_MiddleTower_Body_Middle() {
 
-    draw_6_Faces_Figure();
+	glBindTexture(GL_TEXTURE_2D, texture[3]);
+
+	//front
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0, 0, 0);
+	glTexCoord2f(0, 0.8); glVertex3f(0, 0, 1);
+	glTexCoord2f(1, 0.8); glVertex3f(1, 0, 1);
+	glTexCoord2f(1, 0); glVertex3f(1, 0, 0);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	//back
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0, 1, 0);
+	glTexCoord2f(0, 0.8); glVertex3f(1, 1, 0);
+	glTexCoord2f(1, 0.8); glVertex3f(1, 1, 1);
+	glTexCoord2f(1, 0); glVertex3f(0, 1, 1);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	//bot
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0, 0, 0);
+	glTexCoord2f(0, 1); glVertex3f(1, 0, 0);
+	glTexCoord2f(1, 1); glVertex3f(1, 1, 0);
+	glTexCoord2f(1, 0); glVertex3f(0, 1, 0);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	//top
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0, 0, 1);
+	glTexCoord2f(0, 1); glVertex3f(0, 1, 1);
+	glTexCoord2f(1, 1); glVertex3f(1, 1, 1);
+	glTexCoord2f(1, 0); glVertex3f(1, 0, 1);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0, 0, 0);
+	glTexCoord2f(0, 0.8); glVertex3f(0, 1, 0);
+	glTexCoord2f(1, 0.8); glVertex3f(0, 1, 1);
+	glTexCoord2f(1, 0); glVertex3f(0, 0, 1);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(1, 0, 0);
+	glTexCoord2f(0, 0.8); glVertex3f(1, 0, 1);
+	glTexCoord2f(1, 0.8); glVertex3f(1, 1, 1);
+	glTexCoord2f(1, 0); glVertex3f(1, 1, 0);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
 
 }
 
 //body top
 void draw_MiddleTower_Body_Top() {
 
-    draw_6_Faces_Figure();
+	glBindTexture(GL_TEXTURE_2D, texture[0]);
+
+	//front
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0, 0, 0);
+	glTexCoord2f(0, 1); glVertex3f(0, 0, 1);
+	glTexCoord2f(1, 1); glVertex3f(1, 0, 1);
+	glTexCoord2f(1, 0); glVertex3f(1, 0, 0);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	//back
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0, 1, 0);
+	glTexCoord2f(0, 1); glVertex3f(1, 1, 0);
+	glTexCoord2f(1, 1); glVertex3f(1, 1, 1);
+	glTexCoord2f(1, 0); glVertex3f(0, 1, 1);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	//bot
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0, 0, 0);
+	glTexCoord2f(0, 1); glVertex3f(1, 0, 0);
+	glTexCoord2f(1, 1); glVertex3f(1, 1, 0);
+	glTexCoord2f(1, 0); glVertex3f(0, 1, 0);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	//top
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0, 0, 1);
+	glTexCoord2f(0, 1); glVertex3f(0, 1, 1);
+	glTexCoord2f(1, 1); glVertex3f(1, 1, 1);
+	glTexCoord2f(1, 0); glVertex3f(1, 0, 1);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0, 0, 0);
+	glTexCoord2f(0, 1); glVertex3f(0, 1, 0);
+	glTexCoord2f(1, 1); glVertex3f(0, 1, 1);
+	glTexCoord2f(1, 0); glVertex3f(0, 0, 1);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(1, 0, 0);
+	glTexCoord2f(0, 1); glVertex3f(1, 0, 1);
+	glTexCoord2f(1, 1); glVertex3f(1, 1, 1);
+	glTexCoord2f(1, 0); glVertex3f(1, 1, 0);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
 
 }
 
@@ -47,6 +269,8 @@ void draw_MiddleTower_Body_Bottom_Spikes() {
 //crown
 void draw_MiddleTower_Crown() {
 
+	glBindTexture(GL_TEXTURE_2D, texture[3]);
+
     draw_6_Faces_Figure();
 
 }
@@ -54,102 +278,9 @@ void draw_MiddleTower_Crown() {
 //crown spike
 void draw_MiddleTower_Crown_Spike() {
 
+	glBindTexture(GL_TEXTURE_2D, texture[1]);
+
     draw_6_Faces_Figure();
-
-}
-
-//outside crown spikes part
-void draw_MiddleTower_Bottom_Crown_Spikes_Part() {
-
-    //sets the beginning of the inside draw part
-    glBegin(GL_LINE_LOOP);
-
-    glVertex3f(0, 0, 0);
-    glVertex3f(5, 0, 0);        //     adds 5px width
-    glVertex3f(5, 5, 0);    //     adds 5px height
-    glVertex3f(0, 5, 0);        //     removes 5px width
-
-    //sets the ending of the draw
-    glEnd();
-
-}
-
-//outside crown part
-void draw_MiddleTower_Bottom_Crown() {
-
-    //makes a cycle where since the point 5px away from the origin in the x axis
-    //until it reach 5px before the end of the x axis draw
-    for (GLfloat i = 0; i < 30; i += 5) {
-
-        glPushMatrix();
-        glTranslatef(i, 0, 0);
-        draw_MiddleTower_Bottom_Crown_Spikes_Part();
-        glTranslatef(0, 25, 0);
-        draw_MiddleTower_Bottom_Crown_Spikes_Part();
-        glPopMatrix();
-
-    }
-
-    //makes a cycle where since the point 5px away from the origin in the y axis
-    //until it reach 5px before the end of the y axis draw
-    for (GLfloat i = 5; i < 25; i += 5) {
-
-        glPushMatrix();
-        glTranslatef(0, i, 0);
-        draw_MiddleTower_Bottom_Crown_Spikes_Part();
-        glTranslatef(25, 0, 0);
-        draw_MiddleTower_Bottom_Crown_Spikes_Part();
-        glPopMatrix();
-
-    }
-
-}
-
-/**********************************************************************/
-//inside crown spikes part
-void draw_MiddleRight_Tower_Crown_Spikes_Part() {
-
-    //sets the beginning of the inside draw part
-    glBegin(GL_LINE_LOOP);
-
-    glVertex3f(0, 0, 0);
-    glVertex3f(5, 0, 0);        //     adds 5px width
-    glVertex3f(5, 5, 0);    //     adds 5px height
-    glVertex3f(0, 5, 0);        //     removes 5px width
-
-    //sets the ending of the draw
-    glEnd();
-
-}
-
-//inside crown part
-void draw_MiddleRight_Tower_Crown() {
-
-    //makes a cycle where since the point 5px away from the origin in the x axis
-    //until it reach 5px before the end of the x axis draw
-    for (GLfloat i = 0; i < 15; i += 5) {
-
-        glPushMatrix();
-        glTranslatef(i, 0, 0);
-        draw_MiddleRight_Tower_Crown_Spikes_Part();
-        glTranslatef(0, 10, 0);
-        draw_MiddleRight_Tower_Crown_Spikes_Part();
-        glPopMatrix();
-
-    }
-
-    //makes a cycle where since the point 5px away from the origin in the y axis
-    //until it reach 5px before the end of the y axis draw
-    for (GLfloat i = 5; i < 10; i += 5) {
-
-        glPushMatrix();
-        glTranslatef(0, i, 0);
-        draw_MiddleRight_Tower_Crown_Spikes_Part();
-        glTranslatef(10, 0, 0);
-        draw_MiddleRight_Tower_Crown_Spikes_Part();
-        glPopMatrix();
-
-    }
 
 }
 

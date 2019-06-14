@@ -116,7 +116,7 @@ static int scene_To_print = /*0*/0;
 static int draw_angleUp = 0;
 static int draw_angleRight = 0;
 
-static unsigned int texture[3]; // Array of texture indices.
+static unsigned int texture[20]; // Array of texture indices.
 
 /***********************************************************************************************************************
 ************************************************************************************************************************

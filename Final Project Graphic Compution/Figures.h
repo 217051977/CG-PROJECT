@@ -153,6 +153,8 @@ void create_Left_Bot_Body_Left_Tower_Figure() {
 
 void create_Left_Top_Body_Left_Tower_Figure() {
 
+	glBindTexture(GL_TEXTURE_2D, texture[0]);
+
     create_Left___Top_Body_Left_Tower_Face();
 
 	create_Front___Top_Body_Left_Tower_Face();
@@ -161,7 +163,13 @@ void create_Left_Top_Body_Left_Tower_Figure() {
 
 	create_Back___Top_Body_Left_Tower_Face();
 
+	glBindTexture(GL_TEXTURE_2D, 0);
+
+	glBindTexture(GL_TEXTURE_2D, texture[3]);
+
     create_Top_Face();
+
+	glBindTexture(GL_TEXTURE_2D, 0);
 
 }
 
@@ -172,5 +180,248 @@ void create_Left_Ruined_Tower_Bot_Figure() {
     create_Left_Ruined_Tower_Bot___Left_Face();
     create_Left_Ruined_Tower_Bot___Right_Face();
     create_Left_Ruined_Tower_Bot___Bot_Face();
+
+}
+
+void create_Main_Building() {
+
+	glBindTexture(GL_TEXTURE_2D, texture[7]);
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0, 0, 0);
+	glTexCoord2f(0, 1); glVertex3f(0, 0, 0.25);
+	glTexCoord2f(1, 1); glVertex3f(0.375, 0, 0.25);
+	glTexCoord2f(1, 0); glVertex3f(0.375, 0, 0);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	glBindTexture(GL_TEXTURE_2D, texture[8]);
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0.375, 0, 0);
+	glTexCoord2f(0, 1); glVertex3f(0.375, 0, 0.25);
+	glTexCoord2f(1, 1); glVertex3f(0.625, 0, 0.25);
+	glTexCoord2f(1, 0); glVertex3f(0.625, 0, 0);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	glBindTexture(GL_TEXTURE_2D, texture[7]);
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0.625, 0, 0);
+	glTexCoord2f(0, 1); glVertex3f(0.625, 0, 0.25);
+	glTexCoord2f(1, 1); glVertex3f(1, 0, 0.25);
+	glTexCoord2f(1, 0); glVertex3f(1, 0, 0);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0, 0, 0.25);
+	glTexCoord2f(0, 1); glVertex3f(0, 0, 0.5);
+	glTexCoord2f(1, 1); glVertex3f(0.25, 0, 0.5);
+	glTexCoord2f(1, 0); glVertex3f(0.25, 0, 0.25);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0.25, 0, 0.25);
+	glTexCoord2f(0, 1); glVertex3f(0.25, 0, 0.5);
+	glTexCoord2f(1, 1); glVertex3f(0.5, 0, 0.5);
+	glTexCoord2f(1, 0); glVertex3f(0.5, 0, 0.25);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0.5, 0, 0.25);
+	glTexCoord2f(0, 1); glVertex3f(0.5, 0, 0.5);
+	glTexCoord2f(1, 1); glVertex3f(0.75, 0, 0.5);
+	glTexCoord2f(1, 0); glVertex3f(0.75, 0, 0.25);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0.75, 0, 0.25);
+	glTexCoord2f(0, 1); glVertex3f(0.75, 0, 0.5);
+	glTexCoord2f(1, 1); glVertex3f(1, 0, 0.5);
+	glTexCoord2f(1, 0); glVertex3f(1, 0, 0.25);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0, 0, 0.5);
+	glTexCoord2f(0, 1); glVertex3f(0, 0, 0.75);
+	glTexCoord2f(1, 1); glVertex3f(0.25, 0, 0.75);
+	glTexCoord2f(1, 0); glVertex3f(0.25, 0, 0.5);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0.25, 0, 0.5);
+	glTexCoord2f(0, 1); glVertex3f(0.25, 0, 0.75);
+	glTexCoord2f(1, 1); glVertex3f(0.5, 0, 0.75);
+	glTexCoord2f(1, 0); glVertex3f(0.5, 0, 0.5);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0.5, 0, 0.5);
+	glTexCoord2f(0, 1); glVertex3f(0.5, 0, 0.75);
+	glTexCoord2f(1, 1); glVertex3f(0.75, 0, 0.75);
+	glTexCoord2f(1, 0); glVertex3f(0.75, 0, 0.5);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0.75, 0, 0.5);
+	glTexCoord2f(0, 1); glVertex3f(0.75, 0, 0.75);
+	glTexCoord2f(1, 1); glVertex3f(1, 0, 0.75);
+	glTexCoord2f(1, 0); glVertex3f(1, 0, 0.5);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0, 0, 0.75);
+	glTexCoord2f(0, 1); glVertex3f(0, 0, 1);
+	glTexCoord2f(1, 1); glVertex3f(0.25, 0, 1);
+	glTexCoord2f(1, 0); glVertex3f(0.25, 0, 0.75);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0.25, 0, 0.75);
+	glTexCoord2f(0, 1); glVertex3f(0.25, 0, 1);
+	glTexCoord2f(1, 1); glVertex3f(0.5, 0, 1);
+	glTexCoord2f(1, 0); glVertex3f(0.5, 0, 0.75);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0.5, 0, 0.75);
+	glTexCoord2f(0, 1); glVertex3f(0.5, 0, 1);
+	glTexCoord2f(1, 1); glVertex3f(0.75, 0, 1);
+	glTexCoord2f(1, 0); glVertex3f(0.75, 0, 0.75);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0.75, 0, 0.75);
+	glTexCoord2f(0, 1); glVertex3f(0.75, 0, 1);
+	glTexCoord2f(1, 1); glVertex3f(1, 0, 1);
+	glTexCoord2f(1, 0); glVertex3f(1, 0, 0.75);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+
+
+
+
+
+
+	glBindTexture(GL_TEXTURE_2D, texture[7]);
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0, 1, 0);
+	glTexCoord2f(0, 4); glVertex3f(1, 1, 0);
+	glTexCoord2f(4, 4); glVertex3f(1, 1, 1);
+	glTexCoord2f(4, 0); glVertex3f(0, 1, 1);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	glBindTexture(GL_TEXTURE_2D, texture[10]);
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0, 0, 0);
+	glTexCoord2f(0, 4); glVertex3f(1, 0, 0);
+	glTexCoord2f(4, 4); glVertex3f(1, 1, 0);
+	glTexCoord2f(4, 0); glVertex3f(0, 1, 0);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0, 0, 1);
+	glTexCoord2f(0, 4); glVertex3f(0, 1, 1);
+	glTexCoord2f(4, 4); glVertex3f(1, 1, 1);
+	glTexCoord2f(4, 0); glVertex3f(1, 0, 1);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	glBindTexture(GL_TEXTURE_2D, texture[7]);
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(0, 0, 0);
+	glTexCoord2f(0, 4); glVertex3f(0, 1, 0);
+	glTexCoord2f(4, 4); glVertex3f(0, 1, 1);
+	glTexCoord2f(4, 0); glVertex3f(0, 0, 1);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
+	//  sets the beginning with only the lines that surrounds it
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0); glVertex3f(1, 0, 0);
+	glTexCoord2f(0, 4); glVertex3f(1, 0, 1);
+	glTexCoord2f(4, 4); glVertex3f(1, 1, 1);
+	glTexCoord2f(4, 0); glVertex3f(1, 1, 0);
+
+	//	sets the ending of the draw connecting the first vertex draw with the last
+	glEnd();
+
 
 }

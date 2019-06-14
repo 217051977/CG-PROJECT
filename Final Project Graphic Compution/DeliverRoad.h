@@ -100,6 +100,11 @@ void draw_FrontDoor() {
      * draw_Gate()
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
+
+	glBindTexture(GL_TEXTURE_2D, 0);
+
+	glBindTexture(GL_TEXTURE_2D, texture[1]);
+
     glPushMatrix();
     glTranslatef(7, 0, 0);
     draw_Delivery_Gate_Left_Door(delivery_Door_Angle);
