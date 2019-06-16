@@ -158,8 +158,8 @@ void drawScene(void) {
 	glLoadIdentity();
 
 	set_LookAt(perspective_Or_Animation);
-	glRotatef(draw_angleUp, 1, 0, 0);
-	glRotatef(draw_angleUp, 0, 0, 1);
+	//glRotatef(draw_angleUp, 1, 0, 0);
+	//glRotatef(draw_angleUp, 0, 0, 1);
 
     //set the next draw color
     // RBG (Red Blue Green) -> (0-1, 0-1, 0-1)
@@ -210,6 +210,8 @@ void drawScene(void) {
         }break;
 
     }
+
+	drawSkyBox();
 
     //send the scene to be rendered
     glutSwapBuffers();

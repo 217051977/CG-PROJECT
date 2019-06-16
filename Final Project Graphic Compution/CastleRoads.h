@@ -63,7 +63,7 @@ void draw_Castle_Road_Vertical_Core() {
 	glBindTexture(GL_TEXTURE_2D, texture[9]);
 
 	glPushMatrix();
-	glScalef(30, 40, 0);
+	glScalef(30, 70, 0);
 	glTranslatef(0, 0, -1);
 	create_Top_Face(0, 0, 1, 1);
 	glPopMatrix();
@@ -148,7 +148,7 @@ void draw_Castle_Road_Horizontal_Core() {
 	glBindTexture(GL_TEXTURE_2D, texture[9]);
 
 	glPushMatrix();
-	glScalef(35, 30, 0);
+	glScalef(65, 30, 0);
 	glTranslatef(0, 0, -1);
 	create_Top_Face(0, 0, 1, 1);
 	glPopMatrix();

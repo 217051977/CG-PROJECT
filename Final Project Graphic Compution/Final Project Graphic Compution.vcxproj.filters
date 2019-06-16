@@ -229,6 +229,9 @@
     <Filter Include="Resource Files\getBMP">
       <UniqueIdentifier>{d6a7af7c-0b09-48f5-9e91-900f16aff791}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\DirectFunctions\SkyBox">
+      <UniqueIdentifier>{3328d751-f9f2-4737-b6f7-a90923f1215f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RightTower.h">
@@ -473,6 +476,9 @@
     </ClInclude>
     <ClInclude Include="getbmp.h">
       <Filter>Resource Files\getBMP</Filter>
+    </ClInclude>
+    <ClInclude Include="SkyBox.h">
+      <Filter>Header Files\DirectFunctions\SkyBox</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

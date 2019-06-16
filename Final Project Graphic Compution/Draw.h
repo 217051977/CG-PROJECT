@@ -1161,7 +1161,11 @@ void draw_Castle_Roads() {
      * */
     glPushMatrix();
     glTranslatef(X_INITIAL + 252.5, Y_INITIAL + 295, 0);
+
+	glPushMatrix();
+	glTranslatef(0, -30, 0);
     draw_Castle_Road_Vertical_Core();
+	glPopMatrix();
 
     glTranslatef(0, 100, 0);
     draw_Castle_Road_Vertical_Core();
@@ -1188,7 +1192,11 @@ void draw_Castle_Roads() {
 	draw_Castle_Road_Horizontal_Inside();
 
 	glTranslatef(40, 0, 0);
+
+	glPushMatrix();
+	glTranslatef(-30, 0, 0);
 	draw_Castle_Road_Horizontal_Core();
+	glPopMatrix();
 
 	glTranslatef(95, 0, 0);
 	draw_Castle_Road_Horizontal_Core();
@@ -1352,11 +1360,11 @@ void draw_Castle_Courtyard() {
 	glPushMatrix();
 	glTranslatef(20, 40, 0);
 	glRotatef(180, 0, 0, 1);
-	draw_Store_Vertical(20, 40, 14, 4, 0.25);
+	draw_Store_Vertical(20, 40, 14, 4, 0.2);
 	glPopMatrix();
 
 	glTranslatef(30, 0, 0);
-	draw_Store_Horizontal(20, 20, 4, 8, 0.25);
+	draw_Store_Vertical(20, 20, 8, 4, 0.25);
 
 	glTranslatef(20, 30, 0);
 	glPushMatrix();
@@ -1480,10 +1488,20 @@ void draw_Castle_Hallway() {
 	glPopMatrix();
 
 	glTranslatef(-130, 170, 0);
+	
+	glPushMatrix();
+	glScalef(130, 30, 40);
+	glTranslatef(1, 1, 0);
+	glRotatef(180, 0, 0, 1);
 	draw_Hallway_Section_Horizontal();
+	glPopMatrix();
 
 	glTranslatef(0, -170, 0);
+
+	glPushMatrix();
+	glScalef(130, 30, 40);
 	draw_Hallway_Section_Horizontal();
+	glPopMatrix();
 
 	glTranslatef(-30, 0, 0);
 	draw_Hallway_Section_Vertical();

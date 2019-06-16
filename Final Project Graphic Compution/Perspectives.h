@@ -184,7 +184,7 @@ void setPerspectives(int option) {
         case 41: {}
         case 42: {
 
-            gluPerspective(150, 1, 1, 1000);
+            gluPerspective(150, 1, 1, 9999999999999999999);
 
         }
 

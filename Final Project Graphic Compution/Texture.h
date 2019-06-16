@@ -327,4 +327,64 @@ void loadExternalTextures() {
 
 	glBindTexture(GL_TEXTURE_2D, 0);
 
+	// Load the texture.
+	image[16] = getbmp("./Textures/Tower/Lava3.bmp");
+
+	// Activate texture index texture[16]. 
+	glBindTexture(GL_TEXTURE_2D, texture[16]);
+
+	// Set texture parameters for wrapping.
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+
+	// Set texture parameters for filtering.
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+
+	// Specify an image as the texture to be bound with the currently active texture index.
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, image[16]->sizeX, image[16]->sizeY, 0,
+		GL_RGBA, GL_UNSIGNED_BYTE, image[16]->data);
+
+	glBindTexture(GL_TEXTURE_2D, 0);
+
+	// Load the texture.
+	image[17] = getbmp("./Textures/Tower/VolcanoWall.bmp");
+
+	// Activate texture index texture[17]. 
+	glBindTexture(GL_TEXTURE_2D, texture[17]);
+
+	// Set texture parameters for wrapping.
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+
+	// Set texture parameters for filtering.
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+
+	// Specify an image as the texture to be bound with the currently active texture index.
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, image[17]->sizeX, image[17]->sizeY, 0,
+		GL_RGBA, GL_UNSIGNED_BYTE, image[17]->data);
+
+	glBindTexture(GL_TEXTURE_2D, 0);
+
+	// Load the texture.
+	image[18] = getbmp("./Textures/Tower/Sky1.bmp");
+
+	// Activate texture index texture[18]. 
+	glBindTexture(GL_TEXTURE_2D, texture[18]);
+
+	// Set texture parameters for wrapping.
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+
+	// Set texture parameters for filtering.
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+	// Specify an image as the texture to be bound with the currently active texture index.
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, image[18]->sizeX, image[18]->sizeY, 0,
+		GL_RGBA, GL_UNSIGNED_BYTE, image[18]->data);
+
+	glBindTexture(GL_TEXTURE_2D, 0);
+
 }
