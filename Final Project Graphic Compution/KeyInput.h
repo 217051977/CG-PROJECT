@@ -218,55 +218,19 @@ void specialKeyInput(int key, int x, int y)
 {
 	if (key == GLUT_KEY_DOWN)
 	{
-		if (draw_angleUp = -360) {
-
-			draw_angleUp = 0;
-
-		}
-		else {
-
-			draw_angleUp--;
-
-		}
+		if (d > 0.0) d -= 0.05;
 	}
 	if (key == GLUT_KEY_UP)
 	{
-		if (draw_angleUp = 360) {
-
-			draw_angleUp = 0;
-
-		}
-		else {
-
-			draw_angleUp++;
-
-		}
-	}
-	if (key == GLUT_KEY_LEFT)
-	{
-		if (draw_angleRight = -360) {
-
-			draw_angleRight = 0;
-
-		}
-		else {
-
-			draw_angleRight--;
-
-		}
+		if (d < 1.0) d += 0.05;
 	}
 	if (key == GLUT_KEY_RIGHT)
 	{
-		if (draw_angleRight = 360) {
-
-			draw_angleRight = 0;
-
-		}
-		else {
-
-			draw_angleRight++;
-
-		}
+		if (theta > 0.0) theta -= 1.0;
+	}
+	if (key == GLUT_KEY_LEFT)
+	{
+		if (theta < 180.0) theta += 1.0;
 	}
 	glutPostRedisplay();
 }

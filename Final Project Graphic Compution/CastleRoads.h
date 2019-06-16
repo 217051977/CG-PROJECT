@@ -33,18 +33,7 @@ void draw_Castle_Road_Vertical_OutSide() {
 	glPushMatrix();
 	glScalef(30, 305, 0);
 	glTranslatef(0, 0, -1);
-
-	//  sets the beginning with only the lines that surrounds it
-	glBegin(GL_POLYGON);
-
-	glTexCoord2f(0, 0); glVertex3f(0, 0, 1);
-	glTexCoord2f(0, 5); glVertex3f(0, 1, 1);
-	glTexCoord2f(1, 5); glVertex3f(1, 1, 1);
-	glTexCoord2f(1, 0); glVertex3f(1, 0, 1);
-
-	//	sets the ending of the draw connecting the first vertex draw with the last
-	glEnd();
-
+	create_Top_Face(0, 0, 1, 5);
 	glPopMatrix();
 
 }
@@ -63,9 +52,9 @@ void draw_Castle_Road_Vertical_Core() {
 	glBindTexture(GL_TEXTURE_2D, texture[9]);
 
 	glPushMatrix();
-	glScalef(30, 70, 0);
+	glScalef(52, 70, 0);
 	glTranslatef(0, 0, -1);
-	create_Top_Face(0, 0, 1, 1);
+	create_Top_Face(0, 0, 1.5, 1.5);
 	glPopMatrix();
 
 }
@@ -84,19 +73,9 @@ void draw_Castle_Road_Vertical_Inside() {
 	glBindTexture(GL_TEXTURE_2D, texture[9]);
 
 	glPushMatrix();
-	glScalef(30, 10, 0);
+	glScalef(52, 10, 0);
 	glTranslatef(0, 0, -1);
-
-	//  sets the beginning with only the lines that surrounds it
-	glBegin(GL_POLYGON);
-
-	glTexCoord2f(0, 0); glVertex3f(0, 0, 1);
-	glTexCoord2f(0, 0.3); glVertex3f(0, 1, 1);
-	glTexCoord2f(1, 0.3); glVertex3f(1, 1, 1);
-	glTexCoord2f(1, 0); glVertex3f(1, 0, 1);
-
-	//	sets the ending of the draw connecting the first vertex draw with the last
-	glEnd();
+	create_Top_Face(0, 0, 1.5, 0.3);
 
 	glPopMatrix();
 
@@ -118,18 +97,7 @@ void draw_Castle_Road_Horizontal_OutSide() {
 	glPushMatrix();
 	glScalef(210, 30, 0);
 	glTranslatef(0, 0, -1);
-
-	//  sets the beginning with only the lines that surrounds it
-	glBegin(GL_POLYGON);
-
-	glTexCoord2f(0, 0); glVertex3f(0, 0, 1);
-	glTexCoord2f(0, 1); glVertex3f(0, 1, 1);
-	glTexCoord2f(5, 1); glVertex3f(1, 1, 1);
-	glTexCoord2f(5, 0); glVertex3f(1, 0, 1);
-
-	//	sets the ending of the draw connecting the first vertex draw with the last
-	glEnd();
-
+	create_Top_Face(0, 0, 5, 1);
 	glPopMatrix();
 
 }
@@ -148,9 +116,9 @@ void draw_Castle_Road_Horizontal_Core() {
 	glBindTexture(GL_TEXTURE_2D, texture[9]);
 
 	glPushMatrix();
-	glScalef(65, 30, 0);
+	glScalef(79, 80, 0);
 	glTranslatef(0, 0, -1);
-	create_Top_Face(0, 0, 1, 1);
+	create_Top_Face(0, 0, 3, 1);
 	glPopMatrix();
 
 }
@@ -171,6 +139,7 @@ void draw_Castle_Road_Horizontal_Inside() {
 	glPushMatrix();
 	glScalef(10, 30, 0);
 	glTranslatef(0, 0, -1);
+	create_Top_Face(0, 0, 0.3, 1);
 
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);

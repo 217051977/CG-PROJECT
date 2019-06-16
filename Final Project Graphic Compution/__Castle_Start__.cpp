@@ -118,6 +118,28 @@ static int draw_angleRight = 0;
 
 static unsigned int texture[20]; // Array of texture indices.
 
+float d = 1;
+static float theta = 45.0; // Angle of the sun with the ground.
+
+//Lightning
+//position of the light
+float lightPosition[] = { X_INITIAL + 250, Y_INITIAL + 200, 100 };
+
+//global light
+GLfloat globalLight[] = { 0.2, 0.2, 0.2, 1 };
+//natural light
+GLfloat ambientLight[] = { 0, 0, 0, 1 };
+//spot on the object that is the target of the light
+GLfloat diffuseLight[] = { d, d, d, 1 };
+//reflective light in the object
+GLfloat specularLight[] = { d, d, d, 1 };
+//shinning factor (0 - 128)
+GLfloat shininess[] = { 60 };
+
+float materialAmbientAndDiffuse[] = { 1, 1, 1, 1 };
+float materialSpecular[] = { 1, 1, 1, 1 };
+float materialShine[] = { 50 };
+
 /***********************************************************************************************************************
 ************************************************************************************************************************
 **********************************************Imports necessaries headers***********************************************

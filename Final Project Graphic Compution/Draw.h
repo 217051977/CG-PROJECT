@@ -1163,15 +1163,23 @@ void draw_Castle_Roads() {
     glTranslatef(X_INITIAL + 252.5, Y_INITIAL + 295, 0);
 
 	glPushMatrix();
-	glTranslatef(0, -30, 0);
+	glTranslatef(-10, -30, 0);
     draw_Castle_Road_Vertical_Core();
 	glPopMatrix();
 
     glTranslatef(0, 100, 0);
+
+	glPushMatrix();
+	glTranslatef(-10, 0, 0);
     draw_Castle_Road_Vertical_Core();
+	glPopMatrix();
 
     glTranslatef(0, 70, 0);
+
+	glPushMatrix();
+	glTranslatef(-10, 0, 0);
     draw_Castle_Road_Vertical_Inside();
+	glPopMatrix();
 
     glTranslatef(121, -265, 0);
     draw_Castle_Road_Vertical_OutSide();
@@ -1188,21 +1196,20 @@ void draw_Castle_Roads() {
 	glTranslatef(-200, 275, 0);
 	draw_Castle_Road_Horizontal_OutSide();
 
-	glTranslatef(0, -125, 0);
-	draw_Castle_Road_Horizontal_Inside();
-
-	glTranslatef(40, 0, 0);
+	glTranslatef(40, -125, 0);
 
 	glPushMatrix();
-	glTranslatef(-30, 0, 0);
+	glTranslatef(-40, -25, 0);
 	draw_Castle_Road_Horizontal_Core();
 	glPopMatrix();
 
 	glTranslatef(95, 0, 0);
-	draw_Castle_Road_Horizontal_Core();
 
-	glTranslatef(65, 0, 0);
-	draw_Castle_Road_Horizontal_Inside();
+	glPushMatrix();
+	glTranslatef(-4, -25, 0);
+	draw_Castle_Road_Horizontal_Core();
+	glPopMatrix();
+
     glPopMatrix();
 
 }

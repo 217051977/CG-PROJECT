@@ -21,6 +21,8 @@ void create_Front___Top_Body_Left_Tower_Face() {
 
 	glBegin(GL_POLYGON);
 
+	glNormal3f(0, -1, 0);
+
 	glTexCoord2f(0, 0.25); glVertex3f(0, 0, 0);
 	glTexCoord2f(0, 1); glVertex3f(0, 0, 1);
 	glTexCoord2f(1, 1); glVertex3f(1, 0, 1);

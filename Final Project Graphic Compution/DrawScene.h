@@ -213,6 +213,18 @@ void drawScene(void) {
 
 	drawSkyBox();
 
+	// Draw a white line in the direction of the sun after disabling lighting.
+	glDisable(GL_LIGHTING);
+
+	glColor3f(1.0, 1.0, 1.0);
+	glLoadIdentity();
+	glBegin(GL_LINES);
+	glVertex3f(0.0, 0.0, -6.0);
+	glVertex3f(d * cos((PI / 180.0) * theta), d * sin((PI / 180.0) * theta), -6.0);
+	glEnd();
+
+	glEnable(GL_LIGHTING); // Restore lighting.
+
     //send the scene to be rendered
     glutSwapBuffers();
 

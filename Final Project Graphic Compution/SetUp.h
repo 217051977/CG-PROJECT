@@ -16,6 +16,34 @@
 //makes the program where this header will be used add it just one time this header to it
 #pragma once
 
+void light0() {
+
+	glLightfv(GL_LIGHT0, GL_AMBIENT, ambientLight);
+
+	glEnable(GL_LIGHT0);
+
+	glLightfv(GL_LIGHT0, GL_LIGHT_MODEL_AMBIENT, globalLight);
+
+	glLightfv(GL_LIGHT0, GL_POSITION, lightPosition);
+
+	glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuseLight);
+	glLightfv(GL_LIGHT0, GL_SPECULAR, specularLight);
+
+}
+
+void lightning() {
+
+	//glLightModeli(GL_LIGHT_MODEL_LOCAL_VIEWER, GL_TRUE);
+	glEnable(GL_LIGHTING);
+	
+	light0();
+
+	glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, materialAmbientAndDiffuse);
+	glMaterialfv(GL_FRONT, GL_SPECULAR, materialSpecular);
+	glMaterialfv(GL_FRONT, GL_SHININESS, materialShine);
+
+}
+
 // Initialization routine.
 void setup(void) {
 
@@ -23,6 +51,8 @@ void setup(void) {
     glClearColor(B_RED, B_GREEN, B_BLUE, B_ALPHA);
 
 	glEnable(GL_DEPTH_TEST);
+
+	lightning();
 
 	glGenTextures(20, texture);
 
