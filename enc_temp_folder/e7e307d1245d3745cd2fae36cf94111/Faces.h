@@ -836,10 +836,9 @@ void create_Left_Ruined_Tower_Bot___Bot_Face() {
 
 //Back
 
-	glBegin(GL_TRIANGLES);
-
 	glNormal3f(0, 1, -1);
 
+	glBegin(GL_TRIANGLES);
 	glTexCoord2f(0, 0); glVertex3f(1, 1, 0.75);
 	glTexCoord2f(10, 0); glVertex3f(0, 1, 0.65);
 	glTexCoord2f(10, 1); glVertex3f(0.5, 0.5, 0.75);
@@ -848,10 +847,9 @@ void create_Left_Ruined_Tower_Bot___Bot_Face() {
 //Left
 	//Right Side
 
-	glBegin(GL_TRIANGLES);
-
 	glNormal3f(-1, 0, -1);
 
+	glBegin(GL_TRIANGLES);
 	glTexCoord2f(0, 0); glVertex3f(0, 0, 0.8);
 	glTexCoord2f(10, 0); glVertex3f(0, 0, 0.6);
 	glTexCoord2f(10, 1); glVertex3f(0.5, 0.5, 0.75);
@@ -933,10 +931,9 @@ void create_Left_Ruined_Tower_Bot___Bot_Face() {
 //Right
 	//Left Side
 
-	glBegin(GL_TRIANGLES);
-
 	glNormal3f(1, 0, -1);
 
+	glBegin(GL_TRIANGLES);
 	glTexCoord2f(0, 0); glVertex3f(1, 0, 0.8);
 	glTexCoord2f(10, 0); glVertex3f(1, 0.02, 0.82);
 	glTexCoord2f(10, 1); glVertex3f(0.5, 0.5, 0.75);
@@ -984,9 +981,6 @@ void create_Left_Ruined_Tower_Bot___Bot_Face() {
 
 	//Right Side
 	glBegin(GL_TRIANGLES);
-
-	glNormal3f(1, 0, -1);
-
 	glTexCoord2f(0, 0); glVertex3f(1, 0.5, 0.69);
 	glTexCoord2f(10, 0); glVertex3f(1, 0.55, 0.65);
 	glTexCoord2f(10, 1); glVertex3f(0.5, 0.5, 0.75);

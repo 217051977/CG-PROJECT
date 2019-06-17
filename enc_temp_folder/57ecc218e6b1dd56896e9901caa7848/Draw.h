@@ -1251,8 +1251,6 @@ void draw_Castle_Courtyard() {
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
 
-	glNormal3f(0, 0, 1);
-
 	glTexCoord2f(0, 0); glVertex3f(0, 0, 1);
 	glTexCoord2f(0, 2); glVertex3f(0, 1, 1);
 	glTexCoord2f(4, 2); glVertex3f(1, 1, 1);

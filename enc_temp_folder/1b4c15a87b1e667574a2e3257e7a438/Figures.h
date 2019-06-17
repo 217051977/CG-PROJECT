@@ -190,8 +190,6 @@ void create_Main_Building() {
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
 
-	glNormal3f(0, -1, 0);
-
 	glTexCoord2f(0, 0); glVertex3f(0, 0, 0);
 	glTexCoord2f(0, 1); glVertex3f(0, 0, 0.25);
 	glTexCoord2f(1, 1); glVertex3f(0.375, 0, 0.25);
@@ -204,8 +202,6 @@ void create_Main_Building() {
 
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
-
-	glNormal3f(0, -1, 0);
 
 	glTexCoord2f(0, 0); glVertex3f(0.375, 0, 0);
 	glTexCoord2f(0, 1); glVertex3f(0.375, 0, 0.25);
@@ -220,8 +216,6 @@ void create_Main_Building() {
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
 
-	glNormal3f(0, -1, 0);
-
 	glTexCoord2f(0, 0); glVertex3f(0.625, 0, 0);
 	glTexCoord2f(0, 1); glVertex3f(0.625, 0, 0.25);
 	glTexCoord2f(1, 1); glVertex3f(1, 0, 0.25);
@@ -232,8 +226,6 @@ void create_Main_Building() {
 
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
-
-	glNormal3f(0, -1, 0);
 
 	glTexCoord2f(0, 0); glVertex3f(0, 0, 0.25);
 	glTexCoord2f(0, 1); glVertex3f(0, 0, 0.5);
@@ -246,8 +238,6 @@ void create_Main_Building() {
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
 
-	glNormal3f(0, -1, 0);
-
 	glTexCoord2f(0, 0); glVertex3f(0.25, 0, 0.25);
 	glTexCoord2f(0, 1); glVertex3f(0.25, 0, 0.5);
 	glTexCoord2f(1, 1); glVertex3f(0.5, 0, 0.5);
@@ -258,8 +248,6 @@ void create_Main_Building() {
 
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
-
-	glNormal3f(0, -1, 0);
 
 	glTexCoord2f(0, 0); glVertex3f(0.5, 0, 0.25);
 	glTexCoord2f(0, 1); glVertex3f(0.5, 0, 0.5);
@@ -272,8 +260,6 @@ void create_Main_Building() {
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
 
-	glNormal3f(0, -1, 0);
-
 	glTexCoord2f(0, 0); glVertex3f(0.75, 0, 0.25);
 	glTexCoord2f(0, 1); glVertex3f(0.75, 0, 0.5);
 	glTexCoord2f(1, 1); glVertex3f(1, 0, 0.5);
@@ -284,8 +270,6 @@ void create_Main_Building() {
 
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
-
-	glNormal3f(0, -1, 0);
 
 	glTexCoord2f(0, 0); glVertex3f(0, 0, 0.5);
 	glTexCoord2f(0, 1); glVertex3f(0, 0, 0.75);
@@ -298,8 +282,6 @@ void create_Main_Building() {
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
 
-	glNormal3f(0, -1, 0);
-
 	glTexCoord2f(0, 0); glVertex3f(0.25, 0, 0.5);
 	glTexCoord2f(0, 1); glVertex3f(0.25, 0, 0.75);
 	glTexCoord2f(1, 1); glVertex3f(0.5, 0, 0.75);
@@ -310,8 +292,6 @@ void create_Main_Building() {
 
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
-
-	glNormal3f(0, -1, 0);
 
 	glTexCoord2f(0, 0); glVertex3f(0.5, 0, 0.5);
 	glTexCoord2f(0, 1); glVertex3f(0.5, 0, 0.75);
@@ -324,8 +304,6 @@ void create_Main_Building() {
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
 
-	glNormal3f(0, -1, 0);
-
 	glTexCoord2f(0, 0); glVertex3f(0.75, 0, 0.5);
 	glTexCoord2f(0, 1); glVertex3f(0.75, 0, 0.75);
 	glTexCoord2f(1, 1); glVertex3f(1, 0, 0.75);
@@ -336,8 +314,6 @@ void create_Main_Building() {
 
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
-
-	glNormal3f(0, -1, 0);
 
 	glTexCoord2f(0, 0); glVertex3f(0, 0, 0.75);
 	glTexCoord2f(0, 1); glVertex3f(0, 0, 1);
@@ -350,8 +326,6 @@ void create_Main_Building() {
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
 
-	glNormal3f(0, -1, 0);
-
 	glTexCoord2f(0, 0); glVertex3f(0.25, 0, 0.75);
 	glTexCoord2f(0, 1); glVertex3f(0.25, 0, 1);
 	glTexCoord2f(1, 1); glVertex3f(0.5, 0, 1);
@@ -363,8 +337,6 @@ void create_Main_Building() {
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
 
-	glNormal3f(0, -1, 0);
-
 	glTexCoord2f(0, 0); glVertex3f(0.5, 0, 0.75);
 	glTexCoord2f(0, 1); glVertex3f(0.5, 0, 1);
 	glTexCoord2f(1, 1); glVertex3f(0.75, 0, 1);
@@ -375,8 +347,6 @@ void create_Main_Building() {
 
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
-
-	glNormal3f(0, -1, 0);
 
 	glTexCoord2f(0, 0); glVertex3f(0.75, 0, 0.75);
 	glTexCoord2f(0, 1); glVertex3f(0.75, 0, 1);
