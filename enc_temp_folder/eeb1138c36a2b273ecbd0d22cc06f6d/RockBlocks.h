@@ -357,7 +357,7 @@ void draw_Castle_RockBlock() {
 
 	glBindTexture(GL_TEXTURE_2D, texture[17]);
 
-	glBegin(/*GL_LINE_LOOP*/GL_POLYGON);
+	glBegin(GL_LINE_LOOP);
 
 	glTexCoord2f(.538, .013); glVertex3f(.538, .013, 0);
 	glTexCoord2f(.5, .013); glVertex3f(.5, .013, 0);
@@ -388,7 +388,6 @@ void draw_Castle_RockBlock() {
 	glTexCoord2f(.255, .95); glVertex3f(.255, .95, 0);
 	glTexCoord2f(.3775, .975); glVertex3f(.3775, .975, 0);
 	glTexCoord2f(.5, .97); glVertex3f(.5, .97, 0);
-	glTexCoord2f(.53, 1); glVertex3f(.53, 1, 0);
 	glTexCoord2f(.53, 1); glVertex3f(.53, 1, 0);
 
 
