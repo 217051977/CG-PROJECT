@@ -34,8 +34,6 @@ void lightning() {
 	light0();
 
 	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, globalLight);
-
-	glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, materialAmbientAndDiffuse);
 	glMaterialfv(GL_FRONT, GL_SPECULAR, materialSpecular);
 	glMaterialfv(GL_FRONT, GL_SHININESS, materialShine);
 
@@ -50,6 +48,8 @@ void setup(void) {
 	glEnable(GL_DEPTH_TEST);
 
 	lightning();
+
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
 	glGenTextures(20, texture);
 

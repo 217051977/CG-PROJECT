@@ -37,6 +37,8 @@ void draw_LeftTower_Crown_Y_Axis() {
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
 
+	glNormal3f(0, -1, 0);
+
 	glTexCoord2f(0, 0); glVertex3f(0, 0, 0);
 	glTexCoord2f(0, 1); glVertex3f(0, 0, 1);
 	glTexCoord2f(0.4, 1); glVertex3f(1, 0, 1);
@@ -49,6 +51,8 @@ void draw_LeftTower_Crown_Y_Axis() {
 
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
+
+	glNormal3f(0, 1, 0);
 
 	glTexCoord2f(0, 0); glVertex3f(0, 1, 0);
 	glTexCoord2f(0, 1); glVertex3f(1, 1, 0);
@@ -63,6 +67,8 @@ void draw_LeftTower_Crown_Y_Axis() {
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
 
+	glNormal3f(0, 0, -1);
+
 	glTexCoord2f(0, 0); glVertex3f(0, 0, 0);
 	glTexCoord2f(0, 0.4); glVertex3f(1, 0, 0);
 	glTexCoord2f(1, 0.4); glVertex3f(1, 1, 0);
@@ -75,6 +81,8 @@ void draw_LeftTower_Crown_Y_Axis() {
 
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
+
+	glNormal3f(0, 0, 1);
 
 	glTexCoord2f(0, 0); glVertex3f(0, 0, 1);
 	glTexCoord2f(0, 0.4); glVertex3f(0, 1, 1);
@@ -89,6 +97,8 @@ void draw_LeftTower_Crown_Y_Axis() {
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
 
+	glNormal3f(-1, 0, 0);
+
 	glTexCoord2f(0, 0); glVertex3f(0, 0, 0);
 	glTexCoord2f(0, 1); glVertex3f(0, 1, 0);
 	glTexCoord2f(0.4, 1); glVertex3f(0, 1, 1);
@@ -101,6 +111,8 @@ void draw_LeftTower_Crown_Y_Axis() {
 
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
+
+	glNormal3f(1, 0, 0);
 
 	glTexCoord2f(0, 0); glVertex3f(1, 0, 0);
 	glTexCoord2f(0, 1); glVertex3f(1, 0, 1);
@@ -120,6 +132,8 @@ void draw_LeftTower_Crown() {
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
 
+	glNormal3f(0, -1, 0);
+
 	glTexCoord2f(0, 0); glVertex3f(0, 0, 0);
 	glTexCoord2f(0, 0.4); glVertex3f(0, 0, 1);
 	glTexCoord2f(1, 0.4); glVertex3f(1, 0, 1);
@@ -132,6 +146,8 @@ void draw_LeftTower_Crown() {
 
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
+
+	glNormal3f(0, 1, 0);
 
 	glTexCoord2f(0, 0); glVertex3f(0, 1, 0);
 	glTexCoord2f(0, 0.4); glVertex3f(1, 1, 0);
@@ -146,6 +162,8 @@ void draw_LeftTower_Crown() {
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
 
+	glNormal3f(0, 0, -1);
+
 	glTexCoord2f(0, 0); glVertex3f(0, 0, 0);
 	glTexCoord2f(0, 1); glVertex3f(1, 0, 0);
 	glTexCoord2f(0.4, 1); glVertex3f(1, 1, 0);
@@ -159,6 +177,8 @@ void draw_LeftTower_Crown() {
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
 
+	glNormal3f(0, 0, 1);
+
 	glTexCoord2f(0, 0); glVertex3f(0, 0, 1);
 	glTexCoord2f(0, 1); glVertex3f(0, 1, 1);
 	glTexCoord2f(0.4, 1); glVertex3f(1, 1, 1);
@@ -170,6 +190,8 @@ void draw_LeftTower_Crown() {
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
 
+	glNormal3f(-1, 0, 0);
+
 	glTexCoord2f(0, 0); glVertex3f(0, 0, 0);
 	glTexCoord2f(0, 0.5); glVertex3f(0, 1, 0);
 	glTexCoord2f(1, 0.5); glVertex3f(0, 1, 1);
@@ -180,6 +202,8 @@ void draw_LeftTower_Crown() {
 
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
+
+	glNormal3f(-1, 0, 0);
 
 	glTexCoord2f(0, 0); glVertex3f(1, 0, 0);
 	glTexCoord2f(0, 0.5); glVertex3f(1, 0, 1);

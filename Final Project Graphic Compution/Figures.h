@@ -79,10 +79,10 @@ void draw_Cylinder_Figure() {
 	 * draw_Circle()
 	 * */
 
-    glBegin(GL_LINE_LOOP);
-    draw_Circle(0, 2 * PI, 1, 1, 0);
-    draw_Circle(0, 2 * PI, 1, 1, 1);
-    glEnd();
+    //glBegin(GL_LINE_LOOP);
+    //draw_Circle(0, 2 * PI, 1, 1, 0);
+    //draw_Circle(0, 2 * PI, 1, 1, 1);
+    //glEnd();
 
 }
 

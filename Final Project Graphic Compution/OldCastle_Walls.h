@@ -34,16 +34,16 @@ void draw_Castle_OldTower_Roof(GLfloat radios, GLfloat xSize) {
      *
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
-    glPushMatrix();
-    glTranslatef(xSize, 0, 200);
-    glBegin(GL_LINE_LOOP);
-    for (GLfloat i = radios, h = 0; i > 1; i -= 2, h += 5) {
-
-        draw_Circle(0, 2 * PI, i, i, h);
-
-    }
-    glEnd();
-    glPopMatrix();
+    //glPushMatrix();
+    //glTranslatef(xSize, 0, 200);
+    //glBegin(GL_LINE_LOOP);
+    //for (GLfloat i = radios, h = 0; i > 1; i -= 2, h += 5) {
+	//
+    //    draw_Circle(0, 2 * PI, i, i, h);
+	//
+    //}
+    //glEnd();
+    //glPopMatrix();
 
 }
 

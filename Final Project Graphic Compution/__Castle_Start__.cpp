@@ -128,7 +128,7 @@ float diffuseLight[] = { d, d, d, 1 };
 //reflective light in the object
 float specularLight[] = { d, d, d, 1 };
 
-float lightPosition[] = { cos((PI / 180) * theta), sin((PI / 180) * theta), 0 };
+float lightPosition[] = { X_INITIAL + 250, Y_INITIAL + 235, 342 };
 
 //global light
 GLfloat globalLight[] = { 0.15, 0.15, 0.15, 1 };
@@ -139,6 +139,7 @@ GLfloat ambientLight[] = { 0.3, 0.3, 0.3, 1 };
 GLfloat shininess[] = { 60 };
 
 float materialAmbientAndDiffuse[] = { 1, 1, 1, 1 };
+float materialAmbientAndDiffuse_Sky[] = { 1, 1, 1, 0.5 };
 float materialSpecular[] = { 0, 0, 0, 1 };
 float materialShine[] = { 50 };
 

@@ -443,71 +443,71 @@ void draw_Castle_RockBlock() {
 	glPopMatrix();
 
 //  sets the beginning with only the lines that surrounds it
-    glBegin(GL_LINE_LOOP);
-
-	glNormal3f(0, 0, 1);
-
-    draw_Circle(-(13 * PI) / 30, (37 * PI) / 26, 205, 205, 150);
-    glVertex3f(-18, -205, 100);
-    glVertex3f(-18, -205, 0);
-    glVertex3f(-70, -205, 0);
-    glVertex3f(-98.5, -185, 0);
-    glVertex3f(-128.5, -180, 0);
-    glVertex3f(-134.5, -175, 0);
-    glVertex3f(-158.5, -155, 0);
-    glVertex3f(-183.5, -145, 0);
-    glVertex3f(-188.5, -140, 0);
-    glVertex3f(-188.5, -135, 0);
-    glVertex3f(-183.5, -115, 0);
-    glVertex3f(-193.5, -95, 0);
-    glVertex3f(-203.5, -85, 0);
-    glVertex3f(-218.5, -45, 0);
-    glVertex3f(-221.5, 0, 0);
-    glVertex3f(-218.5, 25, 0);
-    glVertex3f(-208.5, 45, 0);
-    glVertex3f(-193.5, 75, 0);
-    glVertex3f(-198.5, 115, 0);
-    glVertex3f(-183.5, 145, 0);
-    glVertex3f(-183.5, 155, 0);
-    glVertex3f(-168.5, 175, 0);
-    glVertex3f(-158.5, 165, 0);
-    glVertex3f(-153.5, 195, 0);
-    glVertex3f(-123.5, 210, 0);
-    glVertex3f(-108.5, 205, 0);
-    glVertex3f(-58.5, 215, 0);
-    glVertex3f(0, 210, 0);
-    glVertex3f(11.5, 225, 0);
-    glVertex3f(51.5, 215, 0);
-    glVertex3f(71.5, 195, 0);
-    glVertex3f(91.5, 195, 0);
-    glVertex3f(111.5, 175, 0);
-    glVertex3f(141.5, 165, 0);
-    glVertex3f(151.5, 155, 0);
-    glVertex3f(171.5, 150, 0);
-    glVertex3f(188.5, 135, 0);
-    glVertex3f(201.5, 115, 0);
-    glVertex3f(191.5, 105, 0);
-    glVertex3f(201.5, 85, 0);
-    glVertex3f(201.5, 65, 0);
-    glVertex3f(221, 35, 0);
-    glVertex3f(211.5, 0, 0);
-    glVertex3f(231.5, -25, 0);
-    glVertex3f(226.5, -30, 0);
-    glVertex3f(211.5, -55, 0);
-    glVertex3f(201.5, -58, 0);
-    glVertex3f(206.5, -80, 0);
-    glVertex3f(191.5, -95, 0);
-    glVertex3f(181.5, -105, 0);
-    glVertex3f(171.5, -130, 0);
-    glVertex3f(151.5, -155, 0);
-    glVertex3f(141.5, -165, 0);
-    glVertex3f(90.5, -195, 0);
-    glVertex3f(55, -205, 0);
-    glVertex3f(30, -210, 0);
-    glVertex3f(17, -205, 0);
-    glVertex3f(17, -205, 100);
-
-//	sets the ending of the draw connecting the first vertex draw with the last
-    glEnd();
+    //glBegin(GL_LINE_LOOP);
+	//
+	//glNormal3f(0, 0, 1);
+	//
+    //draw_Circle(-(13 * PI) / 30, (37 * PI) / 26, 205, 205, 150);
+    //glVertex3f(-18, -205, 100);
+    //glVertex3f(-18, -205, 0);
+    //glVertex3f(-70, -205, 0);
+    //glVertex3f(-98.5, -185, 0);
+    //glVertex3f(-128.5, -180, 0);
+    //glVertex3f(-134.5, -175, 0);
+    //glVertex3f(-158.5, -155, 0);
+    //glVertex3f(-183.5, -145, 0);
+    //glVertex3f(-188.5, -140, 0);
+    //glVertex3f(-188.5, -135, 0);
+    //glVertex3f(-183.5, -115, 0);
+    //glVertex3f(-193.5, -95, 0);
+    //glVertex3f(-203.5, -85, 0);
+    //glVertex3f(-218.5, -45, 0);
+    //glVertex3f(-221.5, 0, 0);
+    //glVertex3f(-218.5, 25, 0);
+    //glVertex3f(-208.5, 45, 0);
+    //glVertex3f(-193.5, 75, 0);
+    //glVertex3f(-198.5, 115, 0);
+    //glVertex3f(-183.5, 145, 0);
+    //glVertex3f(-183.5, 155, 0);
+    //glVertex3f(-168.5, 175, 0);
+    //glVertex3f(-158.5, 165, 0);
+    //glVertex3f(-153.5, 195, 0);
+    //glVertex3f(-123.5, 210, 0);
+    //glVertex3f(-108.5, 205, 0);
+    //glVertex3f(-58.5, 215, 0);
+    //glVertex3f(0, 210, 0);
+    //glVertex3f(11.5, 225, 0);
+    //glVertex3f(51.5, 215, 0);
+    //glVertex3f(71.5, 195, 0);
+    //glVertex3f(91.5, 195, 0);
+    //glVertex3f(111.5, 175, 0);
+    //glVertex3f(141.5, 165, 0);
+    //glVertex3f(151.5, 155, 0);
+    //glVertex3f(171.5, 150, 0);
+    //glVertex3f(188.5, 135, 0);
+    //glVertex3f(201.5, 115, 0);
+    //glVertex3f(191.5, 105, 0);
+    //glVertex3f(201.5, 85, 0);
+    //glVertex3f(201.5, 65, 0);
+    //glVertex3f(221, 35, 0);
+    //glVertex3f(211.5, 0, 0);
+    //glVertex3f(231.5, -25, 0);
+    //glVertex3f(226.5, -30, 0);
+    //glVertex3f(211.5, -55, 0);
+    //glVertex3f(201.5, -58, 0);
+    //glVertex3f(206.5, -80, 0);
+    //glVertex3f(191.5, -95, 0);
+    //glVertex3f(181.5, -105, 0);
+    //glVertex3f(171.5, -130, 0);
+    //glVertex3f(151.5, -155, 0);
+    //glVertex3f(141.5, -165, 0);
+    //glVertex3f(90.5, -195, 0);
+    //glVertex3f(55, -205, 0);
+    //glVertex3f(30, -210, 0);
+    //glVertex3f(17, -205, 0);
+    //glVertex3f(17, -205, 100);
+	//
+//	//sets the ending of the draw connecting the first vertex draw with the last
+    //glEnd();
 
 }

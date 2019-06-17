@@ -1286,18 +1286,18 @@ void draw_Castle_Courtyard() {
 
     glTranslatef(94.5, 29.5, 0);
 
-	glColor3f(0, 0, 0);									//CW mas tem de ser CCW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//	make the outside part of the roundabout
-    glBegin(GL_LINE_LOOP);
-    draw_Circle(0, 2 * PI, 7.5, 7.5, 0);
-    draw_Circle(0, 2 * PI, 7.5, 7.5, 5);
-    glEnd();
-
-//	make the inside part of the roundabout
-    glBegin(GL_LINE_LOOP);
-    draw_Circle(0, 2 * PI, 2.5, 2.5, 0);
-    draw_Circle(0, 2 * PI, 2.5, 2.5, 10);
-    glEnd();
+	//glColor3f(0, 0, 0);									//CW mas tem de ser CCW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//	//make the outside part of the roundabout
+    //glBegin(GL_LINE_LOOP);
+    //draw_Circle(0, 2 * PI, 7.5, 7.5, 0);
+    //draw_Circle(0, 2 * PI, 7.5, 7.5, 5);
+    //glEnd();
+	//
+//	//make the inside part of the roundabout
+    //glBegin(GL_LINE_LOOP);
+    //draw_Circle(0, 2 * PI, 2.5, 2.5, 0);
+    //draw_Circle(0, 2 * PI, 2.5, 2.5, 10);
+    //glEnd();
 	glPopMatrix();
 
     /*

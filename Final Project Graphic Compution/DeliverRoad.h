@@ -31,16 +31,16 @@ void draw_FrontDoor_Tower_Roof() {
      *
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
-    glPushMatrix();
-    glTranslatef(0, 0, 100);
-    glBegin(GL_LINE_LOOP);
-
-    draw_Circle(0, 2 * PI, 5, 5, 0);
-    draw_Circle(0, 2 * PI, 3, 3, 5);
-    draw_Circle(0, 2 * PI, 1, 1, 10);
-
-    glEnd();
-    glPopMatrix();
+    //glPushMatrix();
+    //glTranslatef(0, 0, 100);
+    //glBegin(GL_LINE_LOOP);
+	//
+    //draw_Circle(0, 2 * PI, 5, 5, 0);
+    //draw_Circle(0, 2 * PI, 3, 3, 5);
+    //draw_Circle(0, 2 * PI, 1, 1, 10);
+	//
+    //glEnd();
+    //glPopMatrix();
 
 }
 
@@ -56,12 +56,12 @@ void draw_FrontDoor_Tower_Body() {
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      *
      * */
-    glPushMatrix();
-    glScalef(5, 5, 100);
-
-    draw_Cylinder_Figure();
-
-    glPopMatrix();
+    //glPushMatrix();
+    //glScalef(5, 5, 100);
+	//
+    //draw_Cylinder_Figure();
+	//
+    //glPopMatrix();
 
 }
 
@@ -82,16 +82,16 @@ void draw_FrontDoor() {
      *
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
-    glPushMatrix();
-    glTranslatef(2.5, 2.5, 0);
-    draw_FrontDoor_Tower_Roof();
-    draw_FrontDoor_Tower_Body();
-
-    glTranslatef(35, 0, 0);
-    draw_FrontDoor_Tower_Roof();
-    draw_FrontDoor_Tower_Body();
-
-    glPopMatrix();
+  // glPushMatrix();
+  // glTranslatef(2.5, 2.5, 0);
+  // draw_FrontDoor_Tower_Roof();
+  // draw_FrontDoor_Tower_Body();
+  //
+  // glTranslatef(35, 0, 0);
+  // draw_FrontDoor_Tower_Roof();
+  // draw_FrontDoor_Tower_Body();
+  //
+  // glPopMatrix();
 
     /*
      * save the matrix status
