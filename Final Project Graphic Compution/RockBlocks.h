@@ -359,6 +359,8 @@ void draw_Castle_RockBlock() {
 
 	glBegin(GL_LINE_LOOP/*GL_POLYGON/**/);
 
+	glTexCoord2f(.7, .027); glVertex3f(.7, .027, 0);
+	glTexCoord2f(.57, .005); glVertex3f(.57, .005, 0);
 	glTexCoord2f(.538, .013); glVertex3f(.538, .013, 0);
 	glTexCoord2f(.5, .013); glVertex3f(.5, .013, 0);
 	glTexCoord2f(.5, .5); glVertex3f(.5, .5, 0);
@@ -400,9 +402,14 @@ void draw_Castle_RockBlock() {
 	glTexCoord2f(.93, .73); glVertex3f(.93, .73, 0);
 	glTexCoord2f(.96, .68); glVertex3f(.96, .68, 0);
 	glTexCoord2f(.95, .64); glVertex3f(.95, .64, 0);
-
-
 	glTexCoord2f(1, .56); glVertex3f(1, .56, 0);
+	glTexCoord2f(.98, .48); glVertex3f(.98, .48, 0);
+	glTexCoord2f(1.02, .42); glVertex3f(1.02, .42, 0);
+	glTexCoord2f(.98, .355); glVertex3f(.98, .355, 0);
+	glTexCoord2f(.965, .35); glVertex3f(.965, .35, 0);
+	glTexCoord2f(.97, .305); glVertex3f(.97, .305, 0);
+	glTexCoord2f(.92, .25); glVertex3f(.92, .25, 0);
+	glTexCoord2f(.89, .19); glVertex3f(.89, .19, 0);
 
 	glEnd();
 
