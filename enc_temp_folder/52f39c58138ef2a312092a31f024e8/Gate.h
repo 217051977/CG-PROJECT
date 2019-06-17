@@ -19,18 +19,18 @@
 //flag
 void draw_Flag() {
 
-    //glPushMatrix();
-    //glTranslatef(0, 0, 0);
-    ////sets the beginning of the inside draw part
-    //glBegin(GL_LINE_LOOP);
-	//
-    //glVertex3f(0, 0, 0);
-    //glVertex3f(5, -5, 0);    //     adds 5px width and removes 5px height
-	//
-    ////sets the ending of the draw
-    //glEnd();
-	//
-    //glPopMatrix();
+    glPushMatrix();
+    glTranslatef(0, 0, 0);
+    //sets the beginning of the inside draw part
+    glBegin(GL_LINE_LOOP);
+
+    glVertex3f(0, 0, 0);
+    glVertex3f(5, -5, 0);    //     adds 5px width and removes 5px height
+
+    //sets the ending of the draw
+    glEnd();
+
+    glPopMatrix();
 
 }
 
