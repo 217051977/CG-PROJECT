@@ -24,96 +24,96 @@
 
 void draw_RockBlock() {
 
-    ///*
-    // * save the matrix status
-    // * translate the figure
-    // *      X_INITIAL + 40 units for the x value
-    // *      Y_INITIAL + 40 units for the y value
-    // * draw_Left_RockBlock()
-    // * every vertex non modified keeps the same as it was, but the modified ones are changed
-    // * */
-    //glPushMatrix();
-    //glTranslatef(X_INITIAL + 40, Y_INITIAL + 40, 0);
-    //draw_Left_RockBlock();
-    //glPopMatrix();
-	//
-    ///*
-    // * save the matrix status
-    // * translate the figure
-    // *      X_INITIAL + 40 units for the x value
-    // *      Y_INITIAL + 40 units for the y value
-    // * draw_LeftMiddle_RockBlock_Connection()
-    // * every vertex non modified keeps the same as it was, but the modified ones are changed
-    // * */
-    //glPushMatrix();
-    //glTranslatef(X_INITIAL + 40, Y_INITIAL + 40, 0);
-    //draw_LeftMiddle_RockBlock_Connection();     //(180 ,320)
-    //glPopMatrix();
-	//
-    ///*
-    // * save the matrix status
-    // * translate the figure
-    // *      X_INITIAL + 180 units for the x value
-    // *      Y_INITIAL - 50 units for the y value
-    // * draw_Middle_RockBlock()
-    // * every vertex non modified keeps the same as it was, but the modified ones are changed
-    // * */
-    //glPushMatrix();
-    //glTranslatef(X_INITIAL + 180, Y_INITIAL - 50, 0);
-    //draw_Middle_RockBlock();                   //(280 ,250)
-    //glPopMatrix();
-	//
-    ///*
-    // * save the matrix status
-    // * translate the figure
-    // *      X_INITIAL + 360 units for the x value
-    // *      Y_INITIAL + 20 units for the y value
-    // * draw_RightMiddle_RockBlock_Connection()
-    // * every vertex non modified keeps the same as it was, but the modified ones are changed
-    // * */
-    //glPushMatrix();
-    //glTranslatef(X_INITIAL + 360, Y_INITIAL + 20, 0);
-    //draw_RightMiddle_RockBlock_Connection();   //(460, 320)
-    //glPopMatrix();
-	//
-    ///*
-    // * save the matrix status
-    // * translate the figure
-    // *      X_INITIAL + 380 units for the x value
-    // *      Y_INITIAL - 20 units for the y value
-    // * draw_Right_RockBlock()
-    // * every vertex non modified keeps the same as it was, but the modified ones are changed
-    // * */
-    //glPushMatrix();
-    //glTranslatef(X_INITIAL + 380, Y_INITIAL - 20, 0);
-    //draw_Right_RockBlock();                    //(495, 280)
-    //glPopMatrix();
-	//
-    ///*
-    // * save the matrix status
-    // * translate the figure
-    // *      X_INITIAL + 245 units for the x value
-    // *      Y_INITIAL + 90 units for the y value
-    // * draw_DeliveryPath_RockBlock()
-    // * every vertex non modified keeps the same as it was, but the modified ones are changed
-    // * */
-    //glPushMatrix();
-    //glTranslatef(X_INITIAL + 245, Y_INITIAL + 90, 0);
-    //draw_DeliveryPath_RockBlock();             //(345, 390)
-    //glPopMatrix();
-	//
-    ///*
-    // * save the matrix status
-    // * translate the figure
-    // *      X_INITIAL + 314 units for the x value
-    // *      Y_INITIAL - 65 units for the y value
-    // * draw_EntrancePath_RockBlock()
-    // * every vertex non modified keeps the same as it was, but the modified ones are changed
-    // * */
-    //glPushMatrix();
-    //glTranslatef(X_INITIAL + 314, Y_INITIAL - 65, 0);
-    //draw_EntrancePath_Full_RockBlock();
-    //glPopMatrix();
+    /*
+     * save the matrix status
+     * translate the figure
+     *      X_INITIAL + 40 units for the x value
+     *      Y_INITIAL + 40 units for the y value
+     * draw_Left_RockBlock()
+     * every vertex non modified keeps the same as it was, but the modified ones are changed
+     * */
+    glPushMatrix();
+    glTranslatef(X_INITIAL + 40, Y_INITIAL + 40, 0);
+    draw_Left_RockBlock();
+    glPopMatrix();
+
+    /*
+     * save the matrix status
+     * translate the figure
+     *      X_INITIAL + 40 units for the x value
+     *      Y_INITIAL + 40 units for the y value
+     * draw_LeftMiddle_RockBlock_Connection()
+     * every vertex non modified keeps the same as it was, but the modified ones are changed
+     * */
+    glPushMatrix();
+    glTranslatef(X_INITIAL + 40, Y_INITIAL + 40, 0);
+    draw_LeftMiddle_RockBlock_Connection();     //(180 ,320)
+    glPopMatrix();
+
+    /*
+     * save the matrix status
+     * translate the figure
+     *      X_INITIAL + 180 units for the x value
+     *      Y_INITIAL - 50 units for the y value
+     * draw_Middle_RockBlock()
+     * every vertex non modified keeps the same as it was, but the modified ones are changed
+     * */
+    glPushMatrix();
+    glTranslatef(X_INITIAL + 180, Y_INITIAL - 50, 0);
+    draw_Middle_RockBlock();                   //(280 ,250)
+    glPopMatrix();
+
+    /*
+     * save the matrix status
+     * translate the figure
+     *      X_INITIAL + 360 units for the x value
+     *      Y_INITIAL + 20 units for the y value
+     * draw_RightMiddle_RockBlock_Connection()
+     * every vertex non modified keeps the same as it was, but the modified ones are changed
+     * */
+    glPushMatrix();
+    glTranslatef(X_INITIAL + 360, Y_INITIAL + 20, 0);
+    draw_RightMiddle_RockBlock_Connection();   //(460, 320)
+    glPopMatrix();
+
+    /*
+     * save the matrix status
+     * translate the figure
+     *      X_INITIAL + 380 units for the x value
+     *      Y_INITIAL - 20 units for the y value
+     * draw_Right_RockBlock()
+     * every vertex non modified keeps the same as it was, but the modified ones are changed
+     * */
+    glPushMatrix();
+    glTranslatef(X_INITIAL + 380, Y_INITIAL - 20, 0);
+    draw_Right_RockBlock();                    //(495, 280)
+    glPopMatrix();
+
+    /*
+     * save the matrix status
+     * translate the figure
+     *      X_INITIAL + 245 units for the x value
+     *      Y_INITIAL + 90 units for the y value
+     * draw_DeliveryPath_RockBlock()
+     * every vertex non modified keeps the same as it was, but the modified ones are changed
+     * */
+    glPushMatrix();
+    glTranslatef(X_INITIAL + 245, Y_INITIAL + 90, 0);
+    draw_DeliveryPath_RockBlock();             //(345, 390)
+    glPopMatrix();
+
+    /*
+     * save the matrix status
+     * translate the figure
+     *      X_INITIAL + 314 units for the x value
+     *      Y_INITIAL - 65 units for the y value
+     * draw_EntrancePath_RockBlock()
+     * every vertex non modified keeps the same as it was, but the modified ones are changed
+     * */
+    glPushMatrix();
+    glTranslatef(X_INITIAL + 314, Y_INITIAL - 65, 0);
+    draw_EntrancePath_Full_RockBlock();
+    glPopMatrix();
 
     /*
      * save the matrix status
@@ -1160,7 +1160,7 @@ void draw_Castle_Roads() {
      * every vertex non modified keeps the same as it was, but the modified ones are changed
      * */
     glPushMatrix();
-    glTranslatef(X_INITIAL + 252.5, Y_INITIAL + 295, 0);
+    glTranslatef(X_INITIAL + 252.5, Y_INITIAL + 295, 0.01);
 
 	glPushMatrix();
 	glTranslatef(-10, -30, 0);
@@ -1241,7 +1241,7 @@ void draw_Castle_Courtyard() {
 	glBindTexture(GL_TEXTURE_2D, texture[9]);
 
     glPushMatrix();
-    glTranslatef(X_INITIAL + 173.5, Y_INITIAL + 200, 0);
+    glTranslatef(X_INITIAL + 173.5, Y_INITIAL + 200, 0.01);
 
 //	make the courtyard limit (ground)
     glPushMatrix();
@@ -1432,7 +1432,7 @@ void draw_Castle_Courtyard() {
 	glBindTexture(GL_TEXTURE_2D, texture[1]);
 
     glPushMatrix();
-    glTranslatef(253, 165, 0);
+    glTranslatef(253, 165, 0.01);
     for (int h = 0; h < 28; h += 5) {
 
         for (int v = 0; v < 45; v += 5) {

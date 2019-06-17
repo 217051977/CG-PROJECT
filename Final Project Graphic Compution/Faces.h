@@ -76,12 +76,17 @@ void create_Front___Bot_Body_Left_Tower_Face() {
 	glBindTexture(GL_TEXTURE_2D, texture[2]);
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(0, -1, 0);
+
 	glTexCoord2f(0, 0); glVertex3f(0, 0, 0.955);
 	glTexCoord2f(0, 2); glVertex3f(0, 0, 1);
 	glTexCoord2f(1, 0); glVertex3f(0.15, 0, 0.955);
 	glEnd();
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(0, -1, 0);
 
 	glTexCoord2f(0, 0); glVertex3f(0, 0, 0);
 	glTexCoord2f(0, 2); glVertex3f(0, 0, 0.955);
@@ -96,12 +101,17 @@ void create_Front___Bot_Body_Left_Tower_Face() {
 	glBindTexture(GL_TEXTURE_2D, texture[1]);
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(0, -1, 0);
+
 	glTexCoord2f(0, 0); glVertex3f(0.15, 0, 0.905);
 	glTexCoord2f(0, 1); glVertex3f(0.15, 0, 0.954);
 	glTexCoord2f(1, 0); glVertex3f(0.30, 0, 0.905);
 	glEnd();
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(0, -1, 0);
 
 	glTexCoord2f(0, 0); glVertex3f(0.15, 0, 0);
 	glTexCoord2f(0, 1); glVertex3f(0.15, 0, 0.905);
@@ -116,12 +126,17 @@ void create_Front___Bot_Body_Left_Tower_Face() {
 	glBindTexture(GL_TEXTURE_2D, texture[2]);
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(0, -1, 0);
+
 	glTexCoord2f(0, 0); glVertex3f(0.30, 0, 0.84);
 	glTexCoord2f(0, 2); glVertex3f(0.30, 0, 0.905);
 	glTexCoord2f(1, 0); glVertex3f(0.5, 0, 0.84);
 	glEnd();
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(0, -1, 0);
 
 	glTexCoord2f(0, 0); glVertex3f(0.30, 0, 0);
 	glTexCoord2f(0, 2); glVertex3f(0.30, 0, 0.84);
@@ -132,12 +147,18 @@ void create_Front___Bot_Body_Left_Tower_Face() {
 
 	/******************************************************************************************************/
 	glBegin(GL_POLYGON);
+
+	glNormal3f(0, -1, 0);
+
 	glTexCoord2f(0, 2); glVertex3f(0.7, 0, 0.905);
 	glTexCoord2f(0, 0); glVertex3f(0.7, 0, 0.84);
 	glTexCoord2f(1, 0); glVertex3f(0.5, 0, 0.84);
 	glEnd();
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(0, -1, 0);
+
 	glTexCoord2f(1, 0); glVertex3f(0.5, 0, 0);
 	glTexCoord2f(1, 2); glVertex3f(0.5, 0, 0.84);
 	glTexCoord2f(0, 2); glVertex3f(0.7, 0, 0.84);
@@ -150,12 +171,18 @@ void create_Front___Bot_Body_Left_Tower_Face() {
 	glBindTexture(GL_TEXTURE_2D, texture[1]);
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(0, -1, 0);
+
 	glTexCoord2f(0, 1); glVertex3f(0.85, 0, 0.954);
 	glTexCoord2f(0, 0); glVertex3f(0.85, 0, 0.905);
 	glTexCoord2f(1, 0); glVertex3f(0.7, 0, 0.905);
 	glEnd();
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(0, -1, 0);
+
 	glTexCoord2f(1, 0); glVertex3f(0.7, 0, 0);
 	glTexCoord2f(1, 1); glVertex3f(0.7, 0, 0.905);
 	glTexCoord2f(0, 1); glVertex3f(0.85, 0, 0.905);
@@ -168,12 +195,18 @@ void create_Front___Bot_Body_Left_Tower_Face() {
 	glBindTexture(GL_TEXTURE_2D, texture[2]);
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(0, -1, 0);
+
 	glTexCoord2f(0, 2); glVertex3f(1, 0, 1);
 	glTexCoord2f(0, 0); glVertex3f(1, 0, 0.955);
 	glTexCoord2f(1, 0); glVertex3f(0.85, 0, 0.955);
 	glEnd();
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(0, -1, 0);
+
 	glTexCoord2f(1, 0); glVertex3f(0.85, 0, 0);
 	glTexCoord2f(1, 2); glVertex3f(0.85, 0, 0.955);
 	glTexCoord2f(0, 2); glVertex3f(1, 0, 0.955);
@@ -335,6 +368,8 @@ void create_Front_Pyramidal_Face() {
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
 
+	glNormal3f(0, -1, 1);
+
 	/*
 	 * set a vertex on the position (0, 0, 0)
 	 * set a vertex on the position (1, 0, 0)
@@ -391,6 +426,9 @@ void create_Left_Ruined_Tower_Bot___Front_Face() {
 
 //    left brick tower
 	glBegin(GL_POLYGON);
+
+	glNormal3f(0, -1, 0);
+
 	glTexCoord2f(0, 1); glVertex3f(0, 0, 1);
 	glTexCoord2f(0.15, 0.925); glVertex3f(0.15, 0, 0.925);
 	glTexCoord2f(0.15, 0.45); glVertex3f(0.15, 0, 0.45);
@@ -405,6 +443,9 @@ void create_Left_Ruined_Tower_Bot___Front_Face() {
 
 //    left wood tower
 	glBegin(GL_POLYGON);
+
+	glNormal3f(0, -1, 0);
+
 	glTexCoord2f(0.15, 0.925); glVertex3f(0.15, 0, 0.925);
 	glTexCoord2f(0.25, 0.875); glVertex3f(0.25, 0, 0.875);
 	glTexCoord2f(0.25, 0.35); glVertex3f(0.25, 0, 0.35);
@@ -419,6 +460,9 @@ void create_Left_Ruined_Tower_Bot___Front_Face() {
 
 //    middle brick tower
 	glBegin(GL_POLYGON);
+
+	glNormal3f(0, -1, 0);
+
 	glTexCoord2f(0.25, 0.35); glVertex3f(0.25, 0, 0.35);
 	glTexCoord2f(0.25, 0.875); glVertex3f(0.25, 0, 0.875);
 	glTexCoord2f(0.5, 0.75); glVertex3f(0.5, 0, 0.75);
@@ -436,6 +480,9 @@ void create_Left_Ruined_Tower_Bot___Front_Face() {
 
 //    right wood tower
     glBegin(GL_POLYGON);
+
+	glNormal3f(0, -1, 0);
+
     glTexCoord2f(0.85, 0.925); glVertex3f(0.85, 0, 0.925);
 	glTexCoord2f(0.85, 0.35); glVertex3f(0.85, 0, 0.35);
 	glTexCoord2f(0.815, 0.30); glVertex3f(0.815, 0, 0.30);
@@ -451,6 +498,9 @@ void create_Left_Ruined_Tower_Bot___Front_Face() {
 
 //    right brick tower
     glBegin(GL_POLYGON);
+
+	glNormal3f(0, -1, 0);
+
     glTexCoord2f(0.85, 0.925); glVertex3f(0.85, 0, 0.925);
 	glTexCoord2f(1, 1); glVertex3f(1, 0, 1);
 	glTexCoord2f(1, 0.65); glVertex3f(1, 0, 0.65);
@@ -468,6 +518,9 @@ void create_Left_Ruined_Tower_Bot___Back_Face() {
 
 	//Left Side
 	glBegin(GL_POLYGON);
+
+	glNormal3f(0, 1, 0);
+
 	glTexCoord2f(0, 1); glVertex3f(0, 1, 1);
 	glTexCoord2f(0, 0.65); glVertex3f(0, 1, 0.65);
 	glTexCoord2f(0.5, 0.7); glVertex3f(0.5, 1, 0.7);
@@ -476,6 +529,9 @@ void create_Left_Ruined_Tower_Bot___Back_Face() {
 
 	//Right Side
 	glBegin(GL_POLYGON);
+
+	glNormal3f(0, 1, 0);
+
 	glTexCoord2f(0.5, 0.7); glVertex3f(0.5, 1, 0.7);
 	glTexCoord2f(1, 0.75); glVertex3f(1, 1, 0.75);
 	glTexCoord2f(1, 1); glVertex3f(1, 1, 1);
@@ -493,6 +549,9 @@ void create_Left_Ruined_Tower_Bot___Left_Face() {
 
 	//Right Side
     glBegin(GL_POLYGON);
+
+	glNormal3f(-1, 0, 0);
+
 	glTexCoord2f(0, 0.8); glVertex3f(0, 0, 0.8);
 	glTexCoord2f(0.02, 0.82); glVertex3f(0, 0.02, 0.82);
 	glTexCoord2f(0.02, 0.99); glVertex3f(0, 0.02, 0.99);
@@ -500,6 +559,9 @@ void create_Left_Ruined_Tower_Bot___Left_Face() {
     glEnd();
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(-1, 0, 0);
+
 	glTexCoord2f(0.02, 0.82); glVertex3f(0, 0.02, 0.82);
 	glTexCoord2f(0.1, 0.75); glVertex3f(0, 0.1, 0.75);
 	glTexCoord2f(0.1, 0.95); glVertex3f(0, 0.1, 0.95);
@@ -507,6 +569,9 @@ void create_Left_Ruined_Tower_Bot___Left_Face() {
 	glEnd();
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(-1, 0, 0);
+
 	glTexCoord2f(0.1, 0.75); glVertex3f(0, 0.1, 0.75);
 	glTexCoord2f(0.15, 0.6); glVertex3f(0, 0.15, 0.6);
 	glTexCoord2f(0.17, 0.6); glVertex3f(0, 0.17, 0.6);
@@ -516,6 +581,9 @@ void create_Left_Ruined_Tower_Bot___Left_Face() {
 	glEnd();
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(-1, 0, 0);
+
 	glTexCoord2f(0.2, 0.7); glVertex3f(0, 0.2, 0.7);
 	glTexCoord2f(0.28, 0.64); glVertex3f(0, 0.28, 0.64);
 	glTexCoord2f(0.32, 0.72); glVertex3f(0, 0.32, 0.72);
@@ -524,6 +592,9 @@ void create_Left_Ruined_Tower_Bot___Left_Face() {
 	glEnd();
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(-1, 0, 0);
+
 	glTexCoord2f(0.32, 0.72); glVertex3f(0, 0.32, 0.72);
 	glTexCoord2f(0.35, 0.6); glVertex3f(0, 0.35, 0.6);
 	glTexCoord2f(0.42, 0.75); glVertex3f(0, 0.42, 0.75);
@@ -532,6 +603,9 @@ void create_Left_Ruined_Tower_Bot___Left_Face() {
 	glEnd();
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(-1, 0, 0);
+
 	glTexCoord2f(0.42, 0.75); glVertex3f(0, 0.42, 0.75);
 	glTexCoord2f(0.5, 0.65); glVertex3f(0, 0.5, 0.65);
 	glTexCoord2f(0.5, 0.75); glVertex3f(0, 0.5, 0.75);
@@ -540,6 +614,9 @@ void create_Left_Ruined_Tower_Bot___Left_Face() {
 
 	//Left Side	
 	glBegin(GL_POLYGON);
+
+	glNormal3f(-1, 0, 0);
+
 	glTexCoord2f(0.5, 0.65); glVertex3f(0, 0.5, 0.65);
 	glTexCoord2f(0.55, 0.68); glVertex3f(0, 0.55, 0.68);
 	glTexCoord2f(0.55, 0.78); glVertex3f(0, 0.55, 0.78);
@@ -547,6 +624,9 @@ void create_Left_Ruined_Tower_Bot___Left_Face() {
 	glEnd();
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(-1, 0, 0);
+
 	glTexCoord2f(0.55, 0.68); glVertex3f(0, 0.55, 0.68);
 	glTexCoord2f(0.6, 0.6); glVertex3f(0, 0.6, 0.6);
 	glTexCoord2f(0.7, 0.6); glVertex3f(0, 0.7, 0.6);
@@ -556,6 +636,9 @@ void create_Left_Ruined_Tower_Bot___Left_Face() {
 	glEnd();
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(-1, 0, 0);
+
 	glTexCoord2f(0.75, 0.8); glVertex3f(0, 0.75, 0.8);
 	glTexCoord2f(0.8, 0.72); glVertex3f(0, 0.8, 0.72);
 	glTexCoord2f(0.85, 0.68); glVertex3f(0, 0.85, 0.68);
@@ -565,6 +648,9 @@ void create_Left_Ruined_Tower_Bot___Left_Face() {
 	glEnd();
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(-1, 0, 0);
+
 	glTexCoord2f(0.925, 0.75); glVertex3f(0, 0.925, 0.75);
 	glTexCoord2f(1, 0.65); glVertex3f(0, 1, 0.65);
 	glTexCoord2f(1, 1); glVertex3f(0, 1, 1);
@@ -582,13 +668,19 @@ void create_Left_Ruined_Tower_Bot___Right_Face() {
 
 	//Left Side
     glBegin(GL_POLYGON);
-    glTexCoord2f(0, 1); glVertex3f(1, 0, 1);
+
+	glNormal3f(1, 0, 0);
+
+	glTexCoord2f(0, 1); glVertex3f(1, 0, 1);
 	glTexCoord2f(0.02, 0.99); glVertex3f(1, 0.02, 0.99);
 	glTexCoord2f(0.02, 0.82); glVertex3f(1, 0.02, 0.82);
-    glTexCoord2f(0, 0.8); glVertex3f(1, 0, 0.8);
-    glEnd();
+	glTexCoord2f(0, 0.8); glVertex3f(1, 0, 0.8);
+	glEnd();
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(1, 0, 0);
+
 	glTexCoord2f(0.2, 0.9); glVertex3f(1, 0.2, 0.9);
 	glTexCoord2f(0.2, 0.7); glVertex3f(1, 0.2, 0.7);
 	glTexCoord2f(0.17, 0.65); glVertex3f(1, 0.17, 0.65);
@@ -599,6 +691,9 @@ void create_Left_Ruined_Tower_Bot___Right_Face() {
 	glEnd();
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(1, 0, 0);
+
 	glTexCoord2f(0.32, 0.84); glVertex3f(1, 0.32, 0.84);
 	glTexCoord2f(0.32, 0.72); glVertex3f(1, 0.32, 0.72);
 	glTexCoord2f(0.28, 0.65); glVertex3f(1, 0.28, 0.65);
@@ -607,6 +702,9 @@ void create_Left_Ruined_Tower_Bot___Right_Face() {
 	glEnd();
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(1, 0, 0);
+
 	glTexCoord2f(0.42, 0.75); glVertex3f(1, 0.42, 0.75);
 	glTexCoord2f(0.41, 0.69); glVertex3f(1, 0.41, 0.69);
 	glTexCoord2f(0.35, 0.67); glVertex3f(1, 0.35, 0.67);
@@ -616,6 +714,9 @@ void create_Left_Ruined_Tower_Bot___Right_Face() {
 	glEnd();
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(1, 0, 0);
+
 	glTexCoord2f(0.5, 0.69); glVertex3f(1, 0.5, 0.69);
 	glTexCoord2f(0.42, 0.75); glVertex3f(1, 0.42, 0.75);
 	glTexCoord2f(0.42, 0.79); glVertex3f(1, 0.42, 0.79);
@@ -624,6 +725,9 @@ void create_Left_Ruined_Tower_Bot___Right_Face() {
 
 	//Right Side
 	glBegin(GL_POLYGON);
+
+	glNormal3f(1, 0, 0);
+
 	glTexCoord2f(0.6, 0.8); glVertex3f(1, 0.6, 0.8);
 	glTexCoord2f(0.55, 0.65); glVertex3f(1, 0.55, 0.65);
 	glTexCoord2f(0.5, 0.69); glVertex3f(1, 0.5, 0.69);
@@ -631,6 +735,9 @@ void create_Left_Ruined_Tower_Bot___Right_Face() {
 	glEnd();
 
 	glBegin(GL_TRIANGLES);
+
+	glNormal3f(1, 0, 0);
+
 	glTexCoord2f(1, 1); glVertex3f(1, 1, 1);
 	glTexCoord2f(1, 0.85); glVertex3f(1, 1, 0.85);
 	glTexCoord2f(0.7, 0.85); glVertex3f(1, 0.7, 0.85);
@@ -648,6 +755,9 @@ void create_Left_Ruined_Tower_Bot___Bot_Face() {
 //	Front
 	//Left Brick part	
 	glBegin(GL_TRIANGLES);
+
+	glNormal3f(0, -1, -1);
+
 	glTexCoord2f(0, 0); glVertex3f(0, 0, 0.6);
 	glTexCoord2f(10, 0); glVertex3f(0.06, 0, 0.65);
 	glTexCoord2f(10, 1); glVertex3f(0.5, 0.5, 0.75);
@@ -725,6 +835,9 @@ void create_Left_Ruined_Tower_Bot___Bot_Face() {
 	glEnd();
 
 //Back
+
+	glNormal3f(0, 1, -1);
+
 	glBegin(GL_TRIANGLES);
 	glTexCoord2f(0, 0); glVertex3f(1, 1, 0.75);
 	glTexCoord2f(10, 0); glVertex3f(0, 1, 0.65);
@@ -733,6 +846,9 @@ void create_Left_Ruined_Tower_Bot___Bot_Face() {
 
 //Left
 	//Right Side
+
+	glNormal3f(-1, 0, -1);
+
 	glBegin(GL_TRIANGLES);
 	glTexCoord2f(0, 0); glVertex3f(0, 0, 0.8);
 	glTexCoord2f(10, 0); glVertex3f(0, 0, 0.6);
@@ -814,6 +930,9 @@ void create_Left_Ruined_Tower_Bot___Bot_Face() {
 
 //Right
 	//Left Side
+
+	glNormal3f(1, 0, -1);
+
 	glBegin(GL_TRIANGLES);
 	glTexCoord2f(0, 0); glVertex3f(1, 0, 0.8);
 	glTexCoord2f(10, 0); glVertex3f(1, 0.02, 0.82);

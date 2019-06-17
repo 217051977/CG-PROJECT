@@ -27,6 +27,8 @@ void draw_Left_RockBlock() {
 
 	glBegin(GL_POLYGON);
 
+	glNormal3f(0, 0, 1);
+
 	glTexCoord2f(0.5, 1); glVertex3f(0.5, 1, 0);
 	glTexCoord2f(0.6, 0.97); glVertex3f(0.6, 0.97, 0);
 	glTexCoord2f(0.7, 0.95); glVertex3f(0.7, 0.95, 0);
@@ -70,6 +72,8 @@ void draw_LeftMiddle_RockBlock_Connection() {
 	glBindTexture(GL_TEXTURE_2D, texture[17]);
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(0, 0, 1);
 
 	glTexCoord2f(0, 0.6875); glVertex3f(0, 0.6875, 0);
 	glTexCoord2f(0.18, 0.75); glVertex3f(0.18, 0.75, 0);
@@ -116,6 +120,8 @@ void draw_Middle_RockBlock() {
 	glBindTexture(GL_TEXTURE_2D, texture[17]);
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(0, 0, 1);
 	
 	glTexCoord2f(0.325 * x, 0 * y); glVertex3f(0.325, 0, 0);
 	glTexCoord2f(0.3 * x, 0 * y); glVertex3f(0.3, 0, 0);
@@ -162,6 +168,8 @@ void draw_RightMiddle_RockBlock_Connection() {
 
 	glBegin(GL_POLYGON);
 
+	glNormal3f(0, 0, 1);
+
 	glTexCoord2f(.04, .78); glVertex3f(.04, .78, 0);
 	glTexCoord2f(.08335, .8375); glVertex3f(.08335, .8375, 0);
 	glTexCoord2f(.5, .5); glVertex3f(.5, .5, 0);
@@ -170,6 +178,8 @@ void draw_RightMiddle_RockBlock_Connection() {
 	glEnd();
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(0, 0, 1);
 	
 	glTexCoord2f(.08335, .8375); glVertex3f(.08335, .8375, 0);
 	glTexCoord2f(.405, .73); glVertex3f(.405, .73, 0);
@@ -180,6 +190,8 @@ void draw_RightMiddle_RockBlock_Connection() {
 	glEnd();
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(0, 0, 1);
 
 	glTexCoord2f(.75, .66); glVertex3f(.75, .66, 0);
 	glTexCoord2f(1, .72); glVertex3f(1, .72, 0);
@@ -192,6 +204,8 @@ void draw_RightMiddle_RockBlock_Connection() {
 	glEnd();
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(0, 0, 1);
 
 	glTexCoord2f(.46, .29); glVertex3f(.46, .29, 0);
 	glTexCoord2f(.5, .1); glVertex3f(.5, .1, 0);
@@ -218,6 +232,8 @@ void draw_Right_RockBlock() {
 	glBindTexture(GL_TEXTURE_2D, texture[17]);
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(0, 0, 1);
 
 	glTexCoord2f(.1241 * n, 0.2 * n); glVertex3f(.1241, 0.2, 0);
 	glTexCoord2f(.0511 * n, .3332 * n); glVertex3f(.0511, .3332, 0);
@@ -263,6 +279,8 @@ void draw_DeliveryPath_RockBlock() {
 
 	glBegin(GL_POLYGON);
 
+	glNormal3f(0, 0, 1);
+
 	glTexCoord2f(.07145, .1429); glVertex3f(.07145, .1429, 0);
 	glTexCoord2f(0, .3); glVertex3f(0, .3, 0);
 	glTexCoord2f(.07145, .4287); glVertex3f(.07145, .4287, 0);
@@ -298,6 +316,8 @@ void draw_EntrancePath_Full_RockBlock() {
 
 	glBegin(GL_POLYGON);
 
+	glNormal3f(0, 0, 1);
+
 	glTexCoord2f(.27 * n, .2 * n); glVertex3f(.27, .2, 0);
 	glTexCoord2f(.3 * n, .1 * n); glVertex3f(.3, .1, 0);
 	glTexCoord2f(.27 * n, 0 * n); glVertex3f(.27, 0, 0);
@@ -309,6 +329,8 @@ void draw_EntrancePath_Full_RockBlock() {
 	glEnd();
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(0, 0, 1);
 
 	glTexCoord2f(.9 * n, .55 * n); glVertex3f(.9, .55, 0);
 	glTexCoord2f(1 * n, .4 * n); glVertex3f(1, .4, 0);
@@ -326,6 +348,8 @@ void draw_EntrancePath_Full_RockBlock() {
 	glEnd();
 
 	glBegin(GL_POLYGON);
+
+	glNormal3f(0, 0, 1);
 
 	glTexCoord2f(.9 * n, .55 * n); glVertex3f(.9, .55, 0);
 	glTexCoord2f(.71 * n, .47 * n); glVertex3f(.71, .47, 0);
@@ -357,59 +381,62 @@ void draw_Castle_RockBlock() {
 
 	glBindTexture(GL_TEXTURE_2D, texture[17]);
 
-	glBegin(GL_LINE_LOOP/*GL_POLYGON/**/);
+	glBegin(/*GL_LINE_LOOP*/GL_POLYGON/**/);
 
-	glTexCoord2f(.7, .027); glVertex3f(.7, .027, 0);
-	glTexCoord2f(.57, .005); glVertex3f(.57, .005, 0);
-	glTexCoord2f(.538, .013); glVertex3f(.538, .013, 0);
-	glTexCoord2f(.5, .013); glVertex3f(.5, .013, 0);
-	glTexCoord2f(.5, .5); glVertex3f(.5, .5, 0);
-	glTexCoord2f(.5, .013); glVertex3f(.5, .013, 0);
-	glTexCoord2f(.465, .01); glVertex3f(.465, .01, 0);
-	glTexCoord2f(.34, .01); glVertex3f(.34, .01, 0);
-	glTexCoord2f(.28, .06); glVertex3f(.28, .06, 0);
-	glTexCoord2f(.21, .066); glVertex3f(.21, .066, 0);
-	glTexCoord2f(.135, .13); glVertex3f(.135, .13, 0);
-	glTexCoord2f(.087, .152); glVertex3f(.087, .152, 0);
-	glTexCoord2f(.078, .17); glVertex3f(.078, .17, 0);
-	glTexCoord2f(.089, .22); glVertex3f(.089, .22, 0);
-	glTexCoord2f(.06, .27); glVertex3f(.06, .27, 0);
-	glTexCoord2f(.055, .3); glVertex3f(.055, .3, 0);
-	glTexCoord2f(.005, .37); glVertex3f(.005, .37, 0);
-	glTexCoord2f(.01, .4); glVertex3f(.01, .4, 0);
-	glTexCoord2f(0, .5); glVertex3f(0, .5, 0);
-	glTexCoord2f(0, .55); glVertex3f(0, .55, 0);
-	glTexCoord2f(.06, .65); glVertex3f(.06, .65, 0);
-	glTexCoord2f(.06, .75); glVertex3f(.06, .75, 0);
-	glTexCoord2f(.09, .82); glVertex3f(.09, .82, 0);
-	glTexCoord2f(.09, .85); glVertex3f(.09, .85, 0);
-	glTexCoord2f(.12, .88); glVertex3f(.12, .88, 0);
-	glTexCoord2f(.145, .86); glVertex3f(.145, .86, 0);
-	glTexCoord2f(.15, .934); glVertex3f(.15, .934, 0);
-	glTexCoord2f(.22, .97); glVertex3f(.22, .97, 0);
-	glTexCoord2f(.255, .95); glVertex3f(.255, .95, 0);
-	glTexCoord2f(.3775, .975); glVertex3f(.3775, .975, 0);
-	glTexCoord2f(.5, .97); glVertex3f(.5, .97, 0);
-	glTexCoord2f(.53, 1); glVertex3f(.53, 1, 0);
-	glTexCoord2f(.61, .98); glVertex3f(.61, .98, 0);
-	glTexCoord2f(.65, .945); glVertex3f(.65, .945, 0);
-	glTexCoord2f(.705, .945); glVertex3f(.705, .945, 0);
-	glTexCoord2f(.75, .9); glVertex3f(.75, .9, 0);
-	glTexCoord2f(.82, .87); glVertex3f(.82, .87, 0);
-	glTexCoord2f(.84, .85); glVertex3f(.84, .85, 0);
-	glTexCoord2f(.885, .84); glVertex3f(.885, .84, 0);
-	glTexCoord2f(.96, .755); glVertex3f(.96, .755, 0);
-	glTexCoord2f(.93, .73); glVertex3f(.93, .73, 0);
-	glTexCoord2f(.96, .68); glVertex3f(.96, .68, 0);
-	glTexCoord2f(.95, .64); glVertex3f(.95, .64, 0);
-	glTexCoord2f(1, .56); glVertex3f(1, .56, 0);
-	glTexCoord2f(.98, .48); glVertex3f(.98, .48, 0);
-	glTexCoord2f(1.02, .42); glVertex3f(1.02, .42, 0);
-	glTexCoord2f(.98, .355); glVertex3f(.98, .355, 0);
-	glTexCoord2f(.965, .35); glVertex3f(.965, .35, 0);
-	glTexCoord2f(.97, .305); glVertex3f(.97, .305, 0);
-	glTexCoord2f(.92, .25); glVertex3f(.92, .25, 0);
-	glTexCoord2f(.89, .19); glVertex3f(.89, .19, 0);
+	glNormal3f(0, 0, 1);
+
+	glTexCoord2f(.7 * n, .027 * n); glVertex3f(.7, .027, 0);
+	glTexCoord2f(.57 * n, .005 * n); glVertex3f(.57, .005, 0);
+	glTexCoord2f(.538 * n, .013 * n); glVertex3f(.538, .013, 0);
+	glTexCoord2f(.5 * n, .013 * n); glVertex3f(.5, .013, 0);
+	glTexCoord2f(.5 * n, .5 * n); glVertex3f(.5, .5, 0);
+	glTexCoord2f(.5 * n, .013 * n); glVertex3f(.5, .013, 0);
+	glTexCoord2f(.465 * n, .01 * n); glVertex3f(.465, .01, 0);
+	glTexCoord2f(.34 * n, .01 * n); glVertex3f(.34, .01, 0);
+	glTexCoord2f(.28 * n, .06 * n); glVertex3f(.28, .06, 0);
+	glTexCoord2f(.21 * n, .066 * n); glVertex3f(.21, .066, 0);
+	glTexCoord2f(.135 * n, .13 * n); glVertex3f(.135, .13, 0);
+	glTexCoord2f(.087 * n, .152 * n); glVertex3f(.087, .152, 0);
+	glTexCoord2f(.078 * n, .17 * n); glVertex3f(.078, .17, 0);
+	glTexCoord2f(.089 * n, .22 * n); glVertex3f(.089, .22, 0);
+	glTexCoord2f(.06 * n, .27 * n); glVertex3f(.06, .27, 0);
+	glTexCoord2f(.055 * n, .3 * n); glVertex3f(.055, .3, 0);
+	glTexCoord2f(.005 * n, .37 * n); glVertex3f(.005, .37, 0);
+	glTexCoord2f(.01 * n, .4 * n); glVertex3f(.01, .4, 0);
+	glTexCoord2f(0 * n, .5 * n); glVertex3f(0, .5, 0);
+	glTexCoord2f(0 * n, .55 * n); glVertex3f(0, .55, 0);
+	glTexCoord2f(.06 * n, .65 * n); glVertex3f(.06, .65, 0);
+	glTexCoord2f(.06 * n, .75 * n); glVertex3f(.06, .75, 0);
+	glTexCoord2f(.09 * n, .82 * n); glVertex3f(.09, .82, 0);
+	glTexCoord2f(.09 * n, .85 * n); glVertex3f(.09, .85, 0);
+	glTexCoord2f(.12 * n, .88 * n); glVertex3f(.12, .88, 0);
+	glTexCoord2f(.145 * n, .86 * n); glVertex3f(.145, .86, 0);
+	glTexCoord2f(.15 * n, .934 * n); glVertex3f(.15, .934, 0);
+	glTexCoord2f(.22 * n, .97 * n); glVertex3f(.22, .97, 0);
+	glTexCoord2f(.255 * n, .95 * n); glVertex3f(.255, .95, 0);
+	glTexCoord2f(.3775 * n, .975 * n); glVertex3f(.3775, .975, 0);
+	glTexCoord2f(.5 * n, .97 * n); glVertex3f(.5, .97, 0);
+	glTexCoord2f(.53 * n, 1 * n); glVertex3f(.53, 1, 0);
+	glTexCoord2f(.61 * n, .98 * n); glVertex3f(.61, .98, 0);
+	glTexCoord2f(.65 * n, .945 * n); glVertex3f(.65, .945, 0);
+	glTexCoord2f(.705 * n, .945 * n); glVertex3f(.705, .945, 0);
+	glTexCoord2f(.75 * n, .9 * n); glVertex3f(.75, .9, 0);
+	glTexCoord2f(.82 * n, .87 * n); glVertex3f(.82, .87, 0);
+	glTexCoord2f(.84 * n, .85 * n); glVertex3f(.84, .85, 0);
+	glTexCoord2f(.885 * n, .84 * n); glVertex3f(.885, .84, 0);
+	glTexCoord2f(.96 * n, .755 * n); glVertex3f(.96, .755, 0);
+	glTexCoord2f(.93 * n, .73 * n); glVertex3f(.93, .73, 0);
+	glTexCoord2f(.96 * n, .68 * n); glVertex3f(.96, .68, 0);
+	glTexCoord2f(.95 * n, .64 * n); glVertex3f(.95, .64, 0);
+	glTexCoord2f(1 * n, .56 * n); glVertex3f(1, .56, 0);
+	glTexCoord2f(.98 * n, .48 * n); glVertex3f(.98, .48, 0);
+	glTexCoord2f(1.02 * n, .42 * n); glVertex3f(1.02, .42, 0);
+	glTexCoord2f(.98 * n, .355 * n); glVertex3f(.98, .355, 0);
+	glTexCoord2f(.965 * n, .35 * n); glVertex3f(.965, .35, 0);
+	glTexCoord2f(.97 * n, .305 * n); glVertex3f(.97, .305, 0);
+	glTexCoord2f(.92 * n, .25 * n); glVertex3f(.92, .25, 0);
+	glTexCoord2f(.89 * n, .19 * n); glVertex3f(.89, .19, 0);
+	glTexCoord2f(.82 * n, .06 * n); glVertex3f(.82, .06, 0);
 
 	glEnd();
 
@@ -417,6 +444,8 @@ void draw_Castle_RockBlock() {
 
 //  sets the beginning with only the lines that surrounds it
     glBegin(GL_LINE_LOOP);
+
+	glNormal3f(0, 0, 1);
 
     draw_Circle(-(13 * PI) / 30, (37 * PI) / 26, 205, 205, 150);
     glVertex3f(-18, -205, 100);
