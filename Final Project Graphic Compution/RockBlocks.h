@@ -389,7 +389,13 @@ void draw_Castle_RockBlock() {
 	glTexCoord2f(.3775, .975); glVertex3f(.3775, .975, 0);
 	glTexCoord2f(.5, .97); glVertex3f(.5, .97, 0);
 	glTexCoord2f(.53, 1); glVertex3f(.53, 1, 0);
-	glTexCoord2f(.53, 1); glVertex3f(.53, 1, 0);
+	glTexCoord2f(.61, .98); glVertex3f(.61, .98, 0);
+	glTexCoord2f(.65, .945); glVertex3f(.65, .945, 0);
+	glTexCoord2f(.705, .945); glVertex3f(.705, .945, 0);
+	glTexCoord2f(.75, .9); glVertex3f(.75, .9, 0);
+	glTexCoord2f(.82, .87); glVertex3f(.82, .87, 0);
+	glTexCoord2f(.84, .85); glVertex3f(.84, .85, 0);
+	glTexCoord2f(.84, .85); glVertex3f(.84, .85, 0);
 
 
 	glTexCoord2f(1, .5); glVertex3f(1, .5, 0);
