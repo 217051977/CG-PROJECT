@@ -19,132 +19,137 @@
 //left
 void draw_Left_RockBlock() {
 
-//  sets the beginning with only the lines that surrounds it
-    glBegin(GL_LINE_LOOP);
+	glPushMatrix();
+	glTranslatef(-40, -40, 0);
+	glScalef(80, 80, 1);
 
-    /*
-     * set a vertex on the position (-25, 35, 0)
-     * set a vertex on the position (-32.5, 25, 0)
-     * set a vertex on the position (-35, 15, 0)
-     * set a vertex on the position (-37.5, 10, 0)
-     * set a vertex on the position (-40, 5, 0)
-     * set a vertex on the position (-37.5, 0, 0)
-     * set a vertex on the position (-35, -20, 0)
-     * set a vertex on the position (-30, -28, 0)
-     * set a vertex on the position (-20, -35, 0)
-     * set a vertex on the position (-14, -39, 0)
-     * set a vertex on the position (-12, -39.75, 0)
-     * set a vertex on the position (-10, -39.5, 0)
-     * set a vertex on the position (-8, -39.75, 0)
-     * set a vertex on the position (-6, -40, 0)
-     * call the function draw_Circle()
-     * */
-    glVertex3f(-25, 35, 0);
-    glVertex3f(-32.5, 25, 0);
-    glVertex3f(-35, 15, 0);
-    glVertex3f(-37.5, 10, 0);
-    glVertex3f(-40, 5, 0);
-    glVertex3f(-37.5, 0, 0);
-    glVertex3f(-35, -20, 0);
-    glVertex3f(-30, -28, 0);
-    glVertex3f(-20, -35, 0);
-    glVertex3f(-14, -39, 0);
-    glVertex3f(-12, -39.75, 0);
-    glVertex3f(-10, -39.5, 0);
-    glVertex3f(-8, -39.75, 0);
-    glVertex3f(-6, -40, 0);
-    draw_Circle(-(PI) / 2, PI / 2, 40, 40, 0);
+	glBindTexture(GL_TEXTURE_2D, texture[17]);
 
-//	sets the ending of the draw connecting the first vertex draw with the last
-    glEnd();
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0.5, 1); glVertex3f(0.5, 1, 0);
+	glTexCoord2f(0.6, 0.97); glVertex3f(0.6, 0.97, 0);
+	glTexCoord2f(0.7, 0.95); glVertex3f(0.7, 0.95, 0);
+	glTexCoord2f(0.8, 0.9); glVertex3f(0.8, 0.9, 0);
+	glTexCoord2f(0.9, 0.8); glVertex3f(0.9, 0.8, 0);
+	glTexCoord2f(1, 0.5); glVertex3f(1, 0.5, 0);
+	glTexCoord2f(0.9, 0.2); glVertex3f(0.9, 0.2, 0);
+	glTexCoord2f(0.8, 0.1); glVertex3f(0.8, 0.1, 0);
+	glTexCoord2f(0.7, 0.05); glVertex3f(0.7, 0.05, 0);
+	glTexCoord2f(0.6, 0.005); glVertex3f(0.6, 0.005, 0);
+	glTexCoord2f(0.5, 0); glVertex3f(0.5, 0, 0);
+
+	glTexCoord2f(0.425, 0); glVertex3f(0.425, 0, 0);
+	glTexCoord2f(0.4, 0.003125); glVertex3f(0.4, 0.003125, 0);
+	glTexCoord2f(0.375, 0.00625); glVertex3f(0.375, 0.00625, 0);
+	glTexCoord2f(0.35, 0.003125); glVertex3f(0.35, 0.003125, 0);
+	glTexCoord2f(0.325, 0.0125); glVertex3f(0.325, 0.0125, 0);
+	glTexCoord2f(0.25, 0.0625); glVertex3f(0.25, 0.0625, 0);
+	glTexCoord2f(0.125, 0.15); glVertex3f(0.125, 0.15, 0);
+	glTexCoord2f(0.0625, 0.25); glVertex3f(0.0625, 0.25, 0);
+	glTexCoord2f(0.03125, 0.5); glVertex3f(0.03125, 0.5, 0);
+	glTexCoord2f(0, 0.5625); glVertex3f(0, 0.5625, 0);
+	glTexCoord2f(0.03125, 0.625); glVertex3f(0.03125, 0.625, 0);
+	glTexCoord2f(0.0625, 0.6875); glVertex3f(0.0625, 0.6875, 0);
+	glTexCoord2f(0.09375, 0.8125); glVertex3f(0.09375, 0.8125, 0);
+	glTexCoord2f(0.1875, 0.9375); glVertex3f(0.1875, 0.9375, 0);
+	
+	glEnd();
+
+	glPopMatrix();
 
 }
 
 //left__middle connection
 void draw_LeftMiddle_RockBlock_Connection() {
 
-//  sets the beginning with only the lines that surrounds it
-    glBegin(GL_LINE_LOOP);
+	glPushMatrix();
+	glTranslatef(51, -40, 0);
+	glScalef(107, 80, 1);
 
-    /*
-     * set a vertex on the position (50, 15, 0)
-     * set a vertex on the position (70, 20, 0)
-     * set a vertex on the position (90, 30, 0)
-     * set a vertex on the position (100, 40, 0)
-     * set a vertex on the position (130, 37.5, 0)
-     * set a vertex on the position (140, 30, 0)
-     * set a vertex on the position (157, 40, 0)
-     * set a vertex on the position (155, 38, 0)
-     * set a vertex on the position (150, 28, 0)
-     * set a vertex on the position (145, 18, 0)
-     * set a vertex on the position (135, -22, 0)
-     * set a vertex on the position (137, -25, 0)
-     * set a vertex on the position (130, -25, 0)
-     * set a vertex on the position (110, -20, 0)
-     * set a vertex on the position (100, -25, 0)
-     * set a vertex on the position (90, -35, 0)
-     * set a vertex on the position (77.5, -30, 0)
-     * set a vertex on the position (70, -20, 0)
-     * call the function draw_Circle()
-     * */
-    glVertex3f(50, 15, 0);
-    glVertex3f(70, 20, 0);
-    glVertex3f(90, 30, 0);
-    glVertex3f(100, 40, 0);
-    glVertex3f(130, 37.5, 0);
-    glVertex3f(140, 30, 0);
-    glVertex3f(157, 40, 0);
-    glVertex3f(155, 38, 0);
-    glVertex3f(150, 28, 0);
-    glVertex3f(145, 18, 0);
-    glVertex3f(135, -22, 0);
-    glVertex3f(137, -25, 0);
-    glVertex3f(130, -25, 0);
-    glVertex3f(110, -20, 0);
-    glVertex3f(100, -25, 0);
-    glVertex3f(90, -35, 0);
-    glVertex3f(77.5, -30, 0);
-    glVertex3f(70, -20, 0);
-    glVertex3f(50, -25, 0);
-    draw_Circle(-PI / 3, (5 * PI) / 24, 40, 40, 0);
+	glBindTexture(GL_TEXTURE_2D, texture[17]);
 
-//	sets the ending of the draw connecting the first vertex draw with the last
-    glEnd();
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0, 0.6875); glVertex3f(0, 0.6875, 0);
+	glTexCoord2f(0.18, 0.75); glVertex3f(0.18, 0.75, 0);
+	glTexCoord2f(0.36, 0.875); glVertex3f(0.36, 0.875, 0);
+
+	glTexCoord2f(0.45, 1); glVertex3f(0.45, 1, 0);
+	glTexCoord2f(0.72, 0.96875); glVertex3f(0.72, 0.96875, 0);
+	glTexCoord2f(0.81, 0.875); glVertex3f(0.81, 0.875, 0);
+	glTexCoord2f(1, 1); glVertex3f(1, 1, 0);
+	glTexCoord2f(0.945, 0.975); glVertex3f(0.945, 0.975, 0);
+	glTexCoord2f(0.9, 0.85); glVertex3f(0.9, 0.85, 0);
+	glTexCoord2f(0.855, 0.725); glVertex3f(0.855, 0.725, 0);
+	glTexCoord2f(0.765, 0.225); glVertex3f(0.765, 0.225, 0);
+
+	glTexCoord2f(0.783, 0.1875); glVertex3f(0.783, 0.1875, 0);
+	glTexCoord2f(0.72, 0.1875); glVertex3f(0.72, 0.1875, 0);
+	glTexCoord2f(0.54, 0.25); glVertex3f(0.54, 0.25, 0);
+	glTexCoord2f(0.45, 0.1875); glVertex3f(0.45, 0.1875, 0);
+	glTexCoord2f(0.36, 0.0625); glVertex3f(0.36, 0.0625, 0);
+	glTexCoord2f(0.2475, 0.125); glVertex3f(0.2475, 0.125, 0);
+	glTexCoord2f(0.18, 0.25); glVertex3f(0.18, 0.25, 0);
+	glTexCoord2f(0, 0.1875); glVertex3f(0, 0.1875, 0);
+	glTexCoord2f(-0.27, 0.07); glVertex3f(-0.27, 0.07, 0);
+	glTexCoord2f(-0.17, 0.8); glVertex3f(-0.17, 0.8, 0);
+
+	glEnd();
+
+	glPopMatrix();
 
 }
 
 //middle rock block
 void draw_Middle_RockBlock() {
 
+	int x = 2;
+	int y = 2;
+
+	glPushMatrix();
+	glTranslatef(-5, 0, 0);
+	glScalef(195, 150, 1);
+
+	glBindTexture(GL_TEXTURE_2D, texture[17]);
+
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0.325 * x, 0 * y); glVertex3f(0.325, 0, 0);
+	glTexCoord2f(0.3 * x, 0 * y); glVertex3f(0.3, 0, 0);
+	glTexCoord2f(0.175 * x, 0.07 * y); glVertex3f(0.175, 0.07, 0);
+
+	glTexCoord2f(0.125 * x, 0.28 * y); glVertex3f(0.125, 0.28, 0);
+	glTexCoord2f(0.035 * x, 0.35 * y); glVertex3f(0.035, 0.35, 0);
+	glTexCoord2f(0 * x, 0.49 * y); glVertex3f(0, 0.49, 0);
+	glTexCoord2f(0.05 * x, 0.77 * y); glVertex3f(0.05, 0.77, 0);
+	glTexCoord2f(0.075 * x, 0.84 * y); glVertex3f(0.075, 0.84, 0);
+	glTexCoord2f(0.1 * x, 0.91 * y); glVertex3f(0.1, 0.91, 0);
+	glTexCoord2f(0.15 * x, 0.98 * y); glVertex3f(0.15, 0.98, 0);
+	glTexCoord2f(0.35 * x, 1 * y); glVertex3f(0.35, 1, 0);
+
+	glTexCoord2f(0.35 * x, 0.98 * y); glVertex3f(0.35, 0.98, 0);
+	glTexCoord2f(0.55 * x, 0.98 * y); glVertex3f(0.55, 0.98, 0);
+	glTexCoord2f(0.675 * x, 1 * y); glVertex3f(0.675, 1, 0);
+	glTexCoord2f(0.725 * x, 0.98 * y); glVertex3f(0.725, 0.98, 0);
+	glTexCoord2f(0.875 * x, 0.91 * y); glVertex3f(0.875, 0.91, 0);
+	glTexCoord2f(0.9 * x, 0.875 * y); glVertex3f(0.9, 0.875, 0);
+	glTexCoord2f(0.925 * x, 0.805 * y); glVertex3f(0.925, 0.805, 0);
+	glTexCoord2f(0.975 * x, 0.7 * y); glVertex3f(0.975, 0.7, 0);
+	glTexCoord2f(0.925 * x, 0.49 * y); glVertex3f(0.925, 0.49, 0);
+	glTexCoord2f(0.9 * x, 0.42 * y); glVertex3f(0.9, 0.42, 0);
+	glTexCoord2f(0.825 * x, 0.28 * y); glVertex3f(0.825, 0.28, 0);
+	glTexCoord2f(0.8 * x, 0.21 * y); glVertex3f(0.8, 0.21, 0);
+	glTexCoord2f(0.775 * x, 0.105 * y); glVertex3f(0.775, 0.105, 0);
+	glTexCoord2f(0.725 * x, 0 * y); glVertex3f(0.725, 0, 0);
+
+	glEnd();
+
+	glPopMatrix();
+
 //  sets the beginning with only the lines that surrounds it
     glBegin(GL_LINE_LOOP);
 
-    /*
-     * set a vertex on the position (60, 0, 0)
-     * set a vertex on the position (55, 0, 0)
-     * set a vertex on the position (30, 10, 0)
-     * set a vertex on the position (20, 40, 0)
-     * set a vertex on the position (2, 50, 0)
-     * set a vertex on the position (-5, 70, 0)
-     * set a vertex on the position (5, 110, 0)
-     * set a vertex on the position (10, 120, 0)
-     * set a vertex on the position (15, 130, 0)
-     * set a vertex on the position (25, 140, 0)
-     * set a vertex on the position (65, 150, 0)
-     * set a vertex on the position (65, 140, 0)
-     * set a vertex on the position (105, 140, 0)
-     * set a vertex on the position (130, 145, 0)
-     * set a vertex on the position (140, 140, 0)
-     * set a vertex on the position (170, 130, 0)
-     * set a vertex on the position (175, 125, 0)
-     * set a vertex on the position (180, 115, 0)
-     * set a vertex on the position (190, 100, 0)
-     * set a vertex on the position (180, 70, 0)
-     * set a vertex on the position (175, 60, 0)
-     * set a vertex on the position (160, 40, 0)
-     * set a vertex on the position (155, 30, 0)
-     * set a vertex on the position (150, 15, 0)
-     * */
     glVertex3f(60, 0, 0);
     glVertex3f(55, 0, 0);
     glVertex3f(30, 10, 0);
@@ -179,28 +184,39 @@ void draw_Middle_RockBlock() {
 //right__middle connection
 void draw_RightMiddle_RockBlock_Connection() {
 
+	glPushMatrix();
+	glTranslatef(-10, -10, 0);
+	glScalef(60, 80, 1);
+
+	glBindTexture(GL_TEXTURE_2D, texture[17]);
+
+	glBegin(GL_POLYGON);
+
+	glTexCoord2f(0.17, 0.125); glVertex3f(0.17, 0.125, 0);
+	glTexCoord2f(0.34, -0.03125); glVertex3f(0.34, -0.03125, 0);
+	glTexCoord2f(0.51, 0.025); glVertex3f(0.51, 0.025, 0);
+	glTexCoord2f(0.595, 0.0625); glVertex3f(0.595, 0.0625, 0);
+	glTexCoord2f(0.51, 0.25); glVertex3f(0.51, 0.25, 0);
+	glTexCoord2f(0.476, 0.4375); glVertex3f(0.476, 0.4375, 0);
+	glTexCoord2f(0.595, 0.625); glVertex3f(0.595, 0.625, 0);
+	glTexCoord2f(0.85, 0.75); glVertex3f(0.85, 0.75, 0);
+	glTexCoord2f(1.02, 0.875); glVertex3f(1.02, 0.875, 0);
+	glTexCoord2f(0.765, 0.8125); glVertex3f(0.765, 0.8125, 0);
+	glTexCoord2f(0.51, 0.9); glVertex3f(0.51, 0.9, 0);
+	glTexCoord2f(0.425, 0.875); glVertex3f(0.425, 0.875, 0);
+	glTexCoord2f(0.085, 0.975); glVertex3f(0.085, 0.975, 0);
+	glTexCoord2f(0, 0.875); glVertex3f(0, 0.875, 0);
+	glTexCoord2f(0.085, 0.8125); glVertex3f(0.085, 0.8125, 0);
+	glTexCoord2f(0.17, 0.6875); glVertex3f(0.17, 0.6875, 0);
+	glTexCoord2f(0.34, 0.5); glVertex3f(0.34, 0.5, 0);
+
+	glEnd();
+
+	glPopMatrix();
+
 //  sets the beginning with only the lines that surrounds it
     glBegin(GL_LINE_LOOP);
 
-    /*
-     * set a vertex on the position (0, 0, 0)
-     * set a vertex on the position (10, -12.5, 0)
-     * set a vertex on the position (20, -8, 0)
-     * set a vertex on the position (25, -5, 0)
-     * set a vertex on the position (20, 10, 0)
-     * set a vertex on the position (18, 25, 0)
-     * set a vertex on the position (25, 40, 0)
-     * set a vertex on the position (40, 50, 0)
-     * set a vertex on the position (50, 60, 0)
-     * set a vertex on the position (35, 55, 0)
-     * set a vertex on the position (20, 62, 0)
-     * set a vertex on the position (15, 60, 0)
-     * set a vertex on the position (-5, 68, 0)
-     * set a vertex on the position (-10, 60, 0)
-     * set a vertex on the position (-5, 55, 0)
-     * set a vertex on the position (0, 45, 0)
-     * set a vertex on the position (10, 30, 0)
-     * */
     glVertex3f(0, 0, 0);
     glVertex3f(10, -12.5, 0);
     glVertex3f(20, -8, 0);

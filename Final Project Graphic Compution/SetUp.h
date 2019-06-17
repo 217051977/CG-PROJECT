@@ -22,13 +22,6 @@ void light0() {
 
 	glEnable(GL_LIGHT0);
 
-	glLightfv(GL_LIGHT0, GL_LIGHT_MODEL_AMBIENT, globalLight);
-
-	glLightfv(GL_LIGHT0, GL_POSITION, lightPosition);
-
-	glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuseLight);
-	glLightfv(GL_LIGHT0, GL_SPECULAR, specularLight);
-
 }
 
 void lightning() {
@@ -37,6 +30,8 @@ void lightning() {
 	glEnable(GL_LIGHTING);
 	
 	light0();
+
+	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, globalLight);
 
 	glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, materialAmbientAndDiffuse);
 	glMaterialfv(GL_FRONT, GL_SPECULAR, materialSpecular);

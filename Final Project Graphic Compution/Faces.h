@@ -222,6 +222,8 @@ void create_Front_Face(float xI, float yI, float xF, float yF) {
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
 
+	glNormal3f(0, -1, 0);
+
 	glTexCoord2f(xI, yI); glVertex3f(0, 0, 0);
 	glTexCoord2f(xI, yF); glVertex3f(0, 0, 1);
 	glTexCoord2f(xF, yF); glVertex3f(1, 0, 1);
@@ -237,6 +239,8 @@ void create_Back_Face(float xI, float yI, float xF, float yF) {
 
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
+
+	glNormal3f(0, 1, 0);
 
 	glTexCoord2f(xI, yI); glVertex3f(1, 1, 0);
 	glTexCoord2f(xI, yF); glVertex3f(1, 1, 1);
@@ -254,6 +258,8 @@ void create_Bot_Face(float xI, float yI, float xF, float yF) {
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
 
+	glNormal3f(0, 0, -1);
+
 	glTexCoord2f(xI, yI); glVertex3f(0, 0, 0);
 	glTexCoord2f(xI, yF); glVertex3f(1, 0, 0);
 	glTexCoord2f(xF, yF); glVertex3f(1, 1, 0);
@@ -269,6 +275,8 @@ void create_Top_Face(float xI, float yI, float xF, float yF) {
 
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
+
+	glNormal3f(0, 0, 1);
 
 	glTexCoord2f(xI, yI); glVertex3f(0, 0, 1);
 	glTexCoord2f(xI, yF); glVertex3f(0, 1, 1);
@@ -286,6 +294,8 @@ void create_Left_Face(float xI, float yI, float xF, float yF) {
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
 
+	glNormal3f(-1, 0, 0);
+
 	glTexCoord2f(xI, yI); glVertex3f(0, 1, 0);
 	glTexCoord2f(xI, yF); glVertex3f(0, 1, 1);
 	glTexCoord2f(xF, yF); glVertex3f(0, 0, 1);
@@ -301,6 +311,8 @@ void create_Right_Face(float xI, float yI, float xF, float yF) {
 
 	//  sets the beginning with only the lines that surrounds it
 	glBegin(GL_POLYGON);
+
+	glNormal3f(1, 0, 0);
 
 	glTexCoord2f(xI, yI); glVertex3f(1, 0, 0);
 	glTexCoord2f(xI, yF); glVertex3f(1, 0, 1);

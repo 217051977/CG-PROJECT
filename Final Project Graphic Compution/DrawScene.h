@@ -148,12 +148,21 @@ void castle() {
 // Drawing routine.
 void drawScene(void) {
 
+	float diffuseLight[] = { d, d, d, 1 };
+	//reflective light in the object
+	float specularLight[] = { d, d, d, 1 };
+
+	float lightPosition[] = { cos((PI / 180) * theta), sin((PI / 180) * theta), 0};
+
+	glLightfv(GL_LIGHT0, GL_POSITION, lightPosition);
+
+	glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuseLight);
+	glLightfv(GL_LIGHT0, GL_SPECULAR, specularLight);
+
 	//set the screen to the background color
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	glFrontFace(GL_CW);
-	glPolygonMode(GL_FRONT, GL_FILL);
-	glPolygonMode(GL_BACK, GL_LINE);
 
 	glLoadIdentity();
 
@@ -163,7 +172,7 @@ void drawScene(void) {
 
     //set the next draw color
     // RBG (Red Blue Green) -> (0-1, 0-1, 0-1)
-    glColor3f(D_RED, D_GREEN, D_BLUE);
+    //glColor3f(D_RED, D_GREEN, D_BLUE);
 
     switch (scene_To_print) {
 
@@ -211,7 +220,7 @@ void drawScene(void) {
 
     }
 
-	drawSkyBox();
+	//drawSkyBox();
 
 	// Draw a white line in the direction of the sun after disabling lighting.
 	glDisable(GL_LIGHTING);

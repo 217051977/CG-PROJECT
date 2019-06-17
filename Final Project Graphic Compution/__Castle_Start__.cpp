@@ -50,7 +50,7 @@
  *      blue
  *      alpha
  * */
-double B_RED = 1, B_GREEN = 1, B_BLUE = 1, B_ALPHA = 0;
+double B_RED = 0, B_GREEN = 0, B_BLUE = 0, B_ALPHA = 0;
 /*
  * draw color value
  *      red
@@ -110,7 +110,7 @@ static int entranceDoors_AreOpening = 0;
 static int deliveryDoors_AreOpening = 0;
 
 
-static int perspective_Or_Animation = /*-4*/1;
+static int perspective_Or_Animation = /*-4*/-10;
 static int lookAt = 0;
 static int scene_To_print = /*0*/0;
 static int draw_angleUp = 0;
@@ -123,16 +123,12 @@ static float theta = 45.0; // Angle of the sun with the ground.
 
 //Lightning
 //position of the light
-float lightPosition[] = { X_INITIAL + 250, Y_INITIAL + 200, 100 };
 
 //global light
 GLfloat globalLight[] = { 0.2, 0.2, 0.2, 1 };
 //natural light
 GLfloat ambientLight[] = { 0, 0, 0, 1 };
 //spot on the object that is the target of the light
-GLfloat diffuseLight[] = { d, d, d, 1 };
-//reflective light in the object
-GLfloat specularLight[] = { d, d, d, 1 };
 //shinning factor (0 - 128)
 GLfloat shininess[] = { 60 };
 
