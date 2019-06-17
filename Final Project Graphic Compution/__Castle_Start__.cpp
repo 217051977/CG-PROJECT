@@ -50,7 +50,7 @@
  *      blue
  *      alpha
  * */
-double B_RED = 0, B_GREEN = 0, B_BLUE = 0, B_ALPHA = 0;
+double B_RED = 1, B_GREEN = 1, B_BLUE = 1, B_ALPHA = 0;
 /*
  * draw color value
  *      red
@@ -110,7 +110,7 @@ static int entranceDoors_AreOpening = 0;
 static int deliveryDoors_AreOpening = 0;
 
 
-static int perspective_Or_Animation = /*-4*/-10;
+static int perspective_Or_Animation = /*-4*/-4;
 static int lookAt = 0;
 static int scene_To_print = /*0*/0;
 static int draw_angleUp = 0;
